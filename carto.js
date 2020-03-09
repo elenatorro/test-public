@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 151);
+/******/ 	return __webpack_require__(__webpack_require__.s = 45);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -155,8 +155,8 @@ return /******/ (function(modules) { // webpackBootstrap
   // the browser, add `_` as a global object.
   // (`nodeType` is checked to ensure that `module`
   // and `exports` are not HTML elements.)
-  if (typeof exports != 'undefined' && !exports.nodeType) {
-    if (typeof module != 'undefined' && !module.nodeType && module.exports) {
+  if ( true && !exports.nodeType) {
+    if ( true && !module.nodeType && module.exports) {
       exports = module.exports = _;
     }
     exports._ = _;
@@ -1445,7 +1445,7 @@ return /******/ (function(modules) { // webpackBootstrap
   // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
   // IE 11 (#1621), Safari 8 (#1929), and PhantomJS (#2236).
   var nodelist = root.document && root.document.childNodes;
-  if (typeof /./ != 'function' && typeof Int8Array != 'object' && typeof nodelist != 'function') {
+  if ( true && typeof Int8Array != 'object' && typeof nodelist != 'function') {
     _.isFunction = function(obj) {
       return typeof obj == 'function' || false;
     };
@@ -1797,7 +1797,7 @@ return /******/ (function(modules) { // webpackBootstrap
   }
 }());
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18), __webpack_require__(144)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10), __webpack_require__(52)(module)))
 
 /***/ }),
 /* 1 */
@@ -1819,7 +1819,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   // Set up Backbone appropriately for the environment. Start with AMD.
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(17), exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function(_, $, exports) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(11), exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function(_, $, exports) {
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global Backbone.
       root.Backbone = factory(root, exports, _, $);
@@ -3893,7 +3893,7 @@ return /******/ (function(modules) { // webpackBootstrap
   return Backbone;
 });
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10)))
 
 /***/ }),
 /* 2 */
@@ -3902,7 +3902,7 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 
 
-var $ = __webpack_require__(17);
+var $ = __webpack_require__(11);
 var _ = __webpack_require__(0);
 var Backbone = __webpack_require__(1);
 
@@ -4017,8 +4017,8 @@ module.exports = CartoValidationError;
 "use strict";
 
 
-var errorExtender = __webpack_require__(143);
-var errorTracker = __webpack_require__(138);
+var errorExtender = __webpack_require__(53);
+var errorTracker = __webpack_require__(58);
 
 var UNEXPECTED_ERROR = 'unexpected error';
 var GENERIC_ORIGIN = 'generic';
@@ -4277,59 +4277,6 @@ module.exports = {
 
 
 var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var CartoValidationError = __webpack_require__(3);
-
-/**
- * Base filter object
- *
- * @constructor
- * @abstract
- * @memberof carto.filter
- * @api
- */
-function Base() {}
-
-_.extend(Base.prototype, Backbone.Events);
-
-Base.prototype._getValidationError = function (code) {
-  return new CartoValidationError('filter', code);
-};
-
-module.exports = Base;
-
-/**
- * Fired when bounds have changed. Handler gets a parameter with the new bounds.
- *
- * @event boundsChanged
- * @type {carto.filter.Bounds}
- * @api
- */
-
-/**
- * Fired when circle filter has changed. Handler gets a parameter with the new circle.
- *
- * @event circleChanged
- * @type {carto.filter.CircleData}
- * @api
- */
-
-/**
- * Fired when polygon filter has changed. Handler gets a parameter with the new polygon.
- *
- * @event polygonChanged
- * @type {carto.filter.PolygonData}
- * @api
- */
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
 
 var util = {};
 
@@ -4514,6 +4461,59 @@ util.isGoogleMapsLoaded = function () {
 module.exports = util;
 
 /***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var CartoValidationError = __webpack_require__(3);
+
+/**
+ * Base filter object
+ *
+ * @constructor
+ * @abstract
+ * @memberof carto.filter
+ * @api
+ */
+function Base() {}
+
+_.extend(Base.prototype, Backbone.Events);
+
+Base.prototype._getValidationError = function (code) {
+  return new CartoValidationError('filter', code);
+};
+
+module.exports = Base;
+
+/**
+ * Fired when bounds have changed. Handler gets a parameter with the new bounds.
+ *
+ * @event boundsChanged
+ * @type {carto.filter.Bounds}
+ * @api
+ */
+
+/**
+ * Fired when circle filter has changed. Handler gets a parameter with the new circle.
+ *
+ * @event circleChanged
+ * @type {carto.filter.CircleData}
+ * @api
+ */
+
+/**
+ * Fired when polygon filter has changed. Handler gets a parameter with the new polygon.
+ *
+ * @event polygonChanged
+ * @type {carto.filter.PolygonData}
+ * @api
+ */
+
+/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4541,7 +4541,7 @@ module.exports = types;
 var _ = __webpack_require__(0);
 var Backbone = __webpack_require__(1);
 var Model = __webpack_require__(2);
-var util = __webpack_require__(7);
+var util = __webpack_require__(6);
 
 var REQUIRED_OPTS = ['camshaftReference', 'engine'];
 
@@ -4764,1131 +4764,32 @@ module.exports = AnalysisModel;
 
 /***/ }),
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+var g;
 
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
 
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var status = __webpack_require__(5).status;
-var SourceBase = __webpack_require__(12);
-var FilterBase = __webpack_require__(6);
-var SQLFilterBase = __webpack_require__(11);
-var SpatialFilterTypes = __webpack_require__(8);
-var CartoError = __webpack_require__(4);
-var CartoValidationError = __webpack_require__(3);
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
 
-/**
- * Base class for dataview objects.
- *
- * Dataviews are a way to extract data from a CARTO account in predefined ways
- * (eg: a list of categories, the result of a formula operation, etc.).
- *
- * **This object should not be used directly**
- *
- * The data used in a dataviews cames from a {@link carto.source.Base|source} that might change
- * due to different reasons (eg: SQL query changed).
- *
- * When dataview data changes the dataview will trigger events to notify subscribers when new data is available.
- *
- * @example
- * // Keep your widget data sync. Remember each dataview has his own data format.
- * dataview.on('dataChanged', newData => {
- *  renderWidget(newData);
- * })
- *
- * @constructor
- * @abstract
- * @memberof carto.dataview
- * @fires dataChanged
- * @fires columnChanged
- * @fires statusChanged
- * @fires error
- * @api
- */
-function Base() {}
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
 
-_.extend(Base.prototype, Backbone.Events);
+module.exports = g;
 
-/**
- * Return the current dataview status.
- *
- * @return {carto.dataview.status} Current dataview status
- * @api
- */
-Base.prototype.getStatus = function () {
-  return this._status;
-};
-
-/**
- * Return true is the current status is loading.
- *
- * @return {boolean}
- * @api
- */
-Base.prototype.isLoading = function () {
-  return this._status === status.LOADING;
-};
-
-/**
- * Return true is the current status is loaded.
- *
- * @return {boolean}
- * @api
- */
-Base.prototype.isLoaded = function () {
-  return this._status === status.LOADED;
-};
-
-/**
- * Return true is the current status is error.
- *
- * @return {boolean}
- * @api
- */
-Base.prototype.hasError = function () {
-  return this._status === status.ERROR;
-};
-
-/**
- * Enable the dataview. When enabled, a dataview fetches new data
- * when the map changes (changing map configuration or changing map
- * bounding box).
- *
- * @return {carto.dataview.Base} this
- * @api
- */
-Base.prototype.enable = function () {
-  return this._setEnabled(true);
-};
-
-/**
- * Disable the dataview. This stops the dataview from fetching new
- * data when there is a map change (like changing map configuration or changing map
- * bounding box).
- *
- * @return {carto.dataview.Base} this
- * @api
- */
-Base.prototype.disable = function () {
-  return this._setEnabled(false);
-};
-
-/**
- * Return true if the dataview is enabled.
- *
- * @return {boolean}
- * @api
- */
-Base.prototype.isEnabled = function () {
-  return this._enabled;
-};
-
-/**
- * Return the current source where the dataview gets the data from.
- *
- * @return {carto.source.Base} Current source object
- * @api
- */
-Base.prototype.getSource = function () {
-  return this._source;
-};
-
-/**
- * Set the dataview column.
- *
- * @param  {string} column
- * @fires columnChanged
- * @return {carto.dataview.Base} this
- * @api
- */
-Base.prototype.setColumn = function (column) {
-  this._checkColumn(column);
-  this._column = column;
-  if (this._internalModel) {
-    this._internalModel.set('column', this._column);
-  }
-  return this;
-};
-
-/**
- * Return the current dataview column where the dataview is applied.
- *
- * @return {string} Current dataview column
- * @api
- */
-Base.prototype.getColumn = function () {
-  return this._column;
-};
-
-/**
- * Add a {@link carto.filter.Base|filter}.
- *
- * @param  {carto.filter.Base} filter
- * @return {carto.dataview.Base} this
- * @api
- */
-Base.prototype.addFilter = function (filter) {
-  this._checkFilter(filter);
-  this._addSpatialFilter(filter);
-  return this;
-};
-
-/**
- * Remove a {@link carto.filter.Base|filter}.
- *
- * @param  {carto.filter.Base} filter
- * @return {carto.dataview.Base} this
- * @api
- */
-Base.prototype.removeFilter = function (filter) {
-  this._checkFilter(filter);
-  this._removeSpatialFilter(filter);
-  return this;
-};
-
-/**
- * Check if a {@link carto.filter.Base|filter} exists in the dataview.
- *
- * @param  {carto.filter.Base} filter
- * @return {carto.dataview.Base} this
- * @api
- */
-Base.prototype.hasFilter = function (filter) {
-  this._checkFilter(filter);
-  var hasBBoxFilter = filter === this._boundingBoxFilter && this._internalModel && this._internalModel.get('sync_on_bbox_change');
-
-  var hasCircleFilter = filter === this._circleFilter && this._internalModel && this._internalModel.get('sync_on_circle_change');
-
-  var hasPolygonFilter = filter === this._polygonFilter && this._internalModel && this._internalModel.get('sync_on_polygon_change');
-
-  return hasBBoxFilter || hasCircleFilter || hasPolygonFilter;
-};
-
-Base.prototype.getData = function () {
-  throw new Error('getData must be implemented by the particular dataview.');
-};
-
-// Protected methods
-
-Base.prototype.DEFAULTS = {};
-
-/**
- * Initialize dataview.
- *
- * @param {carto.source.Base} source - The source where the dataview will fetch the data
- * @param {string} column - The column name to get the data
- * @param  {object} options - It depends on the instance
- */
-Base.prototype._initialize = function (source, column, options) {
-  options = _.defaults(options || {}, this.DEFAULTS);
-
-  this._checkSource(source);
-  this._checkColumn(column);
-  this._checkOptions(options);
-
-  this._source = source;
-  this._column = column;
-  this._options = options;
-
-  this._status = status.NOT_LOADED;
-  this._enabled = true;
-  this._boundingBoxFilter = null;
-};
-
-Base.prototype._checkSource = function (source) {
-  if (!(source instanceof SourceBase)) {
-    throw this._getValidationError('sourceRequired');
-  }
-};
-
-Base.prototype._checkColumn = function (column) {
-  if (_.isUndefined(column)) {
-    throw this._getValidationError('columnRequired');
-  }
-  if (!_.isString(column)) {
-    throw this._getValidationError('columnString');
-  }
-  if (_.isEmpty(column)) {
-    throw this._getValidationError('emptyColumn');
-  }
-};
-
-Base.prototype._checkOptions = function (options) {
-  throw new Error('_checkOptions must be implemented by the particular dataview.');
-};
-
-Base.prototype._checkFilter = function (filter) {
-  if (!(filter instanceof FilterBase) || filter instanceof SQLFilterBase) {
-    throw this._getValidationError('filterRequired');
-  }
-};
-
-Base.prototype._createInternalModel = function (engine) {
-  throw new Error('_createInternalModel must be implemented by the particular dataview.');
-};
-
-Base.prototype._setEnabled = function (enabled) {
-  this._enabled = enabled;
-  if (this._internalModel) {
-    this._internalModel.set('enabled', enabled);
-  }
-  return this;
-};
-
-Base.prototype._listenToInternalModelSharedEvents = function () {
-  if (this._internalModel) {
-    this.listenTo(this._internalModel, 'change:data', this._onDataChanged);
-    this.listenTo(this._internalModel, 'change:column', this._onColumnChanged);
-    this.listenTo(this._internalModel, 'loading', this._onStatusLoading);
-    this.listenTo(this._internalModel, 'loaded', this._onStatusLoaded);
-    this.listenTo(this._internalModel, 'statusError', this._onStatusError);
-  }
-};
-
-Base.prototype._onDataChanged = function () {
-  this.trigger('dataChanged', this.getData());
-};
-
-Base.prototype._onColumnChanged = function () {
-  if (this._internalModel) {
-    this._column = this._internalModel.get('column');
-  }
-  this.trigger('columnChanged', this._column);
-};
-
-Base.prototype._onStatusLoading = function () {
-  this._status = status.LOADING;
-  this.trigger('statusChanged', this._status);
-};
-
-Base.prototype._onStatusLoaded = function () {
-  this._status = status.LOADED;
-  this.trigger('statusChanged', this._status);
-};
-
-Base.prototype._onStatusError = function (model, error) {
-  this._status = status.ERROR;
-  this.trigger('statusChanged', this._status, error);
-  this._triggerError(this, error);
-};
-
-Base.prototype._changeProperty = function (key, value, internalKey) {
-  var prevValue = this['_' + key];
-  this['_' + key] = value;
-  if (prevValue === value) {
-    return;
-  }
-  this._triggerChange(key, value);
-  if (this._internalModel) {
-    this._internalModel.set(internalKey || key, value);
-  }
-};
-
-Base.prototype._changeProperties = function (properties) {
-  var _this = this;
-
-  _.each(properties, function (value, key) {
-    var prevValue = _this['_' + key];
-
-    if (prevValue !== value) {
-      _this['_' + key] = value;
-      _this._triggerChange(key, value);
-    }
-  });
-
-  if (this._internalModel) {
-    this._internalModel.set(properties);
-  }
-};
-
-Base.prototype._triggerChange = function (key, value) {
-  this.trigger(key + 'Changed', value);
-};
-
-/**
- * Fire a CartoError event from a internalDataviewError.
- */
-Base.prototype._triggerError = function (model, internalDataviewError) {
-  this.trigger('error', new CartoError(internalDataviewError));
-};
-
-Base.prototype._addSpatialFilter = function (spatialFilter) {
-  switch (spatialFilter.type) {
-    case SpatialFilterTypes.BBOX:
-      this._addBoundingBoxFilter(spatialFilter);
-      break;
-    case SpatialFilterTypes.CIRCLE:
-      this._addCircleFilter(spatialFilter);
-      break;
-    case SpatialFilterTypes.POLYGON:
-      this._addPolygonFilter(spatialFilter);
-      break;
-    default:
-      throw new Error('The filter is not a valid spatial filter.');
-  }
-};
-
-Base.prototype._removeSpatialFilter = function (spatialFilter) {
-  switch (spatialFilter.type) {
-    case SpatialFilterTypes.BBOX:
-      if (spatialFilter === this._boundingBoxFilter) {
-        this._removeBoundingBoxFilter();
-      }
-      break;
-    case SpatialFilterTypes.CIRCLE:
-      if (spatialFilter === this._circleFilter) {
-        this._removeCircleFilter();
-      }
-      break;
-    case SpatialFilterTypes.POLYGON:
-      if (spatialFilter === this._polygonFilter) {
-        this._removePolygonFilter();
-      }
-      break;
-    default:
-      throw new Error('The filter is not a valid spatial filter.');
-  }
-};
-
-Base.prototype._addBoundingBoxFilter = function (bboxFilter) {
-  if (bboxFilter === this._boundingBoxFilter) {
-    return;
-  }
-
-  this._boundingBoxFilter = bboxFilter;
-  if (this._internalModel) {
-    this._internalModel.addBBoxFilter(this._boundingBoxFilter.$getInternalModel());
-    this._internalModel.set('sync_on_bbox_change', true);
-  }
-};
-
-Base.prototype._removeBoundingBoxFilter = function () {
-  this._boundingBoxFilter = null;
-  if (this._internalModel) {
-    this._internalModel.removeBBoxFilter();
-    this._internalModel.set('sync_on_bbox_change', false);
-  }
-};
-
-Base.prototype._addCircleFilter = function (circleFilter) {
-  if (circleFilter === this._circleFilter) {
-    return;
-  }
-
-  this._circleFilter = circleFilter;
-  if (this._internalModel) {
-    this._internalModel.addCircleFilter(this._circleFilter.$getInternalModel());
-    this._internalModel.set('sync_on_circle_change', true);
-  }
-};
-
-Base.prototype._removeCircleFilter = function () {
-  this._circleFilter = null;
-  if (this._internalModel) {
-    this._internalModel.removeCircleFilter();
-    this._internalModel.set('sync_on_circle_change', false);
-  }
-};
-
-Base.prototype._addPolygonFilter = function (polygonFilter) {
-  if (polygonFilter === this._polygonFilter) {
-    return;
-  }
-
-  this._polygonFilter = polygonFilter;
-  if (this._internalModel) {
-    this._internalModel.addPolygonFilter(this._polygonFilter.$getInternalModel());
-    this._internalModel.set('sync_on_polygon_change', true);
-  }
-};
-
-Base.prototype._removePolygonFilter = function () {
-  this._polygonFilter = null;
-  if (this._internalModel) {
-    this._internalModel.removePolygonFilter();
-    this._internalModel.set('sync_on_polygon_change', false);
-  }
-};
-
-Base.prototype._getValidationError = function (code) {
-  return new CartoValidationError('dataview', code);
-};
-
-// Internal public methods
-
-Base.prototype.$setEngine = function (engine) {
-  this._source.$setEngine(engine);
-  if (!this._internalModel) {
-    this._createInternalModel(engine);
-    this._listenToInternalModelSharedEvents();
-  }
-};
-
-Base.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
-
-module.exports = Base;
-
-/**
- * Fired when the column name has changed. Handler gets a parameter with the new column name.
- *
- * @event columnChanged
- * @type {string}
- * @api
- */
-
-/**
- * Fired when the status has changed. Handler gets a parameter with the new status.
- *
- * Contains a single argument with the new status.
- *
- * @event statusChanged
- * @type {carto.dataview.status}
- * @api
- */
-
-/**
- * Fired when the data has changed. Handler gets an object with specific data for the type
- * of dataview that triggered the event.
- *
- * @event dataChanged
- * @type {carto.dataview.CategoryData|carto.dataview.FormulaData|carto.dataview.HistogramData|carto.dataview.TimeSeriesData}
- * @api
- */
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(6);
-var getObjectValue = __webpack_require__(95);
-
-var ALLOWED_OPTIONS = ['includeNull'];
-var DEFAULT_JOIN_OPERATOR = 'AND';
-
-/**
- * SQL Filter
- *
- * A SQL filter is the base for all the SQL filters such as the Category Filter or the Range filter
- *
- * @param {string} column - The filtering will be performed against this column
- * @param {object} [options={}]
- * @param {boolean} [options.includeNull] - Include null rows when returning data
- *
- * @class SQLBase
- * @extends carto.filter.Base
- * @memberof carto.filter
- */
-
-var SQLBase = function (_Base) {
-  _inherits(SQLBase, _Base);
-
-  function SQLBase(column) {
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    _classCallCheck(this, SQLBase);
-
-    var _this = _possibleConstructorReturn(this, (SQLBase.__proto__ || Object.getPrototypeOf(SQLBase)).call(this));
-
-    _this._checkColumn(column);
-    _this._checkOptions(options);
-
-    _this._column = column;
-    _this._filters = {};
-    _this._options = options;
-    return _this;
-  }
-
-  /**
-   * Set any of the filter conditions, overwriting the previous one.
-   * @param {string} filterType - The filter type that you want to set
-   * @param {string} filterValue - The value of the filter
-   */
-
-
-  _createClass(SQLBase, [{
-    key: 'set',
-    value: function set(filterType, filterValue) {
-      if (!filterType || !filterValue || !_.isString(filterType)) {
-        return;
-      }
-
-      var newFilter = _defineProperty({}, filterType, filterValue);
-
-      this._checkFilters(newFilter);
-      this._filters[filterType] = filterValue;
-
-      this.trigger('change:filters', newFilter);
-    }
-
-    /**
-     * Set the filter conditions, overriding all the previous ones.
-     * @param {object} filters - The object containing all the new filters to apply.
-     */
-
-  }, {
-    key: 'setFilters',
-    value: function setFilters(filters) {
-      if (!filters || !_.isObject(filters)) {
-        return;
-      }
-
-      this._checkFilters(filters);
-      this._filters = filters;
-
-      this.trigger('change:filters', filters);
-    }
-
-    /**
-     * Remove all conditions from current filter
-     */
-
-  }, {
-    key: 'resetFilters',
-    value: function resetFilters() {
-      this.setFilters({});
-    }
-  }, {
-    key: '$getSQL',
-    value: function $getSQL() {
-      var _this2 = this;
-
-      var filters = Object.keys(this._filters);
-      var sql = filters.map(function (filterType) {
-        return _this2._interpolateFilter(filterType, _this2._filters[filterType]);
-      }).filter(function (filter) {
-        return Boolean(filter);
-      }).join(' ' + DEFAULT_JOIN_OPERATOR + ' ');
-
-      if (this._options.includeNull) {
-        this._includeNullInQuery(sql);
-      }
-
-      if (filters.length > 1) {
-        return '(' + sql + ')';
-      }
-
-      return sql;
-    }
-  }, {
-    key: '_checkColumn',
-    value: function _checkColumn(column) {
-      if (_.isUndefined(column)) {
-        throw this._getValidationError('columnRequired');
-      }
-
-      if (!_.isString(column)) {
-        throw this._getValidationError('columnString');
-      }
-
-      if (_.isEmpty(column)) {
-        throw this._getValidationError('emptyColumn');
-      }
-    }
-  }, {
-    key: '_checkFilters',
-    value: function _checkFilters(filters) {
-      var _this3 = this;
-
-      Object.keys(filters).forEach(function (filter) {
-        var isFilterValid = _.contains(_this3.ALLOWED_FILTERS, filter);
-
-        if (!isFilterValid) {
-          throw _this3._getValidationError('invalidFilter' + filter);
-        }
-
-        var parameters = _this3.PARAMETER_SPECIFICATION[filter].parameters;
-        var haveCorrectType = parameters.every(function (parameter) {
-          var parameterValue = getObjectValue(filters, parameter.name);
-          return parameter.allowedTypes.some(function (type) {
-            return parameterIsOfType(type, parameterValue);
-          });
-        });
-
-        if (!haveCorrectType) {
-          throw _this3._getValidationError('invalidParameterType' + filter);
-        }
-      });
-    }
-  }, {
-    key: '_checkOptions',
-    value: function _checkOptions(options) {
-      var _this4 = this;
-
-      Object.keys(options).forEach(function (option) {
-        var isOptionValid = _.contains(ALLOWED_OPTIONS, option);
-
-        if (!isOptionValid) {
-          throw _this4._getValidationError('invalidOption' + option);
-        }
-      });
-    }
-  }, {
-    key: '_convertValueToSQLString',
-    value: function _convertValueToSQLString(filterValue) {
-      var _this5 = this;
-
-      if (_.isDate(filterValue)) {
-        return '\'' + filterValue.toISOString() + '\'';
-      }
-
-      if (_.isArray(filterValue)) {
-        return filterValue.map(function (value) {
-          return _this5._convertValueToSQLString(value);
-        }).join(',');
-      }
-
-      if (_.isObject(filterValue)) {
-        Object.keys(filterValue).forEach(function (key) {
-          if (key === 'query') {
-            return;
-          }
-
-          filterValue[key] = _this5._convertValueToSQLString(filterValue[key]);
-        });
-
-        return filterValue;
-      }
-
-      if (_.isNumber(filterValue)) {
-        return filterValue;
-      }
-
-      return '\'' + normalizeString(filterValue.toString()) + '\'';
-    }
-  }, {
-    key: '_interpolateFilter',
-    value: function _interpolateFilter(filterType, filterValues) {
-      var sqlString = _.template(this.SQL_TEMPLATES[filterType]);
-      var value = this._convertValueToSQLString(filterValues);
-
-      return sqlString({ column: this._column, value: value });
-    }
-  }, {
-    key: '_includeNullInQuery',
-    value: function _includeNullInQuery(sql) {
-      var filters = Object.keys(this._filters);
-
-      if (filters.length > 1) {
-        sql = '(' + sql + ')';
-      }
-
-      return '(' + sql + ' OR ' + this._column + ' IS NULL)';
-    }
-  }]);
-
-  return SQLBase;
-}(Base);
-
-var parameterIsOfType = function parameterIsOfType(parameterType, parameterValue) {
-  return _['is' + parameterType](parameterValue);
-};
-
-var normalizeString = function normalizeString(value) {
-  return value.replace(/\n/g, '\\n').replace(/\"/g, '\\"').replace(/'/g, "''");
-};
-
-module.exports = SQLBase;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var CartoError = __webpack_require__(4);
-var FiltersCollection = __webpack_require__(22);
-var EVENTS = __webpack_require__(14);
-
-/**
- * Base data source object.
- *
- * The methods listed in the {@link carto.source.Base|source.Base} object are available in all source objects.
- *
- * Use a source to reference the data used in a {@link carto.dataview.Base|dataview} or a {@link carto.layer.Base|layer}.
- *
- * {@link carto.source.Base} should not be used directly use {@link carto.source.Dataset} or {@link carto.source.SQL} instead.
- *
- * @constructor
- * @fires error
- * @abstract
- * @memberof carto.source
- * @api
- */
-function Base() {
-  this._id = Base.$generateId();
-  this._hasFiltersApplied = false;
-  this._appliedFilters = new FiltersCollection();
-}
-
-_.extend(Base.prototype, Backbone.Events);
-
-/**
- * The instance id will be autogenerated by incrementing this variable.
- */
-Base.$nextId = 0;
-
-/**
- * Static funciton used internally to autogenerate source ids.
- */
-Base.$generateId = function () {
-  return 'S' + ++Base.$nextId;
-};
-
-/**
- * Return a unique autogenerated id.
- *
- * @return {string} Unique autogenerated id
- */
-Base.prototype.getId = function () {
-  return this._id;
-};
-
-Base.prototype._createInternalModel = function (engine) {
-  throw new Error('_createInternalModel must be implemented by the particular source');
-};
-
-/**
- * Fire a CartoError event from a internalError
- */
-Base.prototype._triggerError = function (model, internalError) {
-  this.trigger(EVENTS.ERROR, new CartoError(internalError, { analysis: this }));
-};
-
-Base.prototype.$setEngine = function (engine) {
-  if (!this._internalModel) {
-    this._internalModel = this._createInternalModel(engine);
-    this._internalModel.on('change:error', this._triggerError, this);
-  }
-};
-
-/**
- * Return the engine form the source internal model
- */
-Base.prototype.$getEngine = function (engine) {
-  if (this._internalModel) {
-    return this._internalModel._engine;
-  }
-};
-
-/**
- * Return the real CARTO.js model used by the source.
- */
-Base.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
-
-/**
- * Get added filters
- *
- * @returns {Array} Added filters
- * @api
- */
-Base.prototype.getFilters = function () {
-  return this._appliedFilters.getFilters();
-};
-
-/**
- * Add new filter to the source
- *
- * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
- * @api
- */
-Base.prototype.addFilter = function (filter) {
-  this._hasFiltersApplied = true;
-  this._appliedFilters.addFilter(filter);
-};
-
-/**
- * Add new filters to the source
- *
- * @param {Array<carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR>} filters
- * @api
- */
-Base.prototype.addFilters = function (filters) {
-  var _this = this;
-
-  filters.forEach(function (filter) {
-    return _this.addFilter(filter);
-  });
-};
-
-/**
- * Remove an existing filter from source
- *
- * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
- * @api
- */
-Base.prototype.removeFilter = function (filter) {
-  this._appliedFilters.removeFilter(filter);
-  this._hasFiltersApplied = Boolean(this._appliedFilters.count());
-};
-
-/**
- * Remove existing filters from source
- *
- * @param {Array<carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR>} filters
- * @api
- */
-Base.prototype.removeFilters = function (filters) {
-  var _this2 = this;
-
-  filters.forEach(function (filter) {
-    return _this2.removeFilter(filter);
-  });
-};
-
-module.exports = Base;
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var Engine = __webpack_require__(44);
-
-var NON_RESETEABLE_DEFAULT_ATTRS = ['state', 'visible'];
-
-var LegendModelBase = Backbone.Model.extend({
-  defaults: function defaults() {
-    return {
-      visible: false,
-      title: '',
-      preHTMLSnippet: '',
-      postHTMLSnippet: '',
-      state: this.constructor.STATE_LOADING
-    };
-  },
-
-  initialize: function initialize(attrs, deps) {
-    if (!deps.engine) throw new Error('engine is required');
-
-    deps.engine.on(Engine.Events.RELOAD_STARTED, this._onEngineReloadStarted, this);
-  },
-
-  _onEngineReloadStarted: function _onEngineReloadStarted() {
-    this.set('state', this.constructor.STATE_LOADING);
-  },
-
-  isLoading: function isLoading() {
-    return this.get('state') === this.constructor.STATE_LOADING;
-  },
-
-  isError: function isError() {
-    return this.get('state') === this.constructor.STATE_ERROR;
-  },
-
-  isSuccess: function isSuccess() {
-    return this.get('state') === this.constructor.STATE_SUCCESS;
-  },
-
-  show: function show() {
-    this.set('visible', true);
-  },
-
-  hide: function hide() {
-    this.set('visible', false);
-  },
-
-  isVisible: function isVisible() {
-    return this.get('visible');
-  },
-
-  update: function update(attrs) {
-    this.set(attrs);
-  },
-
-  getNonResettableAttrs: function getNonResettableAttrs() {
-    return NON_RESETEABLE_DEFAULT_ATTRS;
-  },
-
-  reset: function reset() {
-    var defaults = _.omit(this.defaults(), this.getNonResettableAttrs());
-    this.set(defaults);
-  },
-
-  isAvailable: function isAvailable() {
-    return false;
-  }
-}, {
-  STATE_LOADING: 'loading',
-  STATE_SUCCESS: 'success',
-  STATE_ERROR: 'error'
-});
-
-module.exports = LegendModelBase;
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Fired when something went wrong on the server side.
- *
- * @event error
- * @type {CartoError}
- * @api
- */
-
-/**
- * Fired when a request to the server completed successfully.
- *
- * @event success
- * @api
- */
-
-module.exports = {
-  SUCCESS: 'success',
-  ERROR: 'error'
-};
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-
-var PROPERTY_KEY = 'prop';
-var MAPPING_KEY = 'mapping';
-
-var RANGE_FILTER_TYPE = 'range';
-var CATEGORY_FILTER_TYPE = 'category';
-var DEFAULT_FILTER_TYPE = 'default';
-
-var Rule = function Rule(rule) {
-  this._rule = rule;
-};
-
-Rule.prototype.matchesAnyProperty = function (props) {
-  return this._matches(this._rule[PROPERTY_KEY], props);
-};
-
-Rule.prototype.matchesAnyMapping = function (mappings) {
-  return this._matches(this._rule[MAPPING_KEY], mappings);
-};
-
-Rule.prototype._matches = function (value, acceptedValues) {
-  if (_.isString(acceptedValues)) {
-    acceptedValues = [acceptedValues];
-  }
-  return _.contains(acceptedValues, value);
-};
-
-Rule.prototype.getBucketsWithRangeFilter = function () {
-  return this._getBucketsByFilterType(RANGE_FILTER_TYPE);
-};
-
-Rule.prototype.getBucketsWithCategoryFilter = function () {
-  return this._getBucketsByFilterType(CATEGORY_FILTER_TYPE);
-};
-
-Rule.prototype.getBucketsWithDefaultFilter = function () {
-  return this._getBucketsByFilterType(DEFAULT_FILTER_TYPE);
-};
-
-Rule.prototype._getBucketsByFilterType = function (filterType) {
-  if (this._rule) {
-    return _.select(this._rule.buckets, function (bucket) {
-      return bucket.filter.type === filterType;
-    });
-  }
-  return [];
-};
-
-Rule.prototype.getColumn = function () {
-  return this._rule.column;
-};
-
-Rule.prototype.getMapping = function () {
-  return this._rule.mapping;
-};
-
-Rule.prototype.getProperty = function () {
-  return this._rule.prop;
-};
-
-Rule.prototype.getFilterAvg = function () {
-  return this._rule.stats.filter_avg;
-};
-
-module.exports = Rule;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var TILED_LAYER_TYPE = 'Tiled';
-var PLAIN_LAYER_TYPE = 'Plain';
-var WMS_LAYER_TYPE = 'WMS';
-var GMAPS_BASE_LAYER_TYPE = 'GMapsBase';
-var CARTODB_LAYER_TYPE = 'CartoDB';
-var TORQUE_LAYER_TYPE = 'torque';
-
-var isLayerOfType = function isLayerOfType(layerModel, layerType) {
-  return layerModel.get('type').toLowerCase() === layerType.toLowerCase();
-};
-
-module.exports = {
-  isTiledLayer: function isTiledLayer(layerModel) {
-    return isLayerOfType(layerModel, TILED_LAYER_TYPE);
-  },
-
-  isPlainLayer: function isPlainLayer(layerModel) {
-    return isLayerOfType(layerModel, PLAIN_LAYER_TYPE);
-  },
-
-  isWMSLayer: function isWMSLayer(layerModel) {
-    return isLayerOfType(layerModel, WMS_LAYER_TYPE);
-  },
-
-  isGoogleMapsBaseLayer: function isGoogleMapsBaseLayer(layerModel) {
-    return isLayerOfType(layerModel, GMAPS_BASE_LAYER_TYPE);
-  },
-
-  isCartoDBLayer: function isCartoDBLayer(layerModel) {
-    return isLayerOfType(layerModel, CARTODB_LAYER_TYPE);
-  },
-
-  isTorqueLayer: function isTorqueLayer(layerModel) {
-    return isLayerOfType(layerModel, TORQUE_LAYER_TYPE);
-  }
-};
-
-/***/ }),
-/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -5908,7 +4809,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 	"use strict";
 
-	if ( typeof module === "object" && typeof module.exports === "object" ) {
+	if (  true && typeof module.exports === "object" ) {
 
 		// For CommonJS and CommonJS-like environments where a proper `window`
 		// is present, execute the factory and get jQuery.
@@ -16493,30 +15394,1129 @@ return jQuery;
 
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports) {
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var g;
+"use strict";
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
 
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1, eval)("this");
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
+var TILED_LAYER_TYPE = 'Tiled';
+var PLAIN_LAYER_TYPE = 'Plain';
+var WMS_LAYER_TYPE = 'WMS';
+var GMAPS_BASE_LAYER_TYPE = 'GMapsBase';
+var CARTODB_LAYER_TYPE = 'CartoDB';
+var TORQUE_LAYER_TYPE = 'torque';
+
+var isLayerOfType = function isLayerOfType(layerModel, layerType) {
+  return layerModel.get('type').toLowerCase() === layerType.toLowerCase();
+};
+
+module.exports = {
+  isTiledLayer: function isTiledLayer(layerModel) {
+    return isLayerOfType(layerModel, TILED_LAYER_TYPE);
+  },
+
+  isPlainLayer: function isPlainLayer(layerModel) {
+    return isLayerOfType(layerModel, PLAIN_LAYER_TYPE);
+  },
+
+  isWMSLayer: function isWMSLayer(layerModel) {
+    return isLayerOfType(layerModel, WMS_LAYER_TYPE);
+  },
+
+  isGoogleMapsBaseLayer: function isGoogleMapsBaseLayer(layerModel) {
+    return isLayerOfType(layerModel, GMAPS_BASE_LAYER_TYPE);
+  },
+
+  isCartoDBLayer: function isCartoDBLayer(layerModel) {
+    return isLayerOfType(layerModel, CARTODB_LAYER_TYPE);
+  },
+
+  isTorqueLayer: function isTorqueLayer(layerModel) {
+    return isLayerOfType(layerModel, TORQUE_LAYER_TYPE);
+  }
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+
+var PROPERTY_KEY = 'prop';
+var MAPPING_KEY = 'mapping';
+
+var RANGE_FILTER_TYPE = 'range';
+var CATEGORY_FILTER_TYPE = 'category';
+var DEFAULT_FILTER_TYPE = 'default';
+
+var Rule = function Rule(rule) {
+  this._rule = rule;
+};
+
+Rule.prototype.matchesAnyProperty = function (props) {
+  return this._matches(this._rule[PROPERTY_KEY], props);
+};
+
+Rule.prototype.matchesAnyMapping = function (mappings) {
+  return this._matches(this._rule[MAPPING_KEY], mappings);
+};
+
+Rule.prototype._matches = function (value, acceptedValues) {
+  if (_.isString(acceptedValues)) {
+    acceptedValues = [acceptedValues];
+  }
+  return _.contains(acceptedValues, value);
+};
+
+Rule.prototype.getBucketsWithRangeFilter = function () {
+  return this._getBucketsByFilterType(RANGE_FILTER_TYPE);
+};
+
+Rule.prototype.getBucketsWithCategoryFilter = function () {
+  return this._getBucketsByFilterType(CATEGORY_FILTER_TYPE);
+};
+
+Rule.prototype.getBucketsWithDefaultFilter = function () {
+  return this._getBucketsByFilterType(DEFAULT_FILTER_TYPE);
+};
+
+Rule.prototype._getBucketsByFilterType = function (filterType) {
+  if (this._rule) {
+    return _.select(this._rule.buckets, function (bucket) {
+      return bucket.filter.type === filterType;
+    });
+  }
+  return [];
+};
+
+Rule.prototype.getColumn = function () {
+  return this._rule.column;
+};
+
+Rule.prototype.getMapping = function () {
+  return this._rule.mapping;
+};
+
+Rule.prototype.getProperty = function () {
+  return this._rule.prop;
+};
+
+Rule.prototype.getFilterAvg = function () {
+  return this._rule.stats.filter_avg;
+};
+
+module.exports = Rule;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Fired when something went wrong on the server side.
+ *
+ * @event error
+ * @type {CartoError}
+ * @api
+ */
+
+/**
+ * Fired when a request to the server completed successfully.
+ *
+ * @event success
+ * @api
+ */
+
+module.exports = {
+  SUCCESS: 'success',
+  ERROR: 'error'
+};
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var Engine = __webpack_require__(31);
+
+var NON_RESETEABLE_DEFAULT_ATTRS = ['state', 'visible'];
+
+var LegendModelBase = Backbone.Model.extend({
+  defaults: function defaults() {
+    return {
+      visible: false,
+      title: '',
+      preHTMLSnippet: '',
+      postHTMLSnippet: '',
+      state: this.constructor.STATE_LOADING
+    };
+  },
+
+  initialize: function initialize(attrs, deps) {
+    if (!deps.engine) throw new Error('engine is required');
+
+    deps.engine.on(Engine.Events.RELOAD_STARTED, this._onEngineReloadStarted, this);
+  },
+
+  _onEngineReloadStarted: function _onEngineReloadStarted() {
+    this.set('state', this.constructor.STATE_LOADING);
+  },
+
+  isLoading: function isLoading() {
+    return this.get('state') === this.constructor.STATE_LOADING;
+  },
+
+  isError: function isError() {
+    return this.get('state') === this.constructor.STATE_ERROR;
+  },
+
+  isSuccess: function isSuccess() {
+    return this.get('state') === this.constructor.STATE_SUCCESS;
+  },
+
+  show: function show() {
+    this.set('visible', true);
+  },
+
+  hide: function hide() {
+    this.set('visible', false);
+  },
+
+  isVisible: function isVisible() {
+    return this.get('visible');
+  },
+
+  update: function update(attrs) {
+    this.set(attrs);
+  },
+
+  getNonResettableAttrs: function getNonResettableAttrs() {
+    return NON_RESETEABLE_DEFAULT_ATTRS;
+  },
+
+  reset: function reset() {
+    var defaults = _.omit(this.defaults(), this.getNonResettableAttrs());
+    this.set(defaults);
+  },
+
+  isAvailable: function isAvailable() {
+    return false;
+  }
+}, {
+  STATE_LOADING: 'loading',
+  STATE_SUCCESS: 'success',
+  STATE_ERROR: 'error'
+});
+
+module.exports = LegendModelBase;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var CartoError = __webpack_require__(4);
+var FiltersCollection = __webpack_require__(27);
+var EVENTS = __webpack_require__(14);
+
+/**
+ * Base data source object.
+ *
+ * The methods listed in the {@link carto.source.Base|source.Base} object are available in all source objects.
+ *
+ * Use a source to reference the data used in a {@link carto.dataview.Base|dataview} or a {@link carto.layer.Base|layer}.
+ *
+ * {@link carto.source.Base} should not be used directly use {@link carto.source.Dataset} or {@link carto.source.SQL} instead.
+ *
+ * @constructor
+ * @fires error
+ * @abstract
+ * @memberof carto.source
+ * @api
+ */
+function Base() {
+  this._id = Base.$generateId();
+  this._hasFiltersApplied = false;
+  this._appliedFilters = new FiltersCollection();
 }
 
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
+_.extend(Base.prototype, Backbone.Events);
 
-module.exports = g;
+/**
+ * The instance id will be autogenerated by incrementing this variable.
+ */
+Base.$nextId = 0;
 
+/**
+ * Static funciton used internally to autogenerate source ids.
+ */
+Base.$generateId = function () {
+  return 'S' + ++Base.$nextId;
+};
+
+/**
+ * Return a unique autogenerated id.
+ *
+ * @return {string} Unique autogenerated id
+ */
+Base.prototype.getId = function () {
+  return this._id;
+};
+
+Base.prototype._createInternalModel = function (engine) {
+  throw new Error('_createInternalModel must be implemented by the particular source');
+};
+
+/**
+ * Fire a CartoError event from a internalError
+ */
+Base.prototype._triggerError = function (model, internalError) {
+  this.trigger(EVENTS.ERROR, new CartoError(internalError, { analysis: this }));
+};
+
+Base.prototype.$setEngine = function (engine) {
+  if (!this._internalModel) {
+    this._internalModel = this._createInternalModel(engine);
+    this._internalModel.on('change:error', this._triggerError, this);
+  }
+};
+
+/**
+ * Return the engine form the source internal model
+ */
+Base.prototype.$getEngine = function (engine) {
+  if (this._internalModel) {
+    return this._internalModel._engine;
+  }
+};
+
+/**
+ * Return the real CARTO.js model used by the source.
+ */
+Base.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+/**
+ * Get added filters
+ *
+ * @returns {Array} Added filters
+ * @api
+ */
+Base.prototype.getFilters = function () {
+  return this._appliedFilters.getFilters();
+};
+
+/**
+ * Add new filter to the source
+ *
+ * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
+ * @api
+ */
+Base.prototype.addFilter = function (filter) {
+  this._hasFiltersApplied = true;
+  this._appliedFilters.addFilter(filter);
+};
+
+/**
+ * Add new filters to the source
+ *
+ * @param {Array<carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR>} filters
+ * @api
+ */
+Base.prototype.addFilters = function (filters) {
+  var _this = this;
+
+  filters.forEach(function (filter) {
+    return _this.addFilter(filter);
+  });
+};
+
+/**
+ * Remove an existing filter from source
+ *
+ * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
+ * @api
+ */
+Base.prototype.removeFilter = function (filter) {
+  this._appliedFilters.removeFilter(filter);
+  this._hasFiltersApplied = Boolean(this._appliedFilters.count());
+};
+
+/**
+ * Remove existing filters from source
+ *
+ * @param {Array<carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR>} filters
+ * @api
+ */
+Base.prototype.removeFilters = function (filters) {
+  var _this2 = this;
+
+  filters.forEach(function (filter) {
+    return _this2.removeFilter(filter);
+  });
+};
+
+module.exports = Base;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(7);
+var getObjectValue = __webpack_require__(101);
+
+var ALLOWED_OPTIONS = ['includeNull'];
+var DEFAULT_JOIN_OPERATOR = 'AND';
+
+/**
+ * SQL Filter
+ *
+ * A SQL filter is the base for all the SQL filters such as the Category Filter or the Range filter
+ *
+ * @param {string} column - The filtering will be performed against this column
+ * @param {object} [options={}]
+ * @param {boolean} [options.includeNull] - Include null rows when returning data
+ *
+ * @class SQLBase
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ */
+
+var SQLBase = function (_Base) {
+  _inherits(SQLBase, _Base);
+
+  function SQLBase(column) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    _classCallCheck(this, SQLBase);
+
+    var _this = _possibleConstructorReturn(this, (SQLBase.__proto__ || Object.getPrototypeOf(SQLBase)).call(this));
+
+    _this._checkColumn(column);
+    _this._checkOptions(options);
+
+    _this._column = column;
+    _this._filters = {};
+    _this._options = options;
+    return _this;
+  }
+
+  /**
+   * Set any of the filter conditions, overwriting the previous one.
+   * @param {string} filterType - The filter type that you want to set
+   * @param {string} filterValue - The value of the filter
+   */
+
+
+  _createClass(SQLBase, [{
+    key: 'set',
+    value: function set(filterType, filterValue) {
+      if (!filterType || !filterValue || !_.isString(filterType)) {
+        return;
+      }
+
+      var newFilter = _defineProperty({}, filterType, filterValue);
+
+      this._checkFilters(newFilter);
+      this._filters[filterType] = filterValue;
+
+      this.trigger('change:filters', newFilter);
+    }
+
+    /**
+     * Set the filter conditions, overriding all the previous ones.
+     * @param {object} filters - The object containing all the new filters to apply.
+     */
+
+  }, {
+    key: 'setFilters',
+    value: function setFilters(filters) {
+      if (!filters || !_.isObject(filters)) {
+        return;
+      }
+
+      this._checkFilters(filters);
+      this._filters = filters;
+
+      this.trigger('change:filters', filters);
+    }
+
+    /**
+     * Remove all conditions from current filter
+     */
+
+  }, {
+    key: 'resetFilters',
+    value: function resetFilters() {
+      this.setFilters({});
+    }
+  }, {
+    key: '$getSQL',
+    value: function $getSQL() {
+      var _this2 = this;
+
+      var filters = Object.keys(this._filters);
+      var sql = filters.map(function (filterType) {
+        return _this2._interpolateFilter(filterType, _this2._filters[filterType]);
+      }).filter(function (filter) {
+        return Boolean(filter);
+      }).join(' ' + DEFAULT_JOIN_OPERATOR + ' ');
+
+      if (this._options.includeNull) {
+        this._includeNullInQuery(sql);
+      }
+
+      if (filters.length > 1) {
+        return '(' + sql + ')';
+      }
+
+      return sql;
+    }
+  }, {
+    key: '_checkColumn',
+    value: function _checkColumn(column) {
+      if (_.isUndefined(column)) {
+        throw this._getValidationError('columnRequired');
+      }
+
+      if (!_.isString(column)) {
+        throw this._getValidationError('columnString');
+      }
+
+      if (_.isEmpty(column)) {
+        throw this._getValidationError('emptyColumn');
+      }
+    }
+  }, {
+    key: '_checkFilters',
+    value: function _checkFilters(filters) {
+      var _this3 = this;
+
+      Object.keys(filters).forEach(function (filter) {
+        var isFilterValid = _.contains(_this3.ALLOWED_FILTERS, filter);
+
+        if (!isFilterValid) {
+          throw _this3._getValidationError('invalidFilter' + filter);
+        }
+
+        var parameters = _this3.PARAMETER_SPECIFICATION[filter].parameters;
+        var haveCorrectType = parameters.every(function (parameter) {
+          var parameterValue = getObjectValue(filters, parameter.name);
+          return parameter.allowedTypes.some(function (type) {
+            return parameterIsOfType(type, parameterValue);
+          });
+        });
+
+        if (!haveCorrectType) {
+          throw _this3._getValidationError('invalidParameterType' + filter);
+        }
+      });
+    }
+  }, {
+    key: '_checkOptions',
+    value: function _checkOptions(options) {
+      var _this4 = this;
+
+      Object.keys(options).forEach(function (option) {
+        var isOptionValid = _.contains(ALLOWED_OPTIONS, option);
+
+        if (!isOptionValid) {
+          throw _this4._getValidationError('invalidOption' + option);
+        }
+      });
+    }
+  }, {
+    key: '_convertValueToSQLString',
+    value: function _convertValueToSQLString(filterValue) {
+      var _this5 = this;
+
+      if (_.isDate(filterValue)) {
+        return '\'' + filterValue.toISOString() + '\'';
+      }
+
+      if (_.isArray(filterValue)) {
+        return filterValue.map(function (value) {
+          return _this5._convertValueToSQLString(value);
+        }).join(',');
+      }
+
+      if (_.isObject(filterValue)) {
+        Object.keys(filterValue).forEach(function (key) {
+          if (key === 'query') {
+            return;
+          }
+
+          filterValue[key] = _this5._convertValueToSQLString(filterValue[key]);
+        });
+
+        return filterValue;
+      }
+
+      if (_.isNumber(filterValue)) {
+        return filterValue;
+      }
+
+      return '\'' + normalizeString(filterValue.toString()) + '\'';
+    }
+  }, {
+    key: '_interpolateFilter',
+    value: function _interpolateFilter(filterType, filterValues) {
+      var sqlString = _.template(this.SQL_TEMPLATES[filterType]);
+      var value = this._convertValueToSQLString(filterValues);
+
+      return sqlString({ column: this._column, value: value });
+    }
+  }, {
+    key: '_includeNullInQuery',
+    value: function _includeNullInQuery(sql) {
+      var filters = Object.keys(this._filters);
+
+      if (filters.length > 1) {
+        sql = '(' + sql + ')';
+      }
+
+      return '(' + sql + ' OR ' + this._column + ' IS NULL)';
+    }
+  }]);
+
+  return SQLBase;
+}(Base);
+
+var parameterIsOfType = function parameterIsOfType(parameterType, parameterValue) {
+  return _['is' + parameterType](parameterValue);
+};
+
+var normalizeString = function normalizeString(value) {
+  return value.replace(/\n/g, '\\n').replace(/\"/g, '\\"').replace(/'/g, "''");
+};
+
+module.exports = SQLBase;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var status = __webpack_require__(5).status;
+var SourceBase = __webpack_require__(16);
+var FilterBase = __webpack_require__(7);
+var SQLFilterBase = __webpack_require__(17);
+var SpatialFilterTypes = __webpack_require__(8);
+var CartoError = __webpack_require__(4);
+var CartoValidationError = __webpack_require__(3);
+
+/**
+ * Base class for dataview objects.
+ *
+ * Dataviews are a way to extract data from a CARTO account in predefined ways
+ * (eg: a list of categories, the result of a formula operation, etc.).
+ *
+ * **This object should not be used directly**
+ *
+ * The data used in a dataviews cames from a {@link carto.source.Base|source} that might change
+ * due to different reasons (eg: SQL query changed).
+ *
+ * When dataview data changes the dataview will trigger events to notify subscribers when new data is available.
+ *
+ * @example
+ * // Keep your widget data sync. Remember each dataview has his own data format.
+ * dataview.on('dataChanged', newData => {
+ *  renderWidget(newData);
+ * })
+ *
+ * @constructor
+ * @abstract
+ * @memberof carto.dataview
+ * @fires dataChanged
+ * @fires columnChanged
+ * @fires statusChanged
+ * @fires error
+ * @api
+ */
+function Base() {}
+
+_.extend(Base.prototype, Backbone.Events);
+
+/**
+ * Return the current dataview status.
+ *
+ * @return {carto.dataview.status} Current dataview status
+ * @api
+ */
+Base.prototype.getStatus = function () {
+  return this._status;
+};
+
+/**
+ * Return true is the current status is loading.
+ *
+ * @return {boolean}
+ * @api
+ */
+Base.prototype.isLoading = function () {
+  return this._status === status.LOADING;
+};
+
+/**
+ * Return true is the current status is loaded.
+ *
+ * @return {boolean}
+ * @api
+ */
+Base.prototype.isLoaded = function () {
+  return this._status === status.LOADED;
+};
+
+/**
+ * Return true is the current status is error.
+ *
+ * @return {boolean}
+ * @api
+ */
+Base.prototype.hasError = function () {
+  return this._status === status.ERROR;
+};
+
+/**
+ * Enable the dataview. When enabled, a dataview fetches new data
+ * when the map changes (changing map configuration or changing map
+ * bounding box).
+ *
+ * @return {carto.dataview.Base} this
+ * @api
+ */
+Base.prototype.enable = function () {
+  return this._setEnabled(true);
+};
+
+/**
+ * Disable the dataview. This stops the dataview from fetching new
+ * data when there is a map change (like changing map configuration or changing map
+ * bounding box).
+ *
+ * @return {carto.dataview.Base} this
+ * @api
+ */
+Base.prototype.disable = function () {
+  return this._setEnabled(false);
+};
+
+/**
+ * Return true if the dataview is enabled.
+ *
+ * @return {boolean}
+ * @api
+ */
+Base.prototype.isEnabled = function () {
+  return this._enabled;
+};
+
+/**
+ * Return the current source where the dataview gets the data from.
+ *
+ * @return {carto.source.Base} Current source object
+ * @api
+ */
+Base.prototype.getSource = function () {
+  return this._source;
+};
+
+/**
+ * Set the dataview column.
+ *
+ * @param  {string} column
+ * @fires columnChanged
+ * @return {carto.dataview.Base} this
+ * @api
+ */
+Base.prototype.setColumn = function (column) {
+  this._checkColumn(column);
+  this._column = column;
+  if (this._internalModel) {
+    this._internalModel.set('column', this._column);
+  }
+  return this;
+};
+
+/**
+ * Return the current dataview column where the dataview is applied.
+ *
+ * @return {string} Current dataview column
+ * @api
+ */
+Base.prototype.getColumn = function () {
+  return this._column;
+};
+
+/**
+ * Add a {@link carto.filter.Base|filter}.
+ *
+ * @param  {carto.filter.Base} filter
+ * @return {carto.dataview.Base} this
+ * @api
+ */
+Base.prototype.addFilter = function (filter) {
+  this._checkFilter(filter);
+  this._addSpatialFilter(filter);
+  return this;
+};
+
+/**
+ * Remove a {@link carto.filter.Base|filter}.
+ *
+ * @param  {carto.filter.Base} filter
+ * @return {carto.dataview.Base} this
+ * @api
+ */
+Base.prototype.removeFilter = function (filter) {
+  this._checkFilter(filter);
+  this._removeSpatialFilter(filter);
+  return this;
+};
+
+/**
+ * Check if a {@link carto.filter.Base|filter} exists in the dataview.
+ *
+ * @param  {carto.filter.Base} filter
+ * @return {carto.dataview.Base} this
+ * @api
+ */
+Base.prototype.hasFilter = function (filter) {
+  this._checkFilter(filter);
+  var hasBBoxFilter = filter === this._boundingBoxFilter && this._internalModel && this._internalModel.get('sync_on_bbox_change');
+
+  var hasCircleFilter = filter === this._circleFilter && this._internalModel && this._internalModel.get('sync_on_circle_change');
+
+  var hasPolygonFilter = filter === this._polygonFilter && this._internalModel && this._internalModel.get('sync_on_polygon_change');
+
+  return hasBBoxFilter || hasCircleFilter || hasPolygonFilter;
+};
+
+Base.prototype.getData = function () {
+  throw new Error('getData must be implemented by the particular dataview.');
+};
+
+// Protected methods
+
+Base.prototype.DEFAULTS = {};
+
+/**
+ * Initialize dataview.
+ *
+ * @param {carto.source.Base} source - The source where the dataview will fetch the data
+ * @param {string} column - The column name to get the data
+ * @param  {object} options - It depends on the instance
+ */
+Base.prototype._initialize = function (source, column, options) {
+  options = _.defaults(options || {}, this.DEFAULTS);
+
+  this._checkSource(source);
+  this._checkColumn(column);
+  this._checkOptions(options);
+
+  this._source = source;
+  this._column = column;
+  this._options = options;
+
+  this._status = status.NOT_LOADED;
+  this._enabled = true;
+  this._boundingBoxFilter = null;
+};
+
+Base.prototype._checkSource = function (source) {
+  if (!(source instanceof SourceBase)) {
+    throw this._getValidationError('sourceRequired');
+  }
+};
+
+Base.prototype._checkColumn = function (column) {
+  if (_.isUndefined(column)) {
+    throw this._getValidationError('columnRequired');
+  }
+  if (!_.isString(column)) {
+    throw this._getValidationError('columnString');
+  }
+  if (_.isEmpty(column)) {
+    throw this._getValidationError('emptyColumn');
+  }
+};
+
+Base.prototype._checkOptions = function (options) {
+  throw new Error('_checkOptions must be implemented by the particular dataview.');
+};
+
+Base.prototype._checkFilter = function (filter) {
+  if (!(filter instanceof FilterBase) || filter instanceof SQLFilterBase) {
+    throw this._getValidationError('filterRequired');
+  }
+};
+
+Base.prototype._createInternalModel = function (engine) {
+  throw new Error('_createInternalModel must be implemented by the particular dataview.');
+};
+
+Base.prototype._setEnabled = function (enabled) {
+  this._enabled = enabled;
+  if (this._internalModel) {
+    this._internalModel.set('enabled', enabled);
+  }
+  return this;
+};
+
+Base.prototype._listenToInternalModelSharedEvents = function () {
+  if (this._internalModel) {
+    this.listenTo(this._internalModel, 'change:data', this._onDataChanged);
+    this.listenTo(this._internalModel, 'change:column', this._onColumnChanged);
+    this.listenTo(this._internalModel, 'loading', this._onStatusLoading);
+    this.listenTo(this._internalModel, 'loaded', this._onStatusLoaded);
+    this.listenTo(this._internalModel, 'statusError', this._onStatusError);
+  }
+};
+
+Base.prototype._onDataChanged = function () {
+  this.trigger('dataChanged', this.getData());
+};
+
+Base.prototype._onColumnChanged = function () {
+  if (this._internalModel) {
+    this._column = this._internalModel.get('column');
+  }
+  this.trigger('columnChanged', this._column);
+};
+
+Base.prototype._onStatusLoading = function () {
+  this._status = status.LOADING;
+  this.trigger('statusChanged', this._status);
+};
+
+Base.prototype._onStatusLoaded = function () {
+  this._status = status.LOADED;
+  this.trigger('statusChanged', this._status);
+};
+
+Base.prototype._onStatusError = function (model, error) {
+  this._status = status.ERROR;
+  this.trigger('statusChanged', this._status, error);
+  this._triggerError(this, error);
+};
+
+Base.prototype._changeProperty = function (key, value, internalKey) {
+  var prevValue = this['_' + key];
+  this['_' + key] = value;
+  if (prevValue === value) {
+    return;
+  }
+  this._triggerChange(key, value);
+  if (this._internalModel) {
+    this._internalModel.set(internalKey || key, value);
+  }
+};
+
+Base.prototype._changeProperties = function (properties) {
+  var _this = this;
+
+  _.each(properties, function (value, key) {
+    var prevValue = _this['_' + key];
+
+    if (prevValue !== value) {
+      _this['_' + key] = value;
+      _this._triggerChange(key, value);
+    }
+  });
+
+  if (this._internalModel) {
+    this._internalModel.set(properties);
+  }
+};
+
+Base.prototype._triggerChange = function (key, value) {
+  this.trigger(key + 'Changed', value);
+};
+
+/**
+ * Fire a CartoError event from a internalDataviewError.
+ */
+Base.prototype._triggerError = function (model, internalDataviewError) {
+  this.trigger('error', new CartoError(internalDataviewError));
+};
+
+Base.prototype._addSpatialFilter = function (spatialFilter) {
+  switch (spatialFilter.type) {
+    case SpatialFilterTypes.BBOX:
+      this._addBoundingBoxFilter(spatialFilter);
+      break;
+    case SpatialFilterTypes.CIRCLE:
+      this._addCircleFilter(spatialFilter);
+      break;
+    case SpatialFilterTypes.POLYGON:
+      this._addPolygonFilter(spatialFilter);
+      break;
+    default:
+      throw new Error('The filter is not a valid spatial filter.');
+  }
+};
+
+Base.prototype._removeSpatialFilter = function (spatialFilter) {
+  switch (spatialFilter.type) {
+    case SpatialFilterTypes.BBOX:
+      if (spatialFilter === this._boundingBoxFilter) {
+        this._removeBoundingBoxFilter();
+      }
+      break;
+    case SpatialFilterTypes.CIRCLE:
+      if (spatialFilter === this._circleFilter) {
+        this._removeCircleFilter();
+      }
+      break;
+    case SpatialFilterTypes.POLYGON:
+      if (spatialFilter === this._polygonFilter) {
+        this._removePolygonFilter();
+      }
+      break;
+    default:
+      throw new Error('The filter is not a valid spatial filter.');
+  }
+};
+
+Base.prototype._addBoundingBoxFilter = function (bboxFilter) {
+  if (bboxFilter === this._boundingBoxFilter) {
+    return;
+  }
+
+  this._boundingBoxFilter = bboxFilter;
+  if (this._internalModel) {
+    this._internalModel.addBBoxFilter(this._boundingBoxFilter.$getInternalModel());
+    this._internalModel.set('sync_on_bbox_change', true);
+  }
+};
+
+Base.prototype._removeBoundingBoxFilter = function () {
+  this._boundingBoxFilter = null;
+  if (this._internalModel) {
+    this._internalModel.removeBBoxFilter();
+    this._internalModel.set('sync_on_bbox_change', false);
+  }
+};
+
+Base.prototype._addCircleFilter = function (circleFilter) {
+  if (circleFilter === this._circleFilter) {
+    return;
+  }
+
+  this._circleFilter = circleFilter;
+  if (this._internalModel) {
+    this._internalModel.addCircleFilter(this._circleFilter.$getInternalModel());
+    this._internalModel.set('sync_on_circle_change', true);
+  }
+};
+
+Base.prototype._removeCircleFilter = function () {
+  this._circleFilter = null;
+  if (this._internalModel) {
+    this._internalModel.removeCircleFilter();
+    this._internalModel.set('sync_on_circle_change', false);
+  }
+};
+
+Base.prototype._addPolygonFilter = function (polygonFilter) {
+  if (polygonFilter === this._polygonFilter) {
+    return;
+  }
+
+  this._polygonFilter = polygonFilter;
+  if (this._internalModel) {
+    this._internalModel.addPolygonFilter(this._polygonFilter.$getInternalModel());
+    this._internalModel.set('sync_on_polygon_change', true);
+  }
+};
+
+Base.prototype._removePolygonFilter = function () {
+  this._polygonFilter = null;
+  if (this._internalModel) {
+    this._internalModel.removePolygonFilter();
+    this._internalModel.set('sync_on_polygon_change', false);
+  }
+};
+
+Base.prototype._getValidationError = function (code) {
+  return new CartoValidationError('dataview', code);
+};
+
+// Internal public methods
+
+Base.prototype.$setEngine = function (engine) {
+  this._source.$setEngine(engine);
+  if (!this._internalModel) {
+    this._createInternalModel(engine);
+    this._listenToInternalModelSharedEvents();
+  }
+};
+
+Base.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+module.exports = Base;
+
+/**
+ * Fired when the column name has changed. Handler gets a parameter with the new column name.
+ *
+ * @event columnChanged
+ * @type {string}
+ * @api
+ */
+
+/**
+ * Fired when the status has changed. Handler gets a parameter with the new status.
+ *
+ * Contains a single argument with the new status.
+ *
+ * @event statusChanged
+ * @type {carto.dataview.status}
+ * @api
+ */
+
+/**
+ * Fired when the data has changed. Handler gets an object with specific data for the type
+ * of dataview that triggered the event.
+ *
+ * @event dataChanged
+ * @type {carto.dataview.CategoryData|carto.dataview.FormulaData|carto.dataview.HistogramData|carto.dataview.TimeSeriesData}
+ * @api
+ */
 
 /***/ }),
 /* 19 */
@@ -16526,55 +16526,156 @@ module.exports = g;
 
 
 var _ = __webpack_require__(0);
-var Model = __webpack_require__(2);
-var BOUNDING_BOX_FILTER_WAIT = 350;
+var Backbone = __webpack_require__(1);
+var Analysis = __webpack_require__(9);
+var camshaftReference = __webpack_require__(20);
+var LayerTypes = __webpack_require__(12);
 
-module.exports = Model.extend({
-  initialize: function initialize(mapAdapter) {
-    this._bounds = {};
-
-    if (mapAdapter) {
-      this._mapAdapter = mapAdapter;
-      this.setBounds(this._mapAdapter.getBounds());
-      this._initBinds();
-    }
-  },
-
-  _initBinds: function _initBinds() {
-    this.listenTo(this._mapAdapter, 'boundsChanged', _.debounce(this._boundsChanged, BOUNDING_BOX_FILTER_WAIT));
-  },
-
-  _stopBinds: function _stopBinds() {
-    if (this._mapAdapter) {
-      this.stopListening(this._mapAdapter, 'boundsChanged');
-    }
-  },
-
-  _boundsChanged: function _boundsChanged(bounds) {
-    this.setBounds(bounds);
-  },
-
-  setBounds: function setBounds(bounds) {
-    this._bounds = bounds;
-    this.trigger('boundsChanged', bounds);
-  },
-
-  getBounds: function getBounds() {
-    return this._bounds;
-  },
-
-  areBoundsAvailable: function areBoundsAvailable() {
-    return _.isFinite(this._bounds.west);
-  },
-
-  serialize: function serialize() {
-    return [this._bounds.west, this._bounds.south, this._bounds.east, this._bounds.north].join(',');
-  },
-
-  clean: function clean() {
-    this._stopBinds();
+var AnalysisService = function AnalysisService(opts) {
+  opts = opts || {};
+  if (!opts.engine) {
+    throw new Error('engine is required');
   }
-});
+
+  this._engine = opts.engine;
+  this._apiKey = opts.apiKey;
+  this._authToken = opts.authToken;
+  this._camshaftReference = opts.camshaftReference || camshaftReference; // For testing purposes
+
+  this._analysisNodes = new Backbone.Collection();
+};
+
+/**
+  * Recursively generates a graph of analyses and returns the "root" node.
+  * For each node definition in the analysisDefinition:
+  *  - If a node had been already created this method updates the attributes of the existing node.
+  *  - Otherwise create a new node and index it by id into the `_analysisNodes` object.
+  */
+AnalysisService.prototype.analyse = function (analysisDefinition) {
+  analysisDefinition = _.clone(analysisDefinition);
+  var analysis = this.findNodeById(analysisDefinition.id);
+  var analysisAttrs = this._getAnalysisAttributesFromAnalysisDefinition(analysisDefinition);
+
+  if (analysis) {
+    analysis.set(analysisAttrs);
+  } else {
+    if (this._apiKey) {
+      analysisAttrs.apiKey = this._apiKey;
+    }
+    if (this._authToken) {
+      analysisAttrs.authToken = this._authToken;
+    }
+    analysis = new Analysis(analysisAttrs, {
+      camshaftReference: this._camshaftReference,
+      engine: this._engine
+    });
+
+    this._analysisNodes.add(analysis);
+    analysis.bind('destroy', this._onAnalysisRemoved, this);
+  }
+
+  return analysis;
+};
+
+/**
+ * This function is used to iterate over the analysis graph.
+ * It uses the camshaft reference to extract those parameters which are analysis nodes. And call analyse on them.
+ *
+ * This function wont be needed if we split the analysis definition in `params` and `inputs`. Where all analysis
+ * are garanted to be in the inputs object.
+ */
+AnalysisService.prototype._getAnalysisAttributesFromAnalysisDefinition = function (analysisDefinition) {
+  var analysisNodes = {};
+  var analysisType = analysisDefinition.type;
+  var sourceNamesForAnalysisType = this._camshaftReference.getSourceNamesForAnalysisType(analysisType);
+  _.each(sourceNamesForAnalysisType, function (sourceName) {
+    var sourceParams = analysisDefinition.params[sourceName];
+    if (sourceParams) {
+      analysisNodes[sourceName] = this.analyse(sourceParams);
+    }
+  }, this);
+
+  return _.omit(_.extend(analysisDefinition, analysisDefinition.params, analysisNodes), 'params');
+};
+
+/**
+ * Create a source analysis
+ * This function is used because some legacy viz.json files contains layers without `source` and have a `query` field instead.
+ * This query is translated into a analysis of type `source`.
+ */
+AnalysisService.prototype.createAnalysisForLayer = function (layerId, layerQuery) {
+  return this.analyse({
+    id: layerId,
+    type: 'source',
+    params: {
+      query: layerQuery
+    }
+  });
+};
+
+AnalysisService.prototype.findNodeById = function (id) {
+  return this._analysisNodes.get(id);
+};
+
+AnalysisService.prototype._onAnalysisRemoved = function (analysis) {
+  this._analysisNodes.remove(analysis);
+  analysis.unbind('destroy', this._onAnalysisRemoved);
+};
+
+/**
+ * Return all the analysis nodes without duplicates.
+ * The analyses are obtained from the layers and dataviews collections.
+ * @example
+ * We have the following analyses:  (a0->a1->a2), (b0->a2)
+ * This method will give us: (a0->a1->a2), (a1->a2), (a2), (b0->a2)
+ */
+AnalysisService.getUniqueAnalysisNodes = function (layersCollection, dataviewsCollection) {
+  var uniqueAnalysisNodes = {};
+  var analysisList = AnalysisService.getAnalysisList(layersCollection, dataviewsCollection);
+  _.each(analysisList, function (analysis) {
+    analysis.getNodesCollection().each(function (analysisNode) {
+      uniqueAnalysisNodes[analysisNode.get('id')] = analysisNode;
+    });
+  });
+
+  return _.map(uniqueAnalysisNodes, function (analisis) {
+    return analisis;
+  }, this);
+};
+
+/**
+ * Return a list with all the analyses contained in the given collections.
+ * @example
+ * We have the following analyses:  (a0->a1->a2), (b0->a2)
+ * This method will give us: (a0->a1->a2), (b0->a2)
+ */
+AnalysisService.getAnalysisList = function (layersCollection, dataviewsCollection) {
+  var layerAnalyses = _getAnalysesFromLayers(layersCollection);
+  var dataviewsAnalyses = _getAnalysesFromDataviews(dataviewsCollection);
+  return layerAnalyses.concat(dataviewsAnalyses);
+};
+
+function _getAnalysesFromLayers(layersCollection) {
+  var layers = _getCartoDBAndTorqueLayers(layersCollection);
+  return _.chain(layers).map(function (layer) {
+    return layer.getSource();
+  }).compact().value();
+}
+
+function _getAnalysesFromDataviews(dataviewsCollection) {
+  return dataviewsCollection.chain().map(function (dataview) {
+    return dataview.getSource();
+  }).compact().value();
+}
+
+function _getCartoDBAndTorqueLayers(layersCollection) {
+  return layersCollection.filter(function (layer) {
+    // Carto and torque layers are supposed to have a source
+    return LayerTypes.isCartoDBLayer(layer) || LayerTypes.isTorqueLayer(layer);
+  });
+}
+
+module.exports = AnalysisService;
 
 /***/ }),
 /* 20 */
@@ -16583,22 +16684,56 @@ module.exports = Model.extend({
 "use strict";
 
 
-var Backbone = __webpack_require__(1);
+var camshaftReference = __webpack_require__(63).getVersion('latest');
+var PARAM_TYPES = {
+  NODE: 'node',
+  NUMBER: 'number',
+  STRING: 'string',
+  ENUM: 'enum'
+};
 
-/**
- * Abort ongoing request if it exists
- */
-module.exports = function (method, model, options) {
-  var self = arguments[1];
+var SOURCE_ANALYSIS_TYPE = 'source';
+var ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP = {};
+ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[SOURCE_ANALYSIS_TYPE] = [];
+var ANALYSIS_TYPE_TO_PARAM_NAMES_MAP = {};
 
-  if (this._xhr) {
-    this._xhr.abort();
+var analysesReference = camshaftReference.analyses;
+if (!analysesReference) {
+  throw new Error('Error loading the reference for Camshaft analyses');
+}
+
+// Populate the analysis source and param names maps.
+for (var analysisType in analysesReference) {
+  var analysisParams = analysesReference[analysisType].params;
+  for (var paramName in analysisParams) {
+    ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType] = ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType] || [];
+    ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType].push(paramName);
+    ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType] = ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType] || [];
+    var paramType = analysisParams[paramName].type;
+    if (paramType === PARAM_TYPES.NODE) {
+      ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType].push(paramName);
+    }
   }
-  this._xhr = Backbone.sync.apply(this, arguments);
-  this._xhr.always(function () {
-    self._xhr = null;
-  });
-  return this._xhr;
+}
+
+module.exports = {
+  getSourceNamesForAnalysisType: function getSourceNamesForAnalysisType(analysisType) {
+    var sourceNames = ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType];
+    if (!sourceNames) {
+      throw new Error('source names for analysis of type ' + analysisType + " couldn't be found");
+    }
+
+    return sourceNames;
+  },
+
+  getParamNamesForAnalysisType: function getParamNamesForAnalysisType(analysisType) {
+    var paramNames = ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType];
+    if (!paramNames) {
+      throw new Error('param names for analysis of type ' + analysisType + " couldn't be found");
+    }
+
+    return paramNames;
+  }
 };
 
 /***/ }),
@@ -16608,12 +16743,331 @@ module.exports = function (method, model, options) {
 "use strict";
 
 
+var cdb = __webpack_require__(74);
+
+module.exports = {
+  error: function error() {
+    console.error.apply(console, arguments);
+  },
+
+  log: function log() {
+    console.log.apply(console, arguments);
+  },
+
+  info: function info() {
+    console.log.apply(console, arguments);
+  },
+
+  debug: function debug() {
+    if (cdb.DEBUG) console.log.apply(console, arguments);
+  }
+};
+
+/***/ }),
+/* 22 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"internal-carto.js\",\"version\":\"4.2.1-0\",\"description\":\"CARTO javascript library\",\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/CartoDB/carto.js.git\"},\"author\":{\"name\":\"CARTO\",\"url\":\"https://carto.com/\"},\"contributors\":[\"Javier Álvarez <jmedina@carto.com>\",\"Javier Álvarez <xabel@vizzuality.com>\",\"Javier Arce <javierarce@carto.com>\",\"Javier Santana <jsantana@carto.com>\",\"Raul Ochoa <rochoa@carto.com>\",\"Carlos Matallín <matallo@carto.com>\",\"Jaime Chapinal <jaime.chapinal@carto.com>\",\"Nicklas Gummesson <nicklas@carto.com>\",\"Francisco Dans <francisco@carto.com>\",\"Emilio García <emilio@carto.com>\",\"Ivan Malagon <ivan@carto.com>\",\"Ruben Moya <ruben@carto.com>\",\"Jesus Arroyo Torrens <jarroyo@carto.com>\",\"Iago Lastra <iago@carto.com>\",\"Elena Torró <elena@carto.com>\",\"Jesús Botella <jbotella@carto.com>\",\"Alejandra Arri <alejandraarri@carto.com>\"],\"private\":true,\"license\":\"BSD-3-Clause\",\"dependencies\":{\"@carto/zera\":\"1.0.7\",\"backbone\":\"1.4.0\",\"backbone-poller\":\"^1.1.3\",\"camshaft-reference\":\"0.34.0\",\"carto\":\"github:cartodb/carto#master\",\"clip-path-polygon\":\"0.1.14\",\"d3-array\":\"1.2.1\",\"d3-format\":\"1.2.0\",\"d3-time-format\":\"2.1.0\",\"jasmine-ajax\":\"^4.0.0\",\"jquery\":\"3.4.1\",\"mustache\":\"3.2.1\",\"perfect-scrollbar\":\"git://github.com/CartoDB/perfect-scrollbar.git#master\",\"postcss\":\"5.0.19\",\"promise-polyfill\":\"^6.1.0\",\"torque.js\":\"github:CartoDB/torque#master\",\"underscore\":\"1.9.2\",\"whatwg-fetch\":\"^2.0.3\"},\"devDependencies\":{\"babel-core\":\"^6.26.3\",\"babel-loader\":\"^7.1.4\",\"babel-plugin-transform-object-rest-spread\":\"^6.26.0\",\"babel-preset-env\":\"^1.7.0\",\"babelify\":\"^7.3.0\",\"browserify\":\"13.0.0\",\"browserify-shim\":\"3.8.12\",\"cartoassets\":\"github:CartoDB/CartoAssets#master\",\"eslint\":\"~4.19.1\",\"eslint-config-semistandard\":\"~11.0.0\",\"eslint-config-standard\":\"~10.2.1\",\"eslint-plugin-import\":\"~2.7.0\",\"eslint-plugin-node\":\"~5.2.0\",\"eslint-plugin-promise\":\"~3.5.0\",\"eslint-plugin-standard\":\"~3.0.1\",\"findup-sync\":\"0.1.3\",\"grunt\":\"0.4.5\",\"grunt-aws\":\"^0.7.1\",\"grunt-browserify\":\"^5.3.0\",\"grunt-contrib-clean\":\"~0.5.0\",\"grunt-contrib-concat\":\"~0.3.0\",\"grunt-contrib-connect\":\"~0.11.2\",\"grunt-contrib-copy\":\"~0.7.0\",\"grunt-contrib-cssmin\":\"~0.7.0\",\"grunt-contrib-imagemin\":\"~1.0.0\",\"grunt-contrib-jasmine\":\"1.1.0\",\"grunt-contrib-uglify\":\"0.10.0\",\"grunt-contrib-watch\":\"git://github.com/gruntjs/grunt-contrib-watch.git#b884948805940c663b1cbb91a3c28ba8afdebf78\",\"grunt-eslint\":\"~20.1.0\",\"grunt-exorcise\":\"2.1.0\",\"grunt-fastly\":\"~0.1.3\",\"grunt-gitinfo\":\"~0.1.7\",\"grunt-prompt\":\"~1.3.0\",\"grunt-replace\":\"0.6.2\",\"grunt-sass\":\"2.0.0\",\"gulp\":\"3.8.10\",\"gulp-iconfont\":\"1.0.0\",\"gulp-iconfont-css\":\"0.0.9\",\"gulp-install\":\"0.2.0\",\"gulp-sketch\":\"0.0.7\",\"jsdoc\":\"^3.6.3\",\"jstify\":\"^0.14.0\",\"leaflet\":\"1.3.1\",\"load-grunt-tasks\":\"~0.6.0\",\"npm-watch\":\"^0.3.0\",\"semver\":\"~5.4.0\",\"source-map-support\":\"github:CartoDB/node-source-map-support#0.4.6-cdb1\",\"time-grunt\":\"~0.3.1\",\"uglifyjs-webpack-plugin\":\"^1.1.2\",\"watchify\":\"^3.11.1\",\"webpack\":\"^4.42.0\",\"webpack-cli\":\"^3.3.11\"},\"browserify\":{\"transform\":[\"browserify-shim\",\"jstify\"]},\"browser\":{\"cdb\":\"./src/cdb.js\",\"cdb.config\":\"./src/cdb.config.js\",\"cdb.core.util\":\"./src/core/util.js\",\"cdb.core.Profiler\":\"./src/core/profiler.js\",\"cdb.log\":\"./src/cdb.log.js\",\"cdb.errors\":\"./src/cdb.errors.js\",\"cdb.templates\":\"./src/cdb.templates.js\",\"geojson\":\"./vendor/GeoJSON.js\",\"html-css-sanitizer\":\"./vendor/html-css-sanitizer-bundle.js\",\"mousewheel\":\"./vendor/mousewheel.js\",\"mwheelIntent\":\"./vendor/mwheelIntent.js\"},\"browserify-shim\":{\"geojson\":\"GeoJSON\",\"html-css-sanitizer\":\"html\",\"mousewheel\":{\"depends\":[\"jquery:jQuery\"]},\"mwheelIntent\":{\"depends\":[\"jquery:jQuery\"]}},\"files\":[\"dist\",\"node_modules/cdb\",\"src\",\"themes\",\"vendor\"],\"main\":\"src/index.js\",\"config\":{\"root\":\".\"},\"scripts\":{\"test\":\"grunt test\",\"test:browser\":\"grunt dev\",\"lint\":\"eslint .\",\"lint:fix\":\"eslint . --fix\",\"build\":\"rm -rf dist/public; NODE_ENV=production webpack --progress --config webpack/webpack.config.js && NODE_ENV=production webpack --progress --config webpack/webpack.min.config.js\",\"build:watch\":\"NODE_ENV=development webpack --progress -w --config webpack/webpack.config.js\",\"build:internal\":\"grunt build\",\"docs\":\"rm -rf docs/public; jsdoc --configure config/jsdoc/public-conf.json\",\"docs:internal\":\"rm -rf docs/internal; jsdoc --configure config/jsdoc/internal-conf.json\",\"bump\":\"npm version prerelease\",\"bump:patch\":\"npm version patch\",\"bump:minor\":\"npm version minor\",\"postversion\":\"git push origin HEAD --follow-tags\",\"release\":\"./scripts/release.sh\"},\"watch\":{\"docs\":\"src/**/*.js\"}}");
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var WindshaftError = __webpack_require__(34);
+
+var parseWindshaftErrors = function parseWindshaftErrors(response, type) {
+  response = response || {};
+  if (response.responseJSON) {
+    response = response.responseJSON;
+  }
+  if (response.errors_with_context) {
+    return _.map(response.errors_with_context, function (error) {
+      return new WindshaftError(error, type);
+    });
+  }
+  if (response.errors) {
+    var content = typeof response.errors[0] === 'string' ? { message: response.errors[0] } : response.errors[0];
+
+    return [new WindshaftError(content, type)];
+  }
+  if (response.statusText) {
+    return [new WindshaftError({ message: response.statusText }, type, 'ajax')];
+  }
+  return [];
+};
+
+module.exports = parseWindshaftErrors;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  OVERLAY_TYPES: {
+    ATTRIBUTION: 'attribution',
+    HEADER: 'header',
+    LIMITS: 'limits',
+    TILES: 'tiles',
+    LOADER: 'loader',
+    LOGO: 'logo',
+    SEARCH: 'search',
+    ZOOM: 'zoom'
+  },
+
+  MAP_PROVIDER_TYPES: {
+    GMAPS: 'googlemaps',
+    LEAFLET: 'leaflet'
+  },
+
+  GMAPS_BASE_LAYER_TYPES: ['roadmap', 'gray_roadmap', 'dark_roadmap', 'hybrid', 'satellite', 'terrain'],
+
+  WINDSHAFT_ERRORS: {
+    ANALYSIS: 'analysis',
+    LAYER: 'layer',
+    LIMIT: 'limit',
+    TILE: 'tile', // Generic error for tiles
+    GENERIC: 'generic',
+    UNKNOWN: 'unknown'
+  }
+};
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Layer = __webpack_require__(87);
+var EventTypes = __webpack_require__(105);
+var Aggregation = __webpack_require__(106);
+
+/**
+ *  @namespace carto.layer
+ *  @api
+ */
+module.exports = {
+  Aggregation: Aggregation,
+  Layer: Layer,
+  events: EventTypes
+};
+
+/**
+ *  @namespace carto.layer.metadata
+ *  @api
+ */
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var LegendModelBase = __webpack_require__(15);
+
+var StaticLegendModelBase = LegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
+      state: LegendModelBase.STATE_SUCCESS
+    });
+  },
+
+  _onEngineReloadStarted: function _onEngineReloadStarted() {},
+
+  isAvailable: function isAvailable() {
+    return true;
+  }
+});
+
+module.exports = StaticLegendModelBase;
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(7);
+var SQLBase = __webpack_require__(17);
+
+var DEFAULT_JOIN_OPERATOR = 'AND';
+
+/**
+ * Base class for AND and OR filters.
+ *
+ * Filters Collection is a way to group a set of filters in order to create composed filters, allowing the user to change the operator that joins the filters.
+ *
+ * **This object should not be used directly.**
+ *
+ * @class FiltersCollection
+ * @abstract
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ */
+
+var FiltersCollection = function (_Base) {
+  _inherits(FiltersCollection, _Base);
+
+  function FiltersCollection(filters) {
+    _classCallCheck(this, FiltersCollection);
+
+    var _this = _possibleConstructorReturn(this, (FiltersCollection.__proto__ || Object.getPrototypeOf(FiltersCollection)).call(this));
+
+    _this._initialize(filters);
+    return _this;
+  }
+
+  _createClass(FiltersCollection, [{
+    key: '_initialize',
+    value: function _initialize(filters) {
+      var _this2 = this;
+
+      this._filters = [];
+
+      if (filters && filters.length) {
+        filters.map(function (filter) {
+          return _this2.addFilter(filter);
+        });
+      }
+    }
+
+    /**
+     * Add a new filter to collection
+     *
+     * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
+     * @memberof FiltersCollection
+     * @api
+     */
+
+  }, {
+    key: 'addFilter',
+    value: function addFilter(filter) {
+      var _this3 = this;
+
+      if (!(filter instanceof SQLBase) && !(filter instanceof FiltersCollection)) {
+        throw this._getValidationError('wrongFilterType');
+      }
+
+      if (_.contains(this._filters, filter)) return;
+
+      this.listenTo(filter, 'change:filters', function (filters) {
+        return _this3._triggerFilterChange(filters);
+      });
+      this._filters.push(filter);
+      this._triggerFilterChange();
+    }
+
+    /**
+     * Remove an existing filter from collection
+     *
+     * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
+     * @returns {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} The removed element
+     * @memberof FiltersCollection
+     * @api
+     */
+
+  }, {
+    key: 'removeFilter',
+    value: function removeFilter(filter) {
+      var filterIndex = _.indexOf(this._filters, filter);
+      if (filterIndex === -1) return;
+
+      var removedElement = this._filters.splice(filterIndex, 1)[0];
+      removedElement.off('change:filters', null, this);
+
+      this._triggerFilterChange();
+      return removedElement;
+    }
+
+    /**
+     * Get the number of added filters
+     *
+     * @returns {number} Number of contained filters
+     * @memberof FiltersCollection
+     * @api
+     */
+
+  }, {
+    key: 'count',
+    value: function count() {
+      return this._filters.length;
+    }
+
+    /**
+     * Get added filters
+     *
+     * @returns {Array} Added filters
+     * @memberof FiltersCollection
+     * @api
+     */
+
+  }, {
+    key: 'getFilters',
+    value: function getFilters() {
+      return this._filters;
+    }
+  }, {
+    key: '$getSQL',
+    value: function $getSQL() {
+      var sqlFilters = this._filters.map(function (filter) {
+        return filter.$getSQL();
+      }).filter(function (sqlString) {
+        return Boolean(sqlString);
+      });
+
+      var joinedFilters = sqlFilters.join(' ' + (this.JOIN_OPERATOR || DEFAULT_JOIN_OPERATOR) + ' ');
+
+      if (sqlFilters.length > 1) {
+        return '(' + joinedFilters + ')';
+      }
+
+      return joinedFilters;
+    }
+  }, {
+    key: '_triggerFilterChange',
+    value: function _triggerFilterChange(filters) {
+      this.trigger('change:filters', filters);
+    }
+  }]);
+
+  return FiltersCollection;
+}(Base);
+
+module.exports = FiltersCollection;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _ = __webpack_require__(0);
 var Model = __webpack_require__(2);
-var BackboneAbortSync = __webpack_require__(20);
+var BackboneAbortSync = __webpack_require__(29);
 var AnalysisModel = __webpack_require__(9);
-var util = __webpack_require__(7);
-var parseWindshaftErrors = __webpack_require__(26);
+var util = __webpack_require__(6);
+var parseWindshaftErrors = __webpack_require__(23);
 
 var UNFETCHED_STATUS = 'unfetched';
 var FETCHING_STATUS = 'fetching';
@@ -17163,381 +17617,28 @@ module.exports = Model.extend({
 });
 
 /***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(6);
-var SQLBase = __webpack_require__(11);
-
-var DEFAULT_JOIN_OPERATOR = 'AND';
-
-/**
- * Base class for AND and OR filters.
- *
- * Filters Collection is a way to group a set of filters in order to create composed filters, allowing the user to change the operator that joins the filters.
- *
- * **This object should not be used directly.**
- *
- * @class FiltersCollection
- * @abstract
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- */
-
-var FiltersCollection = function (_Base) {
-  _inherits(FiltersCollection, _Base);
-
-  function FiltersCollection(filters) {
-    _classCallCheck(this, FiltersCollection);
-
-    var _this = _possibleConstructorReturn(this, (FiltersCollection.__proto__ || Object.getPrototypeOf(FiltersCollection)).call(this));
-
-    _this._initialize(filters);
-    return _this;
-  }
-
-  _createClass(FiltersCollection, [{
-    key: '_initialize',
-    value: function _initialize(filters) {
-      var _this2 = this;
-
-      this._filters = [];
-
-      if (filters && filters.length) {
-        filters.map(function (filter) {
-          return _this2.addFilter(filter);
-        });
-      }
-    }
-
-    /**
-     * Add a new filter to collection
-     *
-     * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
-     * @memberof FiltersCollection
-     * @api
-     */
-
-  }, {
-    key: 'addFilter',
-    value: function addFilter(filter) {
-      var _this3 = this;
-
-      if (!(filter instanceof SQLBase) && !(filter instanceof FiltersCollection)) {
-        throw this._getValidationError('wrongFilterType');
-      }
-
-      if (_.contains(this._filters, filter)) return;
-
-      this.listenTo(filter, 'change:filters', function (filters) {
-        return _this3._triggerFilterChange(filters);
-      });
-      this._filters.push(filter);
-      this._triggerFilterChange();
-    }
-
-    /**
-     * Remove an existing filter from collection
-     *
-     * @param {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} filter
-     * @returns {(carto.filter.Range|carto.filter.Category|carto.filter.AND|carto.filter.OR)} The removed element
-     * @memberof FiltersCollection
-     * @api
-     */
-
-  }, {
-    key: 'removeFilter',
-    value: function removeFilter(filter) {
-      var filterIndex = _.indexOf(this._filters, filter);
-      if (filterIndex === -1) return;
-
-      var removedElement = this._filters.splice(filterIndex, 1)[0];
-      removedElement.off('change:filters', null, this);
-
-      this._triggerFilterChange();
-      return removedElement;
-    }
-
-    /**
-     * Get the number of added filters
-     *
-     * @returns {number} Number of contained filters
-     * @memberof FiltersCollection
-     * @api
-     */
-
-  }, {
-    key: 'count',
-    value: function count() {
-      return this._filters.length;
-    }
-
-    /**
-     * Get added filters
-     *
-     * @returns {Array} Added filters
-     * @memberof FiltersCollection
-     * @api
-     */
-
-  }, {
-    key: 'getFilters',
-    value: function getFilters() {
-      return this._filters;
-    }
-  }, {
-    key: '$getSQL',
-    value: function $getSQL() {
-      var sqlFilters = this._filters.map(function (filter) {
-        return filter.$getSQL();
-      }).filter(function (sqlString) {
-        return Boolean(sqlString);
-      });
-
-      var joinedFilters = sqlFilters.join(' ' + (this.JOIN_OPERATOR || DEFAULT_JOIN_OPERATOR) + ' ');
-
-      if (sqlFilters.length > 1) {
-        return '(' + joinedFilters + ')';
-      }
-
-      return joinedFilters;
-    }
-  }, {
-    key: '_triggerFilterChange',
-    value: function _triggerFilterChange(filters) {
-      this.trigger('change:filters', filters);
-    }
-  }]);
-
-  return FiltersCollection;
-}(Base);
-
-module.exports = FiltersCollection;
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var LegendModelBase = __webpack_require__(13);
-
-var StaticLegendModelBase = LegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
-      state: LegendModelBase.STATE_SUCCESS
-    });
-  },
-
-  _onEngineReloadStarted: function _onEngineReloadStarted() {},
-
-  isAvailable: function isAvailable() {
-    return true;
-  }
-});
-
-module.exports = StaticLegendModelBase;
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Layer = __webpack_require__(109);
-var EventTypes = __webpack_require__(91);
-var Aggregation = __webpack_require__(90);
-
-/**
- *  @namespace carto.layer
- *  @api
- */
-module.exports = {
-  Aggregation: Aggregation,
-  Layer: Layer,
-  events: EventTypes
-};
-
-/**
- *  @namespace carto.layer.metadata
- *  @api
- */
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  OVERLAY_TYPES: {
-    ATTRIBUTION: 'attribution',
-    HEADER: 'header',
-    LIMITS: 'limits',
-    TILES: 'tiles',
-    LOADER: 'loader',
-    LOGO: 'logo',
-    SEARCH: 'search',
-    ZOOM: 'zoom'
-  },
-
-  MAP_PROVIDER_TYPES: {
-    GMAPS: 'googlemaps',
-    LEAFLET: 'leaflet'
-  },
-
-  GMAPS_BASE_LAYER_TYPES: ['roadmap', 'gray_roadmap', 'dark_roadmap', 'hybrid', 'satellite', 'terrain'],
-
-  WINDSHAFT_ERRORS: {
-    ANALYSIS: 'analysis',
-    LAYER: 'layer',
-    LIMIT: 'limit',
-    TILE: 'tile', // Generic error for tiles
-    GENERIC: 'generic',
-    UNKNOWN: 'unknown'
-  }
-};
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var WindshaftError = __webpack_require__(41);
-
-var parseWindshaftErrors = function parseWindshaftErrors(response, type) {
-  response = response || {};
-  if (response.responseJSON) {
-    response = response.responseJSON;
-  }
-  if (response.errors_with_context) {
-    return _.map(response.errors_with_context, function (error) {
-      return new WindshaftError(error, type);
-    });
-  }
-  if (response.errors) {
-    var content = typeof response.errors[0] === 'string' ? { message: response.errors[0] } : response.errors[0];
-
-    return [new WindshaftError(content, type)];
-  }
-  if (response.statusText) {
-    return [new WindshaftError({ message: response.statusText }, type, 'ajax')];
-  }
-  return [];
-};
-
-module.exports = parseWindshaftErrors;
-
-/***/ }),
-/* 27 */
-/***/ (function(module) {
-
-module.exports = {"name":"internal-carto.js","version":"4.2.1-0","description":"CARTO javascript library","repository":{"type":"git","url":"git://github.com/CartoDB/carto.js.git"},"author":{"name":"CARTO","url":"https://carto.com/"},"contributors":["Javier Álvarez <jmedina@carto.com>","Javier Álvarez <xabel@vizzuality.com>","Javier Arce <javierarce@carto.com>","Javier Santana <jsantana@carto.com>","Raul Ochoa <rochoa@carto.com>","Carlos Matallín <matallo@carto.com>","Jaime Chapinal <jaime.chapinal@carto.com>","Nicklas Gummesson <nicklas@carto.com>","Francisco Dans <francisco@carto.com>","Emilio García <emilio@carto.com>","Ivan Malagon <ivan@carto.com>","Ruben Moya <ruben@carto.com>","Jesus Arroyo Torrens <jarroyo@carto.com>","Iago Lastra <iago@carto.com>","Elena Torró <elena@carto.com>","Jesús Botella <jbotella@carto.com>","Alejandra Arri <alejandraarri@carto.com>"],"private":true,"license":"BSD-3-Clause","dependencies":{"@carto/zera":"1.0.7","backbone":"1.4.0","backbone-poller":"^1.1.3","camshaft-reference":"0.34.0","carto":"cartodb/carto#master","clip-path-polygon":"0.1.14","d3-array":"1.2.1","d3-format":"1.2.0","d3-time-format":"2.1.0","jasmine-ajax":"^4.0.0","jquery":"3.4.1","mustache":"3.2.1","perfect-scrollbar":"git://github.com/CartoDB/perfect-scrollbar.git#master","postcss":"5.0.19","promise-polyfill":"^6.1.0","torque.js":"CartoDB/torque#master","underscore":"1.9.2","whatwg-fetch":"^2.0.3"},"devDependencies":{"babel-core":"^6.26.3","babel-loader":"^7.1.4","babel-plugin-transform-object-rest-spread":"^6.26.0","babel-preset-env":"^1.7.0","babelify":"^7.3.0","browserify":"13.0.0","browserify-shim":"3.8.12","cartoassets":"CartoDB/CartoAssets#master","eslint":"~4.19.1","eslint-config-semistandard":"~11.0.0","eslint-config-standard":"~10.2.1","eslint-plugin-import":"~2.7.0","eslint-plugin-node":"~5.2.0","eslint-plugin-promise":"~3.5.0","eslint-plugin-standard":"~3.0.1","findup-sync":"0.1.3","grunt":"0.4.5","grunt-aws":"^0.4.0","grunt-banner":"^0.6.0","grunt-browserify":"5.0.0","grunt-contrib-clean":"~0.5.0","grunt-contrib-concat":"~0.3.0","grunt-contrib-connect":"~0.11.2","grunt-contrib-copy":"~0.7.0","grunt-contrib-cssmin":"~0.7.0","grunt-contrib-imagemin":"~1.0.0","grunt-contrib-jasmine":"1.1.0","grunt-contrib-watch":"git://github.com/gruntjs/grunt-contrib-watch.git#b884948805940c663b1cbb91a3c28ba8afdebf78","grunt-eslint":"~20.1.0","grunt-exorcise":"2.1.0","grunt-fastly":"~0.1.3","grunt-gitinfo":"~0.1.7","grunt-prompt":"~1.3.0","grunt-replace":"0.6.2","grunt-sass":"2.0.0","grunt-terser":"^1.0.0","gulp":"3.8.10","gulp-iconfont":"1.0.0","gulp-iconfont-css":"0.0.9","gulp-install":"0.2.0","gulp-sketch":"0.0.7","jsdoc":"~3.5.5","jstify":"0.12.0","leaflet":"1.3.1","load-grunt-tasks":"~0.6.0","npm-watch":"^0.3.0","semver":"~5.4.0","source-map-support":"CartoDB/node-source-map-support#0.4.6-cdb1","time-grunt":"~0.3.1","uglifyjs-webpack-plugin":"^1.1.2","watchify":"3.4.0","webpack":"4.12.1","webpack-cli":"^3.0.4"},"browserify":{"transform":["browserify-shim","jstify"]},"browser":{"cdb":"./src/cdb.js","cdb.config":"./src/cdb.config.js","cdb.core.util":"./src/core/util.js","cdb.core.Profiler":"./src/core/profiler.js","cdb.log":"./src/cdb.log.js","cdb.errors":"./src/cdb.errors.js","cdb.templates":"./src/cdb.templates.js","geojson":"./vendor/GeoJSON.js","html-css-sanitizer":"./vendor/html-css-sanitizer-bundle.js","mousewheel":"./vendor/mousewheel.js","mwheelIntent":"./vendor/mwheelIntent.js"},"browserify-shim":{"geojson":"GeoJSON","html-css-sanitizer":"html","mousewheel":{"depends":["jquery:jQuery"]},"mwheelIntent":{"depends":["jquery:jQuery"]}},"files":["dist","node_modules/cdb","src","themes","vendor"],"main":"src/index.js","config":{"root":"."},"scripts":{"test":"grunt test","test:browser":"grunt dev","lint":"eslint .","lint:fix":"eslint . --fix","build":"rm -rf dist/public; NODE_ENV=production webpack --progress --config webpack/webpack.config.js && NODE_ENV=production webpack --progress --config webpack/webpack.min.config.js","build:watch":"NODE_ENV=development webpack --progress -w --config webpack/webpack.config.js","build:internal":"grunt build","docs":"rm -rf docs/public; jsdoc --configure config/jsdoc/public-conf.json","docs:internal":"rm -rf docs/internal; jsdoc --configure config/jsdoc/internal-conf.json","bump":"npm version prerelease","bump:patch":"npm version patch","bump:minor":"npm version minor","postversion":"git push origin HEAD --follow-tags","release":"./scripts/release.sh"},"watch":{"docs":"src/**/*.js"}};
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var cdb = __webpack_require__(122);
-
-module.exports = {
-  error: function error() {
-    console.error.apply(console, arguments);
-  },
-
-  log: function log() {
-    console.log.apply(console, arguments);
-  },
-
-  info: function info() {
-    console.log.apply(console, arguments);
-  },
-
-  debug: function debug() {
-    if (cdb.DEBUG) console.log.apply(console, arguments);
-  }
-};
-
-/***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var camshaftReference = __webpack_require__(133).getVersion('latest');
-var PARAM_TYPES = {
-  NODE: 'node',
-  NUMBER: 'number',
-  STRING: 'string',
-  ENUM: 'enum'
-};
+var Backbone = __webpack_require__(1);
 
-var SOURCE_ANALYSIS_TYPE = 'source';
-var ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP = {};
-ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[SOURCE_ANALYSIS_TYPE] = [];
-var ANALYSIS_TYPE_TO_PARAM_NAMES_MAP = {};
+/**
+ * Abort ongoing request if it exists
+ */
+module.exports = function (method, model, options) {
+  var self = arguments[1];
 
-var analysesReference = camshaftReference.analyses;
-if (!analysesReference) {
-  throw new Error('Error loading the reference for Camshaft analyses');
-}
-
-// Populate the analysis source and param names maps.
-for (var analysisType in analysesReference) {
-  var analysisParams = analysesReference[analysisType].params;
-  for (var paramName in analysisParams) {
-    ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType] = ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType] || [];
-    ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType].push(paramName);
-    ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType] = ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType] || [];
-    var paramType = analysisParams[paramName].type;
-    if (paramType === PARAM_TYPES.NODE) {
-      ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType].push(paramName);
-    }
+  if (this._xhr) {
+    this._xhr.abort();
   }
-}
-
-module.exports = {
-  getSourceNamesForAnalysisType: function getSourceNamesForAnalysisType(analysisType) {
-    var sourceNames = ANALYSIS_TYPE_TO_SOURCE_PARAM_NAMES_MAP[analysisType];
-    if (!sourceNames) {
-      throw new Error('source names for analysis of type ' + analysisType + " couldn't be found");
-    }
-
-    return sourceNames;
-  },
-
-  getParamNamesForAnalysisType: function getParamNamesForAnalysisType(analysisType) {
-    var paramNames = ANALYSIS_TYPE_TO_PARAM_NAMES_MAP[analysisType];
-    if (!paramNames) {
-      throw new Error('param names for analysis of type ' + analysisType + " couldn't be found");
-    }
-
-    return paramNames;
-  }
+  this._xhr = Backbone.sync.apply(this, arguments);
+  this._xhr.always(function () {
+    self._xhr = null;
+  });
+  return this._xhr;
 };
 
 /***/ }),
@@ -17548,156 +17649,55 @@ module.exports = {
 
 
 var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var Analysis = __webpack_require__(9);
-var camshaftReference = __webpack_require__(29);
-var LayerTypes = __webpack_require__(16);
+var Model = __webpack_require__(2);
+var BOUNDING_BOX_FILTER_WAIT = 350;
 
-var AnalysisService = function AnalysisService(opts) {
-  opts = opts || {};
-  if (!opts.engine) {
-    throw new Error('engine is required');
+module.exports = Model.extend({
+  initialize: function initialize(mapAdapter) {
+    this._bounds = {};
+
+    if (mapAdapter) {
+      this._mapAdapter = mapAdapter;
+      this.setBounds(this._mapAdapter.getBounds());
+      this._initBinds();
+    }
+  },
+
+  _initBinds: function _initBinds() {
+    this.listenTo(this._mapAdapter, 'boundsChanged', _.debounce(this._boundsChanged, BOUNDING_BOX_FILTER_WAIT));
+  },
+
+  _stopBinds: function _stopBinds() {
+    if (this._mapAdapter) {
+      this.stopListening(this._mapAdapter, 'boundsChanged');
+    }
+  },
+
+  _boundsChanged: function _boundsChanged(bounds) {
+    this.setBounds(bounds);
+  },
+
+  setBounds: function setBounds(bounds) {
+    this._bounds = bounds;
+    this.trigger('boundsChanged', bounds);
+  },
+
+  getBounds: function getBounds() {
+    return this._bounds;
+  },
+
+  areBoundsAvailable: function areBoundsAvailable() {
+    return _.isFinite(this._bounds.west);
+  },
+
+  serialize: function serialize() {
+    return [this._bounds.west, this._bounds.south, this._bounds.east, this._bounds.north].join(',');
+  },
+
+  clean: function clean() {
+    this._stopBinds();
   }
-
-  this._engine = opts.engine;
-  this._apiKey = opts.apiKey;
-  this._authToken = opts.authToken;
-  this._camshaftReference = opts.camshaftReference || camshaftReference; // For testing purposes
-
-  this._analysisNodes = new Backbone.Collection();
-};
-
-/**
-  * Recursively generates a graph of analyses and returns the "root" node.
-  * For each node definition in the analysisDefinition:
-  *  - If a node had been already created this method updates the attributes of the existing node.
-  *  - Otherwise create a new node and index it by id into the `_analysisNodes` object.
-  */
-AnalysisService.prototype.analyse = function (analysisDefinition) {
-  analysisDefinition = _.clone(analysisDefinition);
-  var analysis = this.findNodeById(analysisDefinition.id);
-  var analysisAttrs = this._getAnalysisAttributesFromAnalysisDefinition(analysisDefinition);
-
-  if (analysis) {
-    analysis.set(analysisAttrs);
-  } else {
-    if (this._apiKey) {
-      analysisAttrs.apiKey = this._apiKey;
-    }
-    if (this._authToken) {
-      analysisAttrs.authToken = this._authToken;
-    }
-    analysis = new Analysis(analysisAttrs, {
-      camshaftReference: this._camshaftReference,
-      engine: this._engine
-    });
-
-    this._analysisNodes.add(analysis);
-    analysis.bind('destroy', this._onAnalysisRemoved, this);
-  }
-
-  return analysis;
-};
-
-/**
- * This function is used to iterate over the analysis graph.
- * It uses the camshaft reference to extract those parameters which are analysis nodes. And call analyse on them.
- *
- * This function wont be needed if we split the analysis definition in `params` and `inputs`. Where all analysis
- * are garanted to be in the inputs object.
- */
-AnalysisService.prototype._getAnalysisAttributesFromAnalysisDefinition = function (analysisDefinition) {
-  var analysisNodes = {};
-  var analysisType = analysisDefinition.type;
-  var sourceNamesForAnalysisType = this._camshaftReference.getSourceNamesForAnalysisType(analysisType);
-  _.each(sourceNamesForAnalysisType, function (sourceName) {
-    var sourceParams = analysisDefinition.params[sourceName];
-    if (sourceParams) {
-      analysisNodes[sourceName] = this.analyse(sourceParams);
-    }
-  }, this);
-
-  return _.omit(_.extend(analysisDefinition, analysisDefinition.params, analysisNodes), 'params');
-};
-
-/**
- * Create a source analysis
- * This function is used because some legacy viz.json files contains layers without `source` and have a `query` field instead.
- * This query is translated into a analysis of type `source`.
- */
-AnalysisService.prototype.createAnalysisForLayer = function (layerId, layerQuery) {
-  return this.analyse({
-    id: layerId,
-    type: 'source',
-    params: {
-      query: layerQuery
-    }
-  });
-};
-
-AnalysisService.prototype.findNodeById = function (id) {
-  return this._analysisNodes.get(id);
-};
-
-AnalysisService.prototype._onAnalysisRemoved = function (analysis) {
-  this._analysisNodes.remove(analysis);
-  analysis.unbind('destroy', this._onAnalysisRemoved);
-};
-
-/**
- * Return all the analysis nodes without duplicates.
- * The analyses are obtained from the layers and dataviews collections.
- * @example
- * We have the following analyses:  (a0->a1->a2), (b0->a2)
- * This method will give us: (a0->a1->a2), (a1->a2), (a2), (b0->a2)
- */
-AnalysisService.getUniqueAnalysisNodes = function (layersCollection, dataviewsCollection) {
-  var uniqueAnalysisNodes = {};
-  var analysisList = AnalysisService.getAnalysisList(layersCollection, dataviewsCollection);
-  _.each(analysisList, function (analysis) {
-    analysis.getNodesCollection().each(function (analysisNode) {
-      uniqueAnalysisNodes[analysisNode.get('id')] = analysisNode;
-    });
-  });
-
-  return _.map(uniqueAnalysisNodes, function (analisis) {
-    return analisis;
-  }, this);
-};
-
-/**
- * Return a list with all the analyses contained in the given collections.
- * @example
- * We have the following analyses:  (a0->a1->a2), (b0->a2)
- * This method will give us: (a0->a1->a2), (b0->a2)
- */
-AnalysisService.getAnalysisList = function (layersCollection, dataviewsCollection) {
-  var layerAnalyses = _getAnalysesFromLayers(layersCollection);
-  var dataviewsAnalyses = _getAnalysesFromDataviews(dataviewsCollection);
-  return layerAnalyses.concat(dataviewsAnalyses);
-};
-
-function _getAnalysesFromLayers(layersCollection) {
-  var layers = _getCartoDBAndTorqueLayers(layersCollection);
-  return _.chain(layers).map(function (layer) {
-    return layer.getSource();
-  }).compact().value();
-}
-
-function _getAnalysesFromDataviews(dataviewsCollection) {
-  return dataviewsCollection.chain().map(function (dataview) {
-    return dataview.getSource();
-  }).compact().value();
-}
-
-function _getCartoDBAndTorqueLayers(layersCollection) {
-  return layersCollection.filter(function (layer) {
-    // Carto and torque layers are supposed to have a source
-    return LayerTypes.isCartoDBLayer(layer) || LayerTypes.isTorqueLayer(layer);
-  });
-}
-
-module.exports = AnalysisService;
+});
 
 /***/ }),
 /* 31 */
@@ -17707,131 +17707,464 @@ module.exports = AnalysisService;
 
 
 var _ = __webpack_require__(0);
+var AnalysisPoller = __webpack_require__(59);
+var AnonymousMapSerializer = __webpack_require__(61);
+var Backbone = __webpack_require__(1);
+var CartoDBLayerGroup = __webpack_require__(70);
+var DataviewsCollection = __webpack_require__(71);
+var LayersCollection = __webpack_require__(72);
+var ModelUpdater = __webpack_require__(73);
+var NamedMapSerializer = __webpack_require__(79);
+var Request = __webpack_require__(80);
+var Response = __webpack_require__(81);
+var WindshaftClient = __webpack_require__(82);
+var AnalysisService = __webpack_require__(19);
+var WindshaftError = __webpack_require__(34);
 
-var AGGREGATION_DATA = {
-  second: { unit: 'second', factor: 1 },
-  minute: { unit: 'minute', factor: 1 },
-  hour: { unit: 'hour', factor: 1 },
-  day: { unit: 'day', factor: 1 },
-  week: { unit: 'day', factor: 7 },
-  month: { unit: 'month', factor: 1 },
-  quarter: { unit: 'month', factor: 3 },
-  year: { unit: 'month', factor: 12 },
-  decade: { unit: 'month', factor: 120 },
-  century: { unit: 'month', factor: 1200 },
-  millennium: { unit: 'month', factor: 12000 }
-};
+var RELOAD_DEBOUNCE_TIME_IN_MILIS = 100;
 
-var helper = {};
+/**
+ *
+ * Creates a new Engine.
+ * An engine is the core of a carto app.
+ *
+ * With the help of external services the engine will:
+ *
+ *  - Keep the state of the layers and dataviews.
+ *  - Serialize the state and send requests to the server.
+ *  - Parse the server response and update the internal models.
+ *  - Notify errors or successful operations.
+ *
+ * @param {Object} params - The parameters to initialize the engine.
+ * @param {string} params.apiKey - Api key used to be autenticate in the windshaft server.
+ * @param {string} params.authToken - Token used to be autenticate in the windshaft server.
+ * @param {string} params.username - Name of the user registered in the windshaft server.
+ * @param {string} params.serverUrl - Url of the windshaft server.
+ * @param {boolean} params.templateName - While we dont remove named maps we must explicitly say when the map is named. Defaults to false.
+ * @param {boolean} params.client - Token used to get map view statistics.
+ * @constructor
+ */
+function Engine(params) {
+  if (!params) throw new Error('new Engine() called with no parameters');
+  this._isNamedMap = params.templateName !== undefined;
 
-function trimBuckets(buckets, filledBuckets, totalBuckets) {
-  var index = null;
-  var keepGoing = true;
-  for (var i = filledBuckets.length - 1; i >= 0 && keepGoing && (_.isFinite(totalBuckets) ? i >= totalBuckets : true); i--) {
-    if (filledBuckets[i]) {
-      keepGoing = false;
-    } else {
-      index = i;
-    }
-  }
+  // Variables for the reload debounce
+  this._timeout = null;
+  this._stackCalls = [];
+  this._batchOptions = {};
 
-  return index !== null ? buckets.slice(0, index) : buckets;
+  this._windshaftSettings = {
+    urlTemplate: params.serverUrl,
+    userName: params.username,
+    client: params.client,
+    apiKey: params.apiKey,
+    authToken: params.authToken,
+    templateName: params.templateName
+  };
+
+  this._windshaftClient = new WindshaftClient(this._windshaftSettings);
+
+  // This object will be responsible of triggering the engine events.
+  this._eventEmmitter = _.extend({}, Backbone.Events);
+
+  this._analysisPoller = new AnalysisPoller();
+  this._layersCollection = new LayersCollection();
+  this._dataviewsCollection = new DataviewsCollection();
+
+  this._cartoLayerGroup = new CartoDBLayerGroup({ apiKey: params.apiKey, authToken: params.authToken }, { layersCollection: this._layersCollection });
+  this._bindCartoLayerGroupError();
+
+  this._modelUpdater = new ModelUpdater({
+    dataviewsCollection: this._dataviewsCollection,
+    layerGroupModel: this._cartoLayerGroup,
+    layersCollection: this._layersCollection
+  });
 }
 
-helper.fillTimestampBuckets = function (buckets, start, aggregation, numberOfBins, from, totalBuckets) {
-  var filledBuckets = []; // To catch empty buckets
-  var definedBucket = false;
-
-  for (var i = 0; i < numberOfBins; i++) {
-    definedBucket = buckets[i] !== undefined;
-    filledBuckets.push(definedBucket);
-
-    var bucketStart = this.add(start, i, aggregation);
-    var nextBucketStart = this.add(start, i + 1, aggregation);
-
-    buckets[i] = _.extend({
-      bin: i,
-      start: bucketStart,
-      end: nextBucketStart - 1,
-      next: nextBucketStart,
-      freq: 0
-    }, buckets[i]);
-    delete buckets[i].timestamp;
-  }
-
-  return from === 'totals' ? buckets : trimBuckets(buckets, filledBuckets, totalBuckets);
-};
-
-helper.fillNumericBuckets = function (buckets, start, width, numberOfBins) {
-  for (var i = 0; i < numberOfBins; i++) {
-    var bucketStart = start + i * width;
-    var commonBucketEnd = start + (i + 1) * width;
-    var isLastBucket = i + 1 === numberOfBins;
-    var bucketEnd = isLastBucket && buckets[i] ? buckets[i].max : commonBucketEnd;
-    var filledBucket = _.extend({}, {
-      bin: i,
-      start: bucketStart,
-      end: bucketEnd,
-      freq: 0
-    }, buckets[i]);
-    buckets[i] = filledBucket;
-  }
-};
-
-helper.hasChangedSomeOf = function (list, changed) {
-  return _.some(_.keys(changed), function (key) {
-    return _.contains(list, key);
-  });
+/**
+ * Return the cartoLayergroup attached to the engine
+ */
+Engine.prototype.getLayerGroup = function () {
+  return this._cartoLayerGroup;
 };
 
 /**
- * Add a `number` of aggregations to the provided timestamp
- *
- * @param {number} timestamp - Starting timestamp
- * @param {number} number - Number of aggregations to add
- * @param {object} aggregation
- * @param {string} aggregation.unit - unit of the aggregation
- * @param {number} aggregation.factor - number of aggretagion units
+ * Returns the API key attached to the engine
  */
-helper.add = function (timestamp, number, aggregation) {
-  if (!AGGREGATION_DATA.hasOwnProperty(aggregation)) {
-    throw Error('aggregation "' + aggregation + '" is not defined');
-  }
-  var date = new Date(timestamp * 1000);
-  var unit = AGGREGATION_DATA[aggregation].unit;
-  var factor = AGGREGATION_DATA[aggregation].factor;
-  var value = number * factor;
-  switch (unit) {
-    case 'second':
-      return date.setUTCSeconds(date.getUTCSeconds() + value) / 1000;
-    case 'minute':
-      return date.setUTCMinutes(date.getUTCMinutes() + value) / 1000;
-    case 'hour':
-      return date.setUTCHours(date.getUTCHours() + value) / 1000;
-    case 'day':
-      return date.setUTCDate(date.getUTCDate() + value) / 1000;
-    case 'month':
-      var n = date.getUTCDate();
-      date.setUTCDate(1);
-      date.setUTCMonth(date.getUTCMonth() + value);
-      date.setUTCDate(Math.min(n, _getDaysInMonth(date.getUTCFullYear(), date.getUTCMonth())));
-      return date.getTime() / 1000;
-    default:
-      return 0;
+Engine.prototype.getApiKey = function () {
+  return this._windshaftSettings && this._windshaftSettings.apiKey;
+};
+
+/**
+ * Returns the Auth token attached to the engine
+ */
+Engine.prototype.getAuthToken = function () {
+  return this._windshaftSettings && this._windshaftSettings.authToken;
+};
+
+/**
+ * Bind a callback function to an event. The callback will be invoked whenever the event is fired.
+ *
+ * @param {string} event - The name of the event that triggers the callback execution.
+ * @param {function} callback - A function to be executed when the event is fired.
+ * @param {function} [context] - The context value for this when the callback is invoked.
+ * @example
+ * // Define a callback to be executed once the map is reloaded.
+ * function onReload(event) {
+ *  console.log(event); // "reload-success"
+ * }
+ * // Attach the callback to the RELOAD_SUCCESS event.
+ * engine.on(Engine.Events.RELOAD_SUCCESS, onReload);
+ * // Call the reload method and wait.
+ * engine.reload();
+ *
+ */
+Engine.prototype.on = function (event, callback, context) {
+  this._eventEmmitter.on(event, callback, context);
+};
+
+/**
+ * Remove a previously-bound callback function from an event.
+ *
+ * @param {string} event - The name of the event that triggers the callback execution.
+ * @param {function} callback - A function callback to be removed when the event is fired.
+ * @param {function} [context] - The context value for this when the callback is invoked.
+ * @example
+ * // Remove the the `displayMap` listener function so it wont be executed anymore when the engine fires the `load` event.
+ * engine.off(Engine.Events.RELOAD_SUCCESS, onReload);
+ *
+ */
+Engine.prototype.off = function (event, callback, context) {
+  this._eventEmmitter.off(event, callback, context);
+};
+
+/**
+ * This is the most important function of the engine.
+ * Generate a payload from the current state, send it to the windshaft server
+ * and update the internal models with the server response.
+ *
+ * Once the response has arrived trigger a 'reload-succes' or 'reload-error' event.
+ *
+ * @param {string} options.sourceId - The sourceId triggering the reload event. This is usefull to prevent uneeded requests and save data.
+ * @param {boolean} options.forceFetch - Forces dataviews to fetch data from server after a reload
+ * @param {boolean} options.includeFilters - Boolean flag to control if the filters need to be added in the payload.
+ *
+ * @fires Engine#Engine:RELOAD_STARTED
+ * @fires Engine#Engine:RELOAD_SUCCESS
+ * @fires Engine#Engine:RELOAD_ERROR
+ *
+ */
+Engine.prototype.reload = function (options) {
+  options = options || {};
+  // Using a debouncer to optimize consecutive calls to reload the map.
+  // This allows to change multiple map parameters reloading the map only once,
+  // and therefore avoid the "You are over platform's limits" Windshaft error.
+  return new Promise(function (resolve, reject) {
+    this._batchOptions = _.pick({
+      sourceId: options.sourceId,
+      forceFetch: this._batchOptions.forceFetch || options.forceFetch,
+      includeFilters: options.includeFilters
+    }, _.negate(_.isUndefined));
+    this._stackCalls.push({
+      success: options.success,
+      error: options.error,
+      resolve: resolve,
+      reject: reject
+    });
+    var later = function () {
+      this._timeout = null;
+      this._performReload(this._batchOptions).then(function () {
+        // Resolve stacked callbacks and promises
+        this._stackCalls.forEach(function (call) {
+          call.success && call.success();
+          call.resolve();
+        });
+        // Reset stack
+        this._stackCalls = [];
+        this._batchOptions = {};
+      }.bind(this)).catch(function (windshaftError) {
+        // Reject stacked callbacks and promises
+        this._stackCalls.forEach(function (call) {
+          call.error && call.error(windshaftError);
+          call.reject(windshaftError);
+        });
+        // Reset stack
+        this._stackCalls = [];
+        this._batchOptions = {};
+      }.bind(this));
+    }.bind(this);
+    clearTimeout(this._timeout);
+    this._timeout = setTimeout(later, RELOAD_DEBOUNCE_TIME_IN_MILIS);
+  }.bind(this));
+};
+
+Engine.prototype._performReload = function (options) {
+  return new Promise(function (resolve, reject) {
+    // Build Windshaft options callbacks
+    var windshaftOptions = this._buildWindshaftOptions(options,
+    // Windshaft success callback
+    function (serverResponse) {
+      this._onReloadSuccess(serverResponse, options.sourceId, options.forceFetch);
+      resolve();
+    }.bind(this),
+    // Windshaft error callback
+    function (errors) {
+      var windshaftError = this._onReloadError(errors);
+      reject(windshaftError);
+    }.bind(this));
+    try {
+      var params = this._buildParams(windshaftOptions.includeFilters);
+      var payload = this._getSerializer().serialize(this._layersCollection, this._dataviewsCollection);
+      var request = new Request(payload, params, windshaftOptions);
+
+      // Trigger STARTED event
+      this._eventEmmitter.trigger(Engine.Events.RELOAD_STARTED);
+      // Perform the request
+      this._windshaftClient.instantiateMap(request);
+    } catch (error) {
+      // Convert error in a windshaftError
+      var windshaftError = new WindshaftError({ message: error.message });
+      this._manageClientError(windshaftError, windshaftOptions);
+    }
+  }.bind(this));
+};
+
+/**
+ *
+ * Add a layer to the engine layersCollection
+ *
+ * @param {layer} layer - A new layer to be added to the engine.
+ *
+ * @public
+ */
+Engine.prototype.addLayer = function (layer) {
+  this._layersCollection.add(layer);
+};
+
+/**
+ *
+ * Remove a layer from the engine layersCollection
+ *
+ * @param {layer} layer - A new layer to be removed from the engine.
+ *
+ * @public
+ */
+Engine.prototype.removeLayer = function (layer) {
+  this._layersCollection.remove(layer);
+};
+
+/**
+ *
+ * Move a layer in the engine layersCollection
+ *
+ * @param {layer} layer - A new layer to be moved in the engine.
+ * @param {number} toIndex - Final index for the layer.
+ *
+ * @public
+ */
+Engine.prototype.moveLayer = function (layer, toIndex) {
+  var fromIndex = this._layersCollection.indexOf(layer);
+  if (fromIndex >= 0 && fromIndex !== toIndex) {
+    this._layersCollection.models.splice(toIndex, 0, this._layersCollection.models.splice(fromIndex, 1)[0]);
+    // Equivalent to:
+    // this._layersCollection.remove(layer, { silent: true });
+    // this._layersCollection.add(layer, { at: toIndex });
   }
 };
 
-/* Internal functions */
+/**
+ *
+ * Add a dataview to the engine dataviewsCollection
+ *
+ * @param {Dataview} dataview - A new dataview to be added to the engine.
+ *
+ * @public
+ */
+Engine.prototype.addDataview = function (dataview) {
+  this._dataviewsCollection.add(dataview);
+};
 
-function _getDaysInMonth(year, month) {
-  return [31, _isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
-}
+/**
+ *
+ * Remove a dataview from the engine dataviewsCollection
+ *
+ * @param {Dataview} dataview - The Dataview to be removed to the engine.
+ *
+ * @public
+ */
+Engine.prototype.removeDataview = function (dataview) {
+  this._dataviewsCollection.remove(dataview);
+};
 
-function _isLeapYear(year) {
-  return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
-}
+/**
+ * Callback executed when the windhsaft client returns a successful response.
+ * Update internal models and trigger a RELOAD_SUCCESS event.
+ * @private
+ */
+Engine.prototype._onReloadSuccess = function (serverResponse, sourceId, forceFetch) {
+  var responseWrapper = new Response(this._windshaftSettings, serverResponse);
+  this._modelUpdater.updateModels(responseWrapper, sourceId, forceFetch);
+  this._restartAnalysisPolling();
+  // Trigger RELOAD_SUCCESS event
+  this._eventEmmitter.trigger(Engine.Events.RELOAD_SUCCESS);
+};
 
-module.exports = helper;
+/**
+ * Callback executed when the windhsaft client returns a failed response.
+ * Update internal models setting errors and trigger a RELOAD_ERROR event.
+ * @private
+ */
+Engine.prototype._onReloadError = function (errors) {
+  var windshaftError = this._getSimpleWindshaftError(errors);
+  this._modelUpdater.setErrors(errors);
+  // Trigger RELOAD_ERROR event
+  this._eventEmmitter.trigger(Engine.Events.RELOAD_ERROR, windshaftError);
+  return windshaftError;
+};
+
+/**
+ * Helper to get windhsaft request options.
+ * @private
+ */
+Engine.prototype._buildWindshaftOptions = function (options, successCallback, errorCallback) {
+  return _.extend({
+    includeFilters: true,
+    success: successCallback,
+    error: errorCallback
+  }, _.pick(options, 'sourceId', 'forceFetch', 'includeFilters'));
+};
+
+/**
+ * Helper to get windhsaft request parameters.
+ * @param {boolean} includeFilters - Boolean flag to control if the filters need to be added in the payload.
+ * @private
+ */
+Engine.prototype._buildParams = function (includeFilters) {
+  var params = {};
+
+  if (true) {
+    params.client = this._windshaftSettings.client;
+  }
+
+  if (includeFilters && !_.isEmpty(this._dataviewsCollection.getFilters())) {
+    params.filters = this._dataviewsCollection.getFilters();
+  }
+
+  if (this._windshaftSettings.apiKey) {
+    params.api_key = this._windshaftSettings.apiKey;
+    return params;
+  }
+
+  if (this._windshaftSettings.authToken) {
+    params.auth_token = this._windshaftSettings.authToken;
+    return params;
+  }
+
+  console.warn('Engine initialized with no apiKeys neither authToken');
+};
+
+/**
+ * Reset the analysis nodes in the poller
+ * @private
+ */
+Engine.prototype._restartAnalysisPolling = function () {
+  var analysisNodes = AnalysisService.getUniqueAnalysisNodes(this._layersCollection, this._dataviewsCollection);
+  this._analysisPoller.resetAnalysisNodes(analysisNodes);
+};
+
+/**
+ * Get the instance of the serializer service depending on is an anonymous or a named map.
+ * @private
+ */
+Engine.prototype._getSerializer = function () {
+  return this._isNamedMap ? NamedMapSerializer : AnonymousMapSerializer;
+};
+
+/**
+ * Manage and propagate the client error
+ * @private
+ */
+Engine.prototype._manageClientError = function (windshaftError, windshaftOptions) {
+  this._modelUpdater.setErrors([windshaftError]);
+  windshaftOptions.error && windshaftOptions.error([windshaftError]);
+};
+
+/**
+ * Listen to errors in cartoLayerGroup
+ */
+Engine.prototype._bindCartoLayerGroupError = function () {
+  this._cartoLayerGroup.on('all', function (change, error) {
+    if (change.lastIndexOf('error:', 0) === 0) {
+      error = new WindshaftError(error);
+      this._eventEmmitter.trigger(Engine.Events.LAYER_ERROR, error);
+    }
+  }, this);
+};
+
+Engine.prototype._getSimpleWindshaftError = function (errors) {
+  var error = _.find(errors, function (error) {
+    return error.isGlobalError();
+  });
+  if (!error && errors && errors.length > 0) {
+    error = errors[0];
+  }
+  return error;
+};
+
+/**
+ * Events fired by the engine
+ *
+ * @readonly
+ * @enum {string}
+ */
+Engine.Events = {
+  /**
+   * Reload started event, fired every time the reload process starts.
+   */
+  RELOAD_STARTED: 'reload-started',
+  /**
+   * Reload success event, fired every time the reload function succeed.
+   */
+  RELOAD_SUCCESS: 'reload-success',
+  /**
+   * Reload error event, fired every time the reload function fails.
+   */
+  RELOAD_ERROR: 'reload-error',
+  /**
+   * Error event, fired every time a tile or limit error happens.
+   */
+  LAYER_ERROR: 'layer-error'
+};
+
+module.exports = Engine;
+
+/**
+ * Reload started event, fired every time the reload process starts.
+ *
+ * @event Engine#Engine:RELOAD_STARTED
+ * @type {string}
+ */
+
+/**
+  * Reload success event, fired every time the reload function succeed.
+  *
+  * @event Engine#Engine:RELOAD_SUCCESS
+  * @type {string}
+  */
+
+/**
+  * Reload success event, fired every time the reload function fails.
+  *
+  * @event Engine#Engine:RELOAD_ERROR
+  * @type {string}
+  */
+
+/**
+  * Layer group error event, fired every time an error with layer group happends (tile or limit).
+  *
+  * @event Engine#Engine:LAYER_ERROR
+  * @type {string}
+  */
 
 /***/ }),
 /* 32 */
@@ -17840,427 +18173,24 @@ module.exports = helper;
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var d3 = __webpack_require__(45);
-var DataviewModelBase = __webpack_require__(21);
-var HistogramDataModel = __webpack_require__(64);
-var helper = __webpack_require__(31);
-var dateUtils = __webpack_require__(63);
+var v = __webpack_require__(64);
 
-module.exports = DataviewModelBase.extend({
-
-  defaults: _.extend({
-    type: 'histogram',
-    totalAmount: 0,
-    filteredAmount: 0,
-    hasNulls: false,
-    localTimezone: false
-  }, DataviewModelBase.prototype.defaults),
-
-  _getDataviewSpecificURLParams: function _getDataviewSpecificURLParams() {
-    var params = [];
-
-    if (_.isNumber(this.get('own_filter'))) {
-      params.push('own_filter=' + this.get('own_filter'));
-      if (this.get('column_type') === 'number' && this.get('bins')) {
-        params.push('bins=' + this.get('bins'));
-      }
-    } else {
-      var offset = this.getCurrentOffset();
-
-      if (this.get('column_type') === 'number' && this.get('bins')) {
-        params.push('bins=' + this.get('bins'));
-      } else if (this.get('column_type') === 'date') {
-        params.push('aggregation=' + (this.get('aggregation') || 'auto'));
-        if (_.isFinite(offset)) {
-          params.push('offset=' + offset);
-        }
-      }
-
-      // Start - End
-      var start = this.get('start');
-      var end = this.get('end');
-      if (_.isFinite(start) && _.isFinite(end)) {
-        params.push('start=' + start);
-        params.push('end=' + end);
-      }
+module.exports.getVersion = function (version) {
+    if (version === 'latest') {
+        version = v.target;
     }
-    return params;
-  },
-
-  initialize: function initialize(attrs, opts) {
-    this._localOffset = dateUtils.getLocalOffset();
-
-    // Internal model for calculating all the data in the histogram (without filters)
-    this._totals = new HistogramDataModel({
-      bins: this.get('bins'),
-      aggregation: this.get('aggregation'),
-      offset: this.get('offset'),
-      column_type: this.get('column_type'),
-      apiKey: opts && opts.engine && opts.engine.getApiKey(),
-      authToken: opts && opts.engine && opts.engine.getAuthToken(),
-      localTimezone: this.get('localTimezone'),
-      localOffset: this._localOffset,
-      start: this.get('start'),
-      end: this.get('end')
-    });
-
-    DataviewModelBase.prototype.initialize.apply(this, arguments);
-    this._data = new Backbone.Collection(this.get('data'));
-
-    if (attrs && (attrs.min || attrs.max)) {
-      this.filter && this.filter.setRange(this.get('min'), this.get('max'));
-    }
-  },
-
-  _initBinds: function _initBinds() {
-    DataviewModelBase.prototype._initBinds.apply(this);
-
-    this._updateURLBinding();
-
-    // When original data gets fetched
-    this._totals.bind('loadModelCompleted', this._onTotalsDataFetched, this);
-    this._totals.once('loadModelCompleted', this._updateBindings, this);
-    this._totals.bind('error', this.setUnavailable, this);
-    this._totals.bind('error', this._onTotalsError, this);
-
-    this.on('change:column', this._onColumnChanged, this);
-    this.on('change:localTimezone', this._onLocalTimezoneChanged, this);
-    this.on('change', this._onFieldsChanged, this);
-    this.on('change:column_type', this._onColumnTypeChanged, this);
-  },
-
-  _onLocalTimezoneChanged: function _onLocalTimezoneChanged() {
-    this._totals.set('localTimezone', this.get('localTimezone'));
-  },
-
-  _updateURLBinding: function _updateURLBinding() {
-    this.off('change:url');
-    this.on('change:url', this._onUrlChanged, this);
-  },
-
-  _updateBindings: function _updateBindings() {
-    this._onChangeBinds();
-    this._updateURLBinding();
-  },
-
-  enableFilter: function enableFilter() {
-    this.set('own_filter', 1);
-  },
-
-  disableFilter: function disableFilter() {
-    this.unset('own_filter');
-  },
-
-  getData: function getData() {
-    return this._data.toJSON();
-  },
-
-  getUnfilteredData: function getUnfilteredData() {
-    return this._totals.get('data');
-  },
-
-  getUnfilteredDataModel: function getUnfilteredDataModel() {
-    return this._totals;
-  },
-
-  getSize: function getSize() {
-    return this._data.size();
-  },
-
-  getColumnType: function getColumnType() {
-    return this.get('column_type');
-  },
-
-  hasNulls: function hasNulls() {
-    return this.get('hasNulls');
-  },
-
-  parse: function parse(data) {
-    var aggregation = data.aggregation || this._totals && this._totals.get('aggregation');
-    var numberOfBins = _.isFinite(data.bins_count) ? data.bins_count : this.get('bins');
-    var width = data.bin_width;
-    var start = this.get('column_type') === 'date' ? data.timestamp_start : data.bins_start;
-
-    var parsedData = {
-      data: [],
-      filteredAmount: 0,
-      nulls: 0,
-      totalAmount: 0
-    };
-
-    if (this.has('error')) {
-      return parsedData;
+    else if (!v.versions.includes(version)) {
+        throw new Error(
+                'Invalid camshaft-reference version: "' + version + '". ' +
+                'Valid versions are: ' + v.versions.join(', ') + '.'
+        );
     }
 
-    parsedData.data = new Array(numberOfBins);
+    return __webpack_require__(65)("./" + version + "/reference.json");
+};
 
-    _.each(data.bins, function (bin) {
-      parsedData.data[bin.bin] = bin;
-    });
+module.exports.versions = v.versions;
 
-    this.set({
-      aggregation: aggregation
-    }, { silent: true });
-
-    if (this.get('column_type') === 'date') {
-      parsedData.data = helper.fillTimestampBuckets(parsedData.data, start, aggregation, numberOfBins, 'filtered', this._totals.get('data').length);
-      numberOfBins = parsedData.data.length;
-    } else {
-      helper.fillNumericBuckets(parsedData.data, start, width, numberOfBins);
-    }
-
-    // if parse option is passed in the constructor, this._data is not created yet at this point
-    this._data && this._data.reset(parsedData.data);
-
-    // Calculate totals
-    parsedData.totalAmount = this._calculateTotalAmount(parsedData.data);
-    parsedData.filteredAmount = this._calculateFilteredAmount(this.filter, this._data);
-    parsedData.nulls = data.nulls;
-    parsedData.bins = numberOfBins;
-
-    if (data.nulls != null) {
-      parsedData = _.extend({}, parsedData, {
-        nulls: data.nulls,
-        hasNulls: true
-      });
-    }
-
-    return parsedData;
-  },
-
-  _onFilterChanged: function _onFilterChanged(filter) {
-    this.set('filteredAmount', this._calculateFilteredAmount(filter, this._data));
-
-    DataviewModelBase.prototype._onFilterChanged.apply(this, arguments);
-  },
-
-  _onColumnChanged: function _onColumnChanged() {
-    this._totals.set({
-      column_type: this.get('column_type'),
-      column: this.get('column'),
-      start: null,
-      end: null
-    });
-    this.set('aggregation', undefined, { silent: true });
-
-    this._reloadAndForceFetch();
-  },
-
-  _calculateTotalAmount: function _calculateTotalAmount(buckets) {
-    return _.reduce(buckets, function (memo, bucket) {
-      var add = bucket && bucket.freq ? bucket.freq : 0;
-      return memo + add;
-    }, 0);
-  },
-
-  _calculateFilteredAmount: function _calculateFilteredAmount(filter, data) {
-    var filteredAmount = 0;
-    if (filter && filter.get('min') !== void 0 && filter.get('max') !== void 0) {
-      var indexes = this._findBinsIndexes(data, filter.get('min'), filter.get('max'));
-      filteredAmount = this._sumBinsFreq(data, indexes.start, indexes.end);
-    }
-
-    return filteredAmount;
-  },
-
-  _findBinsIndexes: function _findBinsIndexes(data, start, end) {
-    var startBin = data.findWhere({ start: Math.min(start, end) });
-    var endBin = data.findWhere({ end: Math.max(start, end) });
-
-    return {
-      start: startBin && startBin.get('bin'),
-      end: endBin && endBin.get('bin')
-    };
-  },
-
-  _sumBinsFreq: function _sumBinsFreq(data, start, end) {
-    return _.reduce(data.slice(start, end + 1), function (acum, d) {
-      return (d.get('freq') || 0) + acum;
-    }, 0);
-  },
-
-  /*
-  Ported from cartodb-postgresql
-  https://github.com/CartoDB/cartodb-postgresql/blob/master/scripts-available/CDB_DistType.sql
-  */
-  getDistributionType: function getDistributionType(data) {
-    var histogram = data || this.get('data');
-    var freqAccessor = function freqAccessor(a) {
-      return a.freq;
-    };
-    var osc = d3.max(histogram, freqAccessor) - d3.min(histogram, freqAccessor);
-    var mean = d3.mean(histogram, freqAccessor);
-    // When the difference between the max and the min values is less than
-    // 10 percent of the mean, it's a flat histogram (F)
-    if (osc < mean * 0.1) return 'F';
-    var sumFreqs = d3.sum(histogram, freqAccessor);
-    var freqs = histogram.map(function (bin) {
-      return 100 * bin.freq / sumFreqs;
-    });
-
-    // The ajus array represents relative growths
-    var ajus = freqs.map(function (freq, index) {
-      var next = freqs[index + 1];
-      if (freq > next) return -1;
-      if (Math.abs(freq - next) <= 0.05) return 0;
-      return 1;
-    });
-    ajus.pop();
-    var maxAjus = d3.max(ajus);
-    var minAjus = d3.min(ajus);
-    // If it never grows or shrinks, it returns flat
-    if (minAjus === 0 && maxAjus === 0) return 'F';else if (maxAjus < 1) return 'L';else if (minAjus > -1) return 'J';else {
-      var uniques = _.uniq(ajus);
-      var A_TYPES = [[1, -1], [1, 0, -1], [1, -1, 0], [0, 1, -1]];
-      var U_TYPES = [[-1, 1], [-1, 0, 1], [-1, 1, 0], [0, -1, 1]];
-      if (A_TYPES.some(function (e) {
-        return _.isEqual(e, uniques);
-      })) return 'A';else if (U_TYPES.some(function (e) {
-        return _.isEqual(e, uniques);
-      })) return 'U';else return 'S';
-    }
-  },
-
-  toJSON: function toJSON(d) {
-    var columnType = this.get('column_type');
-    var offset = this.get('offset');
-
-    var options = {
-      column: this.get('column')
-    };
-
-    if (columnType === 'number' && this.get('bins')) {
-      options.bins = this.get('bins');
-    } else if (columnType === 'date') {
-      options.aggregation = this.get('aggregation') || 'auto';
-
-      if (_.isFinite(offset)) {
-        options.offset = offset;
-      }
-    }
-
-    return {
-      type: 'histogram',
-      source: { id: this.getSourceId() },
-      options: options
-    };
-  },
-
-  _onColumnTypeChanged: function _onColumnTypeChanged() {
-    this.filter && this.filter.set('column_type', this.get('column_type'));
-  },
-
-  _onChangeBinds: function _onChangeBinds() {
-    DataviewModelBase.prototype._onChangeBinds.call(this);
-  },
-
-  _onUrlChanged: function _onUrlChanged() {
-    this._totals.set({
-      offset: this.get('offset'),
-      bins: this.get('bins')
-    }, { silent: true });
-
-    this._totals.setUrl(this.get('url'));
-  },
-
-  _onTotalsDataFetched: function _onTotalsDataFetched(data, model) {
-    var start = model.get('start');
-    var end = model.get('end');
-
-    if (_.isFinite(start) && _.isFinite(end)) {
-      this.set({
-        start: start,
-        end: end
-      });
-    }
-
-    this.set({
-      aggregation: model.get('aggregation') || 'auto',
-      offset: model.get('offset') || 0,
-      bins: model.get('bins'),
-      error: model.get('error')
-    }, { silent: true });
-
-    var resetFilter = false;
-
-    if (this.get('column_type') === 'date' && (_.has(this.changed, 'aggregation') || _.has(this.changed, 'offset'))) {
-      resetFilter = true;
-    } else if (this.get('column_type') === 'number' && _.has(this.changed, 'bins')) {
-      resetFilter = true;
-    }
-
-    resetFilter ? this._resetFilterAndFetch() : this.fetch();
-  },
-
-  _onFieldsChanged: function _onFieldsChanged() {
-    this._setTotalsStartEnd();
-
-    if (!helper.hasChangedSomeOf(['bins', 'aggregation', 'offset'], this.changed)) {
-      return;
-    }
-
-    var aggregationChangedToUndefined = _.has(this.changed, 'aggregation') && _.isUndefined(this.changed.aggregation);
-
-    // We should avoid fetching totals when bins has changed and aggregation has
-    // changed to undefined. That means a change in column. If we set the bins
-    // we trigger a fetch while a map instantiation is ongoing. The API returns bad data in that case.
-    if (this.get('column_type') === 'number' && !aggregationChangedToUndefined) {
-      this._totals.set('bins', this.get('bins'));
-    }
-    if (this.get('column_type') === 'date') {
-      if (this.hasChanged('aggregation')) {
-        this._resetFilter();
-      }
-      this._totals.set({
-        offset: this.get('offset'),
-        aggregation: this.get('aggregation')
-      });
-    }
-  },
-
-  _setTotalsStartEnd: function _setTotalsStartEnd() {
-    var start = this.get('start');
-    var end = this.get('end');
-
-    var startEndChanged = helper.hasChangedSomeOf(['start', 'end'], this.changed);
-    var startEndValid = _.isFinite(start) && _.isFinite(end);
-    var hasDifferentValues = this._totals.get('start') !== start || this._totals.get('end') !== end;
-
-    if (startEndChanged && startEndValid && hasDifferentValues) {
-      this._totals.set({ start: start, end: end });
-      this._totals.refresh();
-    }
-  },
-
-  _resetFilterAndFetch: function _resetFilterAndFetch() {
-    this._resetFilter();
-    this.fetch();
-  },
-
-  _resetFilter: function _resetFilter() {
-    this.disableFilter();
-    this.filter && this.filter.unsetRange();
-  },
-
-  _onTotalsError: function _onTotalsError(model, error) {
-    var parsedError = error && this._parseError(error);
-
-    if (parsedError && parsedError.message !== 'abort') {
-      this._triggerStatusError(parsedError);
-    }
-  },
-
-  getCurrentOffset: function getCurrentOffset() {
-    return this.get('localTimezone') ? this._localOffset : this.get('offset');
-  }
-},
-
-// Class props
-{
-  ATTRS_NAMES: DataviewModelBase.ATTRS_NAMES.concat(['column', 'column_type', 'bins', 'min', 'max', 'aggregation', 'offset'])
-});
 
 /***/ }),
 /* 33 */
@@ -18269,59 +18199,435 @@ module.exports = DataviewModelBase.extend({
 "use strict";
 
 
-var Backbone = __webpack_require__(1);
-var _ = __webpack_require__(0);
-var CategoryItemModel = __webpack_require__(73);
-var COUNT_AGGREGATION_TYPE = 'count';
-
-/**
- *  Data categories collection
- *
- *  - It basically sorts by (value, selected and "Other").
- */
-
-module.exports = Backbone.Collection.extend({
-  model: CategoryItemModel,
-
-  initialize: function initialize(models, options) {
-    this.aggregationModel = options.aggregationModel;
-    this.aggregation = options.aggregationModel.get('aggregation');
-  },
-
-  reset: function reset(models, options) {
-    if (this.aggregationModel.get('aggregation') !== COUNT_AGGREGATION_TYPE) {
-      models = _.filter(models, function (category) {
-        var isModel = category instanceof Backbone.Model;
-        var value = isModel ? category.get('value') : category.value;
-        return value != null;
-      });
-    }
-    Backbone.Collection.prototype.reset.call(this, models, options);
-  },
-
-  comparator: function comparator(a, b) {
-    if (a.get('name') === 'Other') {
-      return 1;
-    } else if (b.get('name') === 'Other') {
-      return -1;
-    } else if (a.get('value') === b.get('value')) {
-      return a.get('selected') < b.get('selected') ? 1 : -1;
-    } else {
-      return a.get('value') < b.get('value') ? 1 : -1;
-    }
-  },
-
-  isOtherAvailable: function isOtherAvailable() {
-    return this.where({
-      agg: true,
-      name: 'Other'
-    }).length > 0;
-  }
-
-});
+module.exports = {
+  MAPS_API_BASE_URL: 'api/v1/map'
+};
 
 /***/ }),
 /* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var WINDSHAFT_ERRORS = __webpack_require__(24).WINDSHAFT_ERRORS;
+
+var WindshaftError = function WindshaftError(error, type, origin) {
+  this._error = error;
+
+  this.origin = origin || 'windshaft';
+  this.type = getType(error.type, type, WINDSHAFT_ERRORS.GENERIC);
+  this.subtype = error.subtype;
+  this.message = truncateMessage(error.message);
+  this.context = error.context;
+
+  if (this.isLayerError(error.type)) {
+    this.context = error.layer && error.layer.context;
+    this.layerId = error.layer && error.layer.id;
+  }
+
+  if (this.isAnalysisError(error.type) && error.analysis) {
+    this.context = error.analysis.context;
+    this.analysisId = error.analysis.node_id || error.analysis.id;
+  }
+};
+
+WindshaftError.prototype.isGlobalError = function (errorType) {
+  return !this.isLayerError(errorType) && !this.isAnalysisError(errorType);
+};
+
+WindshaftError.prototype.isLayerError = function (errorType) {
+  errorType = errorType || this._error.type;
+  return errorType === WINDSHAFT_ERRORS.LAYER;
+};
+
+WindshaftError.prototype.isAnalysisError = function (errorType) {
+  errorType = errorType || this._error.type;
+  return errorType === WINDSHAFT_ERRORS.ANALYSIS;
+};
+
+// Helper functions
+
+function truncateMessage(message) {
+  var MAX_SIZE = 256;
+
+  return message && message.length > MAX_SIZE ? message.substring(0, MAX_SIZE) : message;
+}
+
+function getType(originalType, forcedType, genericType) {
+  if (!originalType || originalType === WINDSHAFT_ERRORS.UNKNOWN) {
+    if (forcedType) {
+      return forcedType;
+    } else if (originalType !== WINDSHAFT_ERRORS.UNKNOWN) {
+      return genericType;
+    } else {
+      return WINDSHAFT_ERRORS.UNKNOWN;
+    }
+  } else {
+    return originalType;
+  }
+}
+
+module.exports = WindshaftError;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+
+/**
+ * Base layer object.
+ *
+ * This object should not be used directly! use {@link carto.layer.Layer} instead.
+ *
+ * @constructor
+ * @abstract
+ * @fires error
+ * @memberof carto.layer
+ * @api
+ */
+function Base(source, layer, options) {
+  options = options || {};
+  this._id = options.id || Base.$generateId();
+}
+
+_.extend(Base.prototype, Backbone.Events);
+
+/**
+ * Get the unique autogenerated id.
+ *
+ * @return {string} Unique autogenerated id
+ *
+ */
+Base.prototype.getId = function () {
+  return this._id;
+};
+
+/**
+ * The instance id will be autogenerated by incrementing this variable.
+ */
+Base.$nextId = 0;
+
+/**
+ * Static funciton used internally to autogenerate source ids.
+ */
+Base.$generateId = function () {
+  return 'L' + ++Base.$nextId;
+};
+
+/**
+ * Return the real CARTO.js model used by the layer.
+ */
+Base.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+module.exports = Base;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+
+var getFieldNames = function getFieldNames(fields) {
+  return _.map(fields, function (field) {
+    var o = {};
+    o[field.name] = field.title;
+    return o;
+  });
+};
+
+var PopupFields = Backbone.Collection.extend({
+  equals: function equals(otherFields) {
+    var myFields = this.toJSON();
+    return _.isEqual(getFieldNames(myFields), getFieldNames(otherFields));
+  }
+});
+
+module.exports = PopupFields;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+
+/**
+ * Base style object.
+ *
+ * @fires error
+ * @constructor
+ * @abstract
+ * @memberof carto.style
+ * @api
+ */
+function Base() {}
+
+_.extend(Base.prototype, Backbone.Events);
+
+Base.prototype.$setError = function (cartoError) {
+  this._error = cartoError;
+  this.trigger('error', cartoError);
+};
+
+Base.prototype.$setEngine = function (newEngine) {
+  if (this._engine && this._engine !== newEngine) {
+    throw new Error('CartoCSS engine cannot be changed');
+  }
+  this._engine = newEngine;
+};
+
+Base.prototype.$getEngine = function () {
+  return this._engine;
+};
+
+module.exports = Base;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Base metadata object
+ *
+ * @constructor
+ * @abstract
+ * @memberof carto.layer.metadata
+ * @api
+ */
+function Base(type, rule) {
+  this._type = type || '';
+  this._column = rule.getColumn();
+  this._mapping = rule.getMapping();
+  this._property = rule.getProperty();
+}
+
+/**
+ * Return the type of the metadata
+ *
+ * @return {string}
+ * @api
+ */
+Base.prototype.getType = function () {
+  return this._type;
+};
+
+/**
+ * Return the column of the metadata
+ *
+ * @return {string}
+ * @api
+ */
+Base.prototype.getColumn = function () {
+  return this._column;
+};
+
+/**
+ * Return the property of the metadata
+ *
+ * @return {string}
+ * @api
+ */
+Base.prototype.getMapping = function () {
+  return this._mapping;
+};
+
+/**
+ * Return the property of the metadata
+ *
+ * @return {string}
+ * @api
+ */
+Base.prototype.getProperty = function () {
+  return this._property;
+};
+
+module.exports = Base;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (eventName, internalEvent, layer) {
+  if (layer) {
+    var event = {
+      data: undefined,
+      latLng: undefined
+    };
+    if (internalEvent.feature) {
+      event.data = internalEvent.feature;
+    }
+    if (internalEvent.latlng) {
+      event.latLng = {
+        lat: internalEvent.latlng[0],
+        lng: internalEvent.latlng[1]
+      };
+    }
+    if (internalEvent.position) {
+      event.position = {
+        x: internalEvent.position.x,
+        y: internalEvent.position.y
+      };
+    }
+
+    /**
+     * Event object for feature events triggered by {@link carto.layer.Layer}.
+     *
+     * @typedef {object} carto.layer.FeatureEvent
+     * @property {LatLng} latLng - Object with coordinates where interaction took place
+     * @property {object} data - Object with feature data (one attribute for each specified column)
+     * @api
+     */
+
+    /**
+     * Fired when user clicks on a feature.
+     *
+     * @event featureClicked
+     * @type {carto.layer.FeatureEvent}
+     * @api
+     */
+
+    /**
+     * Fired when user moves the mouse over a feature.
+     *
+     * @event featureOver
+     * @type {carto.layer.FeatureEvent}
+     * @api
+     */
+
+    /**
+     * Fired when user moves the mouse out of a feature.
+     *
+     * @event featureOut
+     * @type {carto.layer.FeatureEvent}
+     * @api
+     */
+    layer.trigger(eventName, event);
+  }
+};
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var parseWindshaftErrors = __webpack_require__(23);
+
+function CartoDBLayerGroupViewBase(layerGroupModel, opts) {
+  opts = opts || {};
+  this.interaction = [];
+  this.nativeMap = opts.nativeMap;
+  this._mapModel = opts.mapModel;
+
+  layerGroupModel.on('change:urls', this._reload, this);
+  layerGroupModel.onLayerVisibilityChanged(this._reload.bind(this));
+
+  this._reload();
+}
+
+CartoDBLayerGroupViewBase.prototype = {
+  _reload: function _reload() {
+    throw new Error('_reload must be implemented');
+  },
+
+  _reloadInteraction: function _reloadInteraction() {
+    this._clearInteraction();
+
+    this.model.forEachGroupedLayer(function (layerModel, layerIndex) {
+      if (layerModel.isVisible() && (layerModel.isInteractive() || this._mapModel && this._mapModel.isFeatureInteractivityEnabled())) {
+        this._enableInteraction(layerIndex);
+      }
+    }, this);
+  },
+
+  _clearInteraction: function _clearInteraction() {
+    for (var layerIndex in this.interaction) {
+      if (this.interaction.hasOwnProperty(layerIndex) && this.interaction[layerIndex]) {
+        this.interaction[layerIndex].remove();
+        this.interaction[layerIndex] = null;
+      }
+    }
+  },
+
+  _enableInteraction: function _enableInteraction(layerIndexInLayerGroup) {
+    var self = this;
+    var tilejson = this._generateTileJSON(layerIndexInLayerGroup);
+    if (tilejson) {
+      var previousLayerInteraction = this.interaction[layerIndexInLayerGroup];
+      if (previousLayerInteraction) {
+        previousLayerInteraction.remove();
+      }
+
+      // eslint-disable-next-line
+      this.interaction[layerIndexInLayerGroup] = new this.interactionClass().map(this.nativeMap).tilejson(tilejson).on('on', function (zeraEvent) {
+        if (self._interactionDisabled) return;
+        zeraEvent.layer = layerIndexInLayerGroup;
+        self._manageOnEvents(self.nativeMap, zeraEvent);
+      }).on('off', function (zeraEvent) {
+        if (self._interactionDisabled) return;
+        zeraEvent = zeraEvent || {};
+        // TODO: zera has an .on('error', () => { }) callback that should be used here
+        if (zeraEvent.errors != null) {
+          self._manageInteractivityErrors(zeraEvent);
+        }
+        zeraEvent.layer = layerIndexInLayerGroup;
+        self._manageOffEvents(self.nativeMap, zeraEvent);
+      });
+    }
+  },
+
+  _manageInteractivityErrors: function _manageInteractivityErrors(payload) {
+    var errors = parseWindshaftErrors(payload);
+    if (errors.length > 0) {
+      this.trigger('featureError', errors[0]);
+    }
+  },
+
+  _generateTileJSON: function _generateTileJSON(layerIndexInLayerGroup) {
+    if (this.model.hasURLs()) {
+      return {
+        tilejson: '2.0.0',
+        scheme: 'xyz',
+        grids: this.model.getGridURLTemplatesWithSubdomains(layerIndexInLayerGroup),
+        tiles: this.model.getTileURLTemplatesWithSubdomains(),
+        formatter: function formatter(options, data) {
+          return data;
+        }
+      };
+    }
+  },
+
+  error: function error(e) {},
+
+  tilesOk: function tilesOk() {}
+};
+
+module.exports = CartoDBLayerGroupViewBase;
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -19011,438 +19317,62 @@ module.exports = TileLoader;
 //# sourceMappingURL=zera.js.map
 
 /***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var parseWindshaftErrors = __webpack_require__(26);
-
-function CartoDBLayerGroupViewBase(layerGroupModel, opts) {
-  opts = opts || {};
-  this.interaction = [];
-  this.nativeMap = opts.nativeMap;
-  this._mapModel = opts.mapModel;
-
-  layerGroupModel.on('change:urls', this._reload, this);
-  layerGroupModel.onLayerVisibilityChanged(this._reload.bind(this));
-
-  this._reload();
-}
-
-CartoDBLayerGroupViewBase.prototype = {
-  _reload: function _reload() {
-    throw new Error('_reload must be implemented');
-  },
-
-  _reloadInteraction: function _reloadInteraction() {
-    this._clearInteraction();
-
-    this.model.forEachGroupedLayer(function (layerModel, layerIndex) {
-      if (layerModel.isVisible() && (layerModel.isInteractive() || this._mapModel && this._mapModel.isFeatureInteractivityEnabled())) {
-        this._enableInteraction(layerIndex);
-      }
-    }, this);
-  },
-
-  _clearInteraction: function _clearInteraction() {
-    for (var layerIndex in this.interaction) {
-      if (this.interaction.hasOwnProperty(layerIndex) && this.interaction[layerIndex]) {
-        this.interaction[layerIndex].remove();
-        this.interaction[layerIndex] = null;
-      }
-    }
-  },
-
-  _enableInteraction: function _enableInteraction(layerIndexInLayerGroup) {
-    var self = this;
-    var tilejson = this._generateTileJSON(layerIndexInLayerGroup);
-    if (tilejson) {
-      var previousLayerInteraction = this.interaction[layerIndexInLayerGroup];
-      if (previousLayerInteraction) {
-        previousLayerInteraction.remove();
-      }
-
-      // eslint-disable-next-line
-      this.interaction[layerIndexInLayerGroup] = new this.interactionClass().map(this.nativeMap).tilejson(tilejson).on('on', function (zeraEvent) {
-        if (self._interactionDisabled) return;
-        zeraEvent.layer = layerIndexInLayerGroup;
-        self._manageOnEvents(self.nativeMap, zeraEvent);
-      }).on('off', function (zeraEvent) {
-        if (self._interactionDisabled) return;
-        zeraEvent = zeraEvent || {};
-        // TODO: zera has an .on('error', () => { }) callback that should be used here
-        if (zeraEvent.errors != null) {
-          self._manageInteractivityErrors(zeraEvent);
-        }
-        zeraEvent.layer = layerIndexInLayerGroup;
-        self._manageOffEvents(self.nativeMap, zeraEvent);
-      });
-    }
-  },
-
-  _manageInteractivityErrors: function _manageInteractivityErrors(payload) {
-    var errors = parseWindshaftErrors(payload);
-    if (errors.length > 0) {
-      this.trigger('featureError', errors[0]);
-    }
-  },
-
-  _generateTileJSON: function _generateTileJSON(layerIndexInLayerGroup) {
-    if (this.model.hasURLs()) {
-      return {
-        tilejson: '2.0.0',
-        scheme: 'xyz',
-        grids: this.model.getGridURLTemplatesWithSubdomains(layerIndexInLayerGroup),
-        tiles: this.model.getTileURLTemplatesWithSubdomains(),
-        formatter: function formatter(options, data) {
-          return data;
-        }
-      };
-    }
-  },
-
-  error: function error(e) {},
-
-  tilesOk: function tilesOk() {}
-};
-
-module.exports = CartoDBLayerGroupViewBase;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (eventName, internalEvent, layer) {
-  if (layer) {
-    var event = {
-      data: undefined,
-      latLng: undefined
-    };
-    if (internalEvent.feature) {
-      event.data = internalEvent.feature;
-    }
-    if (internalEvent.latlng) {
-      event.latLng = {
-        lat: internalEvent.latlng[0],
-        lng: internalEvent.latlng[1]
-      };
-    }
-    if (internalEvent.position) {
-      event.position = {
-        x: internalEvent.position.x,
-        y: internalEvent.position.y
-      };
-    }
-
-    /**
-     * Event object for feature events triggered by {@link carto.layer.Layer}.
-     *
-     * @typedef {object} carto.layer.FeatureEvent
-     * @property {LatLng} latLng - Object with coordinates where interaction took place
-     * @property {object} data - Object with feature data (one attribute for each specified column)
-     * @api
-     */
-
-    /**
-     * Fired when user clicks on a feature.
-     *
-     * @event featureClicked
-     * @type {carto.layer.FeatureEvent}
-     * @api
-     */
-
-    /**
-     * Fired when user moves the mouse over a feature.
-     *
-     * @event featureOver
-     * @type {carto.layer.FeatureEvent}
-     * @api
-     */
-
-    /**
-     * Fired when user moves the mouse out of a feature.
-     *
-     * @event featureOut
-     * @type {carto.layer.FeatureEvent}
-     * @api
-     */
-    layer.trigger(eventName, event);
-  }
-};
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Base metadata object
- *
- * @constructor
- * @abstract
- * @memberof carto.layer.metadata
- * @api
- */
-function Base(type, rule) {
-  this._type = type || '';
-  this._column = rule.getColumn();
-  this._mapping = rule.getMapping();
-  this._property = rule.getProperty();
-}
-
-/**
- * Return the type of the metadata
- *
- * @return {string}
- * @api
- */
-Base.prototype.getType = function () {
-  return this._type;
-};
-
-/**
- * Return the column of the metadata
- *
- * @return {string}
- * @api
- */
-Base.prototype.getColumn = function () {
-  return this._column;
-};
-
-/**
- * Return the property of the metadata
- *
- * @return {string}
- * @api
- */
-Base.prototype.getMapping = function () {
-  return this._mapping;
-};
-
-/**
- * Return the property of the metadata
- *
- * @return {string}
- * @api
- */
-Base.prototype.getProperty = function () {
-  return this._property;
-};
-
-module.exports = Base;
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-
-/**
- * Base style object.
- *
- * @fires error
- * @constructor
- * @abstract
- * @memberof carto.style
- * @api
- */
-function Base() {}
-
-_.extend(Base.prototype, Backbone.Events);
-
-Base.prototype.$setError = function (cartoError) {
-  this._error = cartoError;
-  this.trigger('error', cartoError);
-};
-
-Base.prototype.$setEngine = function (newEngine) {
-  if (this._engine && this._engine !== newEngine) {
-    throw new Error('CartoCSS engine cannot be changed');
-  }
-  this._engine = newEngine;
-};
-
-Base.prototype.$getEngine = function () {
-  return this._engine;
-};
-
-module.exports = Base;
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-
-var getFieldNames = function getFieldNames(fields) {
-  return _.map(fields, function (field) {
-    var o = {};
-    o[field.name] = field.title;
-    return o;
-  });
-};
-
-var PopupFields = Backbone.Collection.extend({
-  equals: function equals(otherFields) {
-    var myFields = this.toJSON();
-    return _.isEqual(getFieldNames(myFields), getFieldNames(otherFields));
-  }
-});
-
-module.exports = PopupFields;
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-
-/**
- * Base layer object.
- *
- * This object should not be used directly! use {@link carto.layer.Layer} instead.
- *
- * @constructor
- * @abstract
- * @fires error
- * @memberof carto.layer
- * @api
- */
-function Base(source, layer, options) {
-  options = options || {};
-  this._id = options.id || Base.$generateId();
-}
-
-_.extend(Base.prototype, Backbone.Events);
-
-/**
- * Get the unique autogenerated id.
- *
- * @return {string} Unique autogenerated id
- *
- */
-Base.prototype.getId = function () {
-  return this._id;
-};
-
-/**
- * The instance id will be autogenerated by incrementing this variable.
- */
-Base.$nextId = 0;
-
-/**
- * Static funciton used internally to autogenerate source ids.
- */
-Base.$generateId = function () {
-  return 'L' + ++Base.$nextId;
-};
-
-/**
- * Return the real CARTO.js model used by the layer.
- */
-Base.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
-
-module.exports = Base;
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var WINDSHAFT_ERRORS = __webpack_require__(25).WINDSHAFT_ERRORS;
-
-var WindshaftError = function WindshaftError(error, type, origin) {
-  this._error = error;
-
-  this.origin = origin || 'windshaft';
-  this.type = getType(error.type, type, WINDSHAFT_ERRORS.GENERIC);
-  this.subtype = error.subtype;
-  this.message = truncateMessage(error.message);
-  this.context = error.context;
-
-  if (this.isLayerError(error.type)) {
-    this.context = error.layer && error.layer.context;
-    this.layerId = error.layer && error.layer.id;
-  }
-
-  if (this.isAnalysisError(error.type) && error.analysis) {
-    this.context = error.analysis.context;
-    this.analysisId = error.analysis.node_id || error.analysis.id;
-  }
-};
-
-WindshaftError.prototype.isGlobalError = function (errorType) {
-  return !this.isLayerError(errorType) && !this.isAnalysisError(errorType);
-};
-
-WindshaftError.prototype.isLayerError = function (errorType) {
-  errorType = errorType || this._error.type;
-  return errorType === WINDSHAFT_ERRORS.LAYER;
-};
-
-WindshaftError.prototype.isAnalysisError = function (errorType) {
-  errorType = errorType || this._error.type;
-  return errorType === WINDSHAFT_ERRORS.ANALYSIS;
-};
-
-// Helper functions
-
-function truncateMessage(message) {
-  var MAX_SIZE = 256;
-
-  return message && message.length > MAX_SIZE ? message.substring(0, MAX_SIZE) : message;
-}
-
-function getType(originalType, forcedType, genericType) {
-  if (!originalType || originalType === WINDSHAFT_ERRORS.UNKNOWN) {
-    if (forcedType) {
-      return forcedType;
-    } else if (originalType !== WINDSHAFT_ERRORS.UNKNOWN) {
-      return genericType;
-    } else {
-      return WINDSHAFT_ERRORS.UNKNOWN;
-    }
-  } else {
-    return originalType;
-  }
-}
-
-module.exports = WindshaftError;
-
-/***/ }),
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = {
-  MAPS_API_BASE_URL: 'api/v1/map'
-};
+var Backbone = __webpack_require__(1);
+var _ = __webpack_require__(0);
+var CategoryItemModel = __webpack_require__(123);
+var COUNT_AGGREGATION_TYPE = 'count';
+
+/**
+ *  Data categories collection
+ *
+ *  - It basically sorts by (value, selected and "Other").
+ */
+
+module.exports = Backbone.Collection.extend({
+  model: CategoryItemModel,
+
+  initialize: function initialize(models, options) {
+    this.aggregationModel = options.aggregationModel;
+    this.aggregation = options.aggregationModel.get('aggregation');
+  },
+
+  reset: function reset(models, options) {
+    if (this.aggregationModel.get('aggregation') !== COUNT_AGGREGATION_TYPE) {
+      models = _.filter(models, function (category) {
+        var isModel = category instanceof Backbone.Model;
+        var value = isModel ? category.get('value') : category.value;
+        return value != null;
+      });
+    }
+    Backbone.Collection.prototype.reset.call(this, models, options);
+  },
+
+  comparator: function comparator(a, b) {
+    if (a.get('name') === 'Other') {
+      return 1;
+    } else if (b.get('name') === 'Other') {
+      return -1;
+    } else if (a.get('value') === b.get('value')) {
+      return a.get('selected') < b.get('selected') ? 1 : -1;
+    } else {
+      return a.get('value') < b.get('value') ? 1 : -1;
+    }
+  },
+
+  isOtherAvailable: function isOtherAvailable() {
+    return this.where({
+      agg: true,
+      name: 'Other'
+    }).length > 0;
+  }
+
+});
 
 /***/ }),
 /* 43 */
@@ -19451,24 +19381,427 @@ module.exports = {
 "use strict";
 
 
-var v = __webpack_require__(132);
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var d3 = __webpack_require__(151);
+var DataviewModelBase = __webpack_require__(28);
+var HistogramDataModel = __webpack_require__(132);
+var helper = __webpack_require__(44);
+var dateUtils = __webpack_require__(133);
 
-module.exports.getVersion = function (version) {
-    if (version === 'latest') {
-        version = v.target;
+module.exports = DataviewModelBase.extend({
+
+  defaults: _.extend({
+    type: 'histogram',
+    totalAmount: 0,
+    filteredAmount: 0,
+    hasNulls: false,
+    localTimezone: false
+  }, DataviewModelBase.prototype.defaults),
+
+  _getDataviewSpecificURLParams: function _getDataviewSpecificURLParams() {
+    var params = [];
+
+    if (_.isNumber(this.get('own_filter'))) {
+      params.push('own_filter=' + this.get('own_filter'));
+      if (this.get('column_type') === 'number' && this.get('bins')) {
+        params.push('bins=' + this.get('bins'));
+      }
+    } else {
+      var offset = this.getCurrentOffset();
+
+      if (this.get('column_type') === 'number' && this.get('bins')) {
+        params.push('bins=' + this.get('bins'));
+      } else if (this.get('column_type') === 'date') {
+        params.push('aggregation=' + (this.get('aggregation') || 'auto'));
+        if (_.isFinite(offset)) {
+          params.push('offset=' + offset);
+        }
+      }
+
+      // Start - End
+      var start = this.get('start');
+      var end = this.get('end');
+      if (_.isFinite(start) && _.isFinite(end)) {
+        params.push('start=' + start);
+        params.push('end=' + end);
+      }
     }
-    else if (!v.versions.includes(version)) {
-        throw new Error(
-                'Invalid camshaft-reference version: "' + version + '". ' +
-                'Valid versions are: ' + v.versions.join(', ') + '.'
-        );
+    return params;
+  },
+
+  initialize: function initialize(attrs, opts) {
+    this._localOffset = dateUtils.getLocalOffset();
+
+    // Internal model for calculating all the data in the histogram (without filters)
+    this._totals = new HistogramDataModel({
+      bins: this.get('bins'),
+      aggregation: this.get('aggregation'),
+      offset: this.get('offset'),
+      column_type: this.get('column_type'),
+      apiKey: opts && opts.engine && opts.engine.getApiKey(),
+      authToken: opts && opts.engine && opts.engine.getAuthToken(),
+      localTimezone: this.get('localTimezone'),
+      localOffset: this._localOffset,
+      start: this.get('start'),
+      end: this.get('end')
+    });
+
+    DataviewModelBase.prototype.initialize.apply(this, arguments);
+    this._data = new Backbone.Collection(this.get('data'));
+
+    if (attrs && (attrs.min || attrs.max)) {
+      this.filter && this.filter.setRange(this.get('min'), this.get('max'));
+    }
+  },
+
+  _initBinds: function _initBinds() {
+    DataviewModelBase.prototype._initBinds.apply(this);
+
+    this._updateURLBinding();
+
+    // When original data gets fetched
+    this._totals.bind('loadModelCompleted', this._onTotalsDataFetched, this);
+    this._totals.once('loadModelCompleted', this._updateBindings, this);
+    this._totals.bind('error', this.setUnavailable, this);
+    this._totals.bind('error', this._onTotalsError, this);
+
+    this.on('change:column', this._onColumnChanged, this);
+    this.on('change:localTimezone', this._onLocalTimezoneChanged, this);
+    this.on('change', this._onFieldsChanged, this);
+    this.on('change:column_type', this._onColumnTypeChanged, this);
+  },
+
+  _onLocalTimezoneChanged: function _onLocalTimezoneChanged() {
+    this._totals.set('localTimezone', this.get('localTimezone'));
+  },
+
+  _updateURLBinding: function _updateURLBinding() {
+    this.off('change:url');
+    this.on('change:url', this._onUrlChanged, this);
+  },
+
+  _updateBindings: function _updateBindings() {
+    this._onChangeBinds();
+    this._updateURLBinding();
+  },
+
+  enableFilter: function enableFilter() {
+    this.set('own_filter', 1);
+  },
+
+  disableFilter: function disableFilter() {
+    this.unset('own_filter');
+  },
+
+  getData: function getData() {
+    return this._data.toJSON();
+  },
+
+  getUnfilteredData: function getUnfilteredData() {
+    return this._totals.get('data');
+  },
+
+  getUnfilteredDataModel: function getUnfilteredDataModel() {
+    return this._totals;
+  },
+
+  getSize: function getSize() {
+    return this._data.size();
+  },
+
+  getColumnType: function getColumnType() {
+    return this.get('column_type');
+  },
+
+  hasNulls: function hasNulls() {
+    return this.get('hasNulls');
+  },
+
+  parse: function parse(data) {
+    var aggregation = data.aggregation || this._totals && this._totals.get('aggregation');
+    var numberOfBins = _.isFinite(data.bins_count) ? data.bins_count : this.get('bins');
+    var width = data.bin_width;
+    var start = this.get('column_type') === 'date' ? data.timestamp_start : data.bins_start;
+
+    var parsedData = {
+      data: [],
+      filteredAmount: 0,
+      nulls: 0,
+      totalAmount: 0
+    };
+
+    if (this.has('error')) {
+      return parsedData;
     }
 
-    return __webpack_require__(131)("./" + version + '/reference.json');
-};
+    parsedData.data = new Array(numberOfBins);
 
-module.exports.versions = v.versions;
+    _.each(data.bins, function (bin) {
+      parsedData.data[bin.bin] = bin;
+    });
 
+    this.set({
+      aggregation: aggregation
+    }, { silent: true });
+
+    if (this.get('column_type') === 'date') {
+      parsedData.data = helper.fillTimestampBuckets(parsedData.data, start, aggregation, numberOfBins, 'filtered', this._totals.get('data').length);
+      numberOfBins = parsedData.data.length;
+    } else {
+      helper.fillNumericBuckets(parsedData.data, start, width, numberOfBins);
+    }
+
+    // if parse option is passed in the constructor, this._data is not created yet at this point
+    this._data && this._data.reset(parsedData.data);
+
+    // Calculate totals
+    parsedData.totalAmount = this._calculateTotalAmount(parsedData.data);
+    parsedData.filteredAmount = this._calculateFilteredAmount(this.filter, this._data);
+    parsedData.nulls = data.nulls;
+    parsedData.bins = numberOfBins;
+
+    if (data.nulls != null) {
+      parsedData = _.extend({}, parsedData, {
+        nulls: data.nulls,
+        hasNulls: true
+      });
+    }
+
+    return parsedData;
+  },
+
+  _onFilterChanged: function _onFilterChanged(filter) {
+    this.set('filteredAmount', this._calculateFilteredAmount(filter, this._data));
+
+    DataviewModelBase.prototype._onFilterChanged.apply(this, arguments);
+  },
+
+  _onColumnChanged: function _onColumnChanged() {
+    this._totals.set({
+      column_type: this.get('column_type'),
+      column: this.get('column'),
+      start: null,
+      end: null
+    });
+    this.set('aggregation', undefined, { silent: true });
+
+    this._reloadAndForceFetch();
+  },
+
+  _calculateTotalAmount: function _calculateTotalAmount(buckets) {
+    return _.reduce(buckets, function (memo, bucket) {
+      var add = bucket && bucket.freq ? bucket.freq : 0;
+      return memo + add;
+    }, 0);
+  },
+
+  _calculateFilteredAmount: function _calculateFilteredAmount(filter, data) {
+    var filteredAmount = 0;
+    if (filter && filter.get('min') !== void 0 && filter.get('max') !== void 0) {
+      var indexes = this._findBinsIndexes(data, filter.get('min'), filter.get('max'));
+      filteredAmount = this._sumBinsFreq(data, indexes.start, indexes.end);
+    }
+
+    return filteredAmount;
+  },
+
+  _findBinsIndexes: function _findBinsIndexes(data, start, end) {
+    var startBin = data.findWhere({ start: Math.min(start, end) });
+    var endBin = data.findWhere({ end: Math.max(start, end) });
+
+    return {
+      start: startBin && startBin.get('bin'),
+      end: endBin && endBin.get('bin')
+    };
+  },
+
+  _sumBinsFreq: function _sumBinsFreq(data, start, end) {
+    return _.reduce(data.slice(start, end + 1), function (acum, d) {
+      return (d.get('freq') || 0) + acum;
+    }, 0);
+  },
+
+  /*
+  Ported from cartodb-postgresql
+  https://github.com/CartoDB/cartodb-postgresql/blob/master/scripts-available/CDB_DistType.sql
+  */
+  getDistributionType: function getDistributionType(data) {
+    var histogram = data || this.get('data');
+    var freqAccessor = function freqAccessor(a) {
+      return a.freq;
+    };
+    var osc = d3.max(histogram, freqAccessor) - d3.min(histogram, freqAccessor);
+    var mean = d3.mean(histogram, freqAccessor);
+    // When the difference between the max and the min values is less than
+    // 10 percent of the mean, it's a flat histogram (F)
+    if (osc < mean * 0.1) return 'F';
+    var sumFreqs = d3.sum(histogram, freqAccessor);
+    var freqs = histogram.map(function (bin) {
+      return 100 * bin.freq / sumFreqs;
+    });
+
+    // The ajus array represents relative growths
+    var ajus = freqs.map(function (freq, index) {
+      var next = freqs[index + 1];
+      if (freq > next) return -1;
+      if (Math.abs(freq - next) <= 0.05) return 0;
+      return 1;
+    });
+    ajus.pop();
+    var maxAjus = d3.max(ajus);
+    var minAjus = d3.min(ajus);
+    // If it never grows or shrinks, it returns flat
+    if (minAjus === 0 && maxAjus === 0) return 'F';else if (maxAjus < 1) return 'L';else if (minAjus > -1) return 'J';else {
+      var uniques = _.uniq(ajus);
+      var A_TYPES = [[1, -1], [1, 0, -1], [1, -1, 0], [0, 1, -1]];
+      var U_TYPES = [[-1, 1], [-1, 0, 1], [-1, 1, 0], [0, -1, 1]];
+      if (A_TYPES.some(function (e) {
+        return _.isEqual(e, uniques);
+      })) return 'A';else if (U_TYPES.some(function (e) {
+        return _.isEqual(e, uniques);
+      })) return 'U';else return 'S';
+    }
+  },
+
+  toJSON: function toJSON(d) {
+    var columnType = this.get('column_type');
+    var offset = this.get('offset');
+
+    var options = {
+      column: this.get('column')
+    };
+
+    if (columnType === 'number' && this.get('bins')) {
+      options.bins = this.get('bins');
+    } else if (columnType === 'date') {
+      options.aggregation = this.get('aggregation') || 'auto';
+
+      if (_.isFinite(offset)) {
+        options.offset = offset;
+      }
+    }
+
+    return {
+      type: 'histogram',
+      source: { id: this.getSourceId() },
+      options: options
+    };
+  },
+
+  _onColumnTypeChanged: function _onColumnTypeChanged() {
+    this.filter && this.filter.set('column_type', this.get('column_type'));
+  },
+
+  _onChangeBinds: function _onChangeBinds() {
+    DataviewModelBase.prototype._onChangeBinds.call(this);
+  },
+
+  _onUrlChanged: function _onUrlChanged() {
+    this._totals.set({
+      offset: this.get('offset'),
+      bins: this.get('bins')
+    }, { silent: true });
+
+    this._totals.setUrl(this.get('url'));
+  },
+
+  _onTotalsDataFetched: function _onTotalsDataFetched(data, model) {
+    var start = model.get('start');
+    var end = model.get('end');
+
+    if (_.isFinite(start) && _.isFinite(end)) {
+      this.set({
+        start: start,
+        end: end
+      });
+    }
+
+    this.set({
+      aggregation: model.get('aggregation') || 'auto',
+      offset: model.get('offset') || 0,
+      bins: model.get('bins'),
+      error: model.get('error')
+    }, { silent: true });
+
+    var resetFilter = false;
+
+    if (this.get('column_type') === 'date' && (_.has(this.changed, 'aggregation') || _.has(this.changed, 'offset'))) {
+      resetFilter = true;
+    } else if (this.get('column_type') === 'number' && _.has(this.changed, 'bins')) {
+      resetFilter = true;
+    }
+
+    resetFilter ? this._resetFilterAndFetch() : this.fetch();
+  },
+
+  _onFieldsChanged: function _onFieldsChanged() {
+    this._setTotalsStartEnd();
+
+    if (!helper.hasChangedSomeOf(['bins', 'aggregation', 'offset'], this.changed)) {
+      return;
+    }
+
+    var aggregationChangedToUndefined = _.has(this.changed, 'aggregation') && _.isUndefined(this.changed.aggregation);
+
+    // We should avoid fetching totals when bins has changed and aggregation has
+    // changed to undefined. That means a change in column. If we set the bins
+    // we trigger a fetch while a map instantiation is ongoing. The API returns bad data in that case.
+    if (this.get('column_type') === 'number' && !aggregationChangedToUndefined) {
+      this._totals.set('bins', this.get('bins'));
+    }
+    if (this.get('column_type') === 'date') {
+      if (this.hasChanged('aggregation')) {
+        this._resetFilter();
+      }
+      this._totals.set({
+        offset: this.get('offset'),
+        aggregation: this.get('aggregation')
+      });
+    }
+  },
+
+  _setTotalsStartEnd: function _setTotalsStartEnd() {
+    var start = this.get('start');
+    var end = this.get('end');
+
+    var startEndChanged = helper.hasChangedSomeOf(['start', 'end'], this.changed);
+    var startEndValid = _.isFinite(start) && _.isFinite(end);
+    var hasDifferentValues = this._totals.get('start') !== start || this._totals.get('end') !== end;
+
+    if (startEndChanged && startEndValid && hasDifferentValues) {
+      this._totals.set({ start: start, end: end });
+      this._totals.refresh();
+    }
+  },
+
+  _resetFilterAndFetch: function _resetFilterAndFetch() {
+    this._resetFilter();
+    this.fetch();
+  },
+
+  _resetFilter: function _resetFilter() {
+    this.disableFilter();
+    this.filter && this.filter.unsetRange();
+  },
+
+  _onTotalsError: function _onTotalsError(model, error) {
+    var parsedError = error && this._parseError(error);
+
+    if (parsedError && parsedError.message !== 'abort') {
+      this._triggerStatusError(parsedError);
+    }
+  },
+
+  getCurrentOffset: function getCurrentOffset() {
+    return this.get('localTimezone') ? this._localOffset : this.get('offset');
+  }
+},
+
+// Class props
+{
+  ATTRS_NAMES: DataviewModelBase.ATTRS_NAMES.concat(['column', 'column_type', 'bins', 'min', 'max', 'aggregation', 'offset'])
+});
 
 /***/ }),
 /* 44 */
@@ -19478,1596 +19811,1354 @@ module.exports.versions = v.versions;
 
 
 var _ = __webpack_require__(0);
-var AnalysisPoller = __webpack_require__(137);
-var AnonymousMapSerializer = __webpack_require__(135);
-var Backbone = __webpack_require__(1);
-var CartoDBLayerGroup = __webpack_require__(126);
-var DataviewsCollection = __webpack_require__(125);
-var LayersCollection = __webpack_require__(124);
-var ModelUpdater = __webpack_require__(123);
-var NamedMapSerializer = __webpack_require__(117);
-var Request = __webpack_require__(116);
-var Response = __webpack_require__(115);
-var WindshaftClient = __webpack_require__(114);
-var AnalysisService = __webpack_require__(30);
-var WindshaftError = __webpack_require__(41);
 
-var RELOAD_DEBOUNCE_TIME_IN_MILIS = 100;
+var AGGREGATION_DATA = {
+  second: { unit: 'second', factor: 1 },
+  minute: { unit: 'minute', factor: 1 },
+  hour: { unit: 'hour', factor: 1 },
+  day: { unit: 'day', factor: 1 },
+  week: { unit: 'day', factor: 7 },
+  month: { unit: 'month', factor: 1 },
+  quarter: { unit: 'month', factor: 3 },
+  year: { unit: 'month', factor: 12 },
+  decade: { unit: 'month', factor: 120 },
+  century: { unit: 'month', factor: 1200 },
+  millennium: { unit: 'month', factor: 12000 }
+};
 
-/**
- *
- * Creates a new Engine.
- * An engine is the core of a carto app.
- *
- * With the help of external services the engine will:
- *
- *  - Keep the state of the layers and dataviews.
- *  - Serialize the state and send requests to the server.
- *  - Parse the server response and update the internal models.
- *  - Notify errors or successful operations.
- *
- * @param {Object} params - The parameters to initialize the engine.
- * @param {string} params.apiKey - Api key used to be autenticate in the windshaft server.
- * @param {string} params.authToken - Token used to be autenticate in the windshaft server.
- * @param {string} params.username - Name of the user registered in the windshaft server.
- * @param {string} params.serverUrl - Url of the windshaft server.
- * @param {boolean} params.templateName - While we dont remove named maps we must explicitly say when the map is named. Defaults to false.
- * @param {boolean} params.client - Token used to get map view statistics.
- * @constructor
- */
-function Engine(params) {
-  if (!params) throw new Error('new Engine() called with no parameters');
-  this._isNamedMap = params.templateName !== undefined;
+var helper = {};
 
-  // Variables for the reload debounce
-  this._timeout = null;
-  this._stackCalls = [];
-  this._batchOptions = {};
+function trimBuckets(buckets, filledBuckets, totalBuckets) {
+  var index = null;
+  var keepGoing = true;
+  for (var i = filledBuckets.length - 1; i >= 0 && keepGoing && (_.isFinite(totalBuckets) ? i >= totalBuckets : true); i--) {
+    if (filledBuckets[i]) {
+      keepGoing = false;
+    } else {
+      index = i;
+    }
+  }
 
-  this._windshaftSettings = {
-    urlTemplate: params.serverUrl,
-    userName: params.username,
-    client: params.client,
-    apiKey: params.apiKey,
-    authToken: params.authToken,
-    templateName: params.templateName
-  };
-
-  this._windshaftClient = new WindshaftClient(this._windshaftSettings);
-
-  // This object will be responsible of triggering the engine events.
-  this._eventEmmitter = _.extend({}, Backbone.Events);
-
-  this._analysisPoller = new AnalysisPoller();
-  this._layersCollection = new LayersCollection();
-  this._dataviewsCollection = new DataviewsCollection();
-
-  this._cartoLayerGroup = new CartoDBLayerGroup({ apiKey: params.apiKey, authToken: params.authToken }, { layersCollection: this._layersCollection });
-  this._bindCartoLayerGroupError();
-
-  this._modelUpdater = new ModelUpdater({
-    dataviewsCollection: this._dataviewsCollection,
-    layerGroupModel: this._cartoLayerGroup,
-    layersCollection: this._layersCollection
-  });
+  return index !== null ? buckets.slice(0, index) : buckets;
 }
 
-/**
- * Return the cartoLayergroup attached to the engine
- */
-Engine.prototype.getLayerGroup = function () {
-  return this._cartoLayerGroup;
+helper.fillTimestampBuckets = function (buckets, start, aggregation, numberOfBins, from, totalBuckets) {
+  var filledBuckets = []; // To catch empty buckets
+  var definedBucket = false;
+
+  for (var i = 0; i < numberOfBins; i++) {
+    definedBucket = buckets[i] !== undefined;
+    filledBuckets.push(definedBucket);
+
+    var bucketStart = this.add(start, i, aggregation);
+    var nextBucketStart = this.add(start, i + 1, aggregation);
+
+    buckets[i] = _.extend({
+      bin: i,
+      start: bucketStart,
+      end: nextBucketStart - 1,
+      next: nextBucketStart,
+      freq: 0
+    }, buckets[i]);
+    delete buckets[i].timestamp;
+  }
+
+  return from === 'totals' ? buckets : trimBuckets(buckets, filledBuckets, totalBuckets);
 };
 
-/**
- * Returns the API key attached to the engine
- */
-Engine.prototype.getApiKey = function () {
-  return this._windshaftSettings && this._windshaftSettings.apiKey;
-};
-
-/**
- * Returns the Auth token attached to the engine
- */
-Engine.prototype.getAuthToken = function () {
-  return this._windshaftSettings && this._windshaftSettings.authToken;
-};
-
-/**
- * Bind a callback function to an event. The callback will be invoked whenever the event is fired.
- *
- * @param {string} event - The name of the event that triggers the callback execution.
- * @param {function} callback - A function to be executed when the event is fired.
- * @param {function} [context] - The context value for this when the callback is invoked.
- * @example
- * // Define a callback to be executed once the map is reloaded.
- * function onReload(event) {
- *  console.log(event); // "reload-success"
- * }
- * // Attach the callback to the RELOAD_SUCCESS event.
- * engine.on(Engine.Events.RELOAD_SUCCESS, onReload);
- * // Call the reload method and wait.
- * engine.reload();
- *
- */
-Engine.prototype.on = function (event, callback, context) {
-  this._eventEmmitter.on(event, callback, context);
-};
-
-/**
- * Remove a previously-bound callback function from an event.
- *
- * @param {string} event - The name of the event that triggers the callback execution.
- * @param {function} callback - A function callback to be removed when the event is fired.
- * @param {function} [context] - The context value for this when the callback is invoked.
- * @example
- * // Remove the the `displayMap` listener function so it wont be executed anymore when the engine fires the `load` event.
- * engine.off(Engine.Events.RELOAD_SUCCESS, onReload);
- *
- */
-Engine.prototype.off = function (event, callback, context) {
-  this._eventEmmitter.off(event, callback, context);
-};
-
-/**
- * This is the most important function of the engine.
- * Generate a payload from the current state, send it to the windshaft server
- * and update the internal models with the server response.
- *
- * Once the response has arrived trigger a 'reload-succes' or 'reload-error' event.
- *
- * @param {string} options.sourceId - The sourceId triggering the reload event. This is usefull to prevent uneeded requests and save data.
- * @param {boolean} options.forceFetch - Forces dataviews to fetch data from server after a reload
- * @param {boolean} options.includeFilters - Boolean flag to control if the filters need to be added in the payload.
- *
- * @fires Engine#Engine:RELOAD_STARTED
- * @fires Engine#Engine:RELOAD_SUCCESS
- * @fires Engine#Engine:RELOAD_ERROR
- *
- */
-Engine.prototype.reload = function (options) {
-  options = options || {};
-  // Using a debouncer to optimize consecutive calls to reload the map.
-  // This allows to change multiple map parameters reloading the map only once,
-  // and therefore avoid the "You are over platform's limits" Windshaft error.
-  return new Promise(function (resolve, reject) {
-    this._batchOptions = _.pick({
-      sourceId: options.sourceId,
-      forceFetch: this._batchOptions.forceFetch || options.forceFetch,
-      includeFilters: options.includeFilters
-    }, _.negate(_.isUndefined));
-    this._stackCalls.push({
-      success: options.success,
-      error: options.error,
-      resolve: resolve,
-      reject: reject
-    });
-    var later = function () {
-      this._timeout = null;
-      this._performReload(this._batchOptions).then(function () {
-        // Resolve stacked callbacks and promises
-        this._stackCalls.forEach(function (call) {
-          call.success && call.success();
-          call.resolve();
-        });
-        // Reset stack
-        this._stackCalls = [];
-        this._batchOptions = {};
-      }.bind(this)).catch(function (windshaftError) {
-        // Reject stacked callbacks and promises
-        this._stackCalls.forEach(function (call) {
-          call.error && call.error(windshaftError);
-          call.reject(windshaftError);
-        });
-        // Reset stack
-        this._stackCalls = [];
-        this._batchOptions = {};
-      }.bind(this));
-    }.bind(this);
-    clearTimeout(this._timeout);
-    this._timeout = setTimeout(later, RELOAD_DEBOUNCE_TIME_IN_MILIS);
-  }.bind(this));
-};
-
-Engine.prototype._performReload = function (options) {
-  return new Promise(function (resolve, reject) {
-    // Build Windshaft options callbacks
-    var windshaftOptions = this._buildWindshaftOptions(options,
-    // Windshaft success callback
-    function (serverResponse) {
-      this._onReloadSuccess(serverResponse, options.sourceId, options.forceFetch);
-      resolve();
-    }.bind(this),
-    // Windshaft error callback
-    function (errors) {
-      var windshaftError = this._onReloadError(errors);
-      reject(windshaftError);
-    }.bind(this));
-    try {
-      var params = this._buildParams(windshaftOptions.includeFilters);
-      var payload = this._getSerializer().serialize(this._layersCollection, this._dataviewsCollection);
-      var request = new Request(payload, params, windshaftOptions);
-
-      // Trigger STARTED event
-      this._eventEmmitter.trigger(Engine.Events.RELOAD_STARTED);
-      // Perform the request
-      this._windshaftClient.instantiateMap(request);
-    } catch (error) {
-      // Convert error in a windshaftError
-      var windshaftError = new WindshaftError({ message: error.message });
-      this._manageClientError(windshaftError, windshaftOptions);
-    }
-  }.bind(this));
-};
-
-/**
- *
- * Add a layer to the engine layersCollection
- *
- * @param {layer} layer - A new layer to be added to the engine.
- *
- * @public
- */
-Engine.prototype.addLayer = function (layer) {
-  this._layersCollection.add(layer);
-};
-
-/**
- *
- * Remove a layer from the engine layersCollection
- *
- * @param {layer} layer - A new layer to be removed from the engine.
- *
- * @public
- */
-Engine.prototype.removeLayer = function (layer) {
-  this._layersCollection.remove(layer);
-};
-
-/**
- *
- * Move a layer in the engine layersCollection
- *
- * @param {layer} layer - A new layer to be moved in the engine.
- * @param {number} toIndex - Final index for the layer.
- *
- * @public
- */
-Engine.prototype.moveLayer = function (layer, toIndex) {
-  var fromIndex = this._layersCollection.indexOf(layer);
-  if (fromIndex >= 0 && fromIndex !== toIndex) {
-    this._layersCollection.models.splice(toIndex, 0, this._layersCollection.models.splice(fromIndex, 1)[0]);
-    // Equivalent to:
-    // this._layersCollection.remove(layer, { silent: true });
-    // this._layersCollection.add(layer, { at: toIndex });
+helper.fillNumericBuckets = function (buckets, start, width, numberOfBins) {
+  for (var i = 0; i < numberOfBins; i++) {
+    var bucketStart = start + i * width;
+    var commonBucketEnd = start + (i + 1) * width;
+    var isLastBucket = i + 1 === numberOfBins;
+    var bucketEnd = isLastBucket && buckets[i] ? buckets[i].max : commonBucketEnd;
+    var filledBucket = _.extend({}, {
+      bin: i,
+      start: bucketStart,
+      end: bucketEnd,
+      freq: 0
+    }, buckets[i]);
+    buckets[i] = filledBucket;
   }
 };
 
-/**
- *
- * Add a dataview to the engine dataviewsCollection
- *
- * @param {Dataview} dataview - A new dataview to be added to the engine.
- *
- * @public
- */
-Engine.prototype.addDataview = function (dataview) {
-  this._dataviewsCollection.add(dataview);
-};
-
-/**
- *
- * Remove a dataview from the engine dataviewsCollection
- *
- * @param {Dataview} dataview - The Dataview to be removed to the engine.
- *
- * @public
- */
-Engine.prototype.removeDataview = function (dataview) {
-  this._dataviewsCollection.remove(dataview);
-};
-
-/**
- * Callback executed when the windhsaft client returns a successful response.
- * Update internal models and trigger a RELOAD_SUCCESS event.
- * @private
- */
-Engine.prototype._onReloadSuccess = function (serverResponse, sourceId, forceFetch) {
-  var responseWrapper = new Response(this._windshaftSettings, serverResponse);
-  this._modelUpdater.updateModels(responseWrapper, sourceId, forceFetch);
-  this._restartAnalysisPolling();
-  // Trigger RELOAD_SUCCESS event
-  this._eventEmmitter.trigger(Engine.Events.RELOAD_SUCCESS);
-};
-
-/**
- * Callback executed when the windhsaft client returns a failed response.
- * Update internal models setting errors and trigger a RELOAD_ERROR event.
- * @private
- */
-Engine.prototype._onReloadError = function (errors) {
-  var windshaftError = this._getSimpleWindshaftError(errors);
-  this._modelUpdater.setErrors(errors);
-  // Trigger RELOAD_ERROR event
-  this._eventEmmitter.trigger(Engine.Events.RELOAD_ERROR, windshaftError);
-  return windshaftError;
-};
-
-/**
- * Helper to get windhsaft request options.
- * @private
- */
-Engine.prototype._buildWindshaftOptions = function (options, successCallback, errorCallback) {
-  return _.extend({
-    includeFilters: true,
-    success: successCallback,
-    error: errorCallback
-  }, _.pick(options, 'sourceId', 'forceFetch', 'includeFilters'));
-};
-
-/**
- * Helper to get windhsaft request parameters.
- * @param {boolean} includeFilters - Boolean flag to control if the filters need to be added in the payload.
- * @private
- */
-Engine.prototype._buildParams = function (includeFilters) {
-  var params = {};
-
-  if (true) {
-    params.client = this._windshaftSettings.client;
-  }
-
-  if (includeFilters && !_.isEmpty(this._dataviewsCollection.getFilters())) {
-    params.filters = this._dataviewsCollection.getFilters();
-  }
-
-  if (this._windshaftSettings.apiKey) {
-    params.api_key = this._windshaftSettings.apiKey;
-    return params;
-  }
-
-  if (this._windshaftSettings.authToken) {
-    params.auth_token = this._windshaftSettings.authToken;
-    return params;
-  }
-
-  console.warn('Engine initialized with no apiKeys neither authToken');
-};
-
-/**
- * Reset the analysis nodes in the poller
- * @private
- */
-Engine.prototype._restartAnalysisPolling = function () {
-  var analysisNodes = AnalysisService.getUniqueAnalysisNodes(this._layersCollection, this._dataviewsCollection);
-  this._analysisPoller.resetAnalysisNodes(analysisNodes);
-};
-
-/**
- * Get the instance of the serializer service depending on is an anonymous or a named map.
- * @private
- */
-Engine.prototype._getSerializer = function () {
-  return this._isNamedMap ? NamedMapSerializer : AnonymousMapSerializer;
-};
-
-/**
- * Manage and propagate the client error
- * @private
- */
-Engine.prototype._manageClientError = function (windshaftError, windshaftOptions) {
-  this._modelUpdater.setErrors([windshaftError]);
-  windshaftOptions.error && windshaftOptions.error([windshaftError]);
-};
-
-/**
- * Listen to errors in cartoLayerGroup
- */
-Engine.prototype._bindCartoLayerGroupError = function () {
-  this._cartoLayerGroup.on('all', function (change, error) {
-    if (change.lastIndexOf('error:', 0) === 0) {
-      error = new WindshaftError(error);
-      this._eventEmmitter.trigger(Engine.Events.LAYER_ERROR, error);
-    }
-  }, this);
-};
-
-Engine.prototype._getSimpleWindshaftError = function (errors) {
-  var error = _.find(errors, function (error) {
-    return error.isGlobalError();
+helper.hasChangedSomeOf = function (list, changed) {
+  return _.some(_.keys(changed), function (key) {
+    return _.contains(list, key);
   });
-  if (!error && errors && errors.length > 0) {
-    error = errors[0];
+};
+
+/**
+ * Add a `number` of aggregations to the provided timestamp
+ *
+ * @param {number} timestamp - Starting timestamp
+ * @param {number} number - Number of aggregations to add
+ * @param {object} aggregation
+ * @param {string} aggregation.unit - unit of the aggregation
+ * @param {number} aggregation.factor - number of aggretagion units
+ */
+helper.add = function (timestamp, number, aggregation) {
+  if (!AGGREGATION_DATA.hasOwnProperty(aggregation)) {
+    throw Error('aggregation "' + aggregation + '" is not defined');
   }
-  return error;
+  var date = new Date(timestamp * 1000);
+  var unit = AGGREGATION_DATA[aggregation].unit;
+  var factor = AGGREGATION_DATA[aggregation].factor;
+  var value = number * factor;
+  switch (unit) {
+    case 'second':
+      return date.setUTCSeconds(date.getUTCSeconds() + value) / 1000;
+    case 'minute':
+      return date.setUTCMinutes(date.getUTCMinutes() + value) / 1000;
+    case 'hour':
+      return date.setUTCHours(date.getUTCHours() + value) / 1000;
+    case 'day':
+      return date.setUTCDate(date.getUTCDate() + value) / 1000;
+    case 'month':
+      var n = date.getUTCDate();
+      date.setUTCDate(1);
+      date.setUTCMonth(date.getUTCMonth() + value);
+      date.setUTCDate(Math.min(n, _getDaysInMonth(date.getUTCFullYear(), date.getUTCMonth())));
+      return date.getTime() / 1000;
+    default:
+      return 0;
+  }
 };
 
-/**
- * Events fired by the engine
- *
- * @readonly
- * @enum {string}
- */
-Engine.Events = {
-  /**
-   * Reload started event, fired every time the reload process starts.
-   */
-  RELOAD_STARTED: 'reload-started',
-  /**
-   * Reload success event, fired every time the reload function succeed.
-   */
-  RELOAD_SUCCESS: 'reload-success',
-  /**
-   * Reload error event, fired every time the reload function fails.
-   */
-  RELOAD_ERROR: 'reload-error',
-  /**
-   * Error event, fired every time a tile or limit error happens.
-   */
-  LAYER_ERROR: 'layer-error'
-};
+/* Internal functions */
 
-module.exports = Engine;
+function _getDaysInMonth(year, month) {
+  return [31, _isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+}
 
-/**
- * Reload started event, fired every time the reload process starts.
- *
- * @event Engine#Engine:RELOAD_STARTED
- * @type {string}
- */
+function _isLeapYear(year) {
+  return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+}
 
-/**
-  * Reload success event, fired every time the reload function succeed.
-  *
-  * @event Engine#Engine:RELOAD_SUCCESS
-  * @type {string}
-  */
-
-/**
-  * Reload success event, fired every time the reload function fails.
-  *
-  * @event Engine#Engine:RELOAD_ERROR
-  * @type {string}
-  */
-
-/**
-  * Layer group error event, fired every time an error with layer group happends (tile or limit).
-  *
-  * @event Engine#Engine:LAYER_ERROR
-  * @type {string}
-  */
+module.exports = helper;
 
 /***/ }),
 /* 45 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/ascending.js
-/* harmony default export */ var ascending = (function(a, b) {
-  return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/bisector.js
-
-
-/* harmony default export */ var bisector = (function(compare) {
-  if (compare.length === 1) compare = ascendingComparator(compare);
-  return {
-    left: function(a, x, lo, hi) {
-      if (lo == null) lo = 0;
-      if (hi == null) hi = a.length;
-      while (lo < hi) {
-        var mid = lo + hi >>> 1;
-        if (compare(a[mid], x) < 0) lo = mid + 1;
-        else hi = mid;
-      }
-      return lo;
-    },
-    right: function(a, x, lo, hi) {
-      if (lo == null) lo = 0;
-      if (hi == null) hi = a.length;
-      while (lo < hi) {
-        var mid = lo + hi >>> 1;
-        if (compare(a[mid], x) > 0) hi = mid;
-        else lo = mid + 1;
-      }
-      return lo;
-    }
-  };
-});
-
-function ascendingComparator(f) {
-  return function(d, x) {
-    return ascending(f(d), x);
-  };
-}
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/bisect.js
-
-
-
-var ascendingBisect = bisector(ascending);
-var bisectRight = ascendingBisect.right;
-var bisectLeft = ascendingBisect.left;
-/* harmony default export */ var bisect = (bisectRight);
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/pairs.js
-/* harmony default export */ var pairs = (function(array, f) {
-  if (f == null) f = pair;
-  var i = 0, n = array.length - 1, p = array[0], pairs = new Array(n < 0 ? 0 : n);
-  while (i < n) pairs[i] = f(p, p = array[++i]);
-  return pairs;
-});
-
-function pair(a, b) {
-  return [a, b];
-}
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/cross.js
-
-
-/* harmony default export */ var cross = (function(values0, values1, reduce) {
-  var n0 = values0.length,
-      n1 = values1.length,
-      values = new Array(n0 * n1),
-      i0,
-      i1,
-      i,
-      value0;
-
-  if (reduce == null) reduce = pair;
-
-  for (i0 = i = 0; i0 < n0; ++i0) {
-    for (value0 = values0[i0], i1 = 0; i1 < n1; ++i1, ++i) {
-      values[i] = reduce(value0, values1[i1]);
-    }
-  }
-
-  return values;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/descending.js
-/* harmony default export */ var descending = (function(a, b) {
-  return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/number.js
-/* harmony default export */ var number = (function(x) {
-  return x === null ? NaN : +x;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/variance.js
-
-
-/* harmony default export */ var variance = (function(values, valueof) {
-  var n = values.length,
-      m = 0,
-      i = -1,
-      mean = 0,
-      value,
-      delta,
-      sum = 0;
-
-  if (valueof == null) {
-    while (++i < n) {
-      if (!isNaN(value = number(values[i]))) {
-        delta = value - mean;
-        mean += delta / ++m;
-        sum += delta * (value - mean);
-      }
-    }
-  }
-
-  else {
-    while (++i < n) {
-      if (!isNaN(value = number(valueof(values[i], i, values)))) {
-        delta = value - mean;
-        mean += delta / ++m;
-        sum += delta * (value - mean);
-      }
-    }
-  }
-
-  if (m > 1) return sum / (m - 1);
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/deviation.js
-
-
-/* harmony default export */ var deviation = (function(array, f) {
-  var v = variance(array, f);
-  return v ? Math.sqrt(v) : v;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/extent.js
-/* harmony default export */ var extent = (function(values, valueof) {
-  var n = values.length,
-      i = -1,
-      value,
-      min,
-      max;
-
-  if (valueof == null) {
-    while (++i < n) { // Find the first comparable value.
-      if ((value = values[i]) != null && value >= value) {
-        min = max = value;
-        while (++i < n) { // Compare the remaining values.
-          if ((value = values[i]) != null) {
-            if (min > value) min = value;
-            if (max < value) max = value;
-          }
-        }
-      }
-    }
-  }
-
-  else {
-    while (++i < n) { // Find the first comparable value.
-      if ((value = valueof(values[i], i, values)) != null && value >= value) {
-        min = max = value;
-        while (++i < n) { // Compare the remaining values.
-          if ((value = valueof(values[i], i, values)) != null) {
-            if (min > value) min = value;
-            if (max < value) max = value;
-          }
-        }
-      }
-    }
-  }
-
-  return [min, max];
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/array.js
-var array_array = Array.prototype;
-
-var slice = array_array.slice;
-var map = array_array.map;
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/constant.js
-/* harmony default export */ var constant = (function(x) {
-  return function() {
-    return x;
-  };
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/identity.js
-/* harmony default export */ var identity = (function(x) {
-  return x;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/range.js
-/* harmony default export */ var range = (function(start, stop, step) {
-  start = +start, stop = +stop, step = (n = arguments.length) < 2 ? (stop = start, start = 0, 1) : n < 3 ? 1 : +step;
-
-  var i = -1,
-      n = Math.max(0, Math.ceil((stop - start) / step)) | 0,
-      range = new Array(n);
-
-  while (++i < n) {
-    range[i] = start + i * step;
-  }
-
-  return range;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/ticks.js
-var e10 = Math.sqrt(50),
-    e5 = Math.sqrt(10),
-    e2 = Math.sqrt(2);
-
-/* harmony default export */ var ticks = (function(start, stop, count) {
-  var reverse,
-      i = -1,
-      n,
-      ticks,
-      step;
-
-  stop = +stop, start = +start, count = +count;
-  if (start === stop && count > 0) return [start];
-  if (reverse = stop < start) n = start, start = stop, stop = n;
-  if ((step = tickIncrement(start, stop, count)) === 0 || !isFinite(step)) return [];
-
-  if (step > 0) {
-    start = Math.ceil(start / step);
-    stop = Math.floor(stop / step);
-    ticks = new Array(n = Math.ceil(stop - start + 1));
-    while (++i < n) ticks[i] = (start + i) * step;
-  } else {
-    start = Math.floor(start * step);
-    stop = Math.ceil(stop * step);
-    ticks = new Array(n = Math.ceil(start - stop + 1));
-    while (++i < n) ticks[i] = (start - i) / step;
-  }
-
-  if (reverse) ticks.reverse();
-
-  return ticks;
-});
-
-function tickIncrement(start, stop, count) {
-  var step = (stop - start) / Math.max(0, count),
-      power = Math.floor(Math.log(step) / Math.LN10),
-      error = step / Math.pow(10, power);
-  return power >= 0
-      ? (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1) * Math.pow(10, power)
-      : -Math.pow(10, -power) / (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1);
-}
-
-function tickStep(start, stop, count) {
-  var step0 = Math.abs(stop - start) / Math.max(0, count),
-      step1 = Math.pow(10, Math.floor(Math.log(step0) / Math.LN10)),
-      error = step0 / step1;
-  if (error >= e10) step1 *= 10;
-  else if (error >= e5) step1 *= 5;
-  else if (error >= e2) step1 *= 2;
-  return stop < start ? -step1 : step1;
-}
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/sturges.js
-/* harmony default export */ var sturges = (function(values) {
-  return Math.ceil(Math.log(values.length) / Math.LN2) + 1;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/histogram.js
-
-
-
-
-
-
-
-
-
-/* harmony default export */ var src_histogram = (function() {
-  var value = identity,
-      domain = extent,
-      threshold = sturges;
-
-  function histogram(data) {
-    var i,
-        n = data.length,
-        x,
-        values = new Array(n);
-
-    for (i = 0; i < n; ++i) {
-      values[i] = value(data[i], i, data);
-    }
-
-    var xz = domain(values),
-        x0 = xz[0],
-        x1 = xz[1],
-        tz = threshold(values, x0, x1);
-
-    // Convert number of thresholds into uniform thresholds.
-    if (!Array.isArray(tz)) {
-      tz = tickStep(x0, x1, tz);
-      tz = range(Math.ceil(x0 / tz) * tz, Math.floor(x1 / tz) * tz, tz); // exclusive
-    }
-
-    // Remove any thresholds outside the domain.
-    var m = tz.length;
-    while (tz[0] <= x0) tz.shift(), --m;
-    while (tz[m - 1] > x1) tz.pop(), --m;
-
-    var bins = new Array(m + 1),
-        bin;
-
-    // Initialize bins.
-    for (i = 0; i <= m; ++i) {
-      bin = bins[i] = [];
-      bin.x0 = i > 0 ? tz[i - 1] : x0;
-      bin.x1 = i < m ? tz[i] : x1;
-    }
-
-    // Assign data to bins by value, ignoring any outside the domain.
-    for (i = 0; i < n; ++i) {
-      x = values[i];
-      if (x0 <= x && x <= x1) {
-        bins[bisect(tz, x, 0, m)].push(data[i]);
-      }
-    }
-
-    return bins;
-  }
-
-  histogram.value = function(_) {
-    return arguments.length ? (value = typeof _ === "function" ? _ : constant(_), histogram) : value;
-  };
-
-  histogram.domain = function(_) {
-    return arguments.length ? (domain = typeof _ === "function" ? _ : constant([_[0], _[1]]), histogram) : domain;
-  };
-
-  histogram.thresholds = function(_) {
-    return arguments.length ? (threshold = typeof _ === "function" ? _ : Array.isArray(_) ? constant(slice.call(_)) : constant(_), histogram) : threshold;
-  };
-
-  return histogram;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/quantile.js
-
-
-/* harmony default export */ var quantile = (function(values, p, valueof) {
-  if (valueof == null) valueof = number;
-  if (!(n = values.length)) return;
-  if ((p = +p) <= 0 || n < 2) return +valueof(values[0], 0, values);
-  if (p >= 1) return +valueof(values[n - 1], n - 1, values);
-  var n,
-      i = (n - 1) * p,
-      i0 = Math.floor(i),
-      value0 = +valueof(values[i0], i0, values),
-      value1 = +valueof(values[i0 + 1], i0 + 1, values);
-  return value0 + (value1 - value0) * (i - i0);
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/freedmanDiaconis.js
-
-
-
-
-
-/* harmony default export */ var freedmanDiaconis = (function(values, min, max) {
-  values = map.call(values, number).sort(ascending);
-  return Math.ceil((max - min) / (2 * (quantile(values, 0.75) - quantile(values, 0.25)) * Math.pow(values.length, -1 / 3)));
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/scott.js
-
-
-/* harmony default export */ var scott = (function(values, min, max) {
-  return Math.ceil((max - min) / (3.5 * deviation(values) * Math.pow(values.length, -1 / 3)));
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/max.js
-/* harmony default export */ var src_max = (function(values, valueof) {
-  var n = values.length,
-      i = -1,
-      value,
-      max;
-
-  if (valueof == null) {
-    while (++i < n) { // Find the first comparable value.
-      if ((value = values[i]) != null && value >= value) {
-        max = value;
-        while (++i < n) { // Compare the remaining values.
-          if ((value = values[i]) != null && value > max) {
-            max = value;
-          }
-        }
-      }
-    }
-  }
-
-  else {
-    while (++i < n) { // Find the first comparable value.
-      if ((value = valueof(values[i], i, values)) != null && value >= value) {
-        max = value;
-        while (++i < n) { // Compare the remaining values.
-          if ((value = valueof(values[i], i, values)) != null && value > max) {
-            max = value;
-          }
-        }
-      }
-    }
-  }
-
-  return max;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/mean.js
-
-
-/* harmony default export */ var src_mean = (function(values, valueof) {
-  var n = values.length,
-      m = n,
-      i = -1,
-      value,
-      sum = 0;
-
-  if (valueof == null) {
-    while (++i < n) {
-      if (!isNaN(value = number(values[i]))) sum += value;
-      else --m;
-    }
-  }
-
-  else {
-    while (++i < n) {
-      if (!isNaN(value = number(valueof(values[i], i, values)))) sum += value;
-      else --m;
-    }
-  }
-
-  if (m) return sum / m;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/median.js
-
-
-
-
-/* harmony default export */ var median = (function(values, valueof) {
-  var n = values.length,
-      i = -1,
-      value,
-      numbers = [];
-
-  if (valueof == null) {
-    while (++i < n) {
-      if (!isNaN(value = number(values[i]))) {
-        numbers.push(value);
-      }
-    }
-  }
-
-  else {
-    while (++i < n) {
-      if (!isNaN(value = number(valueof(values[i], i, values)))) {
-        numbers.push(value);
-      }
-    }
-  }
-
-  return quantile(numbers.sort(ascending), 0.5);
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/merge.js
-/* harmony default export */ var merge = (function(arrays) {
-  var n = arrays.length,
-      m,
-      i = -1,
-      j = 0,
-      merged,
-      array;
-
-  while (++i < n) j += arrays[i].length;
-  merged = new Array(j);
-
-  while (--n >= 0) {
-    array = arrays[n];
-    m = array.length;
-    while (--m >= 0) {
-      merged[--j] = array[m];
-    }
-  }
-
-  return merged;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/min.js
-/* harmony default export */ var src_min = (function(values, valueof) {
-  var n = values.length,
-      i = -1,
-      value,
-      min;
-
-  if (valueof == null) {
-    while (++i < n) { // Find the first comparable value.
-      if ((value = values[i]) != null && value >= value) {
-        min = value;
-        while (++i < n) { // Compare the remaining values.
-          if ((value = values[i]) != null && min > value) {
-            min = value;
-          }
-        }
-      }
-    }
-  }
-
-  else {
-    while (++i < n) { // Find the first comparable value.
-      if ((value = valueof(values[i], i, values)) != null && value >= value) {
-        min = value;
-        while (++i < n) { // Compare the remaining values.
-          if ((value = valueof(values[i], i, values)) != null && min > value) {
-            min = value;
-          }
-        }
-      }
-    }
-  }
-
-  return min;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/permute.js
-/* harmony default export */ var permute = (function(array, indexes) {
-  var i = indexes.length, permutes = new Array(i);
-  while (i--) permutes[i] = array[indexes[i]];
-  return permutes;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/scan.js
-
-
-/* harmony default export */ var scan = (function(values, compare) {
-  if (!(n = values.length)) return;
-  var n,
-      i = 0,
-      j = 0,
-      xi,
-      xj = values[j];
-
-  if (compare == null) compare = ascending;
-
-  while (++i < n) {
-    if (compare(xi = values[i], xj) < 0 || compare(xj, xj) !== 0) {
-      xj = xi, j = i;
-    }
-  }
-
-  if (compare(xj, xj) === 0) return j;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/shuffle.js
-/* harmony default export */ var shuffle = (function(array, i0, i1) {
-  var m = (i1 == null ? array.length : i1) - (i0 = i0 == null ? 0 : +i0),
-      t,
-      i;
-
-  while (m) {
-    i = Math.random() * m-- | 0;
-    t = array[m + i0];
-    array[m + i0] = array[i + i0];
-    array[i + i0] = t;
-  }
-
-  return array;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/sum.js
-/* harmony default export */ var src_sum = (function(values, valueof) {
-  var n = values.length,
-      i = -1,
-      value,
-      sum = 0;
-
-  if (valueof == null) {
-    while (++i < n) {
-      if (value = +values[i]) sum += value; // Note: zero and null are equivalent.
-    }
-  }
-
-  else {
-    while (++i < n) {
-      if (value = +valueof(values[i], i, values)) sum += value;
-    }
-  }
-
-  return sum;
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/transpose.js
-
-
-/* harmony default export */ var src_transpose = (function(matrix) {
-  if (!(n = matrix.length)) return [];
-  for (var i = -1, m = src_min(matrix, transpose_length), transpose = new Array(m); ++i < m;) {
-    for (var j = -1, n, row = transpose[i] = new Array(n); ++j < n;) {
-      row[j] = matrix[j][i];
-    }
-  }
-  return transpose;
-});
-
-function transpose_length(d) {
-  return d.length;
-}
-
-// CONCATENATED MODULE: ./node_modules/d3-array/src/zip.js
-
-
-/* harmony default export */ var zip = (function() {
-  return src_transpose(arguments);
-});
-
-// CONCATENATED MODULE: ./node_modules/d3-array/index.js
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "bisect", function() { return bisect; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "bisectRight", function() { return bisectRight; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "bisectLeft", function() { return bisectLeft; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "ascending", function() { return ascending; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "bisector", function() { return bisector; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "cross", function() { return cross; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "descending", function() { return descending; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "deviation", function() { return deviation; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "extent", function() { return extent; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "histogram", function() { return src_histogram; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "thresholdFreedmanDiaconis", function() { return freedmanDiaconis; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "thresholdScott", function() { return scott; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "thresholdSturges", function() { return sturges; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "max", function() { return src_max; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "mean", function() { return src_mean; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "median", function() { return median; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "merge", function() { return merge; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "min", function() { return src_min; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "pairs", function() { return pairs; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "permute", function() { return permute; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "quantile", function() { return quantile; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "range", function() { return range; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "scan", function() { return scan; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "shuffle", function() { return shuffle; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "sum", function() { return src_sum; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "ticks", function() { return ticks; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "tickIncrement", function() { return tickIncrement; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "tickStep", function() { return tickStep; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "transpose", function() { return src_transpose; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "variance", function() { return variance; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "zip", function() { return zip; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var FiltersCollection = __webpack_require__(22);
-
 /**
- * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within filters.
+ *  @api
+ *  @namespace carto
  *
- * This filter will group as many filters as you want and it will add them to the query returning the rows that match ANY of the filters to render the visualization.
+ *  @description
+ *  # CARTO.js
+ *  All the library features are exposed through the `carto` namespace.
  *
- * You can add or remove filters by invoking `.addFilter()` and `.removeFilter()`.
  *
- * @example
- * // Create a filter by room type, showing only private rooms
- * const roomTypeFilter = new carto.filter.Category('room_type', { eq: 'Private room' });
- * // Create a filter by price, showing only listings lower than or equal to 50€
- * const priceFilter = new carto.filter.Range('price', { lte: 50 });
- *
- * // Combine the filters with an OR operator, returning rows that match one or the other filter
- * const filterByRoomTypeOrPrice = new carto.filter.OR([ roomTypeFilter, priceFilter ]);
- *
- * // Add filters to the existing source
- * source.addFilter(filterByRoomTypeOrPrice);
- *
- * @class OR
- * @extends carto.filter.FiltersCollection
- * @memberof carto.filter
- * @api
+ * - **Client** : The api client.
+ * - **source** : Source description
+ * - **style** : Style description
+ * - **layer** : Layer description
+ * - **dataview** : Dataview description
+ * - **filter** : Filter description
+ * - **events** : The events exposed.
+ * - **operation** : The operations exposed.
  */
 
-var OR = function (_FiltersCollection) {
-  _inherits(OR, _FiltersCollection);
+// Add polyfill for `fetch`
+__webpack_require__(46);
+// Add polyfill for `Promise`
+var Promise = __webpack_require__(47);
+if (!window.Promise) {
+  window.Promise = Promise;
+}
 
-  /**
-   * Create a OR group filter
-   * @param {Array} filters - The filters to apply in the query
-   */
-  function OR(filters) {
-    _classCallCheck(this, OR);
+var Client = __webpack_require__(51);
+var source = __webpack_require__(114);
+var style = __webpack_require__(117);
+var layer = __webpack_require__(25);
+var dataview = __webpack_require__(119);
+var filter = __webpack_require__(137);
+var events = __webpack_require__(14);
+var constants = __webpack_require__(5);
 
-    var _this = _possibleConstructorReturn(this, (OR.__proto__ || Object.getPrototypeOf(OR)).call(this, filters));
+var carto = {
+  version: __webpack_require__(22).version,
+  ATTRIBUTION: constants.ATTRIBUTION,
+  Client: Client,
+  source: source,
+  style: style,
+  layer: layer,
+  dataview: dataview,
+  filter: filter,
+  events: events,
+  operation: constants.operation
+};
 
-    _this.JOIN_OPERATOR = 'OR';
-    return _this;
+module.exports = carto;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+(function(self) {
+  'use strict';
+
+  if (self.fetch) {
+    return
   }
 
-  return OR;
-}(FiltersCollection);
+  var support = {
+    searchParams: 'URLSearchParams' in self,
+    iterable: 'Symbol' in self && 'iterator' in Symbol,
+    blob: 'FileReader' in self && 'Blob' in self && (function() {
+      try {
+        new Blob()
+        return true
+      } catch(e) {
+        return false
+      }
+    })(),
+    formData: 'FormData' in self,
+    arrayBuffer: 'ArrayBuffer' in self
+  }
 
-module.exports = OR;
+  if (support.arrayBuffer) {
+    var viewClasses = [
+      '[object Int8Array]',
+      '[object Uint8Array]',
+      '[object Uint8ClampedArray]',
+      '[object Int16Array]',
+      '[object Uint16Array]',
+      '[object Int32Array]',
+      '[object Uint32Array]',
+      '[object Float32Array]',
+      '[object Float64Array]'
+    ]
+
+    var isDataView = function(obj) {
+      return obj && DataView.prototype.isPrototypeOf(obj)
+    }
+
+    var isArrayBufferView = ArrayBuffer.isView || function(obj) {
+      return obj && viewClasses.indexOf(Object.prototype.toString.call(obj)) > -1
+    }
+  }
+
+  function normalizeName(name) {
+    if (typeof name !== 'string') {
+      name = String(name)
+    }
+    if (/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(name)) {
+      throw new TypeError('Invalid character in header field name')
+    }
+    return name.toLowerCase()
+  }
+
+  function normalizeValue(value) {
+    if (typeof value !== 'string') {
+      value = String(value)
+    }
+    return value
+  }
+
+  // Build a destructive iterator for the value list
+  function iteratorFor(items) {
+    var iterator = {
+      next: function() {
+        var value = items.shift()
+        return {done: value === undefined, value: value}
+      }
+    }
+
+    if (support.iterable) {
+      iterator[Symbol.iterator] = function() {
+        return iterator
+      }
+    }
+
+    return iterator
+  }
+
+  function Headers(headers) {
+    this.map = {}
+
+    if (headers instanceof Headers) {
+      headers.forEach(function(value, name) {
+        this.append(name, value)
+      }, this)
+    } else if (Array.isArray(headers)) {
+      headers.forEach(function(header) {
+        this.append(header[0], header[1])
+      }, this)
+    } else if (headers) {
+      Object.getOwnPropertyNames(headers).forEach(function(name) {
+        this.append(name, headers[name])
+      }, this)
+    }
+  }
+
+  Headers.prototype.append = function(name, value) {
+    name = normalizeName(name)
+    value = normalizeValue(value)
+    var oldValue = this.map[name]
+    this.map[name] = oldValue ? oldValue+','+value : value
+  }
+
+  Headers.prototype['delete'] = function(name) {
+    delete this.map[normalizeName(name)]
+  }
+
+  Headers.prototype.get = function(name) {
+    name = normalizeName(name)
+    return this.has(name) ? this.map[name] : null
+  }
+
+  Headers.prototype.has = function(name) {
+    return this.map.hasOwnProperty(normalizeName(name))
+  }
+
+  Headers.prototype.set = function(name, value) {
+    this.map[normalizeName(name)] = normalizeValue(value)
+  }
+
+  Headers.prototype.forEach = function(callback, thisArg) {
+    for (var name in this.map) {
+      if (this.map.hasOwnProperty(name)) {
+        callback.call(thisArg, this.map[name], name, this)
+      }
+    }
+  }
+
+  Headers.prototype.keys = function() {
+    var items = []
+    this.forEach(function(value, name) { items.push(name) })
+    return iteratorFor(items)
+  }
+
+  Headers.prototype.values = function() {
+    var items = []
+    this.forEach(function(value) { items.push(value) })
+    return iteratorFor(items)
+  }
+
+  Headers.prototype.entries = function() {
+    var items = []
+    this.forEach(function(value, name) { items.push([name, value]) })
+    return iteratorFor(items)
+  }
+
+  if (support.iterable) {
+    Headers.prototype[Symbol.iterator] = Headers.prototype.entries
+  }
+
+  function consumed(body) {
+    if (body.bodyUsed) {
+      return Promise.reject(new TypeError('Already read'))
+    }
+    body.bodyUsed = true
+  }
+
+  function fileReaderReady(reader) {
+    return new Promise(function(resolve, reject) {
+      reader.onload = function() {
+        resolve(reader.result)
+      }
+      reader.onerror = function() {
+        reject(reader.error)
+      }
+    })
+  }
+
+  function readBlobAsArrayBuffer(blob) {
+    var reader = new FileReader()
+    var promise = fileReaderReady(reader)
+    reader.readAsArrayBuffer(blob)
+    return promise
+  }
+
+  function readBlobAsText(blob) {
+    var reader = new FileReader()
+    var promise = fileReaderReady(reader)
+    reader.readAsText(blob)
+    return promise
+  }
+
+  function readArrayBufferAsText(buf) {
+    var view = new Uint8Array(buf)
+    var chars = new Array(view.length)
+
+    for (var i = 0; i < view.length; i++) {
+      chars[i] = String.fromCharCode(view[i])
+    }
+    return chars.join('')
+  }
+
+  function bufferClone(buf) {
+    if (buf.slice) {
+      return buf.slice(0)
+    } else {
+      var view = new Uint8Array(buf.byteLength)
+      view.set(new Uint8Array(buf))
+      return view.buffer
+    }
+  }
+
+  function Body() {
+    this.bodyUsed = false
+
+    this._initBody = function(body) {
+      this._bodyInit = body
+      if (!body) {
+        this._bodyText = ''
+      } else if (typeof body === 'string') {
+        this._bodyText = body
+      } else if (support.blob && Blob.prototype.isPrototypeOf(body)) {
+        this._bodyBlob = body
+      } else if (support.formData && FormData.prototype.isPrototypeOf(body)) {
+        this._bodyFormData = body
+      } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
+        this._bodyText = body.toString()
+      } else if (support.arrayBuffer && support.blob && isDataView(body)) {
+        this._bodyArrayBuffer = bufferClone(body.buffer)
+        // IE 10-11 can't handle a DataView body.
+        this._bodyInit = new Blob([this._bodyArrayBuffer])
+      } else if (support.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) {
+        this._bodyArrayBuffer = bufferClone(body)
+      } else {
+        throw new Error('unsupported BodyInit type')
+      }
+
+      if (!this.headers.get('content-type')) {
+        if (typeof body === 'string') {
+          this.headers.set('content-type', 'text/plain;charset=UTF-8')
+        } else if (this._bodyBlob && this._bodyBlob.type) {
+          this.headers.set('content-type', this._bodyBlob.type)
+        } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
+          this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8')
+        }
+      }
+    }
+
+    if (support.blob) {
+      this.blob = function() {
+        var rejected = consumed(this)
+        if (rejected) {
+          return rejected
+        }
+
+        if (this._bodyBlob) {
+          return Promise.resolve(this._bodyBlob)
+        } else if (this._bodyArrayBuffer) {
+          return Promise.resolve(new Blob([this._bodyArrayBuffer]))
+        } else if (this._bodyFormData) {
+          throw new Error('could not read FormData body as blob')
+        } else {
+          return Promise.resolve(new Blob([this._bodyText]))
+        }
+      }
+
+      this.arrayBuffer = function() {
+        if (this._bodyArrayBuffer) {
+          return consumed(this) || Promise.resolve(this._bodyArrayBuffer)
+        } else {
+          return this.blob().then(readBlobAsArrayBuffer)
+        }
+      }
+    }
+
+    this.text = function() {
+      var rejected = consumed(this)
+      if (rejected) {
+        return rejected
+      }
+
+      if (this._bodyBlob) {
+        return readBlobAsText(this._bodyBlob)
+      } else if (this._bodyArrayBuffer) {
+        return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer))
+      } else if (this._bodyFormData) {
+        throw new Error('could not read FormData body as text')
+      } else {
+        return Promise.resolve(this._bodyText)
+      }
+    }
+
+    if (support.formData) {
+      this.formData = function() {
+        return this.text().then(decode)
+      }
+    }
+
+    this.json = function() {
+      return this.text().then(JSON.parse)
+    }
+
+    return this
+  }
+
+  // HTTP methods whose capitalization should be normalized
+  var methods = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT']
+
+  function normalizeMethod(method) {
+    var upcased = method.toUpperCase()
+    return (methods.indexOf(upcased) > -1) ? upcased : method
+  }
+
+  function Request(input, options) {
+    options = options || {}
+    var body = options.body
+
+    if (input instanceof Request) {
+      if (input.bodyUsed) {
+        throw new TypeError('Already read')
+      }
+      this.url = input.url
+      this.credentials = input.credentials
+      if (!options.headers) {
+        this.headers = new Headers(input.headers)
+      }
+      this.method = input.method
+      this.mode = input.mode
+      if (!body && input._bodyInit != null) {
+        body = input._bodyInit
+        input.bodyUsed = true
+      }
+    } else {
+      this.url = String(input)
+    }
+
+    this.credentials = options.credentials || this.credentials || 'omit'
+    if (options.headers || !this.headers) {
+      this.headers = new Headers(options.headers)
+    }
+    this.method = normalizeMethod(options.method || this.method || 'GET')
+    this.mode = options.mode || this.mode || null
+    this.referrer = null
+
+    if ((this.method === 'GET' || this.method === 'HEAD') && body) {
+      throw new TypeError('Body not allowed for GET or HEAD requests')
+    }
+    this._initBody(body)
+  }
+
+  Request.prototype.clone = function() {
+    return new Request(this, { body: this._bodyInit })
+  }
+
+  function decode(body) {
+    var form = new FormData()
+    body.trim().split('&').forEach(function(bytes) {
+      if (bytes) {
+        var split = bytes.split('=')
+        var name = split.shift().replace(/\+/g, ' ')
+        var value = split.join('=').replace(/\+/g, ' ')
+        form.append(decodeURIComponent(name), decodeURIComponent(value))
+      }
+    })
+    return form
+  }
+
+  function parseHeaders(rawHeaders) {
+    var headers = new Headers()
+    // Replace instances of \r\n and \n followed by at least one space or horizontal tab with a space
+    // https://tools.ietf.org/html/rfc7230#section-3.2
+    var preProcessedHeaders = rawHeaders.replace(/\r?\n[\t ]+/g, ' ')
+    preProcessedHeaders.split(/\r?\n/).forEach(function(line) {
+      var parts = line.split(':')
+      var key = parts.shift().trim()
+      if (key) {
+        var value = parts.join(':').trim()
+        headers.append(key, value)
+      }
+    })
+    return headers
+  }
+
+  Body.call(Request.prototype)
+
+  function Response(bodyInit, options) {
+    if (!options) {
+      options = {}
+    }
+
+    this.type = 'default'
+    this.status = options.status === undefined ? 200 : options.status
+    this.ok = this.status >= 200 && this.status < 300
+    this.statusText = 'statusText' in options ? options.statusText : 'OK'
+    this.headers = new Headers(options.headers)
+    this.url = options.url || ''
+    this._initBody(bodyInit)
+  }
+
+  Body.call(Response.prototype)
+
+  Response.prototype.clone = function() {
+    return new Response(this._bodyInit, {
+      status: this.status,
+      statusText: this.statusText,
+      headers: new Headers(this.headers),
+      url: this.url
+    })
+  }
+
+  Response.error = function() {
+    var response = new Response(null, {status: 0, statusText: ''})
+    response.type = 'error'
+    return response
+  }
+
+  var redirectStatuses = [301, 302, 303, 307, 308]
+
+  Response.redirect = function(url, status) {
+    if (redirectStatuses.indexOf(status) === -1) {
+      throw new RangeError('Invalid status code')
+    }
+
+    return new Response(null, {status: status, headers: {location: url}})
+  }
+
+  self.Headers = Headers
+  self.Request = Request
+  self.Response = Response
+
+  self.fetch = function(input, init) {
+    return new Promise(function(resolve, reject) {
+      var request = new Request(input, init)
+      var xhr = new XMLHttpRequest()
+
+      xhr.onload = function() {
+        var options = {
+          status: xhr.status,
+          statusText: xhr.statusText,
+          headers: parseHeaders(xhr.getAllResponseHeaders() || '')
+        }
+        options.url = 'responseURL' in xhr ? xhr.responseURL : options.headers.get('X-Request-URL')
+        var body = 'response' in xhr ? xhr.response : xhr.responseText
+        resolve(new Response(body, options))
+      }
+
+      xhr.onerror = function() {
+        reject(new TypeError('Network request failed'))
+      }
+
+      xhr.ontimeout = function() {
+        reject(new TypeError('Network request failed'))
+      }
+
+      xhr.open(request.method, request.url, true)
+
+      if (request.credentials === 'include') {
+        xhr.withCredentials = true
+      } else if (request.credentials === 'omit') {
+        xhr.withCredentials = false
+      }
+
+      if ('responseType' in xhr && support.blob) {
+        xhr.responseType = 'blob'
+      }
+
+      request.headers.forEach(function(value, name) {
+        xhr.setRequestHeader(name, value)
+      })
+
+      xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit)
+    })
+  }
+  self.fetch.polyfill = true
+})(typeof self !== 'undefined' ? self : this);
+
 
 /***/ }),
 /* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* WEBPACK VAR INJECTION */(function(setImmediate) {(function (root) {
 
+  // Store setTimeout reference so promise-polyfill will be unaffected by
+  // other code modifying setTimeout (like sinon.useFakeTimers())
+  var setTimeoutFunc = setTimeout;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var FiltersCollection = __webpack_require__(22);
-
-/**
- * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within filters.
- *
- * This filter will group as many filters as you want and it will add them to the query returning the rows that match ALL the filters to render the visualization.
- *
- * You can add or remove filters by invoking `.addFilter()` and `.removeFilter()`.
- *
- * @example
- * // Create a filter by room type, showing only private rooms
- * const roomTypeFilter = new carto.filter.Category('room_type', { eq: 'Private room' });
- * // Create a filter by price, showing only listings lower than or equal to 50€
- * const priceFilter = new carto.filter.Range('price', { lte: 50 });
- *
- * // Combine the filters with an AND condition, returning rows that match both filters
- * const filterByRoomTypeAndPrice = new carto.filter.AND([ roomTypeFilter, priceFilter ]);
- *
- * // Add filters to the existing source
- * source.addFilter(filterByRoomTypeAndPrice);
- *
- * @class AND
- * @extends carto.filter.FiltersCollection
- * @memberof carto.filter
- * @api
- */
-
-var AND = function (_FiltersCollection) {
-  _inherits(AND, _FiltersCollection);
-
-  function AND(filters) {
-    _classCallCheck(this, AND);
-
-    var _this = _possibleConstructorReturn(this, (AND.__proto__ || Object.getPrototypeOf(AND)).call(this, filters));
-
-    _this.JOIN_OPERATOR = 'AND';
-    return _this;
+  function noop() {}
+  
+  // Polyfill for Function.prototype.bind
+  function bind(fn, thisArg) {
+    return function () {
+      fn.apply(thisArg, arguments);
+    };
   }
 
-  return AND;
-}(FiltersCollection);
+  function Promise(fn) {
+    if (!(this instanceof Promise)) throw new TypeError('Promises must be constructed via new');
+    if (typeof fn !== 'function') throw new TypeError('not a function');
+    this._state = 0;
+    this._handled = false;
+    this._value = undefined;
+    this._deferreds = [];
 
-module.exports = AND;
+    doResolve(fn, this);
+  }
+
+  function handle(self, deferred) {
+    while (self._state === 3) {
+      self = self._value;
+    }
+    if (self._state === 0) {
+      self._deferreds.push(deferred);
+      return;
+    }
+    self._handled = true;
+    Promise._immediateFn(function () {
+      var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
+      if (cb === null) {
+        (self._state === 1 ? resolve : reject)(deferred.promise, self._value);
+        return;
+      }
+      var ret;
+      try {
+        ret = cb(self._value);
+      } catch (e) {
+        reject(deferred.promise, e);
+        return;
+      }
+      resolve(deferred.promise, ret);
+    });
+  }
+
+  function resolve(self, newValue) {
+    try {
+      // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
+      if (newValue === self) throw new TypeError('A promise cannot be resolved with itself.');
+      if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
+        var then = newValue.then;
+        if (newValue instanceof Promise) {
+          self._state = 3;
+          self._value = newValue;
+          finale(self);
+          return;
+        } else if (typeof then === 'function') {
+          doResolve(bind(then, newValue), self);
+          return;
+        }
+      }
+      self._state = 1;
+      self._value = newValue;
+      finale(self);
+    } catch (e) {
+      reject(self, e);
+    }
+  }
+
+  function reject(self, newValue) {
+    self._state = 2;
+    self._value = newValue;
+    finale(self);
+  }
+
+  function finale(self) {
+    if (self._state === 2 && self._deferreds.length === 0) {
+      Promise._immediateFn(function() {
+        if (!self._handled) {
+          Promise._unhandledRejectionFn(self._value);
+        }
+      });
+    }
+
+    for (var i = 0, len = self._deferreds.length; i < len; i++) {
+      handle(self, self._deferreds[i]);
+    }
+    self._deferreds = null;
+  }
+
+  function Handler(onFulfilled, onRejected, promise) {
+    this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
+    this.onRejected = typeof onRejected === 'function' ? onRejected : null;
+    this.promise = promise;
+  }
+
+  /**
+   * Take a potentially misbehaving resolver function and make sure
+   * onFulfilled and onRejected are only called once.
+   *
+   * Makes no guarantees about asynchrony.
+   */
+  function doResolve(fn, self) {
+    var done = false;
+    try {
+      fn(function (value) {
+        if (done) return;
+        done = true;
+        resolve(self, value);
+      }, function (reason) {
+        if (done) return;
+        done = true;
+        reject(self, reason);
+      });
+    } catch (ex) {
+      if (done) return;
+      done = true;
+      reject(self, ex);
+    }
+  }
+
+  Promise.prototype['catch'] = function (onRejected) {
+    return this.then(null, onRejected);
+  };
+
+  Promise.prototype.then = function (onFulfilled, onRejected) {
+    var prom = new (this.constructor)(noop);
+
+    handle(this, new Handler(onFulfilled, onRejected, prom));
+    return prom;
+  };
+
+  Promise.all = function (arr) {
+    return new Promise(function (resolve, reject) {
+      if (!arr || typeof arr.length === 'undefined') throw new TypeError('Promise.all accepts an array');
+      var args = Array.prototype.slice.call(arr);
+      if (args.length === 0) return resolve([]);
+      var remaining = args.length;
+
+      function res(i, val) {
+        try {
+          if (val && (typeof val === 'object' || typeof val === 'function')) {
+            var then = val.then;
+            if (typeof then === 'function') {
+              then.call(val, function (val) {
+                res(i, val);
+              }, reject);
+              return;
+            }
+          }
+          args[i] = val;
+          if (--remaining === 0) {
+            resolve(args);
+          }
+        } catch (ex) {
+          reject(ex);
+        }
+      }
+
+      for (var i = 0; i < args.length; i++) {
+        res(i, args[i]);
+      }
+    });
+  };
+
+  Promise.resolve = function (value) {
+    if (value && typeof value === 'object' && value.constructor === Promise) {
+      return value;
+    }
+
+    return new Promise(function (resolve) {
+      resolve(value);
+    });
+  };
+
+  Promise.reject = function (value) {
+    return new Promise(function (resolve, reject) {
+      reject(value);
+    });
+  };
+
+  Promise.race = function (values) {
+    return new Promise(function (resolve, reject) {
+      for (var i = 0, len = values.length; i < len; i++) {
+        values[i].then(resolve, reject);
+      }
+    });
+  };
+
+  // Use polyfill for setImmediate for performance gains
+  Promise._immediateFn = (typeof setImmediate === 'function' && function (fn) { setImmediate(fn); }) ||
+    function (fn) {
+      setTimeoutFunc(fn, 0);
+    };
+
+  Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
+    if (typeof console !== 'undefined' && console) {
+      console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
+    }
+  };
+
+  /**
+   * Set the immediate function to execute callbacks
+   * @param fn {function} Function to execute
+   * @deprecated
+   */
+  Promise._setImmediateFn = function _setImmediateFn(fn) {
+    Promise._immediateFn = fn;
+  };
+
+  /**
+   * Change the function to execute on unhandled rejection
+   * @param {function} fn Function to execute on unhandled rejection
+   * @deprecated
+   */
+  Promise._setUnhandledRejectionFn = function _setUnhandledRejectionFn(fn) {
+    Promise._unhandledRejectionFn = fn;
+  };
+  
+  if ( true && module.exports) {
+    module.exports = Promise;
+  } else if (!root.Promise) {
+    root.Promise = Promise;
+  }
+
+})(this);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(48).setImmediate))
 
 /***/ }),
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
+            (typeof self !== "undefined" && self) ||
+            window;
+var apply = Function.prototype.apply;
 
+// DOM APIs, for completeness
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SQLBase = __webpack_require__(11);
-
-var RANGE_COMPARISON_OPERATORS = {
-  lt: { parameters: [{ name: 'lt', allowedTypes: ['Number', 'Date', 'Object'] }] },
-  lte: { parameters: [{ name: 'lte', allowedTypes: ['Number', 'Date', 'Object'] }] },
-  gt: { parameters: [{ name: 'gt', allowedTypes: ['Number', 'Date', 'Object'] }] },
-  gte: { parameters: [{ name: 'gte', allowedTypes: ['Number', 'Date', 'Object'] }] },
-  between: {
-    parameters: [{ name: 'between.min', allowedTypes: ['Number', 'Date'] }, { name: 'between.max', allowedTypes: ['Number', 'Date'] }]
-  },
-  notBetween: {
-    parameters: [{ name: 'notBetween.min', allowedTypes: ['Number', 'Date'] }, { name: 'notBetween.max', allowedTypes: ['Number', 'Date'] }]
-  },
-  betweenSymmetric: {
-    parameters: [{ name: 'betweenSymmetric.min', allowedTypes: ['Number', 'Date'] }, { name: 'betweenSymmetric.max', allowedTypes: ['Number', 'Date'] }]
-  },
-  notBetweenSymmetric: {
-    parameters: [{ name: 'notBetweenSymmetric.min', allowedTypes: ['Number', 'Date'] }, { name: 'notBetweenSymmetric.max', allowedTypes: ['Number', 'Date'] }]
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, scope, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
   }
 };
 
-var ALLOWED_FILTERS = Object.freeze(Object.keys(RANGE_COMPARISON_OPERATORS));
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(scope, this._id);
+};
 
-/**
- * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within the filter.
- *
- * You can filter columns with `in`, `notIn`, `eq`, `notEq`, `like`, `similarTo` filters, and update the conditions with `.set()` or `.setFilters()` method. It will refresh the visualization automatically when any filter is added or modified.
- *
- * This filter won't include null values within returned rows by default but you can include them by setting `includeNull` option.
- *
- * @param {string} column - The column to filter rows
- * @param {object} filters - The filters you want to apply to the column
- * @param {(number|Date|object)} filters.lt - Return rows whose column value is less than the provided value
- * @param {string} filters.lt.query - Return rows whose column value is less than the value returned by query
- * @param {(number|Date|object)} filters.lte - Return rows whose column value is less than or equal to the provided value
- * @param {string} filters.lte.query - Return rows whose column value is less than or equal to the value returned by query
- * @param {(number|Date|object)} filters.gt - Return rows whose column value is greater than the provided value
- * @param {string} filters.gt.query - Return rows whose column value is greater than the value returned by query
- * @param {(number|Date|object)} filters.gte - Return rows whose column value is greater than or equal to the provided value
- * @param {string} filters.gte.query - Return rows whose column value is greater than or equal to the value returned by query
- * @param {(number|Date)} filters.between - Return rows whose column value is between the provided values
- * @param {(number|Date)} filters.between.min - Lower value of the comparison range
- * @param {(number|Date)} filters.between.max - Upper value of the comparison range
- * @param {(number|Date)} filters.notBetween - Return rows whose column value is not between the provided values
- * @param {(number|Date)} filters.notBetween.min - Lower value of the comparison range
- * @param {(number|Date)} filters.notBetween.max - Upper value of the comparison range
- * @param {(number|Date)} filters.betweenSymmetric - Return rows whose column value is between the provided values after sorting them
- * @param {(number|Date)} filters.betweenSymmetric.min - Lower value of the comparison range
- * @param {(number|Date)} filters.betweenSymmetric.max - Upper value of the comparison range
- * @param {(number|Date)} filters.notBetweenSymmetric - Return rows whose column value is not between the provided values after sorting them
- * @param {(number|Date)} filters.notBetweenSymmetric.min - Lower value of the comparison range
- * @param {(number|Date)} filters.notBetweenSymmetric.max - Upper value of the comparison range
- * @param {object} [options]
- * @param {boolean} [options.includeNull] - Include null rows when returning data
- *
- * @example
- * // Create a filter by price, showing only listings lower than or equal to 50€, and higher than 100€
- * const priceFilter = new carto.filter.Range('price', { lte: 50, gt: 100 });
- *
- * // Add filter to the existing source
- * airbnbDataset.addFilter(priceFilter);
- *
- * @example
- * // Create a filter by price, showing only listings greater than or equal to the average price
- * const priceFilter = new carto.filter.Range('price', { gte: { query: 'SELECT avg(price) FROM listings' } });
- *
- * // Add filter to the existing source
- * airbnbDataset.addFilter(priceFilter);
- *
- * @class Range
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- */
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
 
-var Range = function (_SQLBase) {
-  _inherits(Range, _SQLBase);
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
 
-  function Range(column) {
-    var filters = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    var options = arguments[2];
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
 
-    _classCallCheck(this, Range);
-
-    var _this = _possibleConstructorReturn(this, (Range.__proto__ || Object.getPrototypeOf(Range)).call(this, column, options));
-
-    _this.SQL_TEMPLATES = _this._getSQLTemplates();
-    _this.ALLOWED_FILTERS = ALLOWED_FILTERS;
-    _this.PARAMETER_SPECIFICATION = RANGE_COMPARISON_OPERATORS;
-
-    _this._checkFilters(filters);
-    _this._filters = filters;
-    return _this;
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
   }
+};
 
-  _createClass(Range, [{
-    key: '_getSQLTemplates',
-    value: function _getSQLTemplates() {
-      return {
-        lt: '<%= column %> < <%= value.query ? "(" + value.query + ")" : value %>',
-        lte: '<%= column %> <= <%= value.query ? "(" + value.query + ")" : value %>',
-        gt: '<%= column %> > <%= value.query ? "(" + value.query + ")" : value %>',
-        gte: '<%= column %> >= <%= value.query ? "(" + value.query + ")" : value %>',
-        between: '<%= column %> BETWEEN <%= value.min %> AND <%= value.max %>',
-        notBetween: '<%= column %> NOT BETWEEN <%= value.min %> AND <%= value.max %>',
-        betweenSymmetric: '<%= column %> BETWEEN SYMMETRIC <%= value.min %> AND <%= value.max %>',
-        notBetweenSymmetric: '<%= column %> NOT BETWEEN SYMMETRIC <%= value.min %> AND <%= value.max %>'
-      };
-    }
+// setimmediate attaches itself to the global object
+__webpack_require__(49);
+// On some exotic environments, it's not clear which object `setimmediate` was
+// able to install onto.  Search each possibility in the same order as the
+// `setimmediate` library.
+exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
+                       (typeof global !== "undefined" && global.setImmediate) ||
+                       (this && this.setImmediate);
+exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
+                         (typeof global !== "undefined" && global.clearImmediate) ||
+                         (this && this.clearImmediate);
 
-    /**
-     * Set any of the filter conditions, overwriting the previous one.
-     * @param {string} filterType - The filter type that you want to set. `lt`, `lte`, `gt`, `gte`, `between`, `notBetween`, `betweenSymmetric`, `notBetweenSymmetric`.
-     * @param {string} filterValue - The value of the filter. Check types in {@link carto.filter.Range}
-     *
-     * @memberof Range
-     * @method set
-     * @api
-     */
-
-    /**
-     * Set filter conditions, overriding all the previous ones.
-     * @param {object} filters - Object containing all the new filters to apply. Check filter options in {@link carto.filter.Range}.
-     *
-     * @memberof Range
-     * @method setFilters
-     * @api
-     */
-
-    /**
-     * Remove all conditions from current filter
-     *
-     * @memberof Range
-     * @method resetFilters
-     * @api
-     */
-
-  }]);
-
-  return Range;
-}(SQLBase);
-
-module.exports = Range;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10)))
 
 /***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
 
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SQLBase = __webpack_require__(11);
-
-var CATEGORY_COMPARISON_OPERATORS = {
-  in: { parameters: [{ name: 'in', allowedTypes: ['Array', 'String', 'Object'] }] },
-  notIn: { parameters: [{ name: 'notIn', allowedTypes: ['Array', 'String', 'Object'] }] },
-  eq: { parameters: [{ name: 'eq', allowedTypes: ['String', 'Number', 'Date', 'Object'] }] },
-  notEq: { parameters: [{ name: 'notEq', allowedTypes: ['String', 'Number', 'Date', 'Object'] }] },
-  like: { parameters: [{ name: 'like', allowedTypes: ['String'] }] },
-  similarTo: { parameters: [{ name: 'similarTo', allowedTypes: ['String'] }] }
-};
-
-var ALLOWED_FILTERS = Object.freeze(Object.keys(CATEGORY_COMPARISON_OPERATORS));
-
-/**
- * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within the filter.
- *
- * You can filter columns with `in`, `notIn`, `eq`, `notEq`, `like`, `similarTo` filters, and update the conditions with `.set()` or `.setFilters()` method. It will refresh the visualization automatically when any filter is added or modified.
- *
- * This filter won't include null values within returned rows by default but you can include them by setting `includeNull` option.
- *
- * @param {string} column - The column which the filter will be performed against
- * @param {object} filters - The filters you want to apply to the table rows
- * @param {(string[]|object)} filters.in - Return rows whose column value is included within the provided values
- * @param {string} filters.in.query - Return rows whose column value is included within query results
- * @param {(string[]|object)} filters.notIn - Return rows whose column value is included within the provided values
- * @param {string} filters.notIn.query - Return rows whose column value is not included within query results
- * @param {(string|number|Date|object)} filters.eq - Return rows whose column value is equal to the provided value
- * @param {string} filters.eq.query - Return rows whose column value is equal to the value returned by query
- * @param {(string|number|Date|object)} filters.notEq - Return rows whose column value is not equal to the provided value
- * @param {string} filters.notEq.query - Return rows whose column value is not equal to the value returned by query
- * @param {string} filters.like - Return rows whose column value is like the provided value
- * @param {string} filters.similarTo - Return rows whose column value is similar to the provided values
- * @param {object} [options]
- * @param {boolean} [options.includeNull] - Include null rows when returning data
- *
- * @example
- * // Create a filter by room type, showing only private rooms
- * const roomTypeFilter = new carto.filter.Category('room_type', { eq: 'Private Room' });
- * airbnbDataset.addFilter(roomTypeFilter);
- *
- * @example
- * // Create a filter by room type, showing only private rooms and entire apartments
- * const roomTypeFilter = new carto.filter.Category('room_type', { in: ['Private Room', 'Entire home/apt'] });
- * airbnbDataset.addFilter(roomTypeFilter);
- *
- * @example
- * // Create a filter by room type, showing results included in subquery
- * const roomTypeFilter = new carto.filter.Category('room_type', { in: { query: 'SELECT distinct(type) FROM rooms' } });
- * airbnbDataset.addFilter(roomTypeFilter);
- *
- * @class Category
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- */
-
-var Category = function (_SQLBase) {
-  _inherits(Category, _SQLBase);
-
-  function Category(column) {
-    var filters = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    var options = arguments[2];
-
-    _classCallCheck(this, Category);
-
-    var _this = _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).call(this, column, options));
-
-    _this.SQL_TEMPLATES = _this._getSQLTemplates();
-    _this.ALLOWED_FILTERS = ALLOWED_FILTERS;
-    _this.PARAMETER_SPECIFICATION = CATEGORY_COMPARISON_OPERATORS;
-
-    _this._checkFilters(filters);
-    _this._filters = filters;
-    return _this;
-  }
-
-  _createClass(Category, [{
-    key: '_getSQLTemplates',
-    value: function _getSQLTemplates() {
-      return {
-        in: '<% if (value) { %><%= column %> IN (<%= value.query || value %>)<% } else { %>true = false<% } %>',
-        notIn: '<% if (value) { %><%= column %> NOT IN (<%= value.query || value %>)<% } %>',
-        eq: '<%= column %> = <%= value.query ? "(" + value.query + ")" : value %>',
-        notEq: '<%= column %> != <%= value.query ? "(" + value.query + ")" : value %>',
-        like: '<%= column %> LIKE <%= value %>',
-        similarTo: '<%= column %> SIMILAR TO <%= value %>'
-      };
+    if (global.setImmediate) {
+        return;
     }
 
-    /**
-     * Set any of the filter conditions, overwriting the previous one.
-     * @param {string} filterType - The filter type that you want to set. `in`, `notIn`, `eq`, `notEq`, `like`, `similarTo`.
-     * @param {string} filterValue - The value of the filter. Check types in {@link carto.filter.Category}
-     *
-     * @memberof Category
-     * @method set
-     * @api
-     */
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
 
-    /**
-     * Set filter conditions, overriding all the previous ones.
-     * @param {object} filters - Object containing all the new filters to apply. Check filter options in {@link carto.filter.Category}.
-     *
-     * @memberof Category
-     * @method setFilters
-     * @api
-     */
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
 
-    /**
-     * Remove all conditions from current filter
-     *
-     * @memberof Category
-     * @method resetFilters
-     * @api
-     */
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
 
-  }]);
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
 
-  return Category;
-}(SQLBase);
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
 
-module.exports = Category;
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10), __webpack_require__(50)))
 
 /***/ }),
 /* 50 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
 
 
-var Model = __webpack_require__(2);
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
 
-module.exports = Model.extend({
-  initialize: function initialize() {
-    this._polygon = {};
-  },
 
-  setPolygon: function setPolygon(polygon) {
-    this._polygon = polygon;
-    this.trigger('polygonChanged', polygon);
-  },
 
-  getPolygon: function getPolygon() {
-    return this._polygon;
-  },
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
 
-  serialize: function serialize() {
-    return encodeURIComponent(JSON.stringify(this.getPolygon()));
-  }
-});
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
 
 /***/ }),
 /* 51 */
@@ -21077,119 +21168,552 @@ module.exports = Model.extend({
 
 
 var _ = __webpack_require__(0);
-var Base = __webpack_require__(6);
-var PolygonFilterModel = __webpack_require__(50);
+var Backbone = __webpack_require__(1);
+var CartoError = __webpack_require__(4);
+var Engine = __webpack_require__(31);
+var Events = __webpack_require__(14);
+var LayerBase = __webpack_require__(35);
+var Layers = __webpack_require__(85);
+var VERSION = __webpack_require__(22).version;
 var CartoValidationError = __webpack_require__(3);
-var SpatialFilterTypes = __webpack_require__(8);
+var utils = __webpack_require__(6);
 
-/**
- * Generic polygon filter.
- *
- * When this filter is included into a dataview only the data inside a custom polygon will be taken into account.
- *
- * You can manually set the polygon with the `setPolygon()`.
- *
- * This filter could be useful if you want give the users the ability to select a custom area in the map and update the dataviews accordingly.
- *
- *
- * @constructor
- * @fires polygonChanged
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- *
- */
-function Polygon() {
-  this._internalModel = new PolygonFilterModel();
-  this.type = SpatialFilterTypes.POLYGON;
+function getValidationError(code) {
+  return new CartoValidationError('client', code);
 }
 
-Polygon.prototype = Object.create(Base.prototype);
+var DEFAULT_SERVER_URL = 'https://{username}.carto.com';
 
 /**
- * Set the polygon.
+ * This is the entry point for a CARTO.js application.
  *
- * @param {carto.filter.PolygonData} polygon
- * @fires polygonChanged
- * @return {carto.filter.Polygon} this
+ * A CARTO client allows managing layers and dataviews. Some operations like addding a layer or a dataview are asynchronous.
+ * The client takes care of the communication between CARTO.js and the server for you.
+ *
+ * To create a new client you need a CARTO account, where you will be able to get
+ * your API key and username.
+ *
+ * If you want to learn more about authorization and authentication, please read the authorization fundamentals section of our Developer Center.
+ *
+ * @param {object} settings
+ * @param {string} settings.apiKey - API key used to authenticate against CARTO
+ * @param {string} settings.username - Name of the user
+ * @param {string} [settings.serverUrl='https://{username}.carto.com'] - URL of the windshaft server. Only needed in custom installations. Pattern: `http(s)://{username}.your.carto.instance` or `http(s)://your.carto.instance/user/{username}` (only for On-Premises environments).
+ *
+ * @example
+ * var client = new carto.Client({
+ *   apiKey: 'YOUR_API_KEY_HERE',
+ *   username: 'YOUR_USERNAME_HERE'
+ * });
+ *
+ * var client = new carto.Client({
+ *   apiKey: 'YOUR_API_KEY_HERE',
+ *   username: 'YOUR_USERNAME_HERE',
+ *   serverUrl: 'http://{username}.your.carto.instance'
+ * });
+ *
+ * @constructor
+ * @memberof carto
+ * @api
+ *
+ * @fires error
+ * @fires success
+ */
+function Client(settings) {
+  settings.serverUrl = (settings.serverUrl || DEFAULT_SERVER_URL).replace(/{username}/, settings.username || '');
+  _checkSettings(settings);
+  this._layers = new Layers();
+  this._dataviews = [];
+  this._engine = new Engine({
+    apiKey: settings.apiKey,
+    username: settings.username,
+    serverUrl: settings.serverUrl,
+    client: 'js-' + VERSION
+  });
+  this._bindEngine(this._engine);
+}
+
+_.extend(Client.prototype, Backbone.Events);
+
+/**
+ * Add a layer to the client.
+ * If the layer id already exists in the client this method will throw an error.
+ *
+ * @param {carto.layer.Base} - The layer to be added
+ *
+ * @fires error
+ * @fires success
+ *
+ * @example
+ * // Add a layer to the client
+ * client.addLayer(layer)
+ *  .then(() => {
+ *    console.log('Layer added');
+ *  })
+ *  .catch(cartoError => {
+ *    console.error(cartoError.message);
+ *  });
+ *
+ * @returns {Promise} - A promise that will be fulfilled when the layer is added
  * @api
  */
-Polygon.prototype.setPolygon = function (polygon) {
-  this._checkPolygon(polygon);
-  this._internalModel.setPolygon(polygon);
-  this.trigger('polygonChanged', polygon);
-  return this;
+Client.prototype.addLayer = function (layer) {
+  return this.addLayers([layer]);
 };
 
 /**
- * Reset the polygon.
+ * Add multiple layers to the client at once.
  *
- * @fires polygonChanged
- * @return {carto.filter.Polygon} this
+ * @param {carto.layer.Base[]} - An array with the layers to be added. Note that ([A, B]) displays B as the top layer.
+ *
+ * @fires error
+ * @fires success
+ *
+ * @example
+ * // Add multiple layers ad once layer to the client
+ * client.addLayers([layer0, layer1])
+ *  .then(() => {
+ *    console.log('Layers added');
+ *  })
+ *  .catch(cartoError => {
+ *    console.error(cartoError.message);
+ *  });
+ *
+ * @returns {Promise} A promise that will be fulfilled when the layers are added
  * @api
  */
-Polygon.prototype.resetPolygon = function () {
-  return this.setPolygon({
-    type: 'Polygon',
-    coordinates: []
+Client.prototype.addLayers = function (layers) {
+  layers.forEach(this._addLayer, this);
+  return this._reload();
+};
+
+/**
+ * Remove a layer from the client.
+ *
+ * @example
+ * // Remove a layer from the client
+ * client.removeLayer(layer)
+ * .then(() => {
+ *  console.log('Layer removed');
+ * })
+ * .catch(cartoError => {
+ *  console.error(cartoError.message);
+ * });
+ *
+ * @param {carto.layer.Base} - The layer to be removed
+ *
+ * @fires error
+ * @fires success
+ *
+ * @returns {Promise} A promise that will be fulfilled when the layer is removed
+ * @api
+ */
+Client.prototype.removeLayer = function (layer) {
+  return this.removeLayers([layer]);
+};
+
+/**
+ * Remove multiple layers from the client.
+ *
+ * @example
+ * // Remove multiple layers from the client
+ * client.removeLayers([layer1, layer2])
+ * .then(() => {
+ *  console.log('Layers removed');
+ * })
+ * .catch(cartoError => {
+ *  console.error(cartoError.message);
+ * });
+ *
+ *
+ * @param {carto.layer.Base[]} - An array with the layers to be removed
+ *
+ * @fires error
+ * @fires success
+ *
+ * @returns {Promise} A promise that will be fulfilled when the layers are removed
+ * @api
+ */
+Client.prototype.removeLayers = function (layers) {
+  var layersToRemove = layers.slice(0);
+  layersToRemove.forEach(this._removeLayer, this);
+
+  return this._reload();
+};
+
+/**
+ * Move layer order.
+ *
+ * @example
+ * // Move layer order
+ * client.moveLayer(layer1, 0)
+ * .then(() => {
+ *  console.log('Layer moved');
+ * })
+ * .catch(cartoError => {
+ *  console.error(cartoError.message);
+ * });
+ *
+ *
+ * @param {carto.layer.Base} - The layer to be moved
+ * @param {number} toIndex - Final index for the layer
+ *
+ * @fires error
+ * @fires success
+ *
+ * @returns {Promise} A promise that will be fulfilled when the layer is moved
+ * @api
+ */
+Client.prototype.moveLayer = function (layer, toIndex) {
+  var fromIndex = this._layers.indexOf(layer);
+  this._moveLayer(layer, toIndex);
+  if (fromIndex === toIndex) {
+    return Promise.resolve();
+  } else {
+    return this._reload();
+  }
+};
+
+/**
+ * Get all the {@link carto.layer.Base|layers} from the client.
+ *
+ * @example
+ * // Get all layers from the client
+ * const layers = client.getLayers();
+ *
+ * @example
+ * // Hide all layers from the client
+ * client.getLayers().forEach(layer => layer.hide());
+ *
+ * @returns {carto.layer.Base[]} An array with all the Layers from the client
+ * @api
+ */
+Client.prototype.getLayers = function () {
+  return this._layers.toArray();
+};
+
+/**
+ * Add a dataview to the client.
+ *
+ * @example
+ * // Add a dataview to the client
+ * client.addDataview(dataview)
+ *  .then(() => {
+ *    console.log('Dataview added');
+ *  })
+ *  .catch(cartoError => {
+ *    console.error(cartoError.message);
+ *  }):
+ *
+ * @param {carto.dataview.Base} - The dataview to be added
+ *
+ * @fires error
+ * @fires success
+ *
+ * @returns {Promise} - A promise that will be fulfilled when the dataview is added
+ * @api
+ */
+Client.prototype.addDataview = function (dataview) {
+  return this.addDataviews([dataview]);
+};
+
+/**
+ * Add multipe dataviews to the client.
+ *
+ * @example
+ * // Add several dataviews to the client
+ * client.addDataview([dataview0, dataview1])
+ *  .then(() => {
+ *    console.log('Dataviews added');
+ *  })
+ *  .catch(cartoError => {
+ *    console.error(cartoError.message);
+ *  }):
+ *
+ * @param {carto.dataview.Base[]} - An array with the dataviews to be added
+ *
+ * @fires error
+ * @fires success
+ *
+ * @returns {Promise} A promise that will be fulfilled when the dataviews are added
+ * @api
+ */
+Client.prototype.addDataviews = function (dataviews) {
+  dataviews.forEach(this._addDataview, this);
+  return this._reload();
+};
+
+/**
+ * Remove a dataview from the client.
+ *
+ * @example
+ * // Remove a dataview from the client
+ * client.removeDataview(dataview)
+ * .then(() => {
+ *    console.log('Dataviews removed');
+ *  })
+ *  .catch(cartoError => {
+ *    console.error(cartoError.message);
+ *  }):
+ *
+ * @param {carto.dataview.Base} - The dataview array to be removed
+ *
+ * @fires error
+ * @fires success
+ *
+ * @returns {Promise} A promise that will be fulfilled when the dataview is removed
+ * @api
+ */
+Client.prototype.removeDataview = function (dataview) {
+  var dataviewIndex = this._dataviews.indexOf(dataview);
+
+  if (dataviewIndex === -1) {
+    return Promise.resolve();
+  }
+
+  this._dataviews.splice(dataviewIndex, 1);
+  this._engine.removeDataview(dataview.$getInternalModel());
+  dataview.disable();
+  return this._reload();
+};
+
+/**
+ * Get all the dataviews from the client.
+ *
+ * @example
+ * // Get all the dataviews from the client
+ * const dataviews = client.getDataviews();
+ *
+ * @returns {carto.dataview.Base[]} An array with all the dataviews from the client
+ * @api
+ */
+Client.prototype.getDataviews = function () {
+  return this._dataviews;
+};
+
+/**
+ * Return a {@link http://leafletjs.com/reference-1.3.1.html#tilelayer|leaflet layer} that groups all the layers that have been
+ * added to this client.
+ *
+ * @example
+ * // Get the leafletlayer from the client
+ * const cartoLeafletLayer = client.getLeafletLayer();
+ *
+ * @example
+ * // Add the leafletLayer to a leafletMap
+ * client.getLeafletLayer().addTo(map);
+ *
+ * @param {object} options - {@link https://leafletjs.com/reference-1.3.0.html#tilelayer-minzoom|L.TileLayer} options.
+ *
+ * @returns A {@link http://leafletjs.com/reference-1.3.1.html#tilelayer|L.TileLayer} layer that groups all the layers.
+ *
+ * @api
+ */
+Client.prototype.getLeafletLayer = function (options) {
+  // Check if Leaflet is loaded
+  utils.isLeafletLoaded();
+  if (!this._leafletLayer) {
+    var LeafletLayer = __webpack_require__(86);
+    this._leafletLayer = new LeafletLayer(this._layers, this._engine, options);
+  }
+  return this._leafletLayer;
+};
+
+/**
+ * Return a {@link https://developers.google.com/maps/documentation/javascript/maptypes|google.maps.MapType} that groups all the layers that have been
+ * added to this client.
+ *
+ * @example
+ * // Get googlemaps MapType from client
+ * const gmapsMapType = client.getGoogleMapsMapType();
+ *
+ * @example
+ * // Add googlemaps MapType to a google map
+ * googleMap.overlayMapTypes.push(client.getGoogleMapsMapType(googleMap));
+ *
+ * @param {google.maps.Map} - The native Google Maps map where the CARTO layers will be displayed.
+ *
+ * @return {google.maps.MapType} A Google Maps mapType that groups all the layers:
+ * {@link https://developers.google.com/maps/documentation/javascript/maptypes|google.maps.MapType}
+ * @api
+ */
+Client.prototype.getGoogleMapsMapType = function (map) {
+  // Check if Google Maps is loaded
+  utils.isGoogleMapsLoaded();
+  if (!this._gmapsMapType) {
+    var GoogleMapsMapType = __webpack_require__(109);
+    this._gmapsMapType = new GoogleMapsMapType(this._layers, this._engine, map);
+  }
+  return this._gmapsMapType;
+};
+
+/**
+ * Call engine.reload wrapping the native cartojs errors
+ * into public CartoErrors.
+ */
+Client.prototype._reload = function () {
+  return this._engine.reload().then(function () {
+    return Promise.resolve();
+  }).catch(function (error) {
+    return Promise.reject(new CartoError(error));
   });
 };
 
 /**
- * Return the current polygon data
- *
- * @return {carto.filter.PolygonData} Current polygon data, expressed as a GeoJSON geometry fragment
- * @api
+ * Helper used to link a layer and an engine.
+ * @private
  */
-Polygon.prototype.getPolygon = function () {
-  /**
-   * @typedef {object} carto.filter.PolygonData
-   * @property {string} type - Geometry type, Just 'Polygon' is valid
-   * @property {Array.<number[]>} coordinates - Array of coordinates [lng, lat] as defined in GeoJSON geometries
-   * @api
-   */
-  return this._internalModel.getPolygon();
+Client.prototype._addLayer = function (layer, engine) {
+  _checkLayer(layer);
+  this._checkDuplicatedLayerId(layer);
+  this._layers.add(layer);
+  layer.$setClient(this);
+  layer.$setEngine(this._engine);
+  this._engine.addLayer(layer.$getInternalModel());
 };
 
-Polygon.prototype._checkPolygon = function (polygon) {
-  if (_.isUndefined(polygon) || _.isUndefined(polygon.type) || _.isUndefined(polygon.coordinates) || !_.isString(polygon.type) || !_.isArray(polygon.coordinates) || polygon.type !== 'Polygon') {
-    throw new CartoValidationError('filter', 'invalidPolygonObject');
+/**
+ * Helper used to remove a layer from the client.
+ * @private
+ */
+Client.prototype._removeLayer = function (layer) {
+  _checkLayer(layer);
+  this._layers.remove(layer);
+  this._engine.removeLayer(layer.$getInternalModel());
+};
+
+/**
+ * Helper used to remove a layer from the client.
+ * @private
+ */
+Client.prototype._moveLayer = function (layer, toIndex) {
+  _checkLayer(layer);
+  _checkLayerIndex(toIndex, this._layers.size());
+  this._layers.move(layer, toIndex);
+  this._engine.moveLayer(layer.$getInternalModel(), toIndex);
+};
+
+/**
+ * Helper used to link a dataview and an engine
+ * @private
+ */
+Client.prototype._addDataview = function (dataview, engine) {
+  this._dataviews.push(dataview);
+  dataview.$setEngine(this._engine);
+  this._engine.addDataview(dataview.$getInternalModel());
+};
+
+/**
+ * Client exposes Event.SUCCESS and RELOAD_ERROR to the api users,
+ * those events are wrappers using _engine internaly.
+ */
+Client.prototype._bindEngine = function (engine) {
+  engine.on(Engine.Events.RELOAD_SUCCESS, function () {
+    this.trigger(Events.SUCCESS);
+  }.bind(this));
+
+  engine.on(Engine.Events.RELOAD_ERROR, function (err) {
+    this.trigger(Events.ERROR, new CartoError(err, { layers: this._layers }));
+  }.bind(this));
+
+  engine.on(Engine.Events.LAYER_ERROR, function (err) {
+    this.trigger(Events.ERROR, new CartoError(err));
+  }.bind(this));
+};
+
+/**
+ * Check if some layer in the client has the same id.
+ * @param {carto.layer.Base} layer
+ */
+Client.prototype._checkDuplicatedLayerId = function (layer) {
+  if (this._layers.findById(layer.getId())) {
+    throw getValidationError('duplicatedLayerId');
   }
 };
 
-Polygon.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
+/**
+ * Utility function to reduce duplicated code.
+ */
+function _checkLayer(layer) {
+  if (!(layer instanceof LayerBase)) {
+    throw getValidationError('badLayerType');
+  }
+}
 
-module.exports = Polygon;
+function _checkLayerIndex(index, size) {
+  if (!_.isNumber(index)) {
+    throw getValidationError('indexNumber');
+  }
+  if (index < 0 || index >= size) {
+    throw getValidationError('indexOutOfRange');
+  }
+}
+
+function _checkSettings(settings) {
+  _checkApiKey(settings.apiKey);
+  _checkUsername(settings.username);
+  if (settings.serverUrl) {
+    _checkServerUrl(settings.serverUrl, settings.username);
+  }
+}
+
+function _checkApiKey(apiKey) {
+  if (!apiKey) {
+    throw getValidationError('apiKeyRequired');
+  }
+  if (!_.isString(apiKey)) {
+    throw getValidationError('apiKeyString');
+  }
+}
+
+function _checkUsername(username) {
+  if (!username) {
+    throw getValidationError('usernameRequired');
+  }
+  if (!_.isString(username)) {
+    throw getValidationError('usernameString');
+  }
+}
+
+function _checkServerUrl(serverUrl, username) {
+  var urlregex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+  if (!serverUrl.match(urlregex)) {
+    throw getValidationError('nonValidServerURL');
+  }
+  if (serverUrl.indexOf(username) < 0) {
+    throw getValidationError('serverURLDoesntMatchUsername');
+  }
+}
+
+module.exports = Client;
 
 /***/ }),
 /* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
 
-
-var Model = __webpack_require__(2);
-
-module.exports = Model.extend({
-  initialize: function initialize() {
-    this._circle = {};
-  },
-
-  setCircle: function setCircle(circle) {
-    this._circle = circle;
-    this.trigger('circleChanged', circle);
-  },
-
-  getCircle: function getCircle() {
-    return this._circle;
-  },
-
-  serialize: function serialize() {
-    return encodeURIComponent(JSON.stringify(this.getCircle()));
-  }
-});
 
 /***/ }),
 /* 53 */
@@ -21199,89 +21723,97 @@ module.exports = Model.extend({
 
 
 var _ = __webpack_require__(0);
-var Base = __webpack_require__(6);
-var CircleFilterModel = __webpack_require__(52);
-var CartoValidationError = __webpack_require__(3);
-var SpatialFilterTypes = __webpack_require__(8);
+var ERROR_LIST = __webpack_require__(54);
 
 /**
- * Generic circle filter.
+ * Returns two parameters to enrich a CartoError.
+ * - friendlyMessage: A easy to understand error description.
+ * - errorCode: Am unique error code
  *
- * When this filter is included into a dataview only the data inside a custom circle will be taken into account.
+ * @param {CartoError} cartoError
  *
- * You can manually set the circle properties with the `setCircle()`.
- *
- * This filter could be useful if you want give the users the ability to select a buffer around a point of interest in the map and update the dataviews accordingly.
- *
- *
- * @constructor
- * @fires circleChanged
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- *
+ * @returns {object} - An object containing a friendly message and a errorCode
  */
-function Circle() {
-  this._internalModel = new CircleFilterModel();
-  this.type = SpatialFilterTypes.CIRCLE;
+function getExtraFields(cartoError) {
+  var errorlist = _getErrorList(cartoError);
+  var listedError = _getListedError(cartoError, errorlist);
+
+  return {
+    friendlyMessage: listedError.friendlyMessage,
+    errorCode: listedError.errorCode
+  };
 }
 
-Circle.prototype = Object.create(Base.prototype);
+/**
+ *
+ * @param {CartoError} cartoError
+ */
+function _getErrorList(cartoError) {
+  return ERROR_LIST[cartoError.origin] && ERROR_LIST[cartoError.origin][cartoError.type];
+}
 
 /**
- * Set the circle.
- *
- * @param {carto.filter.CircleData} circle
- * @fires circleChanged
- * @return {carto.filter.Circle} this
- * @api
+ * Get the listed error from a cartoError, if no listedError is found return a generic
+ * unknown error.
+ * @param {CartoError} cartoError
  */
-Circle.prototype.setCircle = function (circle) {
-  this._checkCircle(circle);
-  this._internalModel.setCircle(circle);
-  this.trigger('circleChanged', circle);
-  return this;
-};
-
-/**
- * Reset the circle.
- *
- * @fires circleChanged
- * @return {carto.filter.Circle} this
- * @api
- */
-Circle.prototype.resetCircle = function () {
-  return this.setCircle({ lat: 0, lng: 0, radius: 0 });
-};
-
-/**
- * Return the current circle data
- *
- * @return {carto.filter.CircleData} Current circle data
- * @api
- */
-Circle.prototype.getCircle = function () {
-  /**
-   * @typedef {object} carto.filter.CircleData
-   * @property {number} lat - Center Latitude WGS84
-   * @property {number} lng - Center Longitude WGS84
-   * @property {number} radius - Radius in meters
-   * @api
-   */
-  return this._internalModel.getCircle();
-};
-
-Circle.prototype._checkCircle = function (circle) {
-  if (_.isUndefined(circle) || _.isUndefined(circle.lat) || _.isUndefined(circle.lng) || _.isUndefined(circle.radius) || !_.isNumber(circle.lat) || !_.isNumber(circle.lng) || !_.isNumber(circle.radius)) {
-    throw new CartoValidationError('filter', 'invalidCircleObject');
+function _getListedError(cartoError, errorList) {
+  var errorListkeys = _.keys(errorList);
+  var key;
+  for (var i = 0; i < errorListkeys.length; i++) {
+    key = errorListkeys[i];
+    if (!(errorList[key].messageRegex instanceof RegExp)) {
+      throw new Error('MessageRegex on ' + key + ' is not a RegExp.');
+    }
+    if (errorList[key].messageRegex.test(cartoError.message)) {
+      return {
+        friendlyMessage: _replaceRegex(cartoError, errorList[key]),
+        errorCode: _buildErrorCode(cartoError, key)
+      };
+    }
   }
-};
 
-Circle.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
+  // When cartoError not found return generic values
+  return {
+    friendlyMessage: cartoError.message || '',
+    errorCode: _buildErrorCode(cartoError, 'unknown-error')
+  };
+}
 
-module.exports = Circle;
+/**
+ * Replace $0 and $1 with the proper paramter in the listedError regex to build a friendly message
+ */
+function _replaceRegex(cartoError, listedError) {
+  if (!listedError.friendlyMessage) {
+    return cartoError.message;
+  }
+  var match = cartoError.message && cartoError.message.match(listedError.messageRegex);
+  if (match && match.length > 1) {
+    var replaced = listedError.friendlyMessage.replace('$0', match[1]);
+    if (match.length > 2) {
+      replaced = replaced.replace('$1', match[2]);
+    }
+    return replaced;
+  }
+  return listedError.friendlyMessage;
+}
+
+/**
+ * Generate an unique string that represents a cartoError
+ * @param {cartoError} cartoError
+ * @param {string} key
+ */
+function _buildErrorCode(cartoError, key) {
+  var fragments = [];
+  fragments.push(cartoError && cartoError.origin);
+  fragments.push(cartoError && cartoError.type);
+  fragments.push(key);
+  fragments = _.compact(fragments);
+
+  return fragments.join(':');
+}
+
+module.exports = { getExtraFields: getExtraFields };
 
 /***/ }),
 /* 54 */
@@ -21290,54 +21822,15 @@ module.exports = Circle;
 "use strict";
 
 
-/* global google */
-var _ = __webpack_require__(0);
-var Model = __webpack_require__(2);
+var windshaft = __webpack_require__(55);
+var ajax = __webpack_require__(56);
+var validation = __webpack_require__(57);
 
-/**
- * Adapt the Google Maps map to offer unique:
- * - getBounds() function
- * - 'boundsChanged' event
- */
-module.exports = Model.extend({
-
-  initialize: function initialize(map) {
-    this._isReady = false;
-    this._map = map;
-    this._debouncedTriggerBoundsChanged = _.debounce(this._triggerBoundsChanged, 200);
-
-    google.maps.event.addListener(this._map, 'bounds_changed', this._debouncedTriggerBoundsChanged.bind(this));
-  },
-
-  getBounds: function getBounds() {
-    if (this._isReady) {
-      var mapBounds = this._map.getBounds();
-      var sw = mapBounds.getSouthWest();
-      var ne = mapBounds.getNorthEast();
-      return {
-        west: sw.lng(),
-        south: sw.lat(),
-        east: ne.lng(),
-        north: ne.lat()
-      };
-    }
-    return {
-      west: 0,
-      south: 0,
-      east: 0,
-      north: 0
-    };
-  },
-
-  clean: function clean() {
-    google.maps.event.clearListeners(this._map, 'bounds_changed');
-  },
-
-  _triggerBoundsChanged: function _triggerBoundsChanged() {
-    this._isReady = true;
-    this.trigger('boundsChanged', this.getBounds());
-  }
-});
+module.exports = {
+  ajax: ajax,
+  windshaft: windshaft,
+  validation: validation
+};
 
 /***/ }),
 /* 55 */
@@ -21346,78 +21839,77 @@ module.exports = Model.extend({
 "use strict";
 
 
-/* global google */
-
-var Base = __webpack_require__(6);
-var GoogleMapsBoundingBoxAdapter = __webpack_require__(54);
-var BoundingBoxFilterModel = __webpack_require__(19);
-var utils = __webpack_require__(7);
-var SpatialFilterTypes = __webpack_require__(8);
-
-/**
- * Bounding box filter for Google Maps maps.
- *
- * When this filter is included into a dataview only the data inside the {@link https://developers.google.com/maps/documentation/javascript/3.exp/reference#Map|googleMap}
- * bounds will be taken into account.
- *
- * @param {google.maps.map} map - The google map to track the bounds
- *
- * @fires boundsChanged
- *
- * @constructor
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- *
- * @example
- * // Create a bonding box attached to a google map.
- * const bboxFilter = new carto.filter.BoundingBoxGoogleMaps(googleMap);
- * // Add the filter to a dataview. Generating new data when the map bounds are changed.
- * dataview.addFilter(bboxFilter);
- */
-function BoundingBoxGoogleMaps(map) {
-  if (!_isGoogleMap(map)) {
-    throw new Error('Bounding box requires a Google Maps map but got: ' + map);
+module.exports = {
+  analysis: {
+    'sql-syntax-error': {
+      messageRegex: /^syntax error/
+    },
+    'invalid-dataset': {
+      messageRegex: /relation (.+) does not exist/,
+      friendlyMessage: 'Invalid dataset name used. Dataset $0 does not exist.'
+    },
+    'column-does-not-exist': {
+      messageRegex: /column (.+) does not exist/,
+      friendlyMessage: 'Invalid column name. Column $0 does not exist.'
+    },
+    'analysis-requires-authentication': {
+      messageRegex: /^Analysis requires authentication with API key/
+    }
+  },
+  generic: {},
+  limit: {
+    'over-platform-limits': {
+      messageRegex: /^You are over platform's limits/
+    },
+    'generic-limit-error': {
+      messageRegex: /.*/,
+      friendlyMessage: 'The server is taking too long to respond, due to poor conectivity or a temporary error with our servers. Please try again soon.'
+    }
+  },
+  tile: {
+    'generic-tile-error': {
+      messageRegex: /.*/,
+      friendlyMessage: 'Some tiles might not be rendering correctly.'
+    }
+  },
+  layer: {
+    'column-does-not-exist': {
+      messageRegex: /column (.+) does not exist/,
+      friendlyMessage: 'Invalid column name. Column $0 does not exist.'
+    },
+    'unrecognized-rule': {
+      messageRegex: /Unrecognized rule: (.+)/,
+      friendlyMessage: 'Unrecognized rule "$0"'
+    },
+    'generic-layer-error': {
+      messageRegex: /.*/
+    }
+  },
+  dataview: {
+    'formula-does-not-support-operation': {
+      messageRegex: /Formula does not support (.+) operation/
+    },
+    'column-does-not-exist': {
+      messageRegex: /column (.+) does not exist/
+    },
+    'permission-denied': {
+      messageRegex: /permission denied for (.+)/
+    },
+    'wrong-type-column-used-in-time-series': {
+      messageRegex: /function date_part\(unknown, (.+)\) does not exist/,
+      friendlyMessage: 'Your time series column type is $0. Please use a date type.'
+    },
+    'invalid-aggregation-value': {
+      messageRegex: /Invalid aggregation value. Valid ones: auto, minute, hour, day, week, month, quarter, year, decade, century, millennium/
+    }
+  },
+  auth: {
+    'forbidden': {
+      messageRegex: /^Forbidden$/,
+      friendlyMessage: 'Forbidden. API key does not grant access.'
+    }
   }
-  this.type = SpatialFilterTypes.BBOX;
-
-  // Adapt the Google Maps map to offer unique:
-  // - getBounds() function
-  // - 'boundsChanged' event
-  var mapAdapter = new GoogleMapsBoundingBoxAdapter(map);
-  // Use the adapter for the internal BoundingBoxFilter model
-  this._internalModel = new BoundingBoxFilterModel(mapAdapter);
-  this.listenTo(this._internalModel, 'boundsChanged', this._onBoundsChanged);
-}
-
-BoundingBoxGoogleMaps.prototype = Object.create(Base.prototype);
-
-/**
- * Return the current bounds.
- *
- * @return {carto.filter.Bounds} Current bounds
- * @api
- */
-BoundingBoxGoogleMaps.prototype.getBounds = function () {
-  return this._internalModel.getBounds();
 };
-
-BoundingBoxGoogleMaps.prototype._onBoundsChanged = function (bounds) {
-  this.trigger('boundsChanged', bounds);
-};
-
-BoundingBoxGoogleMaps.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
-
-// Helper to check if an element is a leafletmap object
-function _isGoogleMap(element) {
-  // Check if Google Maps is loaded
-  utils.isGoogleMapsLoaded();
-  return element instanceof google.maps.Map;
-}
-
-module.exports = BoundingBoxGoogleMaps;
 
 /***/ }),
 /* 56 */
@@ -21426,42 +21918,7 @@ module.exports = BoundingBoxGoogleMaps;
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Model = __webpack_require__(2);
-
-/**
- * Adapt the Leaflet map to offer unique:
- * - getBounds() function
- * - 'boundsChanged' event
- */
-module.exports = Model.extend({
-
-  initialize: function initialize(map) {
-    this._map = map;
-    this._debouncedTriggerBoundsChanged = _.debounce(this._triggerBoundsChanged, 200);
-    this._map.on('move zoom', this._debouncedTriggerBoundsChanged, this);
-  },
-
-  getBounds: function getBounds() {
-    var mapBounds = this._map.getBounds();
-    var sw = mapBounds.getSouthWest();
-    var ne = mapBounds.getNorthEast();
-    return {
-      west: sw.lng,
-      south: sw.lat,
-      east: ne.lng,
-      north: ne.lat
-    };
-  },
-
-  clean: function clean() {
-    this._map.off('move zoom');
-  },
-
-  _triggerBoundsChanged: function _triggerBoundsChanged() {
-    this.trigger('boundsChanged', this.getBounds());
-  }
-});
+module.exports = {};
 
 /***/ }),
 /* 57 */
@@ -21470,77 +21927,278 @@ module.exports = Model.extend({
 "use strict";
 
 
-/* global L */
-var Base = __webpack_require__(6);
-var LeafletBoundingBoxAdapter = __webpack_require__(56);
-var BoundingBoxFilterModel = __webpack_require__(19);
-var utils = __webpack_require__(7);
-var SpatialFilterTypes = __webpack_require__(8);
-
-/**
- * Bounding box filter for Leaflet maps.
- *
- * When this filter is included into a dataview only the data inside the {@link http://leafletjs.com/reference-1.3.1.html#map|leafletMap}
- * bounds will be taken into account.
- *
- * @param {L.Map} map - The leaflet map view
- *
- * @fires boundsChanged
- *
- * @constructor
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- *
- * @example
- * // Create a bonding box attached to a leaflet map.
- * const bboxFilter = new carto.filter.BoundingBoxLeaflet(leafletMap);
- * // Add the filter to a dataview. Generating new data when the map bounds are changed.
- * dataview.addFilter(bboxFilter);
- */
-function BoundingBoxLeaflet(map) {
-  if (!_isLeafletMap(map)) {
-    throw new Error('Bounding box requires a Leaflet map but got: ' + map);
+module.exports = {
+  layer: {
+    'non-valid-source': {
+      messageRegex: /nonValidSource/,
+      friendlyMessage: 'The given object is not a valid source. See "carto.source.Base".'
+    },
+    'non-valid-style': {
+      messageRegex: /nonValidStyle/,
+      friendlyMessage: 'The given object is not a valid style. See "carto.style.Base".'
+    },
+    'non-valid-columns': {
+      messageRegex: /nonValidColumns/,
+      friendlyMessage: 'The given object is not a valid array of string columns.'
+    },
+    'source-with-different-client': {
+      messageRegex: /differentSourceClient/,
+      friendlyMessage: "A layer can't have a source which belongs to a different client."
+    },
+    'style-with-different-client': {
+      messageRegex: /differentStyleClient/,
+      friendlyMessage: "A layer can't have a style which belongs to a different client."
+    },
+    'wrong-interactivity-columns': {
+      messageRegex: /wrongInteractivityColumns\[(.+)\]#(.+)$/,
+      friendlyMessage: 'Columns [$0] set on `$1` do not match the columns set in aggregation options.'
+    }
+  },
+  source: {
+    'query-required': {
+      messageRegex: /requiredQuery/,
+      friendlyMessage: 'SQL Source must have a SQL query.'
+    },
+    'query-string': {
+      messageRegex: /requiredString/,
+      friendlyMessage: 'SQL Query must be a string.'
+    },
+    'no-dataset-name': {
+      messageRegex: /noDatasetName/,
+      friendlyMessage: 'Table name is required.'
+    },
+    'dataset-string': {
+      messageRegex: /requiredDatasetString$/,
+      friendlyMessage: 'Table name must be a string.'
+    },
+    'dataset-required': {
+      messageRegex: /requiredDataset$/,
+      friendlyMessage: 'Table name must be not empty.'
+    }
+  },
+  style: {
+    'required-css': {
+      messageRegex: /requiredCSS$/,
+      friendlyMessage: 'CartoCSS is required.'
+    },
+    'css-string': {
+      messageRegex: /requiredCSSString$/,
+      friendlyMessage: 'CartoCSS must be a string.'
+    }
+  },
+  client: {
+    'bad-layer-type': {
+      messageRegex: /badLayerType/,
+      friendlyMessage: 'The given object is not a layer.'
+    },
+    'index-number': {
+      messageRegex: /indexNumber/,
+      friendlyMessage: 'index property must be a number.'
+    },
+    'index-out-of-range': {
+      messageRegex: /indexOutOfRange/,
+      friendlyMessage: 'index is out of range.'
+    },
+    'api-key-required': {
+      messageRegex: /apiKeyRequired/,
+      friendlyMessage: 'apiKey property is required.'
+    },
+    'api-key-string': {
+      messageRegex: /apiKeyString/,
+      friendlyMessage: 'apiKey property must be a string.'
+    },
+    'username-required': {
+      messageRegex: /usernameRequired/,
+      friendlyMessage: 'username property is required.'
+    },
+    'username-string': {
+      messageRegex: /usernameString/,
+      friendlyMessage: 'username property must be a string.'
+    },
+    'non-valid-server-url': {
+      messageRegex: /nonValidServerURL/,
+      friendlyMessage: 'serverUrl is not a valid URL.'
+    },
+    'non-matching-server-url': {
+      messageRegex: /serverURLDoesntMatchUsername/,
+      friendlyMessage: "serverUrl doesn't match the username."
+    },
+    'duplicated-layer-id': {
+      messageRegex: /duplicatedLayerId/,
+      friendlyMessage: 'A layer with the same ID already exists in the client.'
+    }
+  },
+  dataview: {
+    'source-required': {
+      messageRegex: /sourceRequired/,
+      friendlyMessage: 'Source property is required.'
+    },
+    'column-required': {
+      messageRegex: /columnRequired/,
+      friendlyMessage: 'Column property is required.'
+    },
+    'column-string': {
+      messageRegex: /columnString/,
+      friendlyMessage: 'Column property must be a string.'
+    },
+    'empty-column': {
+      messageRegex: /emptyColumn/,
+      friendlyMessage: 'Column property must be not empty.'
+    },
+    'filter-required': {
+      messageRegex: /filterRequired/,
+      friendlyMessage: 'Filter property is required.'
+    },
+    'time-series-options-required': {
+      messageRegex: /timeSeriesOptionsRequired/,
+      friendlyMessage: 'Options object to create a time series dataview is required.'
+    },
+    'time-series-invalid-aggregation': {
+      messageRegex: /timeSeriesInvalidAggregation/,
+      friendlyMessage: 'Time aggregation must be a valid value. Use carto.dataview.timeAggregation.'
+    },
+    'time-series-invalid-offset': {
+      messageRegex: /timeSeriesInvalidOffset/,
+      friendlyMessage: 'Offset must an integer value between -12 and 14.'
+    },
+    'time-series-invalid-uselocaltimezone': {
+      messageRegex: /timeSeriesInvalidUselocaltimezone/,
+      friendlyMessage: 'useLocalTimezone must be a boolean value.'
+    },
+    'histogram-options-required': {
+      messageRegex: /histogramOptionsRequired/,
+      friendlyMessage: 'Options object to create a histogram dataview is required.'
+    },
+    'histogram-invalid-bins': {
+      messageRegex: /histogramInvalidBins/,
+      friendlyMessage: 'Bins must be a positive integer value.'
+    },
+    'histogram-invalid-start-end': {
+      messageRegex: /histogramInvalidStartEnd/,
+      friendlyMessage: 'Both start and end values must be a number or null.'
+    },
+    'formula-options-required': {
+      messageRegex: /formulaOptionsRequired/,
+      friendlyMessage: 'Formula dataview options are not defined.'
+    },
+    'formula-invalid-operation': {
+      messageRegex: /formulaInvalidOperation/,
+      friendlyMessage: 'Operation for formula dataview is not valid. Use carto.operation'
+    },
+    'category-options-required': {
+      messageRegex: /categoryOptionsRequired/,
+      friendlyMessage: 'Category dataview options are not defined.'
+    },
+    'category-limit-required': {
+      messageRegex: /categoryLimitRequired/,
+      friendlyMessage: 'Limit for category dataview is required.'
+    },
+    'category-limit-number': {
+      messageRegex: /categoryLimitNumber/,
+      friendlyMessage: 'Limit for category dataview must be a number.'
+    },
+    'category-limit-positive': {
+      messageRegex: /categoryLimitPositive/,
+      friendlyMessage: 'Limit for category dataview must be greater than 0.'
+    },
+    'category-invalid-operation': {
+      messageRegex: /categoryInvalidOperation/,
+      friendlyMessage: 'Operation for category dataview is not valid. Use carto.operation'
+    },
+    'category-operation-required': {
+      messageRegex: /categoryOperationRequired/,
+      friendlyMessage: 'Operation column for category dataview is required.'
+    },
+    'category-operation-string': {
+      messageRegex: /categoryOperationString/,
+      friendlyMessage: 'Operation column for category dataview must be a string.'
+    },
+    'category-operation-empty': {
+      messageRegex: /categoryOperationEmpty/,
+      friendlyMessage: 'Operation column for category dataview must be not empty.'
+    }
+  },
+  filter: {
+    'invalid-bounds-object': {
+      messageRegex: /invalidBoundsObject/,
+      friendlyMessage: 'Bounds object is not valid. Use a carto.filter.Bounds object'
+    },
+    'invalid-circle-object': {
+      messageRegex: /invalidCircleObject/,
+      friendlyMessage: 'Circle object is not valid. Use a carto.filter.CircleData object'
+    },
+    'invalid-polygon-object': {
+      messageRegex: /invalidPolygonObject/,
+      friendlyMessage: 'Polygon object is not valid. Use a carto.filter.PolygonData object'
+    },
+    'column-required': {
+      messageRegex: /columnRequired/,
+      friendlyMessage: 'Column property is required.'
+    },
+    'column-string': {
+      messageRegex: /columnString/,
+      friendlyMessage: 'Column property must be a string.'
+    },
+    'empty-column': {
+      messageRegex: /emptyColumn/,
+      friendlyMessage: 'Column property must be not empty.'
+    },
+    'invalid-filter': {
+      messageRegex: /invalidFilter(.+)/,
+      friendlyMessage: "'$0' is not a valid filter. Please check documentation."
+    },
+    'invalid-option': {
+      messageRegex: /invalidOption(.+)/,
+      friendlyMessage: "'$0' is not a valid option for this filter."
+    },
+    'wrong-filter-type': {
+      messageRegex: /wrongFilterType/,
+      friendlyMessage: 'Filters need to extend from carto.filter.SQLBase. Please use carto.filter.Category or carto.filter.Range.'
+    },
+    'invalid-parameter-type': {
+      messageRegex: /invalidParameterType(.+)/,
+      friendlyMessage: "Invalid parameter type for '$0'. Please check filters documentation."
+    }
+  },
+  aggregation: {
+    'threshold-required': {
+      messageRegex: /thresholdRequired/,
+      friendlyMessage: 'Aggregation threshold is required.'
+    },
+    'invalid-threshold': {
+      messageRegex: /invalidThreshold/,
+      friendlyMessage: 'Aggregation threshold must be an integer value greater than 0.'
+    },
+    'resolution-required': {
+      messageRegex: /resolutionRequired/,
+      friendlyMessage: 'Aggregation resolution is required.'
+    },
+    'invalid-resolution': {
+      messageRegex: /invalidResolution/,
+      friendlyMessage: 'Aggregation resolution must be 0.5, 1 or powers of 2 up to 256 (2, 4, 8, 16, 32, 64, 128, 256).'
+    },
+    'invalid-placement': {
+      messageRegex: /invalidPlacement/,
+      friendlyMessage: 'Aggregation placement is not valid. Must be one of these values: `point-sample`, `point-grid`, `centroid`'
+    },
+    'column-function-required': {
+      messageRegex: /columnFunctionRequired(.+)$/,
+      friendlyMessage: "Aggregation function for column '$0' is required."
+    },
+    'invalid-column-function': {
+      messageRegex: /invalidColumnFunction(.+)$/,
+      friendlyMessage: "Aggregation function for column '$0' is not valid. Use carto.aggregation.function"
+    },
+    'column-aggregated-column-required': {
+      messageRegex: /columnAggregatedColumnRequired(.+)$/,
+      friendlyMessage: "Column to be aggregated to '$0' is required."
+    },
+    'invalid-column-aggregated-column': {
+      messageRegex: /invalidColumnAggregatedColumn(.+)$/,
+      friendlyMessage: "Column to be aggregated to '$0' must be a string."
+    }
   }
-  this.type = SpatialFilterTypes.BBOX;
-
-  // Adapt the Leaflet map to offer unique:
-  // - getBounds() function
-  // - 'boundsChanged' event
-  var mapAdapter = new LeafletBoundingBoxAdapter(map);
-  // Use the adapter for the internal BoundingBoxFilter model
-  this._internalModel = new BoundingBoxFilterModel(mapAdapter);
-  this.listenTo(this._internalModel, 'boundsChanged', this._onBoundsChanged);
-}
-
-BoundingBoxLeaflet.prototype = Object.create(Base.prototype);
-
-/**
- * Return the current bounds.
- *
- * @return {carto.filter.Bounds} Current bounds
- * @api
- */
-BoundingBoxLeaflet.prototype.getBounds = function () {
-  return this._internalModel.getBounds();
 };
-
-BoundingBoxLeaflet.prototype._onBoundsChanged = function (bounds) {
-  this.trigger('boundsChanged', bounds);
-};
-
-BoundingBoxLeaflet.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
-
-// Helper to check if an element is a Leaflet map object
-function _isLeafletMap(element) {
-  // Check if Leaflet is loaded
-  utils.isLeafletLoaded();
-  return element instanceof L.Map;
-}
-
-module.exports = BoundingBoxLeaflet;
 
 /***/ }),
 /* 58 */
@@ -21549,91 +22207,21 @@ module.exports = BoundingBoxLeaflet;
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(6);
-var BoundingBoxFilterModel = __webpack_require__(19);
-var CartoValidationError = __webpack_require__(3);
-var SpatialFilterTypes = __webpack_require__(8);
-
 /**
- * Generic bounding box filter.
- *
- * When this filter is included into a dataview only the data inside a custom bounding box will be taken into account.
- *
- * You can manually set the bounds via the `.setBounds()` method.
- *
- * This filter could be useful if you want give the users to ability to select a portion of the map and update the dataviews accordingly.
- *
- *
- * @constructor
- * @fires boundsChanged
- * @extends carto.filter.Base
- * @memberof carto.filter
- * @api
- *
+ * Use {@link http://docs.trackjs.com/tracker/top-level-api} for error logging.
  */
-function BoundingBox() {
-  this._internalModel = new BoundingBoxFilterModel();
-  this.type = SpatialFilterTypes.BBOX;
+function track(error) {
+  if (window.trackJs) {
+    try {
+      var message = error ? error.message + ' - code: ' + error.errorCode : JSON.stringify(error);
+      window.trackJs.track(new Error(message));
+    } catch (exc) {
+      // Swallow
+    }
+  }
 }
 
-BoundingBox.prototype = Object.create(Base.prototype);
-
-/**
- * Set the bounds.
- *
- * @param  {carto.filter.Bounds} bounds
- * @fires boundsChanged
- * @return {carto.filter.BoundingBox} this
- * @api
- */
-BoundingBox.prototype.setBounds = function (bounds) {
-  this._checkBounds(bounds);
-  this._internalModel.setBounds(bounds);
-  this.trigger('boundsChanged', bounds);
-  return this;
-};
-
-/**
- * Reset the bounds.
- *
- * @fires boundsChanged
- * @return {carto.filter.BoundingBox} this
- * @api
- */
-BoundingBox.prototype.resetBounds = function () {
-  return this.setBounds({ west: 0, south: 0, east: 0, north: 0 });
-};
-
-/**
- * Return the current bounds.
- *
- * @return {carto.filter.Bounds} Current bounds
- * @api
- */
-BoundingBox.prototype.getBounds = function () {
-  /**
-   * @typedef {object} carto.filter.Bounds
-   * @property {number} west - West coordinate
-   * @property {number} south - South coordinate
-   * @property {number} east - East coordinate
-   * @property {number} north - North coordinate
-   * @api
-   */
-  return this._internalModel.getBounds();
-};
-
-BoundingBox.prototype._checkBounds = function (bounds) {
-  if (_.isUndefined(bounds) || _.isUndefined(bounds.west) || _.isUndefined(bounds.south) || _.isUndefined(bounds.east) || _.isUndefined(bounds.north) || !_.isNumber(bounds.west) || !_.isNumber(bounds.south) || !_.isNumber(bounds.east) || !_.isNumber(bounds.north)) {
-    throw new CartoValidationError('filter', 'invalidBoundsObject');
-  }
-};
-
-BoundingBox.prototype.$getInternalModel = function () {
-  return this._internalModel;
-};
-
-module.exports = BoundingBox;
+module.exports = { track: track };
 
 /***/ }),
 /* 59 */
@@ -21642,112 +22230,307 @@ module.exports = BoundingBox;
 "use strict";
 
 
-var BoundingBox = __webpack_require__(58);
-var BoundingBoxLeaflet = __webpack_require__(57);
-var BoundingBoxGoogleMaps = __webpack_require__(55);
-var Circle = __webpack_require__(53);
-var Polygon = __webpack_require__(51);
-var Category = __webpack_require__(49);
-var Range = __webpack_require__(48);
-var AND = __webpack_require__(47);
-var OR = __webpack_require__(46);
+var _ = __webpack_require__(0);
+var BackbonePoller = __webpack_require__(60);
 
-/**
- *  @namespace carto.filter
- *  @api
- */
-module.exports = {
-  BoundingBox: BoundingBox,
-  BoundingBoxLeaflet: BoundingBoxLeaflet,
-  BoundingBoxGoogleMaps: BoundingBoxGoogleMaps,
-  Circle: Circle,
-  Polygon: Polygon,
-  Category: Category,
-  Range: Range,
-  AND: AND,
-  OR: OR
+function AnalysisPoller() {
+  this._pollers = [];
+}
+
+AnalysisPoller.CONFIG = {
+  START_DELAY: 1000,
+  MAX_DELAY: Infinity,
+  DELAY_MULTIPLIER: 1.5
 };
+
+AnalysisPoller.prototype.resetAnalysisNodes = function (analysisModels) {
+  this.reset();
+  _.each(analysisModels, function (analysisModel) {
+    this._poll(analysisModel);
+  }, this);
+};
+
+AnalysisPoller.prototype._poll = function (analysisModel) {
+  if (this._canBePolled(analysisModel)) {
+    var poller = this._createPoller(analysisModel);
+    poller.start();
+  }
+};
+
+AnalysisPoller.prototype._canBePolled = function (analysisModel) {
+  return analysisModel.url() && !analysisModel.isDone();
+};
+
+AnalysisPoller.prototype._findPoller = function (analysisModel) {
+  return _.find(this._pollers, function (poller) {
+    return poller.model === analysisModel;
+  });
+};
+
+AnalysisPoller.prototype._createPoller = function (analysisModel) {
+  var pollerOptions = {
+    delay: [AnalysisPoller.CONFIG.START_DELAY, AnalysisPoller.CONFIG.MAX_DELAY, AnalysisPoller.CONFIG.DELAY_MULTIPLIER],
+    condition: function condition(analysisModel) {
+      return !analysisModel.isDone();
+    }
+  };
+
+  var poller = BackbonePoller.get(analysisModel, pollerOptions);
+  this._pollers.push(poller);
+  return poller;
+};
+
+AnalysisPoller.prototype.reset = function () {
+  BackbonePoller.reset();
+  this._pollers = [];
+};
+
+module.exports = AnalysisPoller;
 
 /***/ }),
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _ = __webpack_require__(0);
-
-function secondsToHours(seconds) {
-  return seconds / 3600;
-}
-
-/**
- * Transform the data obtained from an internal timeseries dataview into a  public object.
- *
- * @param {object[]} data - The raw time series data
- * @param {number} nulls - Number of data with a null
- * @param {number} totalAmount - Total number of data in the histogram
- *
- * @return {TimeSeriesData} - The parsed and formatted data for the given parameters
- */
-function parseTimeSeriesData(data, nulls, totalAmount, offset) {
-  if (!data) {
-    return null;
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+(c) 2012 Uzi Kilon, Splunk Inc.
+Backbone Poller 1.1.4
+https://github.com/uzikilon/backbone-poller
+Backbone Poller may be freely distributed under the MIT license.
+*/
+(function (root, factory) {
+  'use strict';
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   }
-  var compactData = _.compact(data);
-  var maxBin = _.max(compactData, function (bin) {
-    return bin.freq || 0;
-  });
-  var maxFreq = _.isFinite(maxBin.freq) && maxBin.freq !== 0 ? maxBin.freq : null;
+  else {}
+}(this, function (_, Backbone) {
+  'use strict';
 
-  /**
-   * @description
-   * Object containing time series data.
-   *
-   * @typedef {object} carto.dataview.TimeSeriesData
-   * @property {number} nulls - The number of items with null value
-   * @property {number} totalAmount - The number of elements returned
-   * @property {number} offset - The time offset in hours. Needed to format UTC timestamps into the proper timezone format
-   * @property {carto.dataview.TimeSeriesBinItem[]} bins - Array containing the {@link carto.dataview.TimeSeriesBinItem|data bins} for the time series
-   * @api
-   */
-  return {
-    bins: _createBins(compactData, maxFreq),
-    nulls: nulls || 0,
-    offset: secondsToHours(offset),
-    totalAmount: totalAmount
+  // Default settings
+  var defaults = {
+    delay: 1000,
+    condition: function () {
+      return true;
+    }
   };
-}
 
-/**
- * Transform the time series raw data into {@link carto.dataview.TimeSeriesBinItem}.
- */
-function _createBins(data, maxFreq) {
-  return data.map(function (bin) {
-    /**
-      * @typedef {object} carto.dataview.TimeSeriesBinItem
-      * @property {number} index - Number indicating the bin order
-      * @property {number} start - Starting UTC timestamp of the bin
-      * @property {number} end - End UTC timestamp of the bin
-      * @property {number} min - Minimum UTC timestamp present in the bin. Only appears if freq > 0
-      * @property {number} max - Maximum UTC timestamp present in the bin. Only appears if freq > 0
-      * @property {number} freq - Numbers of elements present in the bin
-      * @property {number} normalized - Normalized frequency with respect to the whole dataset
-      * @api
-      */
-    return {
-      index: bin.bin,
-      start: bin.start,
-      end: bin.end,
-      min: bin.min,
-      max: bin.max,
-      freq: bin.freq,
-      normalized: _.isFinite(bin.freq) && maxFreq > 0 ? bin.freq / maxFreq : 0
-    };
+  // Available events
+  var events = ['start', 'stop', 'fetch', 'success', 'error', 'complete'];
+
+  var pollers = [];
+  function findPoller(model) {
+    return _.find(pollers, function (poller) {
+      return poller.model === model;
+    });
+  }
+
+  var PollingManager = {
+
+    // **Backbone.Poller.get(model[, options])**
+    // <pre>
+    // Returns a singleton instance of a poller for a model
+    // Stops it if running
+    // If options.autostart is true, will start it
+    // Returns a poller instance
+    // </pre>
+    get: function (model, options) {
+      var poller = findPoller(model);
+      if (!poller) {
+        poller = new Poller(model, options);
+        pollers.push(poller);
+      }
+      else {
+        poller.set(options);
+      }
+      if (options && options.autostart === true) {
+        poller.start({silent: true});
+      }
+      return poller;
+    },
+
+    // **Backbone.Poller.size()**
+    // <pre>
+    // Returns the number of instantiated pollers
+    // </pre>
+    size: function () {
+      return pollers.length;
+    },
+
+    // **Backbone.Poller.reset()**
+    // <pre>
+    // Stops all pollers and removes from the pollers pool
+    // </pre>
+    reset: function () {
+      while (pollers.length) {
+        pollers[0].destroy();
+      }
+    }
+  };
+
+  function Poller(model, options) {
+    this.model = model;
+    this.cid = _.uniqueId('poller');
+    this.set(options);
+
+    if (this.model instanceof Backbone.Model) {
+      this.listenTo(this.model, 'destroy', this.destroy);
+    }
+  }
+
+  _.extend(Poller.prototype, Backbone.Events, {
+
+    // **poller.set([options])**
+    // <pre>
+    // Reset poller options and stops the poller
+    // </pre>
+    set: function (options) {
+      this.options = _.extend({}, defaults, options || {});
+      if (this.options.flush) {
+        this.off();
+      }
+      _.each(events, _.bind(function (name) {
+        var callback = this.options[name];
+        if (_.isFunction(callback)) {
+          this.off(name, callback, this);
+          this.on(name, callback, this);
+        }
+      }, this));
+
+      return this.stop({silent: true});
+    },
+    //
+    // **poller.start([options])**
+    // <pre>
+    // Start the poller
+    // Returns a poller instance
+    // Triggers a 'start' events unless options.silent is set to true
+    // </pre>
+    start: function (options) {
+      if (!this.active()) {
+        options && options.silent || this.trigger('start', this.model);
+        this.options.active = true;
+        if (this.options.delayed) {
+          delayedRun(this, _.isNumber(this.options.delayed) && this.options.delayed);
+        }
+        else {
+          run(this);
+        }
+      }
+      return this;
+    },
+    // **poller.stop([options])**
+    // <pre>
+    // Stops the poller
+    // Aborts any running XHR call
+    // Returns a poller instance
+    // Triggers a 'stop' events unless options.silent is set to true
+    // </pre>
+    stop: function (options) {
+      options && options.silent || this.trigger('stop', this.model);
+      this.options.active = false;
+      this.xhr && this.xhr.abort && this.xhr.abort();
+      this.xhr = null;
+      clearTimeout(this.timeoutId);
+      this.timeoutId = null;
+      return this;
+    },
+    // **poller.active()**
+    // <pre>
+    // Returns a boolean for poller status
+    // </pre>
+    active: function () {
+      return this.options.active === true;
+    },
+
+    destroy: function () {
+      var index = _.indexOf(pollers, this);
+      if (index > -1) {
+        this.stop().stopListening().off();
+        pollers.splice(index, 1);
+      }
+    }
   });
-}
 
-module.exports = parseTimeSeriesData;
+  function run(poller) {
+    if (validate(poller)) {
+      var options = _.extend({}, poller.options, {
+        success: function (model, resp) {
+          poller.trigger('success', model, resp);
+          delayedRun(poller);
+        },
+        error: function (model, resp) {
+          if (poller.options.continueOnError) {
+            poller.trigger('error', model, resp);
+            delayedRun(poller);
+          }
+          else {
+            poller.stop({silent: true});
+            poller.trigger('error', model, resp);
+          }
+        }
+      });
+      poller.trigger('fetch', poller.model);
+      poller.xhr = poller.model.fetch(options);
+    }
+  }
+
+  var backoff = {};
+  function getDelay(poller) {
+    if (_.isNumber(poller.options.delay)) {
+      return poller.options.delay;
+    }
+
+    var min = poller.options.delay[0],
+        max = poller.options.delay[1],
+        interval = poller.options.delay[2] || 2;
+
+    if (backoff[poller.cid]) {
+      if (_.isFunction(interval)) {
+        backoff[poller.cid] = interval(backoff[poller.cid]);
+      }
+      else {
+        backoff[poller.cid] *= interval;
+      }
+    }
+    else {
+      backoff[poller.cid] = 1;
+    }
+
+    var res = Math.round(min * backoff[poller.cid]);
+    if (max && max > 0) {
+      res = Math.min(res, max);
+    }
+    return res;
+  }
+
+  function delayedRun(poller, delay) {
+    if (validate(poller)) {
+      poller.timeoutId = _.delay(run, delay || getDelay(poller), poller);
+    }
+  }
+
+  function validate(poller) {
+    if (!poller.options.active) {
+      return false;
+    }
+    if (poller.options.condition(poller.model) !== true) {
+      poller.stop({silent: true});
+      poller.trigger('complete', poller.model);
+      return false;
+    }
+    return true;
+  }
+
+  /* Test hooks */
+  PollingManager.getDelay = getDelay;
+  PollingManager.prototype = Poller.prototype;
+
+  return PollingManager;
+}));
+
 
 /***/ }),
 /* 61 */
@@ -21756,231 +22539,25 @@ module.exports = parseTimeSeriesData;
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(10);
-var HistogramDataviewModel = __webpack_require__(32);
-var parseTimeSeriesData = __webpack_require__(60);
-var timeAggregation = __webpack_require__(5).timeAggregation;
-var isValidTimeAggregation = __webpack_require__(5).isValidTimeAggregation;
+var AnalisysSerializer = __webpack_require__(62);
+var DataviewSerializer = __webpack_require__(68);
+var LayerSerializer = __webpack_require__(69);
 
 /**
- * A dataview to represent an histogram of temporal data allowing to specify the granularity of the {@link carto.dataview.timeAggregation|temporal bins.}
- *
- * @param {carto.source.Base} source - The source where the dataview will fetch the data
- * @param {string} column - The column name to get the data
- * @param {object} [options]
- * @param {carto.dataview.timeAggregation} [options.aggregation=auto] - Granularity of time aggregation
- * @param {number} [options.offset] - Number of hours to offset the aggregation from UTC
- * @param {boolean} [options.useLocalTimezone] - Indicates whether to use the local user timezone, or not
- *
- * @fires dataChanged
- * @fires columnChanged
- * @fires statusChanged
- * @fires error
- *
- * @fires binsChanged
- * @fires aggregationChanged
- * @fires offsetChanged
- * @fires localTimezoneChanged
- *
- * @constructor
- * @extends carto.dataview.Base
- * @memberof carto.dataview
- * @api
- * @example
- * // We have a tweets dataset and we want to show a "per hour histogram" with the data.
- * var timeSeries = new carto.dataview.TimeSeries(source0, 'last_review', {
- *  offset: 0,
- *  aggregation: 'hour'
- * });
- * @example
- * // You can listen to multiple events emmited by the time-series-dataview.
- * // Data and status are fired by all dataviews.
- * timeSeries.on('dataChanged', newData => { });
- * timeSeries.on('statusChanged', (newData, error) => { });
- * timeSeries.on('error', cartoError => { });
+ * Transform a map visualization into a json payload compatible with the windshaft API.
  */
-function TimeSeries(source, column, options) {
-  this._initialize(source, column, options);
-  this._aggregation = this._options.aggregation;
-  this._offset = _hoursToSeconds(this._options.offset);
-  this._localTimezone = this._options.useLocalTimezone;
+function serialize(layersCollection, dataviewsCollection) {
+  return {
+    buffersize: { mvt: 0 },
+    layers: LayerSerializer.serialize(layersCollection),
+    dataviews: DataviewSerializer.serialize(dataviewsCollection),
+    analyses: AnalisysSerializer.serialize(layersCollection, dataviewsCollection)
+  };
 }
 
-TimeSeries.prototype = Object.create(Base.prototype);
-
-TimeSeries.prototype.DEFAULTS = {
-  aggregation: timeAggregation.AUTO,
-  offset: 0,
-  useLocalTimezone: false
+module.exports = {
+  serialize: serialize
 };
-
-/**
- * Return the resulting data.
- *
- * @return {carto.dataview.TimeSeriesData}
- * @api
- */
-TimeSeries.prototype.getData = function () {
-  if (this._internalModel) {
-    return parseTimeSeriesData(this._internalModel.get('data'), this._internalModel.get('nulls'), this._internalModel.get('totalAmount'), this._internalModel.getCurrentOffset());
-  }
-  return null;
-};
-
-/**
- * Set time aggregation.
- *
- * @param {carto.dataview.timeAggregation} aggregation
- * @fires aggregationChanged
- * @return {carto.dataview.TimeSeries} this
- * @api
- */
-TimeSeries.prototype.setAggregation = function (aggregation) {
-  this._validateAggregation(aggregation);
-  this._changeProperty('aggregation', aggregation);
-  return this;
-};
-
-/**
- * Return the current time aggregation.
- *
- * @return {carto.dataview.timeAggregation} Current time aggregation
- * @api
- */
-TimeSeries.prototype.getAggregation = function () {
-  return this._aggregation;
-};
-
-/**
- * Set time offset in hours.
- *
- * @param {number} offset
- * @fires offsetChanged
- * @return {carto.dataview.TimeSeries} this
- * @api
- */
-TimeSeries.prototype.setOffset = function (offset) {
-  this._validateOffset(offset);
-  this._changeProperty('offset', _hoursToSeconds(offset));
-  return this;
-};
-
-/**
- * Return the current time offset in hours.
- *
- * @return {number} Current time offset
- * @api
- */
-TimeSeries.prototype.getOffset = function () {
-  return _secondsToHours(this._offset);
-};
-
-/**
- * Set the local timezone flag. If enabled, the time offset is overriden by the user's local timezone.
- *
- * @param {boolean} localTimezone
- * @fires localTimezoneChanged
- * @return {carto.dataview.TimeSeries} this
- * @api
- */
-TimeSeries.prototype.useLocalTimezone = function (enable) {
-  this._validateLocalTimezone(enable);
-  this._changeProperty('localTimezone', enable);
-  return this;
-};
-
-/**
- * Return the current local timezone flag.
- *
- * @return {boolean} Current local timezone flag
- * @api
- */
-TimeSeries.prototype.isUsingLocalTimezone = function () {
-  return this._localTimezone;
-};
-
-TimeSeries.prototype._checkOptions = function (options) {
-  if (_.isUndefined(options)) {
-    throw this._getValidationError('timeSeriesOptionsRequired');
-  }
-  this._validateAggregation(options.aggregation);
-  this._validateOffset(options.offset);
-  this._validateLocalTimezone(options.useLocalTimezone);
-};
-
-TimeSeries.prototype._validateAggregation = function (aggregation) {
-  if (!isValidTimeAggregation(aggregation)) {
-    throw this._getValidationError('timeSeriesInvalidAggregation');
-  }
-};
-
-TimeSeries.prototype._validateOffset = function (offset) {
-  if (!_.isFinite(offset) || Math.floor(offset) !== offset || offset < -12 || offset > 14) {
-    throw this._getValidationError('timeSeriesInvalidOffset');
-  }
-};
-
-TimeSeries.prototype._validateLocalTimezone = function (localTimezone) {
-  if (!_.isBoolean(localTimezone)) {
-    throw this._getValidationError('timeSeriesInvalidUselocaltimezone');
-  }
-};
-
-TimeSeries.prototype._createInternalModel = function (engine) {
-  this._internalModel = new HistogramDataviewModel({
-    source: this._source.$getInternalModel(),
-    column: this._column,
-    aggregation: this._aggregation,
-    offset: this._offset,
-    localTimezone: this._localTimezone,
-    sync_on_bbox_change: !!this._boundingBoxFilter,
-    sync_on_circle_change: !!this._circleFilter,
-    sync_on_polygon_change: !!this._polygonFilter,
-    enabled: this._enabled,
-    column_type: 'date'
-  }, {
-    engine: engine,
-    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
-    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
-    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
-  });
-};
-
-// Utility functions
-
-function _hoursToSeconds(hours) {
-  return hours * 3600;
-}
-
-function _secondsToHours(seconds) {
-  return seconds / 3600;
-}
-module.exports = TimeSeries;
-
-/**
- * Fired when aggregation has changed. Handler gets a parameter with the new aggregation.
- *
- * @event aggregationChanged
- * @type {string}
- * @api
- */
-
-/**
- * Fired when localTimezone has changed. Handler gets a parameter with the new timezone.
- *
- * @event localTimezoneChanged
- * @type {boolean}
- * @api
- */
-
-/**
- * Fired when offset has changed. Handler gets a parameter with the new offset.
- *
- * @event offsetChanged
- * @type {string}
- * @api
- */
 
 /***/ }),
 /* 62 */
@@ -21990,96 +22567,47 @@ module.exports = TimeSeries;
 
 
 var _ = __webpack_require__(0);
+var AnalysisService = __webpack_require__(19);
 
 /**
- * Transform the data obtained from an internal histogram dataview into a
- * public object.
- *
- * @param {object[]} data - The raw histogram data
- * @param {number} nulls - Number of data with a null
- * @param {number} totalAmount - Total number of data in the histogram
- *
- * @return {carto.dataview.HistogramData} - The parsed and formatted data for the given parameters
+ * Return a payload with the serialization of all the analyses in the
+ * layersCollection and the dataviewsCollection.
  */
-function parseHistogramData(data, nulls, totalAmount) {
-  if (!data) {
-    return null;
-  }
-  var compactData = _.compact(data);
-  var maxBin = _.max(compactData, function (bin) {
-    return bin.freq || 0;
-  });
-  var maxFreq = _.isFinite(maxBin.freq) && maxBin.freq !== 0 ? maxBin.freq : null;
-
-  /**
-   * @description
-   * Object containing histogram data.
-   *
-   * @typedef {object} carto.dataview.HistogramData
-   * @property {number} nulls - The number of items with null value
-   * @property {number} totalAmount - The number of elements returned
-   * @property {carto.dataview.BinItem[]} bins - Array containing the {@link carto.dataview.BinItem|data bins} for the histogram
-   * @property {string} type - String with value: **histogram**
-   * @api
-   */
-  return {
-    bins: _createBins(compactData, maxFreq),
-    nulls: nulls || 0,
-    totalAmount: totalAmount
-  };
+function serialize(layersCollection, dataviewsCollection) {
+  var analysisList = AnalysisService.getAnalysisList(layersCollection, dataviewsCollection);
+  return _generateUniqueAnalysisList(analysisList);
 }
 
 /**
- * Transform the histogram raw data into {@link carto.dataview.BinItem}
+ * Return an analysis list without duplicated or nested analyses
  */
-function _createBins(data, maxFreq) {
-  return data.map(function (bin) {
-    /**
-     *  @example
-     *
-     * // We created an histogram containing airBnb prices per night
-     * const histogramDataview = new carto.dataview.Histogram(airbnbDataset, 'price', { bins: 7 });
-     * // Listen to dataChanged events
-     * histogramDataview.on('dataChanged', data => {
-     *  // The first bin contains prices from 0 to 20€ per night, there are 3 rentals in this bin with a cost of 10 15 and 20€.
-     *  const bin = console.log(data.bins[0]);
-     *  // This is the bin index in the bins array
-     *  bin.index; // 0
-     *  // The first bin contains rentals from 0 to 20€ per night
-     *  bin.start; // 0
-     *  // The first bin contains rentals from 0 to 20€ per night
-     *  bin.end; // 20
-     *  // The lower rental in the bin is 10€ per night
-     *  bin.min; // 10
-     *  // The maximun rental in the bin is 20€ per night
-     *  bin.max; // 20
-     *  // The average price in this bin is 15€ per night
-     *  bin.avg; // 15
-     *  // The bin contains 3 prices
-     *  bin.freq; // 3
-     *  // Those 3 prices represent the 20% of the dataset.
-     *  bin.normalized; // 0.2
-     * });
-     *
-     *
-     *
-     *
-     * @typedef {object} carto.dataview.BinItem
-     * @property {number} index - Number indicating the bin order
-     * @property {number} start - The lower limit of the bin
-     * @property {number} end - The higher limit of the bin
-     * @property {number} min - The minimal value appearing in the bin. Only appears if freq > 0
-     * @property {number} max - The minimal value appearing in the bin. Only appears if freq > 0
-     * @property {number} avg - The average value of the elements for this bin. Only appears if freq > 0
-     * @property {number} freq - Number of elements in the bin
-     * @property {number} normalized - Normalized frequency with respect to the whole data
-     * @api
-     */
-    return _.extend(bin, { normalized: _.isFinite(bin.freq) && maxFreq > 0 ? bin.freq / maxFreq : 0 });
+function _generateUniqueAnalysisList(analysisList) {
+  var analysisIds = {};
+  return _.reduce(analysisList, function (list, analysis) {
+    if (!analysisIds[analysis.get('id')] && !_isAnalysisPartOfOtherAnalyses(analysis, analysisList)) {
+      analysisIds[analysis.get('id')] = true; // keep a set of already added analysis.
+      list.push(analysis.toJSON());
+    }
+    return list;
+  }, []);
+}
+
+/**
+ * Check if an analysis is referenced by other anylisis in the given
+ * analysis collection.
+ */
+function _isAnalysisPartOfOtherAnalyses(analysis, analysisList) {
+  return _.any(analysisList, function (otherAnalysisModel) {
+    if (!analysis.equals(otherAnalysisModel)) {
+      return otherAnalysisModel.findAnalysisById(analysis.get('id'));
+    }
+    return false;
   });
 }
 
-module.exports = parseHistogramData;
+module.exports = {
+  serialize: serialize
+};
 
 /***/ }),
 /* 63 */
@@ -22088,59 +22616,552 @@ module.exports = parseHistogramData;
 "use strict";
 
 
-var dateUtils = {};
+var version = __webpack_require__(32);
+var AnalysisGraph = __webpack_require__(67);
 
-dateUtils.getLocalOffset = function () {
-  var date = new Date();
-  // Return local timezone offset in seconds
-  return date.getTimezoneOffset() * -60;
-};
+module.exports.getVersion = version.getVersion;
+module.exports.versions = version.versions;
+module.exports.AnalysisGraph = AnalysisGraph;
 
-module.exports = dateUtils;
 
 /***/ }),
 /* 64 */
+/***/ (function(module, exports) {
+
+module.exports.versions = [
+  '0.1.0',
+  '0.2.0',
+  '0.3.0',
+  '0.4.0',
+  '0.6.0',
+  '0.7.0',
+  '0.9.0',
+  '0.10.0',
+  '0.14.0',
+  '0.15.0',
+  '0.16.0',
+  '0.17.0',
+  '0.18.0',
+  '0.19.0',
+  '0.20.0',
+  '0.21.0',
+  '0.22.0',
+  '0.23.0',
+  '0.26.0',
+  '0.27.0',
+  '0.29.0',
+  '0.33.0',
+  '0.34.0',
+  '0.37.0',
+  '0.37.1',
+  '0.38.0',
+  '0.40.0',
+  '0.41.0',
+  '0.43.0',
+  '0.44.0',
+  '0.47.0',
+  '0.51.0',
+  '0.52.0',
+  '0.54.0',
+  '0.55.0',
+  '0.55.1',
+  '0.58.1',
+  '0.59.3',
+  '0.59.4'
+];
+
+module.exports.target = '0.59.4';
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./0.59.4/reference.json": 66
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 65;
+
+/***/ }),
+/* 66 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"version\":\"0.59.4\",\"analyses\":{\"aggregate-intersection\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"target\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"aggregate_function\":{\"type\":\"enum\",\"values\":[\"avg\",\"count\",\"max\",\"min\",\"sum\"]},\"aggregate_column\":{\"type\":\"string\",\"optional\":true}}},\"bounding-box\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"category_column\":{\"type\":\"string\",\"optional\":true},\"aggregation\":{\"type\":\"enum\",\"values\":[\"avg\",\"count\",\"max\",\"min\",\"sum\"],\"optional\":true,\"default-value\":\"count\"},\"aggregation_column\":{\"type\":\"string\",\"optional\":true}}},\"bounding-circle\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"category_column\":{\"type\":\"string\",\"optional\":true},\"aggregation\":{\"type\":\"enum\",\"values\":[\"avg\",\"count\",\"max\",\"min\",\"sum\"],\"optional\":true,\"default-value\":\"count\"},\"aggregation_column\":{\"type\":\"string\",\"optional\":true}}},\"buffer\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"radius\":{\"type\":\"number\"},\"isolines\":{\"type\":\"number\",\"optional\":true},\"dissolved\":{\"type\":\"boolean\",\"optional\":true}}},\"centroid\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"category_column\":{\"type\":\"string\",\"optional\":true},\"aggregation\":{\"type\":\"string\",\"optional\":true,\"default-value\":\"count\"},\"aggregation_column\":{\"type\":\"string\",\"optional\":true}}},\"closest\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"target\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"responses\":{\"type\":\"number\",\"optional\":true,\"default-value\":1},\"category\":{\"type\":\"string\",\"optional\":true}}},\"concave-hull\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"category_column\":{\"type\":\"string\",\"optional\":true},\"target_percent\":{\"type\":\"number\",\"optional\":true,\"default-value\":0.7},\"allow_holes\":{\"type\":\"boolean\",\"optional\":true,\"default-value\":false},\"aggregation\":{\"type\":\"enum\",\"values\":[\"avg\",\"count\",\"max\",\"min\",\"sum\"],\"optional\":true,\"default-value\":\"count\"},\"aggregation_column\":{\"type\":\"string\",\"optional\":true}}},\"contour\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"column\":{\"type\":\"string\"},\"buffer\":{\"type\":\"number\",\"optional\":true,\"default-value\":0.2},\"method\":{\"type\":\"enum\",\"values\":[\"nearest_neighbor\",\"barymetric\",\"IDW\"],\"optional\":true,\"default-value\":\"barymetric\"},\"class_method\":{\"type\":\"enum\",\"values\":[\"equals\",\"headstails\",\"jenks\",\"quantiles\"],\"optional\":true,\"default-value\":\"quantiles\"},\"steps\":{\"type\":\"number\",\"optional\":true,\"default-value\":7},\"resolution\":{\"type\":\"number\",\"optional\":true,\"default-value\":-90}}},\"convex-hull\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"category_column\":{\"type\":\"string\",\"optional\":true},\"aggregation\":{\"type\":\"enum\",\"values\":[\"avg\",\"count\",\"max\",\"min\",\"sum\"],\"optional\":true,\"default-value\":\"count\"},\"aggregation_column\":{\"type\":\"string\",\"optional\":true}}},\"data-observatory-measure\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\",\"polygon\"]},\"final_column\":{\"type\":\"string\"},\"segment_name\":{\"type\":\"string\"},\"percent\":{\"type\":\"boolean\",\"optional\":true}}},\"data-observatory-multiple-measures\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\",\"polygon\"]},\"numerators\":{\"type\":\"array\"},\"normalizations\":{\"type\":\"array\"},\"denominators\":{\"type\":\"array\"},\"geom_ids\":{\"type\":\"array\"},\"numerator_timespans\":{\"type\":\"array\"},\"column_names\":{\"type\":\"array\"}}},\"deprecated-sql-function\":{\"params\":{\"function_name\":{\"type\":\"string\"},\"primary_source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"secondary_source\":{\"type\":\"node\",\"geometry\":[\"*\"],\"optional\":true},\"function_args\":{\"type\":\"array\",\"optional\":true}}},\"filter-by-node-column\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"column\":{\"type\":\"string\"},\"filter_source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"filter_column\":{\"type\":\"string\"}}},\"filter-category\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"column\":{\"type\":\"string\"},\"accept\":{\"type\":\"array\",\"optional\":true},\"reject\":{\"type\":\"array\",\"optional\":true}}},\"filter-grouped-rank\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"column\":{\"type\":\"string\"},\"rank\":{\"type\":\"enum\",\"values\":[\"top\",\"bottom\"]},\"group\":{\"type\":\"string\"},\"min\":{\"type\":\"number\",\"optional\":true},\"max\":{\"type\":\"number\",\"optional\":true}}},\"filter-range\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"column\":{\"type\":\"string\"},\"min\":{\"type\":\"number\",\"optional\":true},\"max\":{\"type\":\"number\",\"optional\":true},\"greater_than\":{\"type\":\"number\",\"optional\":true},\"greater_than_or_equal\":{\"type\":\"number\",\"optional\":true},\"less_than\":{\"type\":\"number\",\"optional\":true},\"less_than_or_equal\":{\"type\":\"number\",\"optional\":true}}},\"filter-rank\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"column\":{\"type\":\"string\"},\"rank\":{\"type\":\"enum\",\"values\":[\"top\",\"bottom\"]},\"limit\":{\"type\":\"number\"},\"action\":{\"type\":\"enum\",\"values\":[\"show\",\"hide\"],\"optional\":true,\"default-value\":\"show\"}}},\"georeference-admin-region\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"admin_region_column\":{\"type\":\"string\"},\"country\":{\"type\":\"string\",\"optional\":true},\"country_column\":{\"type\":\"string\",\"optional\":true}}},\"georeference-city\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"city_column\":{\"type\":\"string\"},\"admin_region\":{\"type\":\"string\",\"optional\":true},\"admin_region_column\":{\"type\":\"string\",\"optional\":true},\"country\":{\"type\":\"string\",\"optional\":true},\"country_column\":{\"type\":\"string\",\"optional\":true}}},\"georeference-country\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"country_column\":{\"type\":\"string\"}}},\"georeference-ip-address\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"ip_address\":{\"type\":\"string\"}}},\"georeference-long-lat\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"longitude\":{\"type\":\"string\"},\"latitude\":{\"type\":\"string\"}}},\"georeference-postal-code\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"output_geometry_type\":{\"type\":\"enum\",\"values\":[\"point\",\"polygon\"],\"optional\":true,\"default-value\":\"point\"},\"postal_code_column\":{\"type\":\"string\"},\"country\":{\"type\":\"string\",\"optional\":true},\"country_column\":{\"type\":\"string\",\"optional\":true}}},\"georeference-street-address\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"street_address_column\":{\"type\":\"string\",\"optional\":true},\"street_address_template\":{\"type\":\"string\",\"optional\":true},\"city\":{\"type\":\"string\",\"optional\":true},\"city_column\":{\"type\":\"string\",\"optional\":true},\"state\":{\"type\":\"string\",\"optional\":true},\"state_column\":{\"type\":\"string\",\"optional\":true},\"country\":{\"type\":\"string\",\"optional\":true},\"country_column\":{\"type\":\"string\",\"optional\":true}}},\"gravity\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"target\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"weight_column\":{\"type\":\"string\"},\"weight_threshold\":{\"type\":\"number\",\"optional\":true,\"default-value\":-1e+308},\"pop_column\":{\"type\":\"string\"},\"max_distance\":{\"type\":\"number\"},\"target_id\":{\"type\":\"number\"}}},\"intersection\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"source_columns\":{\"type\":\"array\",\"optional\":true,\"default-value\":[]},\"target\":{\"type\":\"node\",\"geometry\":[\"*\"]}}},\"kmeans\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"clusters\":{\"type\":\"number\"}}},\"line-sequential\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"order_column\":{\"type\":\"string\"},\"order_type\":{\"type\":\"enum\",\"values\":[\"asc\",\"desc\"]},\"category_column\":{\"type\":\"string\",\"optional\":true}}},\"line-source-to-target\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"source_column\":{\"type\":\"string\",\"optional\":true},\"target\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"target_column\":{\"type\":\"string\",\"optional\":true},\"closest\":{\"type\":\"boolean\"}}},\"line-to-column\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"target_column\":{\"type\":\"string\"}}},\"line-to-single-point\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"destination_longitude\":{\"type\":\"number\"},\"destination_latitude\":{\"type\":\"number\"}}},\"link-by-line\":{\"params\":{\"source_points\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"destination_points\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"source_column\":{\"type\":\"string\"},\"destination_column\":{\"type\":\"string\"},\"use_great_circle\":{\"type\":\"boolean\",\"optional\":true,\"default-value\":false}}},\"merge\":{\"params\":{\"left_source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"right_source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"left_source_column\":{\"type\":\"string\"},\"right_source_column\":{\"type\":\"string\"},\"join_operator\":{\"type\":\"enum\",\"values\":[\"inner\",\"left\",\"right\"],\"optional\":true,\"default-value\":\"inner\"},\"source_geometry\":{\"type\":\"enum\",\"values\":[\"left_source\",\"right_source\"],\"optional\":true,\"default-value\":\"left_source\"},\"left_source_columns\":{\"type\":\"array\",\"optional\":true},\"right_source_columns\":{\"type\":\"array\",\"optional\":true,\"default-value\":[]}}},\"moran\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"polygon\",\"point\"]},\"numerator_column\":{\"type\":\"string\"},\"denominator_column\":{\"type\":\"string\",\"optional\":true},\"significance\":{\"type\":\"number\"},\"neighbours\":{\"type\":\"number\",\"optional\":true},\"permutations\":{\"type\":\"number\",\"optional\":true},\"w_type\":{\"type\":\"enum\",\"values\":[\"knn\",\"queen\"],\"optional\":true,\"default-value\":\"knn\"}}},\"point-in-polygon\":{\"params\":{\"points_source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"polygons_source\":{\"type\":\"node\",\"geometry\":[\"polygon\"]}}},\"population-in-area\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"polygon\"]},\"final_column\":{\"type\":\"string\"}}},\"routing-sequential\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"mode\":{\"type\":\"enum\",\"values\":[\"car\",\"walk\",\"bicycle\",\"public_transport\"]},\"units\":{\"type\":\"enum\",\"values\":[\"kilometers\",\"miles\"],\"optional\":true,\"default-value\":\"kilometers\"},\"order_column\":{\"type\":\"string\",\"optional\":true,\"default-value\":\"cartodb_id\"},\"order_type\":{\"type\":\"enum\",\"values\":[\"asc\",\"desc\"],\"optional\":true,\"default-value\":\"asc\"}}},\"routing-to-layer-all-to-all\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"source_column\":{\"type\":\"string\"},\"target\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"target_column\":{\"type\":\"string\"},\"mode\":{\"type\":\"enum\",\"values\":[\"car\",\"walk\",\"bicycle\",\"public_transport\"]},\"units\":{\"type\":\"enum\",\"values\":[\"kilometers\",\"miles\"],\"optional\":true,\"default-value\":\"kilometers\"},\"closest\":{\"type\":\"boolean\"}}},\"routing-to-single-point\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"mode\":{\"type\":\"enum\",\"values\":[\"car\",\"walk\",\"bicycle\",\"public_transport\"]},\"destination_longitude\":{\"type\":\"number\"},\"destination_latitude\":{\"type\":\"number\"},\"units\":{\"type\":\"enum\",\"values\":[\"kilometers\",\"miles\"],\"optional\":true,\"default-value\":\"kilometers\"}}},\"sampling\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"sampling\":{\"type\":\"number\"},\"seed\":{\"type\":\"number\",\"optional\":true}}},\"source\":{\"params\":{\"query\":{\"type\":\"string\"}}},\"spatial-markov-trend\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"time_columns\":{\"type\":\"array\"},\"num_classes\":{\"type\":\"number\",\"optional\":true,\"default-value\":5},\"weight_type\":{\"type\":\"string\",\"optional\":true,\"default-value\":\"knn\"},\"num_ngbrs\":{\"type\":\"number\",\"optional\":true,\"default-value\":5},\"permutations\":{\"type\":\"number\",\"optional\":true,\"default-value\":0},\"geom_col\":{\"type\":\"string\",\"optional\":true,\"default-value\":\"the_geom\"},\"id_col\":{\"type\":\"string\",\"optional\":true,\"default-value\":\"cartodb_id\"}}},\"trade-area\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"point\"]},\"kind\":{\"type\":\"enum\",\"values\":[\"walk\",\"car\"]},\"time\":{\"type\":\"number\"},\"isolines\":{\"type\":\"number\"},\"dissolved\":{\"type\":\"boolean\"}}},\"weighted-centroid\":{\"params\":{\"source\":{\"type\":\"node\",\"geometry\":[\"*\"]},\"weight_column\":{\"type\":\"string\"},\"category_column\":{\"type\":\"string\",\"optional\":true},\"aggregation\":{\"type\":\"string\",\"optional\":true,\"default-value\":\"count\"},\"aggregation_column\":{\"type\":\"string\",\"optional\":true}}}}}");
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var version = __webpack_require__(32);
+
+function AnalysisGraph(definition, wantedVersion) {
+    wantedVersion = wantedVersion || 'latest';
+
+    this.definition = definition;
+    this.reference = version.getVersion(wantedVersion);
+}
+
+module.exports = AnalysisGraph;
+
+AnalysisGraph.prototype.getNodesWithId = function() {
+    return reduceById({}, this.definition, this.reference);
+};
+
+AnalysisGraph.prototype.getChildNodesNames = function() {
+    return childNodes(this.definition.type, this.reference);
+};
+
+AnalysisGraph.prototype.getNodesList = function() {
+    return appendAllNodes([], this.definition, this.reference);
+};
+
+AnalysisGraph.prototype.getDefinitionWith = function(nodeId, extendedWithParams) {
+    return extendDefinition(this.definition, this.reference, nodeId, extendedWithParams);
+};
+
+function extendDefinition(definition, reference, nodeId, extendedWithParams) {
+    if (definition.id && definition.id === nodeId) {
+        Object.keys(extendedWithParams).forEach(function(extendWithParamsKey) {
+            if (!definition.params.hasOwnProperty(extendWithParamsKey)) {
+                definition.params[extendWithParamsKey] = {};
+            }
+            var obj = extendedWithParams[extendWithParamsKey];
+            Object.keys(obj).forEach(function(objK) {
+                definition.params[extendWithParamsKey][objK] = obj[objK];
+            });
+        });
+    }
+
+    childNodes(definition.type, reference)
+        .filter(filterMissingOptionalNodes(definition, reference))
+        .forEach(function(childNodeParamName) {
+            extendDefinition(definition.params[childNodeParamName], reference, nodeId, extendedWithParams);
+        });
+
+    return definition;
+}
+
+function appendAllNodes(allNodes, definition, reference) {
+    allNodes.push(definition);
+
+    childNodes(definition.type, reference)
+        .filter(filterMissingOptionalNodes(definition, reference))
+        .forEach(function(childNodeParamName) {
+            appendAllNodes(allNodes, definition.params[childNodeParamName], reference);
+        });
+    return allNodes;
+}
+
+function reduceById(nodesMap, definition, reference) {
+    if (definition.id) {
+        nodesMap[definition.id] = definition;
+    }
+    childNodes(definition.type, reference)
+        .filter(filterMissingOptionalNodes(definition, reference))
+        .forEach(function(childNodeParamName) {
+            reduceById(nodesMap, definition.params[childNodeParamName], reference);
+        });
+    return nodesMap;
+}
+
+function childNodes(nodeType, reference) {
+    var nodeRef = reference.analyses[nodeType];
+
+    return Object.keys(nodeRef.params).reduce(function(childNodesNames, paramName) {
+        if (nodeRef.params[paramName].type === 'node') {
+            childNodesNames.push(paramName);
+        }
+        return childNodesNames;
+    }, []);
+}
+
+function filterMissingOptionalNodes(definition, reference) {
+    return function(childNodeParamName) {
+        return !isOptionalParam(definition.type, childNodeParamName, reference) ||
+            !!definition.params[childNodeParamName];
+    };
+}
+
+function isOptionalParam(nodeType, paramName, reference) {
+    var nodeRef = reference.analyses[nodeType];
+    return nodeRef.params[paramName].optional;
+}
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function serialize(dataviewsCollection) {
+  return dataviewsCollection.reduce(function (dataviews, dataviewModel) {
+    dataviews[dataviewModel.get('id')] = dataviewModel.toJSON();
+    return dataviews;
+  }, {});
+}
+
+module.exports = {
+  serialize: serialize
+};
+
+/***/ }),
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var _ = __webpack_require__(0);
-var BackboneAbortSync = __webpack_require__(20);
-var Model = __webpack_require__(2);
-var helper = __webpack_require__(31);
+var LayerTypes = __webpack_require__(12);
+
+var DEFAULT_CARTOCSS_VERSION = '2.1.0';
+
+// This types are the understood by the Maps API.
+var HTTP_LAYER_TYPE = 'http';
+var PLAIN_LAYER_TYPE = 'plain';
+var MAPNIK_LAYER_TYPE = 'mapnik';
+var TORQUE_LAYER_TYPE = 'torque';
 
 /**
- *  This model is used for getting the total amount of data
- *  from the histogram widget (without any filter).
+ * Generate a json payload from a layer collection of a map
  */
+function serialize(layersCollection) {
+  return layersCollection.chain().map(_calculateLayerJSON).compact().value();
+}
 
-module.exports = Model.extend({
+function _calculateLayerJSON(layerModel) {
+  if (LayerTypes.isTiledLayer(layerModel)) {
+    return optionsForHTTPLayer(layerModel);
+  } else if (LayerTypes.isPlainLayer(layerModel)) {
+    return optionsForPlainLayer(layerModel);
+  } else if (LayerTypes.isWMSLayer(layerModel)) {
+    return optionsForWMSLayer(layerModel);
+  } else if (LayerTypes.isCartoDBLayer(layerModel)) {
+    return optionsForMapnikLayer(layerModel);
+  } else if (LayerTypes.isTorqueLayer(layerModel)) {
+    return optionsForTorqueLayer(layerModel);
+  }
+}
+
+function optionsForHTTPLayer(layerModel) {
+  return {
+    id: layerModel.get('id'),
+    type: HTTP_LAYER_TYPE,
+    options: {
+      urlTemplate: layerModel.get('urlTemplate'),
+      subdomains: layerModel.get('subdomains'),
+      tms: layerModel.get('tms')
+    }
+  };
+}
+
+function optionsForWMSLayer(layerModel) {
+  return {
+    id: layerModel.get('id'),
+    type: HTTP_LAYER_TYPE,
+    options: {
+      urlTemplate: layerModel.get('urlTemplate'),
+      tms: true
+    }
+  };
+}
+
+function optionsForPlainLayer(layerModel) {
+  return {
+    id: layerModel.get('id'),
+    type: PLAIN_LAYER_TYPE,
+    options: {
+      color: layerModel.get('color'),
+      imageUrl: layerModel.get('image')
+    }
+  };
+}
+
+function optionsForMapnikLayer(layerModel) {
+  var options = sharedOptionsForMapnikAndTorqueLayers(layerModel);
+  options.interactivity = layerModel.getInteractiveColumnNames();
+
+  if (layerModel.infowindow && layerModel.infowindow.hasFields()) {
+    options.attributes = {
+      id: 'cartodb_id',
+      columns: layerModel.infowindow.getFieldNames()
+    };
+  }
+
+  if (isFinite(layerModel.get('minzoom'))) {
+    options.minzoom = layerModel.get('minzoom');
+  }
+
+  if (isFinite(layerModel.get('maxzoom'))) {
+    options.maxzoom = layerModel.get('maxzoom');
+  }
+
+  if (!_.isEmpty(layerModel.aggregation)) {
+    _.extend(options, {
+      aggregation: layerModel.aggregation
+    });
+  }
+
+  return {
+    id: layerModel.get('id'),
+    type: MAPNIK_LAYER_TYPE,
+    options: options
+  };
+}
+
+function optionsForTorqueLayer(layerModel) {
+  var options = sharedOptionsForMapnikAndTorqueLayers(layerModel);
+  return {
+    id: layerModel.get('id'),
+    type: TORQUE_LAYER_TYPE,
+    options: options
+  };
+}
+
+function sharedOptionsForMapnikAndTorqueLayers(layerModel) {
+  var options = {
+    cartocss: layerModel.get('cartocss'),
+    cartocss_version: layerModel.get('cartocss_version') || DEFAULT_CARTOCSS_VERSION
+  };
+
+  options.source = { id: layerModel.getSourceId() };
+
+  if (layerModel.get('sql_wrap')) {
+    options.sql_wrap = layerModel.get('sql_wrap');
+  }
+
+  return options;
+}
+module.exports = { serialize: serialize };
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var $ = __webpack_require__(11);
+var Backbone = __webpack_require__(1);
+var LayerTypes = __webpack_require__(12);
+var util = __webpack_require__(6);
+
+var CartoDBLayerGroup = Backbone.Model.extend({
   defaults: {
-    url: '',
-    data: [],
-    localTimezone: false,
-    localOffset: 0,
-    hasBeenFetched: false
+    visible: true,
+    type: 'layergroup'
   },
 
-  url: function url() {
-    var params = [];
-    var columnType = this.get('column_type');
-    var offset = this._getCurrentOffset();
-    var aggregation = this.get('aggregation') || 'auto';
+  initialize: function initialize(attributes, options) {
+    options = options || {};
 
-    params.push('no_filters=1');
+    if (!options.layersCollection) {
+      throw new Error('layersCollection option is required');
+    }
+    this._layersCollection = options.layersCollection;
+  },
 
-    if (columnType === 'number' && this.get('bins')) {
-      params.push('bins=' + this.get('bins'));
-    } else if (columnType === 'date') {
-      params.push('aggregation=' + aggregation);
-      if (_.isFinite(offset)) {
-        params.push('offset=' + offset);
-      }
+  addError: function addError(error) {
+    var type = error.type;
+
+    if (!type) {
+      throw new Error('Error must have a type property.');
     }
 
+    this.trigger('error:' + type, error);
+  },
+
+  forEachGroupedLayer: function forEachGroupedLayer(iteratee, context) {
+    _.each(this._getGroupedLayers(), iteratee.bind(context || this));
+  },
+
+  _getGroupedLayers: function _getGroupedLayers() {
+    return this._layersCollection.getCartoDBLayers();
+  },
+
+  _getLayers: function _getLayers() {
+    return this._layersCollection.reject(LayerTypes.isGoogleMapsBaseLayer);
+  },
+
+  getIndexOfLayerInLayerGroup: function getIndexOfLayerInLayerGroup(layerModel) {
+    return this._getGroupedLayers().indexOf(layerModel);
+  },
+
+  getLayerInLayerGroupAt: function getLayerInLayerGroupAt(index) {
+    return this._getGroupedLayers()[index];
+  },
+
+  getCartoLayerById: function getCartoLayerById(id) {
+    return this._layersCollection.get(id);
+  },
+
+  isEqual: function isEqual() {
+    return false;
+  },
+
+  hasURLs: function hasURLs() {
+    return !!this.get('urls');
+  },
+
+  getSubdomains: function getSubdomains() {
+    return this.get('urls') && this.get('urls').subdomains || [];
+  },
+
+  getTileURLTemplatesWithSubdomains: function getTileURLTemplatesWithSubdomains() {
+    var urlTemplate = this.getTileURLTemplate();
+    var subdomains = this.getSubdomains();
+
+    if (subdomains && subdomains.length) {
+      return _.map(subdomains, function (subdomain) {
+        return urlTemplate.replace('{s}', subdomain);
+      });
+    }
+
+    return [urlTemplate];
+  },
+
+  getTileURLTemplate: function getTileURLTemplate(type) {
+    type = type || 'png';
+
+    var tileURLTemplate = this.get('urls') && this.get('urls').tiles;
+
+    if (!tileURLTemplate) return '';
+
+    if (type === 'png') {
+      if (this._areAllLayersHidden()) {
+        return '';
+      }
+      return this._generatePNGTileURLTemplate(tileURLTemplate);
+    } else if (type === 'mvt') {
+      return this._generateMTVTileURLTemplate(tileURLTemplate);
+    }
+  },
+
+  _generatePNGTileURLTemplate: function _generatePNGTileURLTemplate(urlTemplate) {
+    var mapnikLayersIndexes = this._getIndexesOfVisibleMapnikLayers();
+
+    if (mapnikLayersIndexes) {
+      urlTemplate = urlTemplate.replace('{layerIndexes}', mapnikLayersIndexes).replace('{format}', 'png');
+
+      return this._appendAuthParamsToURL(urlTemplate);
+    }
+
+    return '';
+  },
+
+  _generateMTVTileURLTemplate: function _generateMTVTileURLTemplate(urlTemplate) {
+    urlTemplate = urlTemplate.replace('{layerIndexes}', 'mapnik').replace('{format}', 'mvt');
+    return this._appendAuthParamsToURL(urlTemplate);
+  },
+
+  _areAllLayersHidden: function _areAllLayersHidden() {
+    return _.all(this._getGroupedLayers(), function (layerModel) {
+      return !layerModel.isVisible();
+    });
+  },
+
+  _getIndexesOfVisibleMapnikLayers: function _getIndexesOfVisibleMapnikLayers(url) {
+    var indexOfLayersInWindshaft = this.get('indexOfLayersInWindshaft');
+    return _.reduce(this._getGroupedLayers(), function (indexes, layerModel, layerIndex) {
+      if (layerModel.isVisible()) {
+        indexes.push(indexOfLayersInWindshaft[layerIndex]);
+      }
+      return indexes;
+    }, []).join(',');
+  },
+
+  _getIndexesOfVisibleLayers: function _getIndexesOfVisibleLayers(url) {
+    return _.reduce(this._getLayers(), function (indexes, layerModel, layerIndex) {
+      if (layerModel.isVisible()) {
+        indexes.push(layerIndex);
+      }
+      return indexes;
+    }, []).join(',');
+  },
+
+  hasTileURLTemplates: function hasTileURLTemplates() {
+    return !!this.getTileURLTemplate();
+  },
+
+  getGridURLTemplatesWithSubdomains: function getGridURLTemplatesWithSubdomains(layerIndex) {
+    var gridURLTemplates = this.get('urls') && this.get('urls').grids && this.get('urls').grids[layerIndex] || [];
+
+    if (this.get('urls') && this.get('urls').subdomains) {
+      var subdomains = this.get('urls').subdomains;
+      gridURLTemplates = _.map(gridURLTemplates, function (url, i) {
+        return url.replace('{s}', subdomains[i]);
+      });
+    }
+
+    return _.map(gridURLTemplates, this._appendAuthParamsToURL, this);
+  },
+
+  getAttributesBaseURL: function getAttributesBaseURL(layerIndex) {
+    return this.get('urls') && this.get('urls').attributes && this.get('urls').attributes[layerIndex];
+  },
+
+  getStaticImageURLTemplate: function getStaticImageURLTemplate() {
+    var staticImageURLTemplate = this.get('urls') && this.get('urls').image;
+    if (staticImageURLTemplate) {
+      staticImageURLTemplate = this._appendParamsToURL(staticImageURLTemplate, ['layer=' + this._getIndexesOfVisibleLayers()]);
+      staticImageURLTemplate = this._appendAuthParamsToURL(staticImageURLTemplate);
+      staticImageURLTemplate = staticImageURLTemplate.replace('{s}', this.getSubdomains()[0]);
+    }
+    return staticImageURLTemplate;
+  },
+
+  fetchAttributes: function fetchAttributes(layerIndex, featureID, callback) {
+    var attributeBaseURL = this.getAttributesBaseURL(layerIndex);
+    if (!attributeBaseURL) {
+      throw new Error('Attributes cannot be fetched until urls are set');
+    }
+
+    var url = this._appendAuthParamsToURL(attributeBaseURL + '/' + featureID);
+
+    $.ajax({
+      dataType: 'jsonp',
+      url: url,
+      jsonpCallback: '_cdbi_layer_attributes_' + util.uniqueCallbackName(this.toJSON()),
+      cache: true,
+      success: function success(data) {
+        // loadingTime.end();
+        callback(data);
+      },
+      error: function error(data) {
+        // loadingTime.end();
+        // cartodb.core.Profiler.metric('cartodb-js.named_map.attributes.error').inc();
+        callback(null);
+      }
+    });
+  },
+
+  _appendAuthParamsToURL: function _appendAuthParamsToURL(url) {
+    var params = [];
     if (this.get('apiKey')) {
       params.push('api_key=' + this.get('apiKey'));
     } else if (this.get('authToken')) {
@@ -22154,657 +23175,42 @@ module.exports = Model.extend({
       }
     }
 
-    // Start - End
-    var start = this.get('start');
-    var end = this.get('end');
-    if (_.isFinite(start) && _.isFinite(end)) {
-      params.push('start=' + start);
-      params.push('end=' + end);
+    return this._appendParamsToURL(url, params);
+  },
+
+  _appendParamsToURL: function _appendParamsToURL(url, params) {
+    if (params.length) {
+      var separator = '?';
+      if (url.indexOf('?') !== -1) {
+        separator = '&';
+      }
+      return url + separator + params.join('&');
     }
-
-    return this.get('url') + '?' + params.join('&');
+    return url;
   },
 
-  initialize: function initialize() {
-    this.sync = BackboneAbortSync.bind(this);
-    this._initBinds();
-  },
-
-  _initBinds: function _initBinds() {
-    this.on('change:url', function () {
-      this.refresh();
-    }, this);
-
-    this.on('change:aggregation change:offset', function () {
-      if (this.get('column_type') === 'date' && this.get('aggregation')) {
-        this.refresh();
+  onLayerVisibilityChanged: function onLayerVisibilityChanged(callback) {
+    this._layersCollection.on('change:visible', function (layerModel) {
+      if (this._isLayerGrouped(layerModel)) {
+        callback(layerModel);
       }
     }, this);
+  },
 
-    this.on('change:bins', function () {
-      if (this.get('column_type') === 'number') {
-        this.refresh();
+  onLayerAdded: function onLayerAdded(callback) {
+    this._layersCollection.on('add', function (layerModel) {
+      if (this._isLayerGrouped(layerModel)) {
+        callback(layerModel, this.getLayerInLayerGroupAt(layerModel));
       }
     }, this);
-
-    this.on('change:localTimezone', function () {
-      this.refresh();
-    }, this);
-
-    this.on('change:column', function () {
-      this.set('aggregation', 'auto', { silent: true });
-    });
-
-    this.on('sync', function () {
-      this.set('hasBeenFetched', true);
-    });
   },
 
-  setUrl: function setUrl(url) {
-    if (!url) {
-      throw new Error('url not specified');
-    }
-    this.set('url', url);
-  },
-
-  setBins: function setBins(bins) {
-    this.set('bins', bins, { silent: bins === void 0 });
-  },
-
-  getData: function getData() {
-    return this.get('data');
-  },
-
-  parse: function parse(data) {
-    var aggregation = data.aggregation || this.get('aggregation');
-    var numberOfBins = data.bins_count || 0;
-    var width = data.bin_width;
-    var start = this.get('column_type') === 'date' ? data.timestamp_start : data.bins_start;
-
-    var parsedData = {};
-    parsedData.data = new Array(numberOfBins);
-
-    if (aggregation) {
-      parsedData.aggregation = aggregation;
-      this.set('aggregation', aggregation, { silent: true });
-    }
-
-    _.each(data.bins, function (bin) {
-      parsedData.data[bin.bin] = bin;
-    });
-
-    if (this.get('column_type') === 'date') {
-      parsedData.data = helper.fillTimestampBuckets(parsedData.data, start, aggregation, numberOfBins, 'totals');
-      numberOfBins = parsedData.data.length;
-    } else {
-      helper.fillNumericBuckets(parsedData.data, start, width, numberOfBins);
-    }
-
-    if (parsedData.data.length > 0) {
-      parsedData.start = parsedData.data[0].start;
-      parsedData.end = parsedData.data[parsedData.data.length - 1].end;
-    }
-
-    parsedData.bins = numberOfBins;
-
-    return parsedData;
-  },
-
-  refresh: function refresh() {
-    this.fetch();
-  },
-
-  _getCurrentOffset: function _getCurrentOffset() {
-    return this.get('localTimezone') ? this.get('localOffset') : this.get('offset');
+  _isLayerGrouped: function _isLayerGrouped(layerModel) {
+    return this._getGroupedLayers().indexOf(layerModel) >= 0;
   }
 });
 
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(10);
-var HistogramDataviewModel = __webpack_require__(32);
-var parseHistogramData = __webpack_require__(62);
-
-/**
- * A histogram is used to represent the distribution of numerical data.
- *
- * See {@link https://en.wikipedia.org/wiki/Histogram}.
- *
- * @param {carto.source.Base} source - The source where the dataview will fetch the data
- * @param {string} column - The column name to get the data
- * @param {object} [options]
- * @param {number} [options.bins=10] - Number of bins to aggregate the data range into
- * @param {number} [options.start] - Lower limit of the data range, if not present, the lower limit of the actual data will be used. Start and end values must be used together.
- * @param {number} [options.end] - Upper limit of the data range, if not present, the upper limit of the actual data will be used. Start and end values must be used together.
- *
- * @fires dataChanged
- * @fires columnChanged
- * @fires statusChanged
- * @fires error
- *
- * @fires binsChanged
- *
- * @constructor
- * @extends carto.dataview.Base
- * @memberof carto.dataview
- * @api
- * @example
- * // Create a cities population histogram.
- * var histogram = new carto.dataview.Histogram(citiesSource, 'population');
- * // Set up a callback to render the histogram data every time new data is obtained.
- *  histogram.on('dataChanged', renderData);
- * // Add the histogram to the client
- * client.addDataview(histogram);
- * @example
- * // Create a cities population histogram with only 4 bins
- * var histogram = new carto.dataview.Histogram(citiesSource, 'population', {bins: 4});
- * // Add a bounding box filter, so the data will change when the map is moved.
- * var bboxFilter = new carto.filter.BoundingBoxLeaflet(map);
- * // Set up a callback to render the histogram data every time new data is obtained.
- *  histogram.on('dataChanged', histogramData => {
- *    console.log(histogramData);
- *  });
- * // Add the histogram to the client
- * client.addDataview(histogram);
- * @example
- * // Create a cities population histogram with a range
- * var histogram = new carto.dataview.Histogram(citiesSource, 'population', { start: 100000, end: 5000000 });
- * // Set up a callback to render the histogram data every time new data is obtained.
- *  histogram.on('dataChanged', histogramData => {
- *    console.log(histogramData);
- *  });
- * // Add the histogram to the client
- * client.addDataview(histogram);
- * @example
- * // The histogram is an async object so it can be on different states: LOADING, ERROR...
- * // Listen to state events
- * histogram.on('statusChanged', (newStatus, error) => { });
- * // Listen to histogram errors
- * histogram.on('error', error => { });
- */
-function Histogram(source, column, options) {
-  this._initialize(source, column, options);
-  this._bins = this._options.bins;
-  this._start = this._options.start;
-  this._end = this._options.end;
-}
-
-Histogram.prototype = Object.create(Base.prototype);
-
-Histogram.prototype.DEFAULTS = {
-  bins: 10
-};
-
-/**
- * Return the resulting data.
- *
- * @return {carto.dataview.HistogramData}
- * @api
- */
-Histogram.prototype.getData = function () {
-  if (this._internalModel) {
-    return parseHistogramData(this._internalModel.get('data'), this._internalModel.get('nulls'), this._internalModel.get('totalAmount'));
-  }
-  return null;
-};
-
-Histogram.prototype.setColumn = function (column) {
-  Base.prototype.setColumn.apply(this, arguments);
-  this._start = null;
-  this._end = null;
-};
-
-/**
- * Set the number of bins.
- *
- * @param {number} bins
- * @fires binsChanged
- * @return {carto.dataview.Histogram} this
- * @api
- */
-Histogram.prototype.setBins = function (bins) {
-  this._validateBins(bins);
-  this._changeProperty('bins', bins);
-  return this;
-};
-
-/**
- * Return the current number of bins.
- *
- * @return {number} Current number of bins
- * @api
- */
-Histogram.prototype.getBins = function () {
-  return this._bins;
-};
-
-/**
- * Set the lower and upper limit of the bins range
- *
- * @param {number} start
- * @param {number} end
- * @return {carto.dataview.Histogram} this
- * @api
- */
-Histogram.prototype.setStartEnd = function (start, end) {
-  this._validateStartEnd(start, end);
-
-  this._changeProperties({ start: start, end: end });
-
-  return this;
-};
-
-/**
- * Return the lower limit of the bins' range
- *
- * @return {number} Current value of start
- * @api
- */
-Histogram.prototype.getStart = function () {
-  return this._start || this._internalModel.get('start');
-};
-
-/**
- * Return the upper limit of the bins' range
- *
- * @return {number} Current value of end
- * @api
- */
-Histogram.prototype.getEnd = function () {
-  return this._end || this._internalModel.get('end');
-};
-
-/**
- * Return the distribution type of the current data according to [Galtung’s AJUS System]{@link https://en.wikipedia.org/wiki/Multimodal_distribution#Galtung.27s_classification}
- *
- * @return {string} Distribution type of current data
- * @api
- */
-Histogram.prototype.getDistributionType = function () {
-  if (this._internalModel) {
-    var data = this._internalModel.getData();
-    return this._internalModel.getDistributionType(data);
-  }
-  return null;
-};
-
-Histogram.prototype._validateBins = function (bins) {
-  if (!_.isFinite(bins) || bins < 1 || Math.floor(bins) !== bins) {
-    throw this._getValidationError('histogramInvalidBins');
-  }
-};
-
-Histogram.prototype._validateStartEnd = function (start, end) {
-  var values = [start, end];
-
-  if (_.every(values, _.isUndefined)) return;
-
-  var bothAreNumbers = _.every(values, function (number) {
-    return _.isNumber(number) && !_.isNaN(number);
-  });
-  var bothAreNull = _.every(values, _.isNull);
-
-  if (!bothAreNumbers && !bothAreNull) {
-    throw this._getValidationError('histogramInvalidStartEnd');
-  }
-};
-
-Histogram.prototype._checkOptions = function (options) {
-  if (_.isUndefined(options)) {
-    throw this._getValidationError('histogramOptionsRequired');
-  }
-  this._validateBins(options.bins);
-  this._validateStartEnd(options.start, options.end);
-};
-
-Histogram.prototype._createInternalModel = function (engine) {
-  this._internalModel = new HistogramDataviewModel({
-    source: this._source.$getInternalModel(),
-    column: this._column,
-    bins: this._bins,
-    start: this._start,
-    end: this._end,
-    sync_on_bbox_change: !!this._boundingBoxFilter,
-    sync_on_circle_change: !!this._circleFilter,
-    sync_on_polygon_change: !!this._polygonFilter,
-    enabled: this._enabled,
-    column_type: 'number'
-  }, {
-    engine: engine,
-    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
-    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
-    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
-  });
-};
-
-module.exports = Histogram;
-
-/**
- * Fired when bins have changed. Handler gets a parameter with the new bins.
- *
- * @event binsChanged
- * @type {number}
- * @api
- */
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Transform the data obtained from an internal formula dataview into a
- * public object.
- *
- * @param  {number} nulls
- * @param  {string} operation
- * @param  {number} result
- *
- * @return {carto.dataview.FormulaData} - The parsed and formatted data for the given parameters
- */
-function parseFormulaData(nulls, operation, result) {
-  /**
-   * @description
-   * Object containing formula data
-   *
-   * @typedef {object} carto.dataview.FormulaData
-   * @property {number} nulls - Number of null values in the column
-   * @property {string} operation - Operation used
-   * @property {number} result - Result of the operation
-   * @api
-   */
-  return {
-    nulls: nulls,
-    operation: operation,
-    result: result
-  };
-}
-
-module.exports = parseFormulaData;
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var DataviewModelBase = __webpack_require__(21);
-
-module.exports = DataviewModelBase.extend({
-  defaults: _.extend({
-    type: 'formula',
-    data: ''
-  }, DataviewModelBase.prototype.defaults),
-
-  initialize: function initialize() {
-    DataviewModelBase.prototype.initialize.apply(this, arguments);
-    this.on('change:column change:operation', this._reloadAndForceFetch, this);
-  },
-
-  parse: function parse(r) {
-    return {
-      data: r.result,
-      nulls: r.nulls
-    };
-  },
-
-  toJSON: function toJSON() {
-    return {
-      type: 'formula',
-      source: { id: this.getSourceId() },
-      options: {
-        column: this.get('column'),
-        operation: this.get('operation')
-      }
-    };
-  }
-},
-
-// Class props
-{
-  ATTRS_NAMES: DataviewModelBase.ATTRS_NAMES.concat(['column', 'operation'])
-});
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(10);
-var constants = __webpack_require__(5);
-var FormulaDataviewModel = __webpack_require__(67);
-var parseFormulaData = __webpack_require__(66);
-
-/**
- * A formula is a simple numeric {@link carto.operation|operation} applied to the column of a {@link carto.source.Base|data source} (dataset or sql query).
- *
- * Like all dataviews, it is an async object so you must wait for the data to be available.
- *
- * @param {carto.source.Base} source - The source where the dataview will fetch the data from
- * @param {string} column - The operation will be performed using this column
- * @param {object} [options]
- * @param {carto.operation} [options.operation] - The operation to apply to the data
- *
- * @fires dataChanged
- * @fires columnChanged
- * @fires statusChanged
- * @fires error
- *
- * @fires operationChanged
- *
- * @constructor
- * @extends carto.dataview.Base
- * @memberof carto.dataview
- * @api
- * @example
- * // Given a cities dataset get the most populated city
- * var formulaDataview = new carto.dataview.Formula(citiesSource, 'population', {
- *  operation: carto.operation.MAX,
- * });
- * @example
- * // You can listen to multiple events emitted by a formula dataview.
- * // Data and status are fired by all dataviews.
- * formulaDataview.on('dataChanged', newData => { });
- * formulaDataview.on('statusChanged', (newData, error) => { });
- * formulaDataview.on('error', cartoError => { });
- *
- * // Listen to specific formula-dataview events
- * formulaDataview.on('columnChanged', newData => { });
- * formulaDataview.on('operationChanged', newData => { });
- */
-function Formula(source, column, options) {
-  this._initialize(source, column, options);
-  this._operation = this._options.operation;
-}
-
-Formula.prototype = Object.create(Base.prototype);
-
-/**
- * Set the dataview operation.
- *
- * @param  {carto.operation} operation
- * @fires operationChanged
- * @return {carto.dataview.Formula} this
- * @api
- */
-Formula.prototype.setOperation = function (operation) {
-  this._checkOperation(operation);
-  this._changeProperty('operation', operation);
-  return this;
-};
-
-/**
- * Return the current dataview operation.
- *
- * @return {carto.operation} Current dataview operation
- * @api
- */
-Formula.prototype.getOperation = function () {
-  return this._operation;
-};
-
-/**
- * Return the resulting data.
- *
- * @return {carto.dataview.FormulaData}
- * @api
- */
-Formula.prototype.getData = function () {
-  if (this._internalModel) {
-    return parseFormulaData(this._internalModel.get('nulls'), this._operation, this._internalModel.get('data'));
-  }
-  return null;
-};
-
-Formula.prototype.DEFAULTS = {
-  operation: constants.operation.COUNT
-};
-
-Formula.prototype._checkOptions = function (options) {
-  if (_.isUndefined(options)) {
-    throw this._getValidationError('formulaOptionsRequired');
-  }
-  this._checkOperation(options.operation);
-};
-
-Formula.prototype._checkOperation = function (operation) {
-  if (_.isUndefined(operation) || !constants.isValidOperation(operation)) {
-    throw this._getValidationError('formulaInvalidOperation');
-  }
-};
-
-Formula.prototype._createInternalModel = function (engine) {
-  this._internalModel = new FormulaDataviewModel({
-    source: this._source.$getInternalModel(),
-    column: this._column,
-    operation: this._operation,
-    sync_on_bbox_change: !!this._boundingBoxFilter,
-    sync_on_circle_change: !!this._circleFilter,
-    sync_on_polygon_change: !!this._polygonFilter,
-    enabled: this._enabled
-  }, {
-    engine: engine,
-    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
-    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
-    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
-  });
-};
-
-module.exports = Formula;
-
-/**
- * Fired when the operation has changed. Handler gets a parameter with the new operation.
- *
- * @event operationChanged
- * @type {carto.operation}
- * @api
- */
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-
-/**
- * Transform the data obtained from an internal category dataview into a
- * public object.
- *
- * @param  {object[]} data
- * @param  {number} count
- * @param  {number} max
- * @param  {number} min
- * @param  {number} nulls
- * @param  {string} operation
- *
- * @return {carto.dataview.CategoryData} - The parsed and formatted data for the given parameters
- */
-function parseCategoryData(data, count, max, min, nulls, operation) {
-  if (!data) {
-    return null;
-  }
-  /**
-   * @typedef {object} carto.dataview.CategoryData
-   * @property {number} count - The total number of categories
-   * @property {number} max - Maximum category value
-   * @property {number} min - Minimum category value
-   * @property {number} nulls - Number of null categories
-   * @property {string} operation - Operation used
-   * @property {carto.dataview.CategoryItem[]} categories
-   * @api
-   */
-  return {
-    count: count,
-    max: max,
-    min: min,
-    nulls: nulls,
-    operation: operation,
-    categories: _createCategories(data)
-  };
-}
-
-/**
- * Transform the histogram raw data into {@link carto.dataview.CategoryItem}
- */
-function _createCategories(data) {
-  return _.map(data, function (item) {
-    /**
-     * @typedef {object} carto.dataview.CategoryItem
-     * @property {boolean} group - Category is a group
-     * @property {string} name - Category name
-     * @property {number} value - Category value
-     * @api
-     */
-    return {
-      group: item.agg,
-      name: item.name,
-      value: item.value
-    };
-  });
-}
-
-module.exports = parseCategoryData;
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Model = __webpack_require__(2);
-
-module.exports = Model.extend({
-
-  isEmpty: function isEmpty() {
-    throw new Error('Filters must implement the .isEmpty method');
-  },
-
-  toJSON: function toJSON() {
-    throw new Error('Filters must implement the .toJSON method');
-  },
-
-  remove: function remove() {
-    this.trigger('destroy', this);
-    this.stopListening();
-  }
-});
+module.exports = CartoDBLayerGroup;
 
 /***/ }),
 /* 71 */
@@ -22815,152 +23221,28 @@ module.exports = Model.extend({
 
 var _ = __webpack_require__(0);
 var Backbone = __webpack_require__(1);
-var WindshaftFilterBase = __webpack_require__(70);
 
-/**
- * Filter used by the category dataview
- */
-module.exports = WindshaftFilterBase.extend({
-
-  defaults: {
-    rejectAll: false
-  },
-
-  initialize: function initialize() {
-    this.rejectedCategories = new Backbone.Collection();
-    this.acceptedCategories = new Backbone.Collection();
-    this._initBinds();
-  },
-
-  _initBinds: function _initBinds() {
-    this.listenTo(this.rejectedCategories, 'add remove', function () {
-      this.set('rejectAll', false);
-    });
-    this.listenTo(this.acceptedCategories, 'add remove', function () {
-      this.set('rejectAll', false);
+var DataviewsCollection = Backbone.Collection.extend({
+  isAnyDataviewFiltered: function isAnyDataviewFiltered() {
+    return this.any(function (dataviewModel) {
+      var filter = dataviewModel.filter;
+      return filter && !filter.isEmpty();
     });
   },
 
-  isEmpty: function isEmpty() {
-    return this.rejectedCategories.size() === 0 && this.acceptedCategories.size() === 0 && !this.get('rejectAll');
-  },
-
-  accept: function accept(values, applyFilter) {
-    values = !_.isArray(values) ? [values] : values;
-
-    _.each(values, function (value) {
-      var d = { name: value };
-      var rejectedMdls = this.rejectedCategories.where(d);
-      var acceptedMdls = this.acceptedCategories.where(d);
-      if (rejectedMdls.length > 0) {
-        this.rejectedCategories.remove(rejectedMdls);
-      } else if (!acceptedMdls.length) {
-        this.acceptedCategories.add(d);
+  getFilters: function getFilters() {
+    return this.reduce(function (filters, dataviewModel) {
+      var filter = dataviewModel.filter;
+      if (filter && !filter.isEmpty()) {
+        filters['dataviews'] = filters['dataviews'] || {};
+        _.extend(filters['dataviews'], filter.toJSON());
       }
-    }, this);
-
-    if (applyFilter !== false) {
-      this.applyFilter();
-    }
-  },
-
-  acceptAll: function acceptAll() {
-    this.set('rejectAll', false);
-    this.cleanFilter();
-  },
-
-  isAccepted: function isAccepted(name) {
-    return this.acceptedCategories.where({ name: name }).length > 0;
-  },
-
-  reject: function reject(values, applyFilter) {
-    values = !_.isArray(values) ? [values] : values;
-
-    _.each(values, function (value) {
-      var d = { name: value };
-      var acceptedMdls = this.acceptedCategories.where(d);
-      var rejectedMdls = this.rejectedCategories.where(d);
-      if (acceptedMdls.length > 0) {
-        this.acceptedCategories.remove(acceptedMdls);
-      } else {
-        if (!rejectedMdls.length) {
-          this.rejectedCategories.add(d);
-        }
-      }
-    }, this);
-
-    if (applyFilter !== false) {
-      this.applyFilter();
-    }
-  },
-
-  isRejected: function isRejected(name) {
-    var acceptCount = this.acceptedCategories.size();
-    if (this.rejectedCategories.where({ name: name }).length > 0) {
-      return true;
-    } else if (acceptCount > 0 && this.acceptedCategories.where({ name: name }).length === 0) {
-      return true;
-    } else if (this.get('rejectAll')) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-
-  rejectAll: function rejectAll() {
-    this.set('rejectAll', true);
-    this.cleanFilter();
-  },
-
-  cleanFilter: function cleanFilter(triggerChange) {
-    this.acceptedCategories.reset();
-    this.rejectedCategories.reset();
-    if (triggerChange !== false) {
-      this.applyFilter();
-    }
-  },
-
-  applyFilter: function applyFilter() {
-    this.trigger('change', this);
-  },
-
-  areAllRejected: function areAllRejected() {
-    return this.get('rejectAll');
-  },
-
-  toJSON: function toJSON() {
-    var filter = {};
-    var rejectCount = this.rejectedCategories.size();
-    var acceptCount = this.acceptedCategories.size();
-    var acceptedCats = { accept: _.pluck(this.acceptedCategories.toJSON(), 'name') };
-    var rejectedCats = { reject: _.pluck(this.rejectedCategories.toJSON(), 'name') };
-
-    if (this.get('rejectAll')) {
-      filter = { accept: [] };
-    } else if (acceptCount > 0) {
-      filter = acceptedCats;
-    } else if (rejectCount > 0 && acceptCount === 0) {
-      filter = rejectedCats;
-    }
-
-    var json = {};
-    json[this.get('dataviewId')] = filter;
-
-    return json;
-  },
-
-  getAcceptedCategoryNames: function getAcceptedCategoryNames() {
-    return this.acceptedCategories.map(function (category) {
-      return category.get('name');
-    });
-  },
-
-  getRejectedCategoryNames: function getRejectedCategoryNames() {
-    return this.rejectedCategories.map(function (category) {
-      return category.get('name');
-    });
+      return filters;
+    }, {});
   }
 });
+
+module.exports = DataviewsCollection;
 
 /***/ }),
 /* 72 */
@@ -22970,61 +23252,107 @@ module.exports = WindshaftFilterBase.extend({
 
 
 var _ = __webpack_require__(0);
-var Model = __webpack_require__(2);
+var Backbone = __webpack_require__(1);
 
-/**
- *  This model is used for getting the total amount of values
- *  from the category.
- *
- */
+var TILED_LAYER_TYPE = 'Tiled';
+var CARTODB_LAYER_TYPE = 'CartoDB';
+var TORQUE_LAYER_TYPE = 'torque';
 
-module.exports = Model.extend({
-  defaults: {
-    url: '',
-    totalCount: 0,
-    categoriesCount: 0
-  },
-
-  url: function url() {
-    var url = this.get('url');
-    var queryOptions = [];
-    if (this.get('apiKey')) {
-      url += '?api_key=' + this.get('apiKey');
-    } else if (this.get('authToken')) {
-      var authToken = this.get('authToken');
-      if (authToken instanceof Array) {
-        _.each(authToken, function (token) {
-          queryOptions.push('auth_token[]=' + token);
-        });
-      } else {
-        queryOptions.push('auth_token=' + authToken);
-      }
-      url += '?' + queryOptions.join('&');
-    }
-    return url;
-  },
+var Layers = Backbone.Collection.extend({
 
   initialize: function initialize() {
-    this.bind('change:url', function () {
-      this.fetch();
-    }, this);
-  },
-
-  setUrl: function setUrl(url) {
-    this.set('url', url);
-  },
-
-  parse: function parse(d) {
-    // Calculating the total amount of all categories with the sum of all
-    // values from this model included the aggregated (Other)
-    return {
-      categoriesCount: d.categoriesCount,
-      totalCount: _.reduce(_.pluck(d.categories, 'value'), function (memo, value) {
-        return memo + value;
-      }, 0)
+    this.comparator = function (m) {
+      return parseInt(m.get('order'), 10);
     };
+    this.bind('add', this._assignIndexes);
+    this.bind('remove', this._assignIndexes);
+  },
+
+  /**
+   * each time a layer is added or removed
+   * the index should be recalculated
+   */
+  _assignIndexes: function _assignIndexes(model, col, options) {
+    if (this.size() > 0) {
+      // Assign an order of 0 to the first layer
+      this.at(0).set({ order: 0 });
+
+      if (this.size() > 1) {
+        var layersByType = this.reduce(function (layersByType, layerModel, index) {
+          var type = layerModel.get('type');
+          if (index === 0 && type === TILED_LAYER_TYPE) {
+            return layersByType;
+          }
+          layersByType[type] = layersByType[type] || [];
+          layersByType[type].push(layerModel);
+          return layersByType;
+        }, {});
+
+        var lastOrder = 1;
+        var sortedTypes = [CARTODB_LAYER_TYPE, TORQUE_LAYER_TYPE, TILED_LAYER_TYPE];
+        _.each(sortedTypes, function (layerType) {
+          var layers = layersByType[layerType] || [];
+          _.each(layers, function (layerModel) {
+            layerModel.set({
+              order: lastOrder
+            });
+            lastOrder += 1;
+          });
+        });
+      }
+    }
+
+    this.sort();
+  },
+
+  getCartoDBLayers: function getCartoDBLayers() {
+    return this._getLayersByType(CARTODB_LAYER_TYPE);
+  },
+
+  getTiledLayers: function getTiledLayers() {
+    return this._getLayersByType(TILED_LAYER_TYPE);
+  },
+
+  getTorqueLayers: function getTorqueLayers() {
+    return this._getLayersByType(TORQUE_LAYER_TYPE);
+  },
+
+  _getLayersByType: function _getLayersByType(layerType) {
+    return this.select(function (layerModel) {
+      return layerModel.get('type') === layerType;
+    });
+  },
+
+  getLayersWithLegends: function getLayersWithLegends() {
+    return this.select(function (layerModel) {
+      return !!layerModel.legends;
+    });
+  },
+
+  moveCartoDBLayer: function moveCartoDBLayer(from, to) {
+    if (from === to) {
+      return false;
+    }
+
+    var movingLayer = this.at(from);
+
+    if (!movingLayer || movingLayer.get('type') !== CARTODB_LAYER_TYPE) {
+      return false;
+    }
+
+    this.remove(movingLayer, { silent: true });
+    this.add(movingLayer, {
+      at: to,
+      silent: true
+    });
+
+    this.trigger('layerMoved', movingLayer);
+
+    return movingLayer;
   }
 });
+
+module.exports = Layers;
 
 /***/ }),
 /* 73 */
@@ -23033,20 +23361,261 @@ module.exports = Model.extend({
 "use strict";
 
 
-var Model = __webpack_require__(2);
+var _ = __webpack_require__(0);
+var log = __webpack_require__(21);
+var util = __webpack_require__(6);
+var RuleToLegendModelAdapters = __webpack_require__(75);
+var AnalysisService = __webpack_require__(19);
+var Backbone = __webpack_require__(1);
+
+function getSubdomain(subdomains, resource) {
+  var index = util.crc32(resource) % subdomains.length;
+  return subdomains[index];
+}
 
 /**
- * Model for a category
+ * This class exposes a method that knows how to set/update the metadata on internal
+ * CartoDB.js models that are linked to a "resource" in the Maps API.
  */
-module.exports = Model.extend({
+var ModelUpdater = function ModelUpdater(deps) {
+  if (!deps.layerGroupModel) throw new Error('layerGroupModel is required');
+  if (!deps.layersCollection) throw new Error('layersCollection is required');
+  if (!deps.dataviewsCollection) throw new Error('dataviewsCollection is required');
 
-  defaults: {
-    name: '',
-    agg: false,
-    value: 0
+  this._layerGroupModel = deps.layerGroupModel;
+  this._layersCollection = deps.layersCollection;
+  this._dataviewsCollection = deps.dataviewsCollection;
+};
+
+ModelUpdater.prototype.updateModels = function (responseWrapper, sourceId, forceFetch) {
+  this._updateLayerModels(responseWrapper);
+  this._updateLayerGroupModel(responseWrapper);
+  this._updateDataviewModels(responseWrapper, sourceId, forceFetch);
+  this._updateAnalysisModels(responseWrapper);
+};
+
+ModelUpdater.prototype._updateLayerGroupModel = function (responseWrapper) {
+  var urls = {
+    tiles: this._generateTileURLTemplate(responseWrapper),
+    subdomains: responseWrapper.getSupportedSubdomains(),
+    grids: this._calculateGridURLTemplatesForCartoDBLayers(responseWrapper),
+    attributes: this._calculateAttributesBaseURLsForCartoDBLayers(responseWrapper),
+    image: this._calculateStaticMapURL(responseWrapper)
+  };
+
+  this._layerGroupModel.set({
+    indexOfLayersInWindshaft: responseWrapper.getLayerIndexesByType('mapnik'),
+    urls: urls
+  });
+};
+
+ModelUpdater.prototype._calculateStaticMapURL = function (responseWrapper) {
+  return [responseWrapper.getStaticBaseURL(), '{z}/{lat}/{lng}/{width}/{height}.{format}'].join('/');
+};
+
+ModelUpdater.prototype._generateTileURLTemplate = function (responseWrapper) {
+  return responseWrapper.getBaseURL() + '/{layerIndexes}/{z}/{x}/{y}.{format}';
+};
+
+ModelUpdater.prototype._calculateGridURLTemplatesForCartoDBLayers = function (responseWrapper) {
+  var urlTemplates = [];
+  var indexesOfMapnikLayers = responseWrapper.getLayerIndexesByType('mapnik');
+  if (indexesOfMapnikLayers.length > 0) {
+    _.each(indexesOfMapnikLayers, function (index) {
+      var layerUrlTemplates = [];
+      var gridURLTemplate = this._generateGridURLTemplate(responseWrapper, index);
+      var subdomains = responseWrapper.getSupportedSubdomains();
+      if (subdomains.length) {
+        _.each(subdomains, function (subdomain) {
+          layerUrlTemplates.push(gridURLTemplate.replace('{s}', subdomain));
+        });
+      } else {
+        layerUrlTemplates.push(gridURLTemplate);
+      }
+
+      urlTemplates.push(layerUrlTemplates);
+    }, this);
   }
+  return urlTemplates;
+};
 
-});
+ModelUpdater.prototype._generateGridURLTemplate = function (responseWrapper, index) {
+  return responseWrapper.getBaseURL() + '/' + index + '/{z}/{x}/{y}.grid.json';
+};
+
+ModelUpdater.prototype._calculateAttributesBaseURLsForCartoDBLayers = function (responseWrapper) {
+  var urls = [];
+  var indexesOfMapnikLayers = responseWrapper.getLayerIndexesByType('mapnik');
+  if (indexesOfMapnikLayers.length > 0) {
+    _.each(indexesOfMapnikLayers, function (index) {
+      urls.push(this._generateAttributesBaseURL(responseWrapper, index));
+    }, this);
+  }
+  return urls;
+};
+
+ModelUpdater.prototype._generateAttributesBaseURL = function (responseWrapper, index) {
+  var baseURL = responseWrapper.getBaseURL() + '/' + index + '/attributes';
+  if (baseURL.indexOf('{s}') >= 0) {
+    var subdomain = getSubdomain(responseWrapper.getSupportedSubdomains(), baseURL);
+    baseURL = baseURL.replace('{s}', subdomain);
+  }
+  return baseURL;
+};
+
+ModelUpdater.prototype._updateLayerModels = function (responseWrapper) {
+  // CartoDB / mapnik layers
+  var indexesOfMapnikLayers = responseWrapper.getLayerIndexesByType('mapnik');
+  _.each(this._layersCollection.getCartoDBLayers(), function (layerModel, localLayerIndex) {
+    var responseWrapperLayerIndex = indexesOfMapnikLayers[localLayerIndex];
+    layerModel.set('meta', responseWrapper.getLayerMetadata(responseWrapperLayerIndex));
+    this._updateLegendModels(layerModel, responseWrapperLayerIndex, responseWrapper);
+
+    layerModel.setOk();
+  }, this);
+
+  // Torque / torque layers
+  var indexesOfTorqueLayers = responseWrapper.getLayerIndexesByType('torque');
+  _.each(this._layersCollection.getTorqueLayers(), function (layerModel, localLayerIndex) {
+    var responseWrapperLayerIndex = indexesOfTorqueLayers[localLayerIndex];
+    var meta = responseWrapper.getLayerMetadata(responseWrapperLayerIndex);
+    layerModel.set('meta', meta);
+    // deep-insight.js expects meta attributes as attributes for some reason
+    layerModel.set(meta);
+    layerModel.set('subdomains', responseWrapper.getSupportedSubdomains());
+    layerModel.set('tileURLTemplates', this._calculateTileURLTemplatesForTorqueLayers(responseWrapper));
+    this._updateLegendModels(layerModel, responseWrapperLayerIndex, responseWrapper);
+
+    layerModel.setOk();
+  }, this);
+};
+
+ModelUpdater.prototype._calculateTileURLTemplatesForTorqueLayers = function (responseWrapper) {
+  var urlTemplates = [];
+  var indexesOfTorqueLayers = responseWrapper.getLayerIndexesByType('torque');
+  if (indexesOfTorqueLayers.length > 0) {
+    urlTemplates.push(this._generateTorqueTileURLTemplate(responseWrapper, indexesOfTorqueLayers));
+  }
+  return urlTemplates;
+};
+
+ModelUpdater.prototype._generateTorqueTileURLTemplate = function (responseWrapper, layerIndexes) {
+  return responseWrapper.getBaseURL() + '/' + layerIndexes.join(',') + '/{z}/{x}/{y}.json.torque';
+};
+
+ModelUpdater.prototype._updateLegendModels = function (layerModel, remoteLayerIndex, responseWrapper) {
+  var layerMetadata = responseWrapper.getLayerMetadata(remoteLayerIndex);
+  _.each(this._getLayerLegends(layerModel), function (legendModel) {
+    this._updateLegendModel(legendModel, layerMetadata);
+  }, this);
+};
+
+ModelUpdater.prototype._updateLegendModel = function (legendModel, layerMetadata) {
+  var cartoCSSRules = layerMetadata && layerMetadata.cartocss_meta && layerMetadata.cartocss_meta.rules;
+  try {
+    var newLegendAttrs = {
+      state: 'success'
+    };
+    if (cartoCSSRules) {
+      var adapter = RuleToLegendModelAdapters.getAdapterForLegend(legendModel);
+      var rulesForLegend = _.filter(cartoCSSRules, adapter.canAdapt);
+      if (!_.isEmpty(rulesForLegend)) {
+        newLegendAttrs = _.extend(newLegendAttrs, adapter.adapt(rulesForLegend));
+      }
+    }
+    legendModel.set(newLegendAttrs);
+  } catch (error) {
+    legendModel.set({ state: 'error' });
+    log.error("legend of type '" + legendModel.get('type') + "' couldn't be updated: " + error.message);
+  }
+};
+
+ModelUpdater.prototype._updateDataviewModels = function (responseWrapper, sourceId, forceFetch) {
+  this._dataviewsCollection.each(function (dataviewModel) {
+    var dataviewMetadata = responseWrapper.getDataviewMetadata(dataviewModel.get('id'));
+    if (dataviewMetadata) {
+      dataviewModel.set({
+        url: dataviewMetadata.url[this._getProtocol()]
+      }, {
+        sourceId: sourceId,
+        forceFetch: forceFetch
+      });
+    }
+  }, this);
+};
+
+ModelUpdater.prototype._updateAnalysisModels = function (responseWrapper) {
+  var analysisNodesCollection = this._getUniqueAnalysisNodesCollection();
+  analysisNodesCollection.each(function (analysisNode) {
+    var analysisMetadata = responseWrapper.getAnalysisNodeMetadata(analysisNode.get('id'));
+    var attrs;
+    if (analysisMetadata) {
+      attrs = {
+        status: analysisMetadata.status,
+        url: analysisMetadata.url[this._getProtocol()],
+        query: analysisMetadata.query
+      };
+
+      attrs = _.omit(attrs, analysisNode.getParamNames());
+
+      if (analysisMetadata.error_message) {
+        attrs = _.extend(attrs, {
+          error: {
+            message: analysisMetadata.error_message
+          }
+        });
+        analysisNode.set(attrs);
+      } else {
+        analysisNode.set(attrs);
+        analysisNode.setOk();
+      }
+    }
+  }, this);
+};
+
+ModelUpdater.prototype._getProtocol = function () {
+  // When running tests window.locationn.protocol using the jasmine test runner,
+  // window.location.protocol returns 'file:'. This is a little hack to make tests happy.
+  if (window.location.protocol === 'file:') {
+    return 'http';
+  }
+  return window.location.protocol.replace(':', '');
+};
+
+ModelUpdater.prototype.setErrors = function (errors) {
+  _.each(errors, this._setError, this);
+  this._setLegendErrors();
+};
+
+ModelUpdater.prototype._setError = function (error) {
+  if (error.isLayerError()) {
+    var layerModel = this._layersCollection.get(error.layerId);
+    layerModel && layerModel.setError(error);
+  } else if (error.isAnalysisError()) {
+    var analysisNodesCollection = this._getUniqueAnalysisNodesCollection();
+    var analysisModel = analysisNodesCollection.get(error.analysisId);
+    analysisModel && analysisModel.setError(error);
+  }
+};
+
+ModelUpdater.prototype._setLegendErrors = function () {
+  var legendModels = this._layersCollection.chain().map(this._getLayerLegends).compact().flatten().value();
+
+  _.each(legendModels, function (legendModel) {
+    legendModel.set('state', 'error');
+  });
+};
+
+ModelUpdater.prototype._getLayerLegends = function (layerModel) {
+  return layerModel.legends && [layerModel.legends.bubble, layerModel.legends.category, layerModel.legends.choropleth];
+};
+
+ModelUpdater.prototype._getUniqueAnalysisNodesCollection = function () {
+  var analysisNodes = AnalysisService.getUniqueAnalysisNodes(this._layersCollection, this._dataviewsCollection);
+  return new Backbone.Collection(analysisNodes);
+};
+
+module.exports = ModelUpdater;
 
 /***/ }),
 /* 74 */
@@ -23055,133 +23624,16 @@ module.exports = Model.extend({
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Model = __webpack_require__(2);
-var BackboneAbortSync = __webpack_require__(20);
-var CategoriesCollection = __webpack_require__(33);
+// Creates cdb object, mutated in the entry file cartodb.js
+// Used to avoid circular dependencies
+var cdb = {};
 
-/**
- * Category search model
- */
-module.exports = Model.extend({
-  defaults: {
-    q: '',
-    data: [],
-    url: ''
-  },
+cdb.VERSION = __webpack_require__(22).version;
+cdb.DEBUG = false;
 
-  url: function url() {
-    var url = this.get('url') + '/search?q=' + encodeURIComponent(this.get('q'));
-    if (this.get('apiKey')) {
-      url += '&api_key=' + this.get('apiKey');
-    } else if (this.get('authToken')) {
-      var authToken = this.get('authToken');
-      if (authToken instanceof Array) {
-        _.each(authToken, function (token) {
-          url += '&auth_token[]=' + token;
-        });
-      } else {
-        url += '&auth_token=' + authToken;
-      }
-    }
-    return url;
-  },
+cdb.helpers = {};
 
-  initialize: function initialize(attrs, opts) {
-    this._data = new CategoriesCollection(null, {
-      aggregationModel: opts.aggregationModel
-    });
-    this.sync = BackboneAbortSync.bind(this);
-  },
-
-  fetchIfSearchIsApplied: function fetchIfSearchIsApplied() {
-    if (this.isSearchApplied()) {
-      this.fetch();
-    }
-  },
-
-  setData: function setData(data) {
-    var categories = this._parseData(data);
-    this._data.reset(categories);
-    this.set('data', categories);
-  },
-
-  getData: function getData() {
-    return this._data;
-  },
-
-  getSize: function getSize() {
-    return this._data.size();
-  },
-
-  getCount: function getCount() {
-    return this.getSize();
-  },
-
-  isValid: function isValid() {
-    var str = this.get('q');
-    return !!(str || '');
-  },
-
-  resetData: function resetData() {
-    this.setData([]);
-    this.set('q', '');
-  },
-
-  getSearchQuery: function getSearchQuery() {
-    return this.get('q');
-  },
-
-  isSearchApplied: function isSearchApplied() {
-    return this.isValid() && this.getSize() > 0;
-  },
-
-  _parseData: function _parseData(categories) {
-    var newData = [];
-    _.each(categories, function (d) {
-      if (!d.agg) {
-        newData.push({
-          selected: false,
-          name: (d.category || d.name).toString(),
-          agg: d.agg,
-          value: d.value
-        });
-      }
-    }, this);
-
-    return newData;
-  },
-
-  parse: function parse(r) {
-    var categories = this._parseData(r.categories);
-    this._data.reset(categories);
-    return {
-      data: categories
-    };
-  },
-
-  fetch: function fetch(opts) {
-    opts = opts || {};
-
-    this.trigger('loading', this);
-
-    if (opts.success) {
-      var successCallback = opts && opts.success;
-    }
-
-    return Model.prototype.fetch.call(this, _.extend(opts, {
-      success: function () {
-        successCallback && successCallback(arguments);
-        this.trigger('loaded', this);
-      }.bind(this),
-      error: function (mdl, err) {
-        if (!err || err && err.statusText !== 'abort') {
-          this.trigger('error', mdl, err);
-        }
-      }.bind(this)
-    }));
-  }
-});
+module.exports = cdb;
 
 /***/ }),
 /* 75 */
@@ -23190,301 +23642,17 @@ module.exports = Model.extend({
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var DataviewModelBase = __webpack_require__(21);
-var SearchModel = __webpack_require__(74);
-var CategoryModelRange = __webpack_require__(72);
-var CategoriesCollection = __webpack_require__(33);
+var ADAPTERS = {
+  bubble: __webpack_require__(76),
+  choropleth: __webpack_require__(77),
+  category: __webpack_require__(78)
+};
 
-/**
- * Category dataview model
- *
- * - It has several internal models/collections
- *   - search model: it manages category search results.
- *   - filter model: it knows which items are accepted or rejected.
- */
-module.exports = DataviewModelBase.extend({
-
-  defaults: _.extend({
-    type: 'category',
-    filterEnabled: false,
-    categories: 6,
-    allCategoryNames: [] // all (new + previously accepted), updated on data fetch (see parse)
-  }, DataviewModelBase.prototype.defaults),
-
-  _getDataviewSpecificURLParams: function _getDataviewSpecificURLParams() {
-    var params = ['own_filter=' + (this.get('filterEnabled') ? 1 : 0), 'categories=' + this.get('categories')];
-    return params;
-  },
-
-  initialize: function initialize(attrs, opts) {
-    DataviewModelBase.prototype.initialize.call(this, attrs, opts);
-
-    // Internal model for calculating total amount of values in the category
-    this._rangeModel = new CategoryModelRange({
-      apiKey: this._engine.getApiKey(),
-      authToken: this._engine.getAuthToken()
-    });
-
-    this._data = new CategoriesCollection(null, {
-      aggregationModel: this
-    });
-
-    this._searchModel = new SearchModel({
-      apiKey: this._engine.getApiKey(),
-      authToken: this._engine.getAuthToken()
-    }, {
-      aggregationModel: this
-    });
-
-    this.on('change:column change:aggregation change:aggregation_column', this._reloadAndForceFetch, this);
-    this.on('change:categories', this.refresh, this);
-
-    this.bind('change:url', function () {
-      this._searchModel.set({
-        url: this.get('url')
-      });
-    }, this);
-
-    this.once('change:url', function () {
-      this._rangeModel.setUrl(this.get('url'));
-    }, this);
-
-    this._rangeModel.bind('change:totalCount change:categoriesCount', function () {
-      this.set({
-        totalCount: this._rangeModel.get('totalCount'),
-        categoriesCount: this._rangeModel.get('categoriesCount')
-      });
-    }, this);
-
-    this._bindSearchModelEvents();
-    if (attrs && attrs.acceptedCategories) {
-      this.filter.accept(attrs.acceptedCategories);
-    }
-  },
-
-  _onMapBoundsChanged: function _onMapBoundsChanged() {
-    DataviewModelBase.prototype._onMapBoundsChanged.apply(this, arguments);
-    this._searchModel.fetchIfSearchIsApplied();
-  },
-
-  _onCircleChanged: function _onCircleChanged() {
-    DataviewModelBase.prototype._onCircleChanged.apply(this, arguments);
-    this._searchModel.fetchIfSearchIsApplied();
-  },
-
-  _onPolygonChanged: function _onPolygonChanged() {
-    DataviewModelBase.prototype._onPolygonChanged.apply(this, arguments);
-    this._searchModel.fetchIfSearchIsApplied();
-  },
-
-  _bindSearchModelEvents: function _bindSearchModelEvents() {
-    this.listenTo(this._searchModel, 'loading', function () {
-      this.trigger('loading', this);
-    }, this);
-
-    this.listenTo(this._searchModel, 'loaded', function () {
-      this.trigger('loaded', this);
-    }, this);
-
-    this.listenTo(this._searchModel, 'error', function (model, response) {
-      if (!response || response && response.statusText !== 'abort') {
-        this.trigger('error', model, response);
-      }
-    }, this);
-
-    this.listenTo(this._searchModel, 'change:data', this._onSearchDataChange, this);
-  },
-
-  _onSearchDataChange: function _onSearchDataChange() {
-    this.getSearchResult().each(function (m) {
-      var selected = this.filter.isAccepted(m.get('name'));
-      m.set('selected', selected);
-    }, this);
-    this.trigger('change:searchData', this);
-  },
-
-  _shouldFetchOnBoundingBoxChange: function _shouldFetchOnBoundingBoxChange() {
-    return DataviewModelBase.prototype._shouldFetchOnBoundingBoxChange.call(this) && !this.isSearchApplied();
-  },
-
-  _shouldFetchOnCircleChange: function _shouldFetchOnCircleChange() {
-    return DataviewModelBase.prototype._shouldFetchOnCircleChange.call(this) && !this.isSearchApplied();
-  },
-
-  _shouldFetchOnPolygonChange: function _shouldFetchOnPolygonChange() {
-    return DataviewModelBase.prototype._shouldFetchOnPolygonChange.call(this) && !this.isSearchApplied();
-  },
-
-  enableFilter: function enableFilter() {
-    this.set('filterEnabled', true);
-  },
-
-  disableFilter: function disableFilter() {
-    this.set('filterEnabled', false);
-  },
-
-  // Search model helper methods //
-
-  getSearchQuery: function getSearchQuery() {
-    return this._searchModel.getSearchQuery();
-  },
-
-  setSearchQuery: function setSearchQuery(q) {
-    this._searchModel.set('q', q);
-  },
-
-  isSearchValid: function isSearchValid() {
-    return this._searchModel.isValid();
-  },
-
-  getSearchResult: function getSearchResult() {
-    return this._searchModel.getData();
-  },
-
-  getSearchCount: function getSearchCount() {
-    return this._searchModel.getCount();
-  },
-
-  applySearch: function applySearch() {
-    this._searchModel.fetch();
-  },
-
-  isSearchApplied: function isSearchApplied() {
-    return this._searchModel.isSearchApplied();
-  },
-
-  cleanSearch: function cleanSearch() {
-    this._searchModel.resetData();
-  },
-
-  setupSearch: function setupSearch() {
-    if (!this.isSearchApplied()) {
-      this._searchModel.setData(this._data.toJSON());
-    }
-  },
-
-  getData: function getData() {
-    return this._data;
-  },
-
-  getSize: function getSize() {
-    return this._data.size();
-  },
-
-  getCount: function getCount() {
-    return this.get('categoriesCount');
-  },
-
-  isOtherAvailable: function isOtherAvailable() {
-    return this._data.isOtherAvailable();
-  },
-
-  numberOfAcceptedCategories: function numberOfAcceptedCategories() {
-    var acceptedCategories = this.filter.acceptedCategories;
-    var numberOfRejectedCategories = this.numberOfRejectedCategories();
-    var data = this.getData();
-    var totalCategories = data.size();
-    var numberOfAcceptedCategories = data.reduce(function (memo, cat) {
-      var isCategoryInData = acceptedCategories.where({ name: cat.get('name') }).length > 0;
-      return memo + (isCategoryInData ? 1 : 0);
-    }, 0);
-    if (!numberOfRejectedCategories) {
-      return numberOfAcceptedCategories;
-    } else {
-      return totalCategories - numberOfRejectedCategories;
-    }
-  },
-
-  numberOfRejectedCategories: function numberOfRejectedCategories() {
-    var rejectedCategories = this.filter.rejectedCategories;
-    var data = this.getData();
-    return data.reduce(function (memo, cat) {
-      var isCategoryInData = rejectedCategories.where({ name: cat.get('name') }).length > 0;
-      return memo + (isCategoryInData ? 1 : 0);
-    }, 0);
-  },
-
-  refresh: function refresh() {
-    if (this.isSearchApplied()) {
-      this._searchModel.fetch();
-    } else {
-      this.fetch();
-    }
-  },
-
-  parse: function parse(d) {
-    var newData = [];
-    var _tmpArray = {};
-    var allNewCategories = d.categories;
-    var allNewCategoryNames = [];
-    var acceptedCategoryNames = [];
-
-    _.each(allNewCategories, function (datum) {
-      var category = datum.category;
-
-      allNewCategoryNames.push(category);
-      var isRejected = this.filter.isRejected(category);
-      _tmpArray[category] = true;
-
-      newData.push({
-        selected: !isRejected,
-        name: category,
-        agg: datum.agg,
-        value: datum.value
-      });
-    }, this);
-
-    // Only accepted categories should appear when filterEnabled is true
-    if (this.get('filterEnabled')) {
-      // Add accepted items that are not present in the categories data
-      this.filter.acceptedCategories.each(function (mdl) {
-        var category = mdl.get('name');
-        acceptedCategoryNames.push(category);
-        if (!_tmpArray[category]) {
-          newData.push({
-            selected: true,
-            name: category,
-            agg: false,
-            value: 0
-          });
-        }
-      }, this);
-    }
-
-    this._data.reset(newData);
-
-    return {
-      allCategoryNames: _.chain(allNewCategoryNames).union(acceptedCategoryNames).unique().value(),
-      data: newData,
-      nulls: d.nulls,
-      min: d.min,
-      max: d.max,
-      count: d.count
-    };
-  },
-
-  // Backbone toJson function override
-  // This function is used to serialize the server request
-  toJSON: function toJSON() {
-    return {
-      type: 'aggregation',
-      source: { id: this.getSourceId() },
-      options: {
-        column: this.get('column'),
-        aggregation: this.get('aggregation'),
-
-        // TODO server-side is using camelCased attr name, update once fixed
-        aggregationColumn: this.get('aggregation_column')
-      }
-    };
+module.exports = {
+  getAdapterForLegend: function getAdapterForLegend(legendModel) {
+    return ADAPTERS[legendModel.get('type')];
   }
-},
-
-// Class props
-{
-  ATTRS_NAMES: DataviewModelBase.ATTRS_NAMES.concat(['column', 'aggregation', 'aggregation_column', 'acceptedCategories', 'categories'])
-});
+};
 
 /***/ }),
 /* 76 */
@@ -23494,266 +23662,39 @@ module.exports = DataviewModelBase.extend({
 
 
 var _ = __webpack_require__(0);
-var Base = __webpack_require__(10);
-var constants = __webpack_require__(5);
-var CategoryDataviewModel = __webpack_require__(75);
-var CategoryFilter = __webpack_require__(71);
-var parseCategoryData = __webpack_require__(69);
+var Rule = __webpack_require__(13);
 
-/**
- *
- * A category dataview is used to aggregate data performing a operation.
- *
- * This is similar to a group by SQL operation, for example:
- *
- * ```
- * SELECT country, AVG(population) GROUP BY country
- * ```
- * The following code is the CARTO.js equivalent:
- *
- * ```javascript
- * var categoryDataview = new carto.dataview.Category(citiesSource, 'country', {
- *     operation: carto.operation.AVG, // Compute the average
- *     operationColumn: 'population' // The name of the column where the operation will be applied.
- *  });
- * ```
- *
- * Like every other dataview, this is an async object and you must wait for the data to be available.
- *
- * The data format for the category-dataview is described in {@link carto.dataview.CategoryData}
- *
- * @param {carto.source.Base} source - The source where the dataview will fetch the data
- * @param {string} column - The name of the column used to create categories
- * @param {object} [options]
- * @param {number} [options.limit=6] - The maximum number of categories in the response
- * @param {carto.operation} [options.operation] - The operation to apply to the data
- * @param {string} [options.operationColumn] - The column where the operation will be applied
- *
- * @fires dataChanged
- * @fires columnChanged
- * @fires statusChanged
- * @fires error
- *
- * @fires limitChanged
- * @fires operationChanged
- * @fires operationColumnChanged
- *
- * @constructor
- * @extends carto.dataview.Base
- * @memberof carto.dataview
- * @api
- * @example
- * // From a cities dataset with name, country and population show the average city population per country:
- * var column = 'country'; // Aggregate the data by country.
- * var categoryDataview = new carto.dataview.Category(citiesSource, column, {
- *     operation: carto.operation.AVG, // Compute the average
- *     operationColumn: 'population' // The name of the column where the operation will be applied.
- *  });
- * @example
- * // Listen for data updates
- * categoryDataview.on('dataChanged', newData => {
- *  console.log(newData); // CategoryData object
- * });
- * @example
- * // You can listen to multiple events emmited by the category-dataview.
- * categoryDataview.on('statusChanged', (newData, error) => { });
- * categoryDataview.on('error', cartoError => { });
- *
- * // Listen to specific category-dataview events.
- * categoryDataview.on('columnChanged', newData => {
- *  console.log(newData); // 'population'
- * });
- * categoryDataview.on('limitChanged', newData => {
- *  console.log(newData); // 11
- * });
- * categoryDataview.on('operationChanged', newData => { });
- * categoryDataview.on('operationColumnChanged', newData => { });
- */
-function Category(source, column, options) {
-  this.DEFAULTS.operationColumn = column;
+var VALID_PROPS = ['marker-width', 'line-width'];
 
-  this._initialize(source, column, options);
-  this._limit = this._options.limit;
-  this._operation = this._options.operation;
-  this._operationColumn = this._options.operationColumn;
-}
-
-Category.prototype = Object.create(Base.prototype);
-
-/**
- * Set the categories limit.
- *
- * @param  {number} limit
- * @fires limitChanged
- * @return {carto.dataview.Category} this
- * @api
- */
-Category.prototype.setLimit = function (limit) {
-  this._checkLimit(limit);
-  this._changeProperty('limit', limit, 'categories');
-  return this;
-};
-
-/**
- * Return the current categories limit.
- *
- * @return {number} Current dataview limit
- * @api
- */
-Category.prototype.getLimit = function () {
-  return this._limit;
-};
-
-/**
- * Set the dataview operation.
- *
- * @param  {carto.operation} operation
- * @fires operationChanged
- * @return {carto.dataview.Category} this
- * @api
- */
-Category.prototype.setOperation = function (operation) {
-  this._checkOperation(operation);
-  this._changeProperty('operation', operation, 'aggregation');
-  return this;
-};
-
-/**
- * Return the current dataview operation.
- *
- * @return {carto.operation} Current dataview operation
- * @api
- */
-Category.prototype.getOperation = function () {
-  return this._operation;
-};
-
-/**
- * Set the dataview operationColumn.
- *
- * @param  {string} operationColumn
- * @fires operationColumnChanged
- * @return {carto.dataview.Category} this
- * @api
- */
-Category.prototype.setOperationColumn = function (operationColumn) {
-  this._checkOperationColumn(operationColumn);
-  this._changeProperty('operationColumn', operationColumn, 'aggregation_column');
-  return this;
-};
-
-/**
- * Return the current dataview operationColumn.
- *
- * @return {string} Current dataview operationColumn
- * @api
- */
-Category.prototype.getOperationColumn = function () {
-  return this._operationColumn;
-};
-
-/**
- * Return the resulting data.
- *
- * @return {carto.dataview.CategoryData}
- * @api
- */
-Category.prototype.getData = function () {
-  if (this._internalModel) {
-    return parseCategoryData(this._internalModel.get('data'), this._internalModel.get('count'), this._internalModel.get('max'), this._internalModel.get('min'), this._internalModel.get('nulls'), this._operation);
-  }
-  return null;
-};
-
-Category.prototype.DEFAULTS = {
-  limit: 6,
-  operation: constants.operation.COUNT
-};
-
-Category.prototype._checkOptions = function (options) {
-  if (_.isUndefined(options)) {
-    throw this._getValidationError('categoryOptionsRequired');
-  }
-  this._checkLimit(options.limit);
-  this._checkOperation(options.operation);
-  this._checkOperationColumn(options.operationColumn);
-};
-
-Category.prototype._checkLimit = function (limit) {
-  if (_.isUndefined(limit)) {
-    throw this._getValidationError('categoryLimitRequired');
-  }
-  if (!_.isNumber(limit)) {
-    throw this._getValidationError('categoryLimitNumber');
-  }
-  if (limit <= 0) {
-    throw this._getValidationError('categoryLimitPositive');
-  }
-};
-
-Category.prototype._checkOperation = function (operation) {
-  if (_.isUndefined(operation) || !constants.isValidOperation(operation)) {
-    throw this._getValidationError('categoryInvalidOperation');
-  }
-};
-
-Category.prototype._checkOperationColumn = function (operationColumn) {
-  if (_.isUndefined(operationColumn)) {
-    throw this._getValidationError('categoryOperationRequired');
-  }
-  if (!_.isString(operationColumn)) {
-    throw this._getValidationError('categoryOperationString');
-  }
-  if (_.isEmpty(operationColumn)) {
-    throw this._getValidationError('categoryOperationEmpty');
-  }
-};
-
-Category.prototype._createInternalModel = function (engine) {
-  this._internalModel = new CategoryDataviewModel({
-    source: this._source.$getInternalModel(),
-    column: this._column,
-    aggregation: this._operation,
-    aggregation_column: this._operationColumn,
-    categories: this._limit,
-    sync_on_bbox_change: !!this._boundingBoxFilter,
-    sync_on_circle_change: !!this._circleFilter,
-    sync_on_polygon_change: !!this._polygonFilter,
-    enabled: this._enabled
-  }, {
-    engine: engine,
-    filter: new CategoryFilter(),
-    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
-    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
-    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
+var isEveryBucketValid = function isEveryBucketValid(rule) {
+  var buckets = rule.getBucketsWithRangeFilter();
+  return _.every(buckets, function (bucket) {
+    return bucket.filter.start != null && bucket.filter.end != null;
   });
 };
 
-module.exports = Category;
+var calculateValues = function calculateValues(buckets) {
+  var lastBucket = _.last(buckets);
+  return _.chain(buckets).map('filter').map('start').concat(lastBucket.filter.end).value();
+};
 
-/**
- * Fired when limit has changed. Handler gets a parameter with the new limit.
- *
- * @event limitChanged
- * @type {number}
- * @api
- */
+module.exports = {
+  canAdapt: function canAdapt(rule) {
+    rule = new Rule(rule);
+    return rule.matchesAnyProperty(VALID_PROPS) && isEveryBucketValid(rule);
+  },
 
-/**
- * Fired when operation has changed. Handler gets a parameter with the new limit.
- *
- * @event operationChanged
- * @type {string}
- * @api
- */
+  adapt: function adapt(rules) {
+    var rule = new Rule(rules[0]);
+    var buckets = rule.getBucketsWithRangeFilter();
 
-/**
- * Fired when operationColumn has changed. Handler gets a parameter with the new operationColumn.
- *
- * @event operationColumnChanged
- * @type {string}
- * @api
- */
+    return {
+      values: calculateValues(buckets),
+      sizes: _.map(buckets, 'value'),
+      avg: rule.getFilterAvg()
+    };
+  }
+};
 
 /***/ }),
 /* 77 */
@@ -23762,24 +23703,57 @@ module.exports = Category;
 "use strict";
 
 
-var Category = __webpack_require__(76);
-var Formula = __webpack_require__(68);
-var Histogram = __webpack_require__(65);
-var TimeSeries = __webpack_require__(61);
-var status = __webpack_require__(5).status;
-var timeAggregation = __webpack_require__(5).timeAggregation;
+var _ = __webpack_require__(0);
+var Rule = __webpack_require__(13);
 
-/**
- * @namespace carto.dataview
- * @api
- */
+var VALID_PROPS = ['line-color', 'marker-fill', 'polygon-fill'];
+var VALID_MAPPINGS = ['>', '>=', '<', '<='];
+
+var isEveryBucketValid = function isEveryBucketValid(rule) {
+  var buckets = rule.getBucketsWithRangeFilter();
+  return _.every(buckets, function (bucket) {
+    return bucket.filter.start != null && bucket.filter.end != null;
+  });
+};
+
+var generateColors = function generateColors(buckets) {
+  if (buckets.length === 1) {
+    var bucket = buckets[0];
+    var labelStart = bucket.filter.start;
+    var labelEnd = bucket.filter.end;
+    return [{ value: bucket.value, label: labelStart.toString() }, { value: bucket.value, label: labelEnd.toString() }];
+  }
+  return _.map(buckets, function (bucket, i) {
+    var label = '';
+    if (i === 0) {
+      label = bucket.filter.start;
+    } else if (i === buckets.length - 1) {
+      label = bucket.filter.end;
+    }
+    return { value: bucket.value, label: label.toString() };
+  });
+};
+
 module.exports = {
-  Category: Category,
-  Formula: Formula,
-  Histogram: Histogram,
-  TimeSeries: TimeSeries,
-  status: status,
-  timeAggregation: timeAggregation
+  canAdapt: function canAdapt(rule) {
+    rule = new Rule(rule);
+    return rule.matchesAnyProperty(VALID_PROPS) && rule.matchesAnyMapping(VALID_MAPPINGS) && isEveryBucketValid(rule);
+  },
+
+  adapt: function adapt(rules) {
+    var rule = new Rule(rules[0]);
+
+    var rangeBuckets = rule.getBucketsWithRangeFilter();
+    var lastBucket = _.last(rangeBuckets);
+    var firstBucket = _.first(rangeBuckets);
+
+    return {
+      colors: generateColors(rangeBuckets),
+      avg: rule.getFilterAvg(),
+      max: lastBucket.filter.end,
+      min: firstBucket.filter.start
+    };
+  }
 };
 
 /***/ }),
@@ -23790,99 +23764,65 @@ module.exports = {
 
 
 var _ = __webpack_require__(0);
-var Base = __webpack_require__(38);
-var CartoValidationError = __webpack_require__(3);
-var CartoError = __webpack_require__(4);
+var Rule = __webpack_require__(13);
 
-// Event constants
-var CONTENT_CHANGED = 'contentChanged';
+var VALID_PROPS = ['line-color', 'marker-fill', 'polygon-fill', 'marker-file'];
+var VALID_MAPPINGS = ['='];
 
-/**
- * A CartoCSS/TurboCarto style that can be applied to a {@link carto.layer.Layer}.
- * @param {string} content - A CartoCSS string
- * @example
- * var style = new carto.style.CartoCSS(`
- *   #layer {
- *     marker-fill: #FABADA;
- *     marker-width: 10;
- *   }
- * `);
- * @constructor
- * @extends carto.style.Base
- * @memberof carto.style
- * @api
- */
-function CartoCSS(content) {
-  _checkContent(content);
-  this._content = content;
-}
-
-CartoCSS.prototype = Object.create(Base.prototype);
-
-/**
- * Get the current CartoCSS/TurboCarto style as a string.
- *
- * @return {string} - The TurboCarto style for this CartoCSS object
- * @api
- */
-CartoCSS.prototype.getContent = function () {
-  return this._content;
-};
-
-/**
- * Set the CartoCSS/Turbocarto as a string.
- *
- * @param {string} newContent - A string containing the new cartocss/turbocarto style
- * @return {Promise<string>} A promise that will be resolved once the cartocss/turbocarto is updated
- * @example
- * // Get the cartoCSS from an exiting layer
- * let cartoCSS = layer.getStyle();
- * // Update the cartoCSS content, remember this method is asynchronous!
- * cartoCSS.setContent(`
- *  #layer {
- *    marker-fill: blue;
- *  }`)
- *  .then(() => {
- *    console.log('cartoCSS was updated');
- *  })
- *  .catch(() => {
- *    console.error('Error updating the cartoCSS for the layer');
- *  });
- * @api
- */
-CartoCSS.prototype.setContent = function (newContent) {
-  _checkContent(newContent);
-  this._content = newContent;
-  // Notify layers that the style has been changed so they can update their internalModels.
-  this.trigger('$changed', this);
-  if (!this._engine) {
-    return _onContentChanged.call(this, newContent);
-  }
-
-  return this._engine.reload().then(function () {
-    return _onContentChanged.call(this, newContent);
-  }.bind(this)).catch(function (windshaftError) {
-    return Promise.reject(new CartoError(windshaftError));
+var isEveryBucketValid = function isEveryBucketValid(rule) {
+  var buckets = rule.getBucketsWithCategoryFilter();
+  return _.every(buckets, function (bucket) {
+    return bucket.filter.name != null && bucket.value != null;
   });
 };
 
-// Once the reload cycle is completed trigger a contentChanged event.
-function _onContentChanged(newContent) {
-  this.trigger(CONTENT_CHANGED, this._content);
-  return Promise.resolve(this._content);
-}
+var generateCategories = function generateCategories(bucketsColor, bucketsIcon) {
+  return _.map(bucketsColor, function (bucketColor) {
+    var bucketIcon = _.find(bucketsIcon, function (bucket) {
+      return bucket.filter.name === bucketColor.filter.name;
+    });
+    return {
+      title: bucketColor.filter.name,
+      icon: bucketIcon && bucketIcon.value ? _extractURL(bucketIcon.value) : '',
+      color: bucketColor.value
+    };
+  });
+};
 
-function _checkContent(content) {
-  if (!content) {
-    throw new CartoValidationError('style', 'requiredCSS');
+var _extractURL = function _extractURL(str) {
+  var url = '';
+  var pattern = /(http|https):\/\/\S+\.(?:gif|jpeg|jpg|png|webp|svg)/g;
+  var match = str.match(pattern);
+  if (match) {
+    url = match[0];
   }
+  return url;
+};
 
-  if (!_.isString(content)) {
-    throw new CartoValidationError('style', 'requiredCSSString');
+module.exports = {
+  canAdapt: function canAdapt(rule) {
+    rule = new Rule(rule);
+    return rule.matchesAnyProperty(VALID_PROPS) && rule.matchesAnyMapping(VALID_MAPPINGS) && isEveryBucketValid(rule);
+  },
+
+  adapt: function adapt(rules) {
+    var ruleColor = new Rule(rules[0]);
+    var ruleIcon = new Rule(rules[1]);
+
+    var categoryBucketsColor = ruleColor.getBucketsWithCategoryFilter();
+    var categoryBucketsIcon = ruleIcon.getBucketsWithCategoryFilter();
+    var defaultBucketsColor = ruleColor.getBucketsWithDefaultFilter();
+    var defaultBucketsIcon = ruleIcon.getBucketsWithDefaultFilter();
+
+    return {
+      categories: generateCategories(categoryBucketsColor, categoryBucketsIcon),
+      default: {
+        icon: _.isEmpty(defaultBucketsIcon) ? '' : _extractURL(defaultBucketsIcon[0].value),
+        color: _.isEmpty(defaultBucketsColor) ? '' : defaultBucketsColor[0].value
+      }
+    };
   }
-}
-
-module.exports = CartoCSS;
+};
 
 /***/ }),
 /* 79 */
@@ -23891,14 +23831,40 @@ module.exports = CartoCSS;
 "use strict";
 
 
-var CartoCSS = __webpack_require__(78);
+var _ = __webpack_require__(0);
+var LayerTypes = __webpack_require__(12);
 
 /**
- * @namespace carto.style
- * @api
+ * Transform a map visualization into a json payload compatible with the windshaft API.
  */
+function serialize(layersCollection, dataviewsCollection) {
+  // Named map templates include both http, cartodb and torque layers
+  // so we need to iterate through all the layers in the collection to
+  // get the indexes rights. Templates are not aware of Google Maps
+  // base layers, so we have to ignore them to get indexes right.
+  var layers = layersCollection.filter(function (layer) {
+    return !LayerTypes.isGoogleMapsBaseLayer(layer);
+  });
+
+  return {
+    buffersize: {
+      mvt: 0
+    },
+    styles: _getStylesFromLayers(layers)
+  };
+}
+
+function _getStylesFromLayers(layers) {
+  return _.reduce(layers, function (styles, layer, index) {
+    if (layer.get('cartocss')) {
+      styles[index] = layer.get('cartocss');
+    }
+    return styles;
+  }, {});
+}
+
 module.exports = {
-  CartoCSS: CartoCSS
+  serialize: serialize
 };
 
 /***/ }),
@@ -23908,151 +23874,24 @@ module.exports = {
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(12);
-var AnalysisModel = __webpack_require__(9);
-var CamshaftReference = __webpack_require__(29);
-var CartoValidationError = __webpack_require__(3);
-var CartoError = __webpack_require__(4);
-
 /**
- * A SQL Query that can be used as the data source for layers and dataviews.
- *
- * @param {string} query A SQL query containing a SELECT statement
- * @fires error
- * @example
- * new carto.source.SQL('SELECT * FROM european_cities');
- * @constructor
- * @extends carto.source.Base
- * @memberof carto.source
- * @fires queryChanged
- * @api
+ * Simple value object that holds everything need to instantiate a map using the Maps API
  */
-function SQL(query) {
-  var _this = this;
-
-  _checkQuery(query);
-  this._query = query;
-
-  Base.apply(this, arguments);
-
-  this._appliedFilters.on('change:filters', function () {
-    return _this._updateInternalModelQuery(_this._getQueryToApply());
-  });
-}
-
-SQL.prototype = Object.create(Base.prototype);
-
-/**
- * Update the query. This method is asyncronous and returns a promise which is resolved when the style
- * is changed succesfully. It also fires a 'queryChanged' event.
- *
- * @param {string} query - The sql query that will be the source of the data
- * @fires queryChanged
- * @returns {Promise} - A promise that will be fulfilled when the reload cycle is completed
- * @api
- */
-SQL.prototype.setQuery = function (query) {
-  _checkQuery(query);
-  this._query = query;
-
-  var sqlString = this._getQueryToApply();
-
-  if (!this._internalModel) {
-    this._triggerQueryChanged(this, sqlString);
-    return Promise.resolve();
-  }
-
-  return this._updateInternalModelQuery(sqlString);
+var Request = function Request(payload, params, options) {
+  this.payload = payload;
+  this.params = params;
+  this.options = options;
 };
 
-/**
- * Get the query being used in this SQL source.
- *
- * @return {string} The query being used in this SQL object
- * @api
- */
-SQL.prototype.getQuery = function () {
-  return this._query;
+Request.prototype.toHashCode = function () {
+  return JSON.stringify(this.payload) + JSON.stringify(this.params) + JSON.stringify(this.options);
 };
 
-/**
- * Creates a new internal model with the given engine and attributes initialized in the constructor.
- *
- * @param {Engine} engine - The engine object to be assigned to the internalModel
- */
-SQL.prototype._createInternalModel = function (engine) {
-  var internalModel = new AnalysisModel({
-    id: this.getId(),
-    type: 'source',
-    query: this._getQueryToApply()
-  }, {
-    camshaftReference: CamshaftReference,
-    engine: engine
-  });
-
-  internalModel.on('change:query', this._triggerQueryChanged, this);
-
-  return internalModel;
+Request.prototype.equals = function (request) {
+  return this.toHashCode() === request.toHashCode();
 };
 
-SQL.prototype._updateInternalModelQuery = function (query) {
-  var _this2 = this;
-
-  if (!this._internalModel) return;
-
-  this._internalModel.set('query', query, { silent: true });
-
-  return this._internalModel._engine.reload().then(function () {
-    return _this2._triggerQueryChanged(_this2, query);
-  }).catch(function (windshaftError) {
-    return Promise.reject(new CartoError(windshaftError));
-  });
-};
-
-SQL.prototype._getQueryToApply = function () {
-  var whereClause = this._appliedFilters.$getSQL();
-
-  if (!this._hasFiltersApplied || _.isEmpty(whereClause)) {
-    return this._query;
-  }
-
-  return 'SELECT * FROM (' + this._query + ') as originalQuery WHERE ' + whereClause;
-};
-
-SQL.prototype.addFilter = function (filter) {
-  Base.prototype.addFilter.apply(this, arguments);
-  this._updateInternalModelQuery(this._getQueryToApply());
-};
-
-SQL.prototype.removeFilter = function (filters) {
-  Base.prototype.removeFilter.apply(this, arguments);
-  this._updateInternalModelQuery(this._getQueryToApply());
-};
-
-SQL.prototype._triggerQueryChanged = function (model, value) {
-  this.trigger('queryChanged', value);
-};
-
-function _checkQuery(query) {
-  if (!query) {
-    throw new CartoValidationError('source', 'requiredQuery');
-  }
-
-  if (!_.isString(query)) {
-    throw new CartoValidationError('source', 'requiredString');
-  }
-}
-
-module.exports = SQL;
-
-/**
- * Fired when the query has changed. Handler gets a parameter with the new query.
- *
- * @event queryChanged
- * @type {string}
- * @api
- */
+module.exports = Request;
 
 /***/ }),
 /* 81 */
@@ -24062,141 +23901,149 @@ module.exports = SQL;
 
 
 var _ = __webpack_require__(0);
-var Base = __webpack_require__(12);
-var AnalysisModel = __webpack_require__(9);
-var CamshaftReference = __webpack_require__(29);
-var CartoValidationError = __webpack_require__(3);
-var CartoError = __webpack_require__(4);
+var WindshaftConfig = __webpack_require__(33);
 
 /**
- * A Dataset that can be used as the data source for layers and dataviews.
- *
- * @param {string} tableName The name of an existing table
- * @example
- * new carto.source.Dataset('european_cities');
+ * Wrapper over a server response to a map instantiation giving some utility methods.
  * @constructor
- * @fires error
- * @extends carto.source.Base
- * @memberof carto.source
- * @api
+ * @param {object} windshaftSettings - Object containing the request options.
+ * @param {string} serverResponse - The json string representing a windshaft response to a map instantiation.
  */
-function Dataset(tableName) {
-  var _this = this;
-
-  _checkTableName(tableName);
-  this._tableName = tableName;
-
-  Base.apply(this, arguments);
-
-  this._appliedFilters.on('change:filters', function () {
-    return _this._updateInternalModelQuery(_this._getQueryToApply());
-  });
+function Response(windshaftSettings, serverResponse) {
+  this._windshaftSettings = windshaftSettings;
+  this._layerGroupId = serverResponse.layergroupid;
+  this._layers = serverResponse.metadata.layers;
+  this._dataviews = serverResponse.metadata.dataviews;
+  this._analyses = serverResponse.metadata.analyses;
+  this._cdnUrl = serverResponse.cdn_url;
 }
 
-Dataset.prototype = Object.create(Base.prototype);
+/**
+ * Return the indexes of the layers for a certain type.
+ * @example
+ * // layers = [ carto, carto, tiled, plain, tiled, torque];
+ * getLayerIndexesByType('mapnik') // [0, 1]
+ * getLayerIndexesByType('tiled') // [2, 4]
+ * getLayerIndexesByType('torque') // [5]
+ * @param {string} Type - The type of the layers: mapnik, torque, plain, tiled.
+ */
+Response.prototype.getLayerIndexesByType = function getLayerIndexesByType(layerType) {
+  return _.reduce(this._getLayers(), function (layerIndexes, layer, index) {
+    if (layer.type === layerType) {
+      layerIndexes.push(index);
+    }
+    return layerIndexes;
+  }, []);
+};
 
 /**
- * Update the table name. This method is asyncronous and returns a promise which is resolved when the style
- * is changed succesfully. It also fires a 'tableNameChanged' event.
- *
- * @param {string} tableName The name of an existing table
- * @fires TableNameChanged
- * @returns {Promise} - A promise that will be fulfilled when the reload cycle is completed
- * @api
+ * Build the base url to build windshaft map requests.
  */
-Dataset.prototype.setTableName = function (tableName) {
-  _checkTableName(tableName);
+Response.prototype.getBaseURL = function getBaseURL() {
+  return [this._getHost(), WindshaftConfig.MAPS_API_BASE_URL, this._layerGroupId].join('/');
+};
 
-  this._tableName = tableName;
+/**
+ * Build the base url for static maps.
+ */
+Response.prototype.getStaticBaseURL = function getStaticBaseURL() {
+  return [this._getHost(), WindshaftConfig.MAPS_API_BASE_URL, 'static/center', this._layerGroupId].join('/');
+};
 
-  if (!this._internalModel) {
-    this._triggerTableNameChanged(this, tableName);
-    return Promise.resolve();
+Response.prototype._getHost = function _getHost() {
+  var urlTemplate = this._windshaftSettings.urlTemplate;
+  var userName = this._windshaftSettings.userName;
+  var protocol = this.getProtocol();
+  var cdnUrl = this._cdnUrl;
+  var cdnHost = cdnUrl && cdnUrl[protocol];
+  var templates = cdnUrl && cdnUrl.templates;
+
+  if (templates && templates[protocol]) {
+    var template = templates[protocol];
+    return template.url + '/' + userName;
   }
 
-  return this._updateInternalModelQuery(this._getQueryToApply());
+  if (cdnHost) {
+    return [protocol, '://', cdnHost, '/', userName].join('');
+  }
+
+  return urlTemplate.replace('{user}', userName);
 };
 
-/**
- * Return the table name being used in  this Dataset object.
- *
- * @return {string} The table name being used in  this Dataset object
- * @api
- */
-Dataset.prototype.getTableName = function () {
-  return this._tableName;
+Response.prototype.getProtocol = function getProtocol() {
+  return this._isHttps() ? 'https' : 'http';
 };
 
-/**
- * Creates a new internal model with the given engine and attributes initialized in the constructor.
- *
- * @param {Engine} engine - The engine object to be assigned to the internalModel
- */
-Dataset.prototype._createInternalModel = function (engine) {
-  var internalModel = new AnalysisModel({
-    id: this.getId(),
-    type: 'source',
-    query: this._getQueryToApply()
-  }, {
-    camshaftReference: CamshaftReference,
-    engine: engine
+Response.prototype._isHttps = function isHttps() {
+  return this._windshaftSettings.urlTemplate.indexOf('https') === 0;
+};
+
+Response.prototype.getSupportedSubdomains = function getSupportedSubdomains() {
+  var templates = this._cdnUrl && this._cdnUrl.templates;
+  var protocol = this.getProtocol();
+  if (templates && templates[protocol]) {
+    return templates[protocol].subdomains;
+  }
+  return [];
+};
+
+Response.prototype.getLayerMetadata = function getLayerMetadata(layerIndex) {
+  var layerMeta = {};
+  var layers = this._getLayers();
+  if (layers && layers[layerIndex]) {
+    layerMeta = layers[layerIndex].meta || {};
+  }
+  return layerMeta;
+};
+
+Response.prototype.getDataviewMetadata = function getDataviewMetadata(dataviewId) {
+  var dataviews = this._getDataviews();
+  if (dataviews && dataviews[dataviewId]) {
+    return dataviews[dataviewId];
+  }
+
+  // Try to get dataview's metatadta from the 'widgets' dictionary inside the metadata of each of the layers
+  dataviews = {};
+  var layersDataviews = _.compact(_.map(this._getLayers(), function (layer) {
+    return layer.widgets;
+  }));
+  _.each(layersDataviews, function (layerDataviews) {
+    _.extend(dataviews, layerDataviews);
   });
 
-  return internalModel;
+  if (dataviews && dataviews[dataviewId]) {
+    return dataviews[dataviewId];
+  }
 };
 
-Dataset.prototype._updateInternalModelQuery = function (query) {
-  var _this2 = this;
-
-  if (!this._internalModel) return;
-
-  this._internalModel.set('query', query, { silent: true });
-
-  return this._internalModel._engine.reload().then(function () {
-    return _this2._triggerTableNameChanged(_this2, _this2._tableName);
-  }).catch(function (windshaftError) {
-    return Promise.reject(new CartoError(windshaftError));
+Response.prototype.getAnalysisNodeMetadata = function (analysisId) {
+  var metadata = {};
+  var nodes = _.map(this._getAnalyses(), function (analysis) {
+    return analysis.nodes;
   });
+  _.each(nodes, function (node) {
+    _.extend(metadata, node);
+  });
+
+  return metadata[analysisId];
 };
 
-Dataset.prototype._getQueryToApply = function () {
-  var whereClause = this._appliedFilters.$getSQL();
-  var datasetQuery = 'SELECT * from ' + this._tableName;
-
-  if (_.isEmpty(whereClause)) {
-    return datasetQuery;
-  }
-
-  return 'SELECT * FROM (' + datasetQuery + ') as datasetQuery WHERE ' + whereClause;
+/**
+ * Return the array with all the layers in the response
+ */
+Response.prototype._getLayers = function _getLayers() {
+  return this._layers;
 };
 
-Dataset.prototype.addFilter = function (filter) {
-  Base.prototype.addFilter.apply(this, arguments);
-  this._updateInternalModelQuery(this._getQueryToApply());
+Response.prototype._getDataviews = function _getDataviews() {
+  return this._dataviews;
 };
 
-Dataset.prototype.removeFilter = function (filters) {
-  Base.prototype.removeFilter.apply(this, arguments);
-  this._updateInternalModelQuery(this._getQueryToApply());
+Response.prototype._getAnalyses = function _getAnalyses() {
+  return this._analyses;
 };
 
-Dataset.prototype._triggerTableNameChanged = function (model, value) {
-  this.trigger('tableNameChanged', value);
-};
-
-function _checkTableName(tableName) {
-  if (_.isUndefined(tableName)) {
-    throw new CartoValidationError('source', 'noDatasetName');
-  }
-  if (!_.isString(tableName)) {
-    throw new CartoValidationError('source', 'requiredDatasetString');
-  }
-  if (_.isEmpty(tableName)) {
-    throw new CartoValidationError('source', 'requiredDataset');
-  }
-}
-
-module.exports = Dataset;
+module.exports = Response;
 
 /***/ }),
 /* 82 */
@@ -24205,2850 +24052,193 @@ module.exports = Dataset;
 "use strict";
 
 
-var Dataset = __webpack_require__(81);
-var SQL = __webpack_require__(80);
+var $ = __webpack_require__(11);
+var _ = __webpack_require__(0);
+var LZMA = __webpack_require__(83);
+var util = __webpack_require__(6);
+var WindshaftConfig = __webpack_require__(33);
+var RequestTracker = __webpack_require__(84);
+var log = __webpack_require__(21);
+var parseWindshaftErrors = __webpack_require__(23);
+
+var validatePresenceOfOptions = function validatePresenceOfOptions(options, requiredOptions) {
+  var missingOptions = _.filter(requiredOptions, function (option) {
+    return !options[option];
+  });
+  if (missingOptions.length) {
+    throw new Error('WindshaftClient could not be initialized. The following options are missing: ' + missingOptions.join(', '));
+  }
+};
+
+var MAX_URL_LENGTH = 2033;
+var COMPRESSION_LEVEL = 3;
+/* The max number of times the same map can be instantiated */
+var MAP_INSTANTIATION_LIMIT = 3;
 
 /**
- *  @namespace carto.source
- *  @api
+ * Windshaft client. It provides a method to create instances of maps in Windshaft.
+ * @param {object} options Options to set up the client
  */
-module.exports = {
-  Dataset: Dataset,
-  SQL: SQL
+var WindshaftClient = function WindshaftClient(settings) {
+  validatePresenceOfOptions(settings, ['urlTemplate', 'userName']);
+
+  if (settings.templateName) {
+    this.endpoints = {
+      get: [WindshaftConfig.MAPS_API_BASE_URL, 'named', settings.templateName, 'jsonp'].join('/'),
+      post: [WindshaftConfig.MAPS_API_BASE_URL, 'named', settings.templateName].join('/')
+    };
+  } else {
+    this.endpoints = {
+      get: WindshaftConfig.MAPS_API_BASE_URL,
+      post: WindshaftConfig.MAPS_API_BASE_URL
+    };
+  }
+
+  this.url = settings.urlTemplate.replace('{user}', settings.userName);
+  this._requestTracker = new RequestTracker(MAP_INSTANTIATION_LIMIT);
 };
+
+WindshaftClient.prototype.instantiateMap = function (request) {
+  // TODO: update options, use promises or explicit callbacks function (error, params).
+  if (this._requestTracker.canRequestBePerformed(request)) {
+    this._performRequest(request, {
+      success: function (response) {
+        this._requestTracker.track(request, response);
+        if (response.errors) {
+          var parsedErrors = parseWindshaftErrors(response);
+          request.options.error && request.options.error(parsedErrors);
+        } else {
+          request.options.success && request.options.success(response);
+        }
+      }.bind(this),
+      error: function (xhr, textStatus) {
+        // Ignore error if request was explicitly aborted
+        if (textStatus === 'abort') return;
+        var errors = {};
+        var parsedErrors = {};
+        try {
+          errors = JSON.parse(xhr.responseText);
+          parsedErrors = parseWindshaftErrors(errors);
+        } catch (e) {}
+        this._requestTracker.track(request, errors);
+        request.options.error && request.options.error(parsedErrors);
+      }.bind(this)
+    });
+  } else {
+    log.error('Maximum number of subsequent equal requests to the Maps API reached (' + MAP_INSTANTIATION_LIMIT + '):', request.payload, request.params);
+    request.options.error && request.options.error({});
+  }
+};
+
+WindshaftClient.prototype._performRequest = function (request, ajaxOptions) {
+  var mapDefinition = request.payload;
+  var params = request.params;
+
+  var encodedURL = this._generateEncodedURL(mapDefinition, params);
+  if (this._isURLValid(encodedURL)) {
+    this._get(encodedURL, ajaxOptions);
+  } else {
+    this._generateCompressedURL(mapDefinition, params, function (compressedURL) {
+      if (this._isURLValid(compressedURL)) {
+        this._get(compressedURL, ajaxOptions);
+      } else {
+        var url = this._getURL(params, 'post');
+        this._post(url, mapDefinition, ajaxOptions);
+      }
+    }.bind(this));
+  }
+};
+
+WindshaftClient.prototype._generateEncodedURL = function (payload, params) {
+  params = _.extend({
+    config: JSON.stringify(payload)
+  }, params);
+
+  return this._getURL(params);
+};
+
+WindshaftClient.prototype._generateCompressedURL = function (payload, params, callback) {
+  var data = JSON.stringify({
+    config: JSON.stringify(payload)
+  });
+
+  LZMA.compress(data, COMPRESSION_LEVEL, function (compressedPayload) {
+    params = _.extend({
+      lzma: util.array2hex(compressedPayload)
+    }, params);
+
+    callback(this._getURL(params));
+  }.bind(this));
+};
+
+WindshaftClient.prototype._isURLValid = function (url) {
+  return url.length < MAX_URL_LENGTH;
+};
+
+WindshaftClient.prototype._post = function (url, payload, options) {
+  this._abortPreviousRequest();
+  this._previousRequest = $.ajax({
+    url: url,
+    crossOrigin: true,
+    method: 'POST',
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify(payload),
+    success: options.success,
+    error: options.error
+  });
+};
+
+WindshaftClient.prototype._get = function (url, options) {
+  this._abortPreviousRequest();
+  this._previousRequest = $.ajax({
+    url: url,
+    method: 'GET',
+    dataType: 'jsonp',
+    jsonpCallback: this._jsonpCallbackName(url),
+    cache: true,
+    success: options.success,
+    error: options.error
+  });
+};
+
+WindshaftClient.prototype._abortPreviousRequest = function () {
+  if (this._previousRequest) {
+    this._previousRequest.abort();
+  }
+};
+
+WindshaftClient.prototype._getURL = function (params, method) {
+  method = method || 'get';
+  var queryString = this._convertParamsToQueryString(params);
+  var endpoint = this.endpoints[method];
+  return [this.url, endpoint].join('/') + queryString;
+};
+
+WindshaftClient.prototype._convertParamsToQueryString = function (params) {
+  var queryString = [];
+  _.each(params, function (value, name) {
+    if (value instanceof Array) {
+      _.each(value, function (oneValue) {
+        queryString.push(name + '[]=' + oneValue);
+      });
+    } else if (value instanceof Object) {
+      queryString.push(name + '=' + encodeURIComponent(JSON.stringify(value)));
+    } else {
+      queryString.push(name + '=' + encodeURIComponent(value));
+    }
+  });
+  return queryString.length > 0 ? '?' + queryString.join('&') : '';
+};
+
+WindshaftClient.prototype._jsonpCallbackName = function (payload) {
+  return '_cdbc_' + util.uniqueCallbackName(payload);
+};
+
+module.exports = WindshaftClient;
 
 /***/ }),
 /* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*
-# metrics profiler
-
-## timing
-
-```
- var timer = Profiler.metric('resource:load')
- time.start();
- ...
- time.end();
-```
-
-## counters
-
-```
- var counter = Profiler.metric('requests')
- counter.inc();   // 1
- counter.inc(10); // 11
- counter.dec()    // 10
- counter.dec(10)  // 0
-```
-
-## Calls per second
-```
-  var fps = Profiler.metric('fps')
-  function render() {
-    fps.mark();
-  }
-```
-*/
-var MAX_HISTORY = 1024;
-function Profiler() {}
-Profiler.metrics = {};
-Profiler._backend = null;
-
-Profiler.get = function (name) {
-  return Profiler.metrics[name] || {
-    max: 0,
-    min: Number.MAX_VALUE,
-    avg: 0,
-    total: 0,
-    count: 0,
-    last: 0,
-    history: typeof Float32Array !== 'undefined' ? new Float32Array(MAX_HISTORY) : []
-  };
-};
-
-Profiler.backend = function (_) {
-  Profiler._backend = _;
-};
-
-Profiler.new_value = function (name, value, type, defer) {
-  type = type || 'i';
-  var t = Profiler.metrics[name] = Profiler.get(name);
-
-  t.max = Math.max(t.max, value);
-  t.min = Math.min(t.min, value);
-  t.total += value;
-  ++t.count;
-  t.avg = t.total / t.count;
-  t.history[t.count % MAX_HISTORY] = value;
-
-  if (!defer) {
-    Profiler._backend && Profiler._backend([type, name, value]);
-  } else {
-    var n = performance.now();
-    // don't allow to send stats quick
-    if (n - t.last > 1000) {
-      Profiler._backend && Profiler._backend([type, name, t.avg]);
-      t.last = n;
-    }
-  }
-};
-
-Profiler.print_stats = function () {
-  for (var k in Profiler.metrics) {
-    var t = Profiler.metrics[k];
-    console.log(' === ' + k + ' === ');
-    console.log(' max: ' + t.max);
-    console.log(' min: ' + t.min);
-    console.log(' avg: ' + t.avg);
-    console.log(' count: ' + t.count);
-    console.log(' total: ' + t.total);
-  }
-};
-
-function Metric(name) {
-  this.t0 = null;
-  this.name = name;
-  this.count = 0;
-}
-
-Metric.prototype = {
-
-  //
-  // start a time measurement
-  //
-  start: function start() {
-    this.t0 = performance.now();
-    return this;
-  },
-
-  // elapsed time since start was called
-  _elapsed: function _elapsed() {
-    return performance.now() - this.t0;
-  },
-
-  //
-  // finish a time measurement and register it
-  // ``start`` should be called first, if not this
-  // function does not take effect
-  //
-  end: function end(defer) {
-    if (this.t0 !== null) {
-      Profiler.new_value(this.name, this._elapsed(), 't', defer);
-      this.t0 = null;
-    }
-  },
-
-  //
-  // increments the value
-  // qty: how many, default = 1
-  //
-  inc: function inc(qty) {
-    qty = qty === undefined ? 1 : qty;
-    Profiler.new_value(this.name, qty, 'i');
-  },
-
-  //
-  // decrements the value
-  // qty: how many, default = 1
-  //
-  dec: function dec(qty) {
-    qty = qty === undefined ? 1 : qty;
-    Profiler.new_value(this.name, qty, 'd');
-  },
-
-  //
-  // measures how many times per second this function is called
-  //
-  mark: function mark() {
-    ++this.count;
-    if (this.t0 === null) {
-      this.start();
-      return;
-    }
-    var elapsed = this._elapsed();
-    if (elapsed > 1) {
-      Profiler.new_value(this.name, this.count);
-      this.count = 0;
-      this.start();
-    }
-  }
-};
-
-Profiler.metric = function (name) {
-  return new Metric(name);
-};
-
-module.exports = Profiler;
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* global google */
-// helper to get pixel position from latlon
-
-function Projector(map) {
-  this.setMap(map);
-}
-Projector.prototype = new google.maps.OverlayView();
-Projector.prototype.draw = function () {};
-Projector.prototype.latLngToPixel = function (latlng) {
-  var projection = this.getProjection();
-  if (projection) {
-    return projection.fromLatLngToContainerPixel(latlng);
-  }
-  console.warn('Projector has no projection');
-  return new google.maps.Point(0, 0);
-};
-
-Projector.prototype.pixelToLatLng = function (point) {
-  var projection = this.getProjection();
-  if (projection) {
-    return projection.fromContainerPixelToLatLng(point);
-  }
-  console.warn('Projector has no projection');
-  return new google.maps.LatLng(0, 0);
-};
-
-module.exports = Projector;
-
-/***/ }),
-/* 85 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-
-/**
- * base layer for all google maps layers
- */
-var GMapsLayerView = function GMapsLayerView(layerModel, opts) {
-  opts = opts || {};
-  this.model = layerModel;
-  this.model.bind('change', this._onModelUpdated, this);
-  this.mapModel = opts.mapModel;
-  this.gmapsMap = opts.nativeMap;
-  this.showLimitErrors = opts.showLimitErrors;
-};
-
-_.extend(GMapsLayerView.prototype, Backbone.Events);
-_.extend(GMapsLayerView.prototype, {
-  addToMap: function addToMap() {
-    throw new Error('Subclasses of GMapsLayerView must implement addToMap');
-  },
-
-  remove: function remove() {
-    throw new Error('Subclasses of GMapsLayerView must implement remove');
-  },
-
-  _onModelUpdated: function _onModelUpdated() {}
-});
-
-module.exports = GMapsLayerView;
-
-/***/ }),
-/* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* global Image, google */
-var _ = __webpack_require__(0);
-var GMapsLayerView = __webpack_require__(85);
-var zera = __webpack_require__(34);
-
-var C = __webpack_require__(25);
-var Projector = __webpack_require__(84);
-var CartoDBLayerGroupViewBase = __webpack_require__(35);
-var Profiler = __webpack_require__(83);
-
-var OPACITY_FILTER = 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)';
-var EMPTY_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-
-function setImageOpacityIE8(img, opacity) {
-  var v = Math.round(opacity * 100);
-  if (v >= 99) {
-    img.style.filter = OPACITY_FILTER;
-  } else {
-    img.style.filter = 'alpha(opacity=' + opacity + ');';
-  }
-}
-
-function generateId() {
-  return ((1 + Math.random()) * 0x100000000 | 0).toString(16).substring(1);
-}
-
-var GMapsCartoDBLayerGroupView = function GMapsCartoDBLayerGroupView(layerModel, options) {
-  var self = this;
-  var hovers = [];
-  var gmapsMap = options.nativeMap;
-
-  _.bindAll(this, 'featureOut', 'featureOver', 'featureClick');
-
-  var opts = _.clone(layerModel.attributes);
-
-  opts.map = gmapsMap;
-
-  var _featureOver = opts.featureOver;
-  var _featureOut = opts.featureOut;
-  var _featureClick = opts.featureClick;
-
-  var previousEvent;
-  var eventTimeout = -1;
-
-  opts.featureOver = function (e, latlon, pxPos, data, layer) {
-    if (!hovers[layer]) {
-      self.trigger('layerenter', e, latlon, pxPos, data, layer);
-    }
-    hovers[layer] = 1;
-    _featureOver && _featureOver.apply(this, arguments);
-    self.featureOver && self.featureOver.apply(this, arguments);
-
-    // if the event is the same than before just cancel the event
-    // firing because there is a layer on top of it
-    if (e.timeStamp === previousEvent) {
-      clearTimeout(eventTimeout);
-    }
-    eventTimeout = setTimeout(function () {
-      self.trigger('mouseover', e, latlon, pxPos, data, layer);
-      self.trigger('layermouseover', e, latlon, pxPos, data, layer);
-    }, 0);
-    previousEvent = e.timeStamp;
-  };
-
-  opts.featureOut = function (m, layer) {
-    if (hovers[layer]) {
-      self.trigger('layermouseout', layer);
-    }
-    hovers[layer] = 0;
-    if (!_.any(hovers)) {
-      self.trigger('mouseout');
-    }
-    _featureOut && _featureOut.apply(this, arguments);
-    self.featureOut && self.featureOut.apply(this, arguments);
-  };
-
-  opts.featureClick = _.debounce(function () {
-    _featureClick && _featureClick.apply(this, arguments);
-    self.featureClick && self.featureClick.apply(opts, arguments);
-  }, 10);
-
-  this.tiles = 0;
-
-  this.options = {
-    tiles: options.tiles,
-    scheme: options.scheme || 'xyz',
-    blankImage: options.blankImage || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
-  };
-
-  // internal id
-  this._id = generateId();
-
-  // non-configurable options
-  this.interactive = true;
-  this.tileSize = new google.maps.Size(256, 256);
-
-  // DOM element cache
-  this.cache = {};
-
-  _.extend(this.options, opts);
-  GMapsLayerView.apply(this, arguments);
-  this.projector = new Projector(opts.map);
-  CartoDBLayerGroupViewBase.apply(this, arguments);
-};
-
-GMapsCartoDBLayerGroupView.prototype.interactionClass = zera.Interactive;
-_.extend(GMapsCartoDBLayerGroupView.prototype, CartoDBLayerGroupViewBase.prototype, GMapsLayerView.prototype, {
-  addToMap: function addToMap() {
-    this.gmapsMap.overlayMapTypes.setAt(0, this);
-  },
-
-  remove: function remove() {
-    var overlayIndex = this._getOverlayIndex();
-
-    if (overlayIndex >= 0) {
-      this.gmapsMap.overlayMapTypes.removeAt(overlayIndex);
-    }
-
-    this._clearInteraction();
-    this.finishLoading && this.finishLoading();
-  },
-
-  reload: function reload() {
-    this.model.invalidate();
-  },
-
-  featureOver: function featureOver(e, latlon, pixelPos, data, layer) {
-    var layerModel = this.model.getLayerInLayerGroupAt(layer);
-    if (layerModel) {
-      this.trigger('featureOver', {
-        layer: layerModel,
-        layerIndex: layer,
-        latlng: [latlon.lat(), latlon.lng()],
-        position: { x: pixelPos.x, y: pixelPos.y },
-        feature: data
-      });
-    }
-  },
-
-  featureOut: function featureOut(e, layer) {
-    var layerModel = this.model.getLayerInLayerGroupAt(layer);
-    if (layerModel) {
-      this.trigger('featureOut', {
-        layer: layerModel,
-        layerIndex: layer
-      });
-    }
-  },
-
-  featureClick: function featureClick(e, latlon, pixelPos, data, layer) {
-    var layerModel = this.model.getLayerInLayerGroupAt(layer);
-    if (layerModel) {
-      this.trigger('featureClick', {
-        layer: layerModel,
-        layerIndex: layer,
-        latlng: [latlon.lat(), latlon.lng()],
-        position: { x: pixelPos.x, y: pixelPos.y },
-        feature: data
-      });
-    }
-  },
-
-  error: function error(e) {
-    if (this.model) {
-      this.model.trigger('error', e ? e.errors : 'unknown error');
-      this.model.trigger('tileError', e ? e.errors : 'unknown error');
-    }
-  },
-
-  ok: function ok(e) {
-    this.model.trigger('tileOk');
-  },
-
-  tilesOk: function tilesOk(e) {
-    this.model.trigger('tileOk');
-  },
-
-  loading: function loading() {
-    this.trigger('loading');
-  },
-
-  finishLoading: function finishLoading() {
-    this.trigger('load');
-  },
-
-  setOpacity: function setOpacity(opacity) {
-    if (isNaN(opacity) || opacity > 1 || opacity < 0) {
-      throw new Error(opacity + ' is not a valid value, should be in [0, 1] range');
-    }
-    this.opacity = this.options.opacity = opacity;
-    for (var key in this.cache) {
-      var img = this.cache[key];
-      img.style.opacity = opacity;
-      setImageOpacityIE8(img, opacity);
-    }
-  },
-
-  getTile: function getTile(coord, zoom, ownerDocument) {
-    var self = this;
-    var ie = 'ActiveXObject' in window;
-    var ielt9 = ie && !document.addEventListener;
-
-    this.options.added = true;
-    if (!this.model.hasTileURLTemplates()) {
-      var key = zoom + '/' + coord.x + '/' + coord.y;
-      var image = this.cache[key] = new Image(256, 256);
-      image.src = EMPTY_GIF;
-      image.setAttribute('gTileKey', key);
-      image.style.opacity = this.options.opacity;
-      return image;
-    }
-
-    var tile = this._getTile(coord, zoom, ownerDocument);
-
-    // in IE8 semi transparency does not work and needs filter
-    if (ielt9) {
-      setImageOpacityIE8(tile, this.options.opacity);
-    }
-    tile.style.opacity = this.options.opacity;
-    if (this.tiles === 0) {
-      this.loading && this.loading();
-    }
-
-    this.tiles++;
-
-    var loadTime = Profiler.metric('cartodb-js.tile.png.load.time').start();
-
-    var finished = function finished() {
-      loadTime.end();
-      self.tiles--;
-      if (self.tiles === 0) {
-        self.finishLoading && self.finishLoading();
-      }
-    };
-
-    tile.onload = finished;
-
-    tile.onerror = function () {
-      Profiler.metric('cartodb-js.tile.png.error').inc();
-      self.model.addError({ type: C.WINDSHAFT_ERRORS.TILE });
-      finished();
-    };
-
-    return tile;
-  },
-
-  // Get a tile element from a coordinate, zoom level, and an ownerDocument.
-  _getTile: function _getTile(coord, zoom, ownerDocument) {
-    var key = zoom + '/' + coord.x + '/' + coord.y;
-    if (!this.cache[key]) {
-      var img = this.cache[key] = new Image(256, 256);
-      this.cache[key].src = this._getTileUrl(coord, zoom);
-      this.cache[key].setAttribute('gTileKey', key);
-      this.cache[key].onerror = function () {
-        img.style.display = 'none';
-      };
-    }
-    return this.cache[key];
-  },
-
-  // Get a tile url, based on x, y coordinates and a z value.
-  _getTileUrl: function _getTileUrl(coord, z) {
-    // Y coordinate is flipped in Mapbox, compared to Google
-    var mod = Math.pow(2, z);
-    var y = this.options.scheme === 'tms' ? mod - 1 - coord.y : coord.y;
-    var x = coord.x % mod;
-
-    x = x < 0 ? coord.x % mod + mod : x;
-
-    if (y < 0) return this.options.blankImage;
-
-    return this.options.tiles[parseInt(x + y, 10) % this.options.tiles.length].replace(/\{z\}/g, z).replace(/\{x\}/g, x).replace(/\{y\}/g, y);
-  },
-
-  _reload: function _reload() {
-    var tileURLTemplates;
-    if (this.model.hasTileURLTemplates()) {
-      tileURLTemplates = [this.model.getTileURLTemplatesWithSubdomains()[0]];
-    } else {
-      tileURLTemplates = [EMPTY_GIF];
-    }
-
-    this.options.tiles = tileURLTemplates;
-    this.tiles = 0;
-    this.cache = {};
-    this._reloadInteraction();
-    this._refreshView();
-  },
-
-  _refreshView: function _refreshView() {
-    var overlays = this.gmapsMap.overlayMapTypes;
-    var overlayIndex = this._getOverlayIndex();
-
-    if (overlayIndex >= 0) {
-      overlays.setAt(overlayIndex, overlays.getAt(overlayIndex));
-    }
-  },
-
-  _checkLayer: function _checkLayer() {
-    if (!this.options.added) {
-      throw new Error('the layer is not still added to the map');
-    }
-  },
-
-  _getOverlayIndex: function _getOverlayIndex() {
-    var overlays = this.gmapsMap.overlayMapTypes.getArray();
-
-    return _.findIndex(overlays, function (overlay) {
-      return overlay && overlay._id === this._id;
-    }, this);
-  },
-
-  /**
-   * Creates an instance of a googleMaps Point
-   */
-  _newPoint: function _newPoint(x, y) {
-    return new google.maps.Point(x, y);
-  },
-
-  _manageOffEvents: function _manageOffEvents(map, o) {
-    if (this.options.featureOut) {
-      return this.options.featureOut && this.options.featureOut(o.e, o.layer);
-    }
-  },
-
-  _manageOnEvents: function _manageOnEvents(map, o) {
-    var point = o.pixel;
-    var latlng = this.projector.pixelToLatLng(point);
-    var eventType = o.e.type.toLowerCase();
-
-    switch (eventType) {
-      case 'mousemove':
-        if (this.options.featureOver) {
-          return this.options.featureOver(o.e, latlng, point, o.data, o.layer);
-        }
-        break;
-
-      case 'click':
-      case 'touchend':
-      case 'touchmove': // for some reason android browser does not send touchend
-      case 'mspointerup':
-      case 'pointerup':
-      case 'pointermove':
-        if (this.options.featureClick) {
-          this.options.featureClick(o.e, latlng, point, o.data, o.layer);
-        }
-        break;
-      default:
-        break;
-    }
-  }
-});
-
-module.exports = GMapsCartoDBLayerGroupView;
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* global google */
-var _ = __webpack_require__(0);
-var Layer = __webpack_require__(24);
-var triggerLayerFeatureEvent = __webpack_require__(36);
-var GMapsCartoDBLayerGroupView = __webpack_require__(86);
-var CartoError = __webpack_require__(4);
-
-/**
- * This object is a custom Google Maps MapType to enable feature interactivity
- * using an internal GMapsCartoDBLayerGroupView instance.
- *
- * NOTE: It also contains the feature events handlers. That's why it requires the carto layers array.
- */
-function GoogleMapsMapType(layers, engine, map) {
-  this._layers = layers;
-  this._engine = engine;
-  this._map = map;
-
-  this._hoveredLayers = [];
-
-  this.tileSize = new google.maps.Size(256, 256);
-  this._internalView = new GMapsCartoDBLayerGroupView(this._engine._cartoLayerGroup, {
-    nativeMap: map
-  });
-  this._id = this._internalView._id;
-  this._internalView.on('featureClick', this._onFeatureClick, this);
-  this._internalView.on('featureOver', this._onFeatureOver, this);
-  this._internalView.on('featureOut', this._onFeatureOut, this);
-  this._internalView.on('featureError', this._onFeatureError, this);
-}
-
-GoogleMapsMapType.prototype.getTile = function (coord, zoom, ownerDocument) {
-  return this._internalView.getTile(coord, zoom, ownerDocument);
-};
-
-GoogleMapsMapType.prototype._onFeatureClick = function (internalEvent) {
-  var layer = this._layers.findById(internalEvent.layer.id);
-  triggerLayerFeatureEvent(Layer.events.FEATURE_CLICKED, internalEvent, layer);
-};
-
-GoogleMapsMapType.prototype._onFeatureOver = function (internalEvent) {
-  var layer = this._layers.findById(internalEvent.layer.id);
-  if (layer.isInteractive()) {
-    this._hoveredLayers[internalEvent.layerIndex] = true;
-    this._map.setOptions({ draggableCursor: 'pointer' });
-  }
-  triggerLayerFeatureEvent(Layer.events.FEATURE_OVER, internalEvent, layer);
-};
-
-GoogleMapsMapType.prototype._onFeatureOut = function (internalEvent) {
-  var layer = this._layers.findById(internalEvent.layer.id);
-  this._hoveredLayers[internalEvent.layerIndex] = false;
-  if (_.any(this._hoveredLayers)) {
-    this._map.setOptions({ draggableCursor: 'pointer' });
-  } else {
-    this._map.setOptions({ draggableCursor: 'auto' });
-  }
-  triggerLayerFeatureEvent(Layer.events.FEATURE_OUT, internalEvent, layer);
-};
-
-GoogleMapsMapType.prototype._onFeatureError = function (error) {
-  var cartoError = new CartoError(error);
-  _.each(this._layers.toArray(), function (layer) {
-    if (layer.isInteractive()) {
-      layer.trigger(Layer.events.TILE_ERROR, cartoError);
-    }
-  });
-};
-
-module.exports = GoogleMapsMapType;
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-
-var LeafletLayerView = function LeafletLayerView(layerModel, opts) {
-  opts = opts || {};
-  this.model = layerModel;
-  this.mapModel = opts.mapModel;
-  this.leafletMap = opts.nativeMap;
-  this.leafletLayer = opts.nativeLayer || this._createLeafletLayer();
-  this.showLimitErrors = opts.showLimitErrors;
-
-  this.setModel(layerModel);
-
-  var type = layerModel.get('type') || layerModel.get('kind');
-  this.type = type && type.toLowerCase();
-};
-
-_.extend(LeafletLayerView.prototype, Backbone.Events);
-_.extend(LeafletLayerView.prototype, {
-
-  setZIndex: function setZIndex(index) {
-    this.leafletLayer.setZIndex(index);
-  },
-
-  setModel: function setModel(model) {
-    if (this.model) {
-      this.model.unbind('change', this._modelUpdated, this);
-    }
-    this.model = model;
-    this.model.bind('change', this._modelUpdated, this);
-  },
-
-  remove: function remove() {
-    this.leafletMap.removeLayer(this.leafletLayer);
-    this.notifyRemove();
-  },
-
-  notifyRemove: function notifyRemove() {
-    this.trigger('remove', this);
-    this.model.unbind(null, null, this);
-    this.unbind();
-  },
-
-  reload: function reload() {
-    this.leafletLayer.redraw();
-  },
-
-  _createLeafletLayer: function _createLeafletLayer() {
-    throw new Error('subclasses of LeafletLayerView must implement _createLeafletLayer');
-  }
-});
-
-module.exports = LeafletLayerView;
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* global L */
-var _ = __webpack_require__(0);
-var C = __webpack_require__(25);
-var LeafletLayerView = __webpack_require__(88);
-var CartoDBLayerGroupViewBase = __webpack_require__(35);
-var zera = __webpack_require__(34);
-var EMPTY_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-
-var LeafletCartoDBLayerGroupView = function LeafletCartoDBLayerGroupView(layerModel, opts) {
-  LeafletLayerView.apply(this, arguments);
-  CartoDBLayerGroupViewBase.apply(this, arguments);
-
-  this.leafletLayer.on('load', function () {
-    this.trigger('load');
-  }.bind(this));
-
-  this.leafletLayer.on('loading', function () {
-    this.trigger('loading');
-  }.bind(this));
-
-  this.leafletLayer.on('tileerror', function (layer) {
-    this.model.addError({ type: C.WINDSHAFT_ERRORS.TILE });
-  }.bind(this));
-};
-
-LeafletCartoDBLayerGroupView.prototype = _.extend({}, LeafletLayerView.prototype, CartoDBLayerGroupViewBase.prototype, {
-  interactionClass: zera.Interactive,
-
-  _createLeafletLayer: function _createLeafletLayer() {
-    var tileLayer = new L.TileLayer(null, {
-      opacity: 0.99,
-      maxZoom: 30
-    });
-    tileLayer._setUrl = function (url, noDraw) {
-      return L.TileLayer.prototype.setUrl.call(this, url, noDraw);
-    };
-    return tileLayer;
-  },
-
-  _reload: function _reload() {
-    var tileURLTemplate = this.model.getTileURLTemplate();
-    var subdomains = this.model.getSubdomains();
-
-    if (!tileURLTemplate) {
-      tileURLTemplate = EMPTY_GIF;
-    }
-
-    if (subdomains) {
-      L.Util.setOptions(this.leafletLayer, { subdomains: subdomains });
-    }
-
-    this.leafletLayer._setUrl(tileURLTemplate);
-
-    this._reloadInteraction();
-  },
-
-  _manageOffEvents: function _manageOffEvents(nativeMap, zeraEvent) {
-    this._onFeatureOut(zeraEvent.layer);
-  },
-
-  _manageOnEvents: function _manageOnEvents(nativeMap, zeraEvent) {
-    var containerPoint = nativeMap.layerPointToContainerPoint(zeraEvent.layerPoint);
-
-    if (!containerPoint || isNaN(containerPoint.x) || isNaN(containerPoint.y)) {
-      return false;
-    }
-
-    var latlng = nativeMap.containerPointToLatLng(containerPoint);
-
-    var eventType = zeraEvent.e.type.toLowerCase();
-
-    switch (eventType) {
-      case 'mousemove':
-        this._onFeatureOver(latlng, containerPoint, zeraEvent.data, zeraEvent.layer);
-        break;
-      case 'click':
-        this._onFeatureClicked(latlng, containerPoint, zeraEvent.data, zeraEvent.layer);
-        break;
-    }
-  },
-
-  _onFeatureClicked: function _onFeatureClicked(latlon, containerPoint, data, layer) {
-    var layerModel = this.model.getLayerInLayerGroupAt(layer);
-    if (layerModel) {
-      this.trigger('featureClick', {
-        layer: layerModel,
-        layerIndex: layer,
-        latlng: [latlon.lat, latlon.lng],
-        position: containerPoint,
-        feature: data
-      });
-    }
-  },
-
-  _onFeatureOver: function _onFeatureOver(latlon, containerPoint, data, layer) {
-    var layerModel = this.model.getLayerInLayerGroupAt(layer);
-    if (layerModel) {
-      this.trigger('featureOver', {
-        layer: layerModel,
-        layerIndex: layer,
-        latlng: [latlon.lat, latlon.lng],
-        position: containerPoint,
-        feature: data
-      });
-    }
-  },
-
-  _onFeatureOut: function _onFeatureOut(layerIndex) {
-    var layerModel = this.model.getLayerInLayerGroupAt(layerIndex);
-    if (layerModel) {
-      this.trigger('featureOut', {
-        layer: layerModel,
-        layerIndex: layerIndex
-      });
-    }
-  }
-});
-
-LeafletCartoDBLayerGroupView.prototype.constructor = LeafletLayerView;
-
-module.exports = LeafletCartoDBLayerGroupView;
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var CartoValidationError = __webpack_require__(3);
-
-/**
- * List of possible aggregation operations.
- * See {@link https://carto.com/developers/maps-api/tile-aggregation#columns } for more info.
- * @enum {string} carto.layer.Aggregation.operation
- * @memberof carto.layer.Aggregation
- * @api
- */
-var OPERATIONS = {
-  /** The new point will contain the average value of the or the aggregated ones */
-  AVG: 'avg',
-  /** The new point will contain the sum of the aggregated values */
-  SUM: 'sum',
-  /** The new point will contain the minimal value existing the aggregated features */
-  MIN: 'min',
-  /** The new point will contain the maximun value existing the aggregated features */
-  MAX: 'max',
-  /** The new point will contain the mode of the aggregated values */
-  MODE: 'mode'
-};
-
-/**
- * List of possible aggregation feature placements.
- * See {@link https://carto.com/developers/maps-api/tile-aggregation#placement } for more info.
- * @enum {string} carto.layer.Aggregation.placement
- * @memberof carto.layer.Aggregation
- * @api
- */
-var PLACEMENTS = {
-  /** The new point will be placed at a random sample of the aggregated points */
-  SAMPLE: 'point-sample',
-  /** The new point will be placed at the center of the aggregation grid cells */
-  GRID: 'point-grid',
-  /** The new point will be placed at averaged coordinated of the grouped points */
-  CENTROID: 'centroid'
-};
-
-var VALID_RESOLUTIONS = [0.5, 1, 2, 4, 8, 16, 32, 64, 128, 256];
-
-/**
- * An aggregation can be passed to a {@link carto.layer.Layer} to reduce the number of visible points
- * increasing the performance.
- *
- * See {@link https://carto.com/developers/maps-api/guides/tile-aggregation/} for more info.
- *
- * @param {object} opts
- * @param {number} opts.threshold - The minimum number of rows in the dataset for aggregation to be applied
- * @param {number} opts.resolution - The cell-size of the spatial aggregation grid [more info]{@link https://carto.com/developers/maps-api/tile-aggregation#resolution}
- * @param {string} opts.placement - The kind of [aggregated geometry]{@link https://carto.com/developers/maps-api/tile-aggregation#placement} generated
- * @param {object} opts.columns - The new columns are computed by a applying an aggregate function to all the points in each group
- * @param {string} opts.columns.aggregatedFunction - The Function used to aggregate the points: avg (average), sum, min (minimum), max (maximum) and mode (the most frequent value in the group)
- * @param {string} opts.columns.aggregatedColumn - The name of the original column to be aggregated.
- *
- * @example
- * // Create a layer with aggregated data.
- * const aggregationOptions = {
- *   // CARTO applies aggregation if your dataset has more than threshold rows. In this case, more than 1 row.
- *   threshold: 1,
- *   // Defines the cell-size of the aggregation grid. In this case, 1x1 pixel.
- *   resolution: 1,
- *   // Where the new point will be placed. In this case, at the center of the grid.
- *   placement: carto.layer.Aggregation.placement.GRID,
- *   // Here we define the aggregated columns that we want to obtain.
- *   columns: {
- *     // Each property key is the name of the new generated column
- *     avg_population: {
- *       // The aggregated column will contain the average of the original data.
- *       aggregateFunction: carto.layer.Aggregation.operation.AVG,
- *       // The column to be aggregated
- *       aggregatedColumn: 'population'
- *     }, {
- *     min_population: {
- *       aggregateFunction: carto.layer.Aggregation.operation.MIN,
- *       aggregatedColumn: 'population'
- *   }
- * };
- * const aggregation = new Aggregation(options);
- * const layer = new carto.layer.Layer(source, style, { aggregation: aggregation });
- *
- * @constructor
- * @api
- * @memberof carto.layer
- */
-function Aggregation(opts) {
-  if (!_.isFinite(opts.threshold)) {
-    throw _getValidationError('thresholdRequired');
-  }
-
-  if (!_.isFinite(opts.threshold) || opts.threshold < 1 || Math.floor(opts.threshold) !== opts.threshold) {
-    throw _getValidationError('invalidThreshold');
-  }
-
-  if (!_.isFinite(opts.resolution)) {
-    throw _getValidationError('resolutionRequired');
-  }
-
-  if (!_.contains(VALID_RESOLUTIONS, opts.resolution)) {
-    throw _getValidationError('invalidResolution');
-  }
-
-  _checkValidPlacement(opts.placement);
-
-  var columns = _checkAndTransformColumns(opts.columns);
-
-  var aggregation = {
-    threshold: opts.threshold,
-    resolution: opts.resolution,
-    placement: opts.placement,
-    columns: columns
-  };
-
-  return _.pick(aggregation, _.identity); // Remove empty values
-}
-
-Aggregation.operation = OPERATIONS;
-
-Aggregation.placement = PLACEMENTS;
-
-function _checkColumns(columns) {
-  Object.keys(columns).forEach(function (key) {
-    _checkColumn(columns, key);
-  });
-}
-
-function _checkColumn(columns, key) {
-  if (!columns[key].aggregatedColumn) {
-    throw _getValidationError('columnAggregatedColumnRequired' + key);
-  }
-
-  if (!_.isString(columns[key].aggregatedColumn)) {
-    throw _getValidationError('invalidColumnAggregatedColumn' + key);
-  }
-
-  if (!columns[key].aggregateFunction) {
-    throw _getValidationError('columnFunctionRequired' + key);
-  }
-
-  if (!_.contains(_.values(OPERATIONS), columns[key].aggregateFunction)) {
-    throw _getValidationError('invalidColumnFunction' + key);
-  }
-}
-
-function _getValidationError(code) {
-  return new CartoValidationError('aggregation', code);
-}
-
-// Windshaft uses snake_case for column parameters
-function _checkAndTransformColumns(columns) {
-  var returnValue = null;
-
-  if (columns) {
-    _checkColumns(columns);
-
-    returnValue = {};
-    Object.keys(columns).forEach(function (key) {
-      returnValue[key] = _columnToSnakeCase(columns[key]);
-    });
-  }
-  return returnValue;
-}
-
-// Windshaft uses snake_case for column parameters
-function _columnToSnakeCase(column) {
-  return {
-    aggregate_function: column.aggregateFunction,
-    aggregated_column: column.aggregatedColumn
-  };
-}
-
-function _checkValidPlacement(placement) {
-  if (placement && !_.contains(_.values(PLACEMENTS), placement)) {
-    throw _getValidationError('invalidPlacement');
-  }
-}
-
-module.exports = Aggregation;
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Events fired by a layer
- *
- * @enum {string}
- * @readonly
- * @memberof carto.layer
- */
-var events = {
-  /**
-   * A feature has been clicked, fired every time the user clicks on a feature.
-   */
-  FEATURE_CLICKED: 'featureClicked',
-  /**
-   * The mouse is over a feature, fired every time the user moves over a feature.
-   */
-  FEATURE_OVER: 'featureOver',
-  /**
-   * The mouse exits a feature, fired every time the user moves out of a feature.
-   */
-  FEATURE_OUT: 'featureOut',
-  /**
-   * There has been an error related to tiles, fired every time the features are not rendered due to an error.
-   */
-  TILE_ERROR: 'featureError'
-};
-
-module.exports = events;
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Base = __webpack_require__(37);
-
-/**
- * Metadata type categories
- *
- * Adding a Turbocarto ramp (with categories) in the style generates a response
- * from the server with the resulting information after computing the ramp.
- * This information is wrapped in a metadata object of type 'categories', that
- * contains a list of categories with the name of the category and the value. And
- * also the default value if it has been defined in the ramp.
- *
- * For example, the following ramp will generate a metadata of type 'categories'
- * with string values (the color) in its categories. The #CCCCCC is the default
- * value in this case:
- *
- *   marker-fill: ramp([scalerank], (#F54690, #D16996, #CCCCCC), (1, 2), "=", category);
- *
- * @param {object} rule - Rule with the cartocss metadata
- * @constructor
- * @hideconstructor
- * @extends carto.layer.metadata.Base
- * @memberof carto.layer.metadata
- * @api
- */
-function Categories(rule) {
-  var categoryBuckets = rule.getBucketsWithCategoryFilter();
-  var defaultBuckets = rule.getBucketsWithDefaultFilter();
-
-  /**
-   * @typedef {object} carto.layer.metadata.Category
-   * @property {number|string} name - The name of the category
-   * @property {string} value - The value of the category
-   * @api
-   */
-  this._categories = categoryBuckets.map(function (bucket) {
-    return {
-      name: bucket.filter.name,
-      value: bucket.value
-    };
-  });
-  this._defaultValue = defaultBuckets.length > 0 ? defaultBuckets[0].value : undefined;
-
-  Base.call(this, 'categories', rule);
-}
-
-Categories.prototype = Object.create(Base.prototype);
-
-/**
- * Return the buckets
- *
- * @return {carto.layer.metadata.Category[]}
- * @api
- */
-Categories.prototype.getCategories = function () {
-  return this._categories;
-};
-
-/**
- * Return the default value
- *
- * @return {string}
- * @api
- */
-Categories.prototype.getDefaultValue = function () {
-  return this._defaultValue;
-};
-
-module.exports = Categories;
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Base = __webpack_require__(37);
-
-/**
- * Metadata type buckets
- *
- * Adding a Turbocarto ramp (with ranges) in the style generates a response
- * from the server with the resulting information, after computing the ramp.
- * This information is wrapped in a metadata object of type 'buckets', that
- * contains a list of buckets with the range (min, max) and the value. And
- * also the total min, max range and the average of the total values.
- *
- * For example, the following ramp will generate a metadata of type 'buckets'
- * with numeric values (the size) in its buckets:
- *
- *   marker-width: ramp([scalerank], range(5, 20), quantiles(5));
- *
- * In another example, this ramp will generate a metadata of type 'buckets'
- * with string values (the color) in its buckets:
- *
- *   marker-fill: ramp([scalerank], (#FFC6C4, #EE919B, #CC607D), quantiles);
- *
- * @param {object} rule - Rule with the cartocss metadata
- * @constructor
- * @hideconstructor
- * @extends carto.layer.metadata.Base
- * @memberof carto.layer.metadata
- * @api
- */
-function Buckets(rule) {
-  var rangeBuckets = rule.getBucketsWithRangeFilter();
-
-  /**
-   * @typedef {object} carto.layer.metadata.Bucket
-   * @property {number} min - The minimum range value
-   * @property {number} max - The maximum range value
-   * @property {number|string} value - The value of the bucket
-   * @api
-   */
-  this._buckets = rangeBuckets.map(function (bucket) {
-    return {
-      min: bucket.filter.start,
-      max: bucket.filter.end,
-      value: bucket.value
-    };
-  });
-  this._avg = rule.getFilterAvg();
-  this._min = rangeBuckets.length > 0 ? rangeBuckets[0].filter.start : undefined;
-  this._max = rangeBuckets.length > 0 ? rangeBuckets[rangeBuckets.length - 1].filter.end : undefined;
-
-  Base.call(this, 'buckets', rule);
-}
-
-Buckets.prototype = Object.create(Base.prototype);
-
-/**
- * Return the buckets
- *
- * @return {carto.layer.metadata.Bucket[]}
- * @api
- */
-Buckets.prototype.getBuckets = function () {
-  return this._buckets;
-};
-
-/**
- * Return the average of the column
- *
- * @return {number}
- * @api
- */
-Buckets.prototype.getAverage = function () {
-  return this._avg;
-};
-
-/**
- * Return the minimum value in the ranges
- *
- * @return {number}
- * @api
- */
-Buckets.prototype.getMin = function () {
-  return this._min;
-};
-
-/**
- * Return the maximum value in the ranges
- *
- * @return {number}
- * @api
- */
-Buckets.prototype.getMax = function () {
-  return this._max;
-};
-
-module.exports = Buckets;
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var BucketsMetadata = __webpack_require__(93);
-var CategoriesMetadata = __webpack_require__(92);
-var Rule = __webpack_require__(15);
-
-/**
- * Generates a list of Metadata objects from the original cartocss_meta rules
- *
- * @param  {Rules} rulesData
- * @return {metadata.Base[]}
- */
-function getMetadataFromRules(rulesData) {
-  var metadata = [];
-
-  rulesData.forEach(function (ruleData) {
-    var rule = new Rule(ruleData);
-
-    if (_isBucketsMetadata(rule)) {
-      metadata.push(new BucketsMetadata(rule));
-    } else if (_isCategoriesMetadata(rule)) {
-      metadata.push(new CategoriesMetadata(rule));
-    }
-  });
-
-  return metadata;
-}
-
-function _isBucketsMetadata(rule) {
-  return rule.getBucketsWithRangeFilter().length > 0;
-}
-
-function _isCategoriesMetadata(rule) {
-  return rule.getBucketsWithCategoryFilter().length > 0;
-}
-
-module.exports = {
-  getMetadataFromRules: getMetadataFromRules
-};
-
-/***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-
-/**
-  * Gets the value at path of object. If the resolved value is undefined, the defaultValue is returned in its place.
-  * @param {Object} object The object to query.
-  * @param {String} path The path of the property to get.
-  * @param {Any} defaultValue The value returned for undefined resolved values.
-  * @return {Any} Returns the resolved value.
-  */
-module.exports = function (object, path, defaultValue) {
-  var keys = path.split('.');
-  var value = keys.reduce(function (a, b) {
-    return (a || {})[b];
-  }, object);
-
-  return _.isUndefined(value) ? defaultValue : value;
-};
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var StaticLegendModelBase = __webpack_require__(23);
-
-var TorqueLegendModel = StaticLegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(StaticLegendModelBase.prototype.defaults.apply(this), {
-      type: 'torque',
-      items: [],
-      html: ''
-    });
-  }
-});
-
-module.exports = TorqueLegendModel;
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var StaticLegendModelBase = __webpack_require__(23);
-
-var CustomChoroplethLegendModel = StaticLegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(StaticLegendModelBase.prototype.defaults.apply(this), {
-      type: 'custom_choropleth',
-      prefix: '',
-      suffix: '',
-      leftLabel: '',
-      rightLabel: '',
-      colors: []
-    });
-  }
-});
-
-module.exports = CustomChoroplethLegendModel;
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var StaticLegendModelBase = __webpack_require__(23);
-
-var CustomLegendModel = StaticLegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(StaticLegendModelBase.prototype.defaults.apply(this), {
-      type: 'custom',
-      items: [],
-      html: ''
-    });
-  }
-});
-
-module.exports = CustomLegendModel;
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var LegendModelBase = __webpack_require__(13);
-
-var ChoroplethLegendModel = LegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
-      type: 'choropleth',
-      prefix: '',
-      suffix: '',
-      leftLabel: '',
-      rightLabel: '',
-      colors: []
-    });
-  },
-
-  getNonResettableAttrs: function getNonResettableAttrs() {
-    return _.union(LegendModelBase.prototype.getNonResettableAttrs.apply(this), ['colors']);
-  },
-
-  isAvailable: function isAvailable() {
-    return this.get('colors') && this.get('colors').length > 0;
-  }
-});
-
-module.exports = ChoroplethLegendModel;
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var LegendModelBase = __webpack_require__(13);
-
-var BubbleLegendModel = LegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
-      type: 'bubble',
-      fillColor: '',
-      prefix: '',
-      suffix: '',
-      values: []
-    });
-  },
-
-  getNonResettableAttrs: function getNonResettableAttrs() {
-    return _.union(LegendModelBase.prototype.getNonResettableAttrs.apply(this), ['values']);
-  },
-
-  isAvailable: function isAvailable() {
-    return this.get('values') && this.get('values').length > 0;
-  }
-});
-
-module.exports = BubbleLegendModel;
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var LegendModelBase = __webpack_require__(13);
-
-var CategoryLegendModel = LegendModelBase.extend({
-  defaults: function defaults() {
-    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
-      type: 'category',
-      categories: []
-    });
-  },
-
-  getNonResettableAttrs: function getNonResettableAttrs() {
-    return _.union(LegendModelBase.prototype.getNonResettableAttrs.apply(this), ['categories']);
-  },
-
-  isAvailable: function isAvailable() {
-    return this.get('categories') && this.get('categories').length > 0;
-  }
-});
-
-module.exports = CategoryLegendModel;
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var CategoryLegendModel = __webpack_require__(101);
-var BubbleLegendModel = __webpack_require__(100);
-var ChoroplethLegendModel = __webpack_require__(99);
-var CustomLegendModel = __webpack_require__(98);
-var CustomChoroplethLegendModel = __webpack_require__(97);
-var TorqueLegendModel = __webpack_require__(96);
-
-var LEGENDS_METADATA = {
-  bubble: {
-    modelClass: BubbleLegendModel,
-    definitionAttrs: [{ 'fillColor': 'color' }, { 'topLabel': 'top_label' }, { 'bottomLabel': 'bottom_label' }],
-    dynamic: true
-  },
-  category: {
-    modelClass: CategoryLegendModel,
-    definitionAttrs: ['prefix', 'suffix'],
-    dynamic: true
-  },
-  choropleth: {
-    modelClass: ChoroplethLegendModel,
-    definitionAttrs: ['prefix', 'suffix', { 'leftLabel': 'left_label' }, { 'rightLabel': 'right_label' }],
-    dynamic: true
-  },
-  custom: {
-    modelClass: CustomLegendModel,
-    definitionAttrs: [{ 'items': 'categories' }, 'html']
-  },
-  html: {
-    modelClass: CustomLegendModel,
-    definitionAttrs: [{ 'items': 'categories' }, 'html']
-  },
-  custom_choropleth: {
-    modelClass: CustomChoroplethLegendModel,
-    definitionAttrs: ['prefix', 'suffix', { 'leftLabel': 'left_label' }, { 'rightLabel': 'right_label' }, 'colors']
-  },
-  torque: {
-    modelClass: TorqueLegendModel,
-    definitionAttrs: [{ 'items': 'categories' }, 'html']
-  }
-};
-
-var SHARED_ATTRS = ['title', { 'preHTMLSnippet': 'pre_html' }, { 'postHTMLSnippet': 'post_html' }];
-
-var Legends = function Legends(legendsData, deps) {
-  if (!deps.engine) throw new Error('engine is required');
-
-  this._legendsData = legendsData || [];
-  this._engine = deps.engine;
-
-  _.each(LEGENDS_METADATA, function (legendMetadata, legendType) {
-    this[legendType] = this._createLegendModel(legendType, legendMetadata);
-  }, this);
-
-  // HOTFIX: TO BE DELETED ONCE MIGRATED
-  var data = this._findDataForLegend('html');
-  if (data) {
-    this['custom'] = this['html'];
-  }
-
-  delete this['html'];
-};
-
-Legends.prototype._createLegendModel = function (legendType, legendMetadata) {
-  var ModelClass = legendMetadata.modelClass;
-  var attrs = SHARED_ATTRS.concat(legendMetadata.definitionAttrs);
-  var data = this._findDataForLegend(legendType);
-
-  // Flatten data.definition
-  data = data && _.extend({}, _.omit(data, 'definition'), data.definition);
-
-  var modelAttrs = {};
-  _.each(attrs, function (attr) {
-    var attrNameInData = attr;
-    var attrNameForModel = attr;
-    if (_.isObject(attr)) {
-      attrNameForModel = Object.keys(attr)[0];
-      attrNameInData = attr[attrNameForModel];
-    }
-
-    modelAttrs[attrNameForModel] = data && data[attrNameInData];
-  });
-
-  var legendModel = new ModelClass(modelAttrs, {
-    engine: this._engine
-  });
-
-  if (data) {
-    legendModel.show();
-  }
-  return legendModel;
-};
-
-Legends.prototype._findDataForLegend = function (legendType) {
-  return _.find(this._legendsData, { type: legendType });
-};
-
-Legends.prototype.hasAnyLegend = function () {
-  var legendTypes = _.keys(LEGENDS_METADATA);
-  return _.some(legendTypes, function (legendType) {
-    var legend = this[legendType];
-    return legend && legend.isVisible();
-  }, this);
-};
-
-module.exports = Legends;
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var PopupFields = __webpack_require__(39);
-
-var TooltipTemplate = Backbone.Model.extend({
-  defaults: {
-    vertical_offset: 0,
-    horizontal_offset: 0,
-    position: 'top|center',
-    template: '',
-    alternative_names: {}
-  },
-
-  initialize: function initialize(attrs) {
-    attrs = attrs || {};
-    this.fields = new PopupFields(attrs.fields || []);
-    this.unset('fields');
-  },
-
-  update: function update(attrs) {
-    attrs = _.clone(attrs);
-
-    if (!this.fields.equals(attrs.fields)) {
-      this.fields.reset(attrs.fields);
-    }
-    delete attrs.fields;
-
-    if (attrs.alternative_names) {
-      attrs.alternative_names = JSON.parse(JSON.stringify(attrs.alternative_names));
-    }
-
-    this.set(attrs);
-  },
-
-  getFieldNames: function getFieldNames() {
-    return this.fields.pluck('name');
-  },
-
-  hasFields: function hasFields() {
-    return !this.fields.isEmpty();
-  },
-
-  hasTemplate: function hasTemplate() {
-    return !!this.get('template');
-  }
-});
-
-module.exports = TooltipTemplate;
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var PopupFields = __webpack_require__(39);
-
-var InfowindowTemplate = Backbone.Model.extend({
-  defaults: {
-    offset: [28, 0], // offset of the tip calculated from the bottom left corner
-    maxHeight: 180, // max height of the content, not the whole infowindow
-    alternative_names: {},
-    template_type: 'mustache'
-  },
-
-  initialize: function initialize(attrs) {
-    attrs = attrs || {};
-    this.fields = new PopupFields(attrs.fields || []);
-    this.unset('fields');
-  },
-
-  update: function update(attrs) {
-    attrs = _.clone(attrs);
-
-    if (!this.fields.equals(attrs.fields)) {
-      this.fields.reset(attrs.fields);
-    }
-    delete attrs.fields;
-
-    if (attrs.alternative_names) {
-      attrs.alternative_names = JSON.parse(JSON.stringify(attrs.alternative_names));
-    }
-
-    this.set(attrs);
-  },
-
-  getFieldNames: function getFieldNames() {
-    return this.fields.pluck('name');
-  },
-
-  hasFields: function hasFields() {
-    return !this.fields.isEmpty();
-  },
-
-  hasTemplate: function hasTemplate() {
-    return !!this.get('template');
-  }
-});
-
-module.exports = InfowindowTemplate;
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var log = __webpack_require__(28);
-var Model = __webpack_require__(2);
-
-// Map layer, could be tiled or whatever
-var MapLayer = Model.extend({
-
-  initialize: function initialize() {
-    this.bind('change:type', function () {
-      log.error('changing layer type is not allowed, remove it and add a new one instead');
-    });
-  },
-
-  // PUBLIC API METHODS
-
-  remove: function remove(opts) {
-    opts = opts || {};
-    this.trigger('destroy', this, this.collection, opts);
-  },
-
-  update: function update(attrs, options) {
-    options = options || {};
-
-    // TODO: Pick the attributes for the specific type of layer
-    // Eg: this.set(_.pick(attrs, this.ATTR_NAMES))
-    this.set(attrs, {
-      silent: options.silent
-    });
-  },
-
-  show: function show() {
-    this.set('visible', true);
-  },
-
-  hide: function hide() {
-    this.set('visible', false);
-  },
-
-  isVisible: function isVisible() {
-    return !!this.get('visible');
-  },
-
-  isHidden: function isHidden() {
-    return !this.isVisible();
-  },
-
-  toggle: function toggle() {
-    this.set('visible', !this.get('visible'));
-  },
-
-  // INTERNAL CartoDB.js METHODS
-
-  setOk: function setOk() {
-    this.unset('error');
-  },
-
-  setError: function setError(error) {
-    this.set('error', error);
-  },
-
-  /**
-   * Only torque and cartodb layers have a source.
-   * @abstract
-   */
-  getSourceId: function getSourceId() {
-    throw new Error('.getSourceId called on a non torque/cartodb layer.');
-  },
-
-  /**
-   * Check if an analysis node is the layer's source.
-   * Only torque and cartodb layers have a source otherwise return false.
-   */
-  hasSource: function hasSource(analysisNode) {
-    return false;
-  }
-});
-
-module.exports = MapLayer;
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Backbone = __webpack_require__(1);
-
-/**
- * global configuration
- */
-var Config = Backbone.Model.extend({
-  VERSION: 4,
-
-  initialize: function initialize() {},
-
-  // error track
-  REPORT_ERROR_URL: '/api/v0/error',
-  ERROR_TRACK_ENABLED: false
-});
-
-module.exports = Config;
-
-/***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Config = __webpack_require__(106);
-
-var config = new Config();
-config.set({
-  cartodb_attributions: '© <a href="https://carto.com/attributions" target="_blank">CARTO</a>',
-  cartodb_logo_link: 'http://www.carto.com'
-});
-
-module.exports = config;
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var config = __webpack_require__(107);
-var LayerModelBase = __webpack_require__(105);
-var InfowindowTemplate = __webpack_require__(104);
-var TooltipTemplate = __webpack_require__(103);
-var Legends = __webpack_require__(102);
-var AnalysisModel = __webpack_require__(9);
-
-var ATTRIBUTES_THAT_TRIGGER_VIS_RELOAD = ['sql', 'source', 'sql_wrap', 'cartocss'];
-
-var CartoDBLayer = LayerModelBase.extend({
-  defaults: {
-    type: 'CartoDB',
-    attribution: config.get('cartodb_attributions'),
-    visible: true
-  },
-
-  initialize: function initialize(attrs, options) {
-    attrs = attrs || {};
-    options = options || {};
-    if (!options.engine) throw new Error('engine is required');
-
-    this._engine = options.engine;
-    if (attrs && attrs.cartocss) {
-      this.set('initialStyle', attrs.cartocss);
-    }
-
-    if (attrs.source) {
-      this.setSource(attrs.source);
-    }
-
-    // PUBLIC PROPERTIES
-    this.infowindow = new InfowindowTemplate(attrs.infowindow);
-    this.tooltip = new TooltipTemplate(attrs.tooltip);
-    this.unset('infowindow');
-    this.unset('tooltip');
-
-    this.legends = new Legends(attrs.legends, { engine: this._engine });
-    this.unset('legends');
-
-    this.bind('change', this._onAttributeChanged, this);
-    this.infowindow.fields.bind('reset add remove', this._reload, this);
-    this.tooltip.fields.bind('reset add remove', this._reload, this);
-
-    this.aggregation = options.aggregation;
-
-    LayerModelBase.prototype.initialize.apply(this, arguments);
-  },
-
-  _onAttributeChanged: function _onAttributeChanged() {
-    var reload = _.any(ATTRIBUTES_THAT_TRIGGER_VIS_RELOAD, function (attr) {
-      if (this.hasChanged(attr)) {
-        return true;
-      }
-    }, this);
-
-    if (reload) {
-      this._reload();
-    }
-  },
-
-  _reload: function _reload() {
-    this._engine.reload({
-      sourceId: this.get('id')
-    });
-  },
-
-  restoreCartoCSS: function restoreCartoCSS() {
-    this.set('cartocss', this.get('initialStyle'));
-  },
-
-  isVisible: function isVisible() {
-    return this.get('visible');
-  },
-
-  isInteractive: function isInteractive() {
-    return this._hasInfowindowFields() || this._hasTooltipFields();
-  },
-
-  _hasInfowindowFields: function _hasInfowindowFields() {
-    return this.infowindow.hasFields();
-  },
-
-  _hasTooltipFields: function _hasTooltipFields() {
-    return this.tooltip.hasFields();
-  },
-
-  getInteractiveColumnNames: function getInteractiveColumnNames() {
-    return _.chain(['cartodb_id']).union(this.infowindow.getFieldNames()).union(this.tooltip.getFieldNames()).uniq().value();
-  },
-
-  isInfowindowEnabled: function isInfowindowEnabled() {
-    return this.infowindow.hasTemplate();
-  },
-
-  isTooltipEnabled: function isTooltipEnabled() {
-    return this.tooltip.hasTemplate();
-  },
-
-  getName: function getName() {
-    return this.get('layer_name');
-  },
-
-  getEstimatedFeatureCount: function getEstimatedFeatureCount() {
-    var meta = this.get('meta');
-    var stats = meta && meta.stats;
-    return stats && stats.estimatedFeatureCount;
-  },
-
-  getSourceId: function getSourceId() {
-    var source = this.getSource();
-    return source && source.id;
-  },
-
-  getSource: function getSource() {
-    return this.get('source');
-  },
-
-  setSource: function setSource(newSource, options) {
-    if (this.getSource()) {
-      this.getSource().unmarkAsSourceOf(this);
-    }
-    newSource.markAsSourceOf(this);
-    this.set('source', newSource, options);
-  },
-
-  /**
-   * Check if an analysis node is the layer's source.
-   * Only torque and cartodb layers have a source otherwise return false.
-   */
-  hasSource: function hasSource(analysisModel) {
-    return this.getSource().equals(analysisModel);
-  },
-
-  update: function update(attrs) {
-    if (attrs.source) {
-      throw new Error('Use ".setSource" to update a layer\'s source instead of the update method');
-    }
-    LayerModelBase.prototype.update.apply(this, arguments);
-  },
-
-  remove: function remove() {
-    this.getSource().unmarkAsSourceOf(this);
-    LayerModelBase.prototype.remove.apply(this, arguments);
-  },
-
-  getTableName: function getTableName() {
-    if (this.get('source').has('options')) {
-      return this.get('source').get('options').table_name;
-    }
-  },
-
-  getApiKey: function getApiKey() {
-    return this._engine.getApiKey();
-  }
-},
-// Static methods and properties
-{
-  _checkSourceAttribute: function _checkSourceAttribute(source) {
-    if (!(source instanceof AnalysisModel)) {
-      throw new Error('Source must be an instance of AnalysisModel');
-    }
-  }
-});
-
-module.exports = CartoDBLayer;
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var Base = __webpack_require__(40);
-var CartoDBLayer = __webpack_require__(108);
-var SourceBase = __webpack_require__(12);
-var StyleBase = __webpack_require__(38);
-var CartoError = __webpack_require__(4);
-var CartoValidationError = __webpack_require__(3);
-var EVENTS = __webpack_require__(14);
-var metadataParser = __webpack_require__(94);
-
-/**
- * Represents a layer Object.
- *
- * A layer is the primary way to visualize geospatial data.
- *
- * To create a layer a {@link carto.source.Base|source} and {@link carto.style.Base|styles}
- * are required:
- *
- * - The {@link carto.source.Base|source} is used to know **what** data will be displayed in the Layer.
- * - The {@link carto.style.Base|style} is used to know **how** to draw the data in the Layer.
- *
- * A layer alone won't do too much. In order to get data from the CARTO server you must add the Layer to a {@link carto.Client|client}.
- *
- * ```
- * // Create a layer. Remember this won't do anything unless the layer is added to a client.
- * const layer = new carto.layer.Layer(source, style);
- *```
- *
- * @param {carto.source.Base} source - The source where the layer will fetch the data
- * @param {carto.style.CartoCSS} style - A CartoCSS object with the layer styling
- * @param {object} [options]
- * @param {Array<string>} [options.featureClickColumns=[]] - Columns that will be available for `featureClick` events
- * @param {boolean} [options.visible=true] - A boolean value indicating the layer's visibility
- * @param {Array<string>} [options.featureOverColumns=[]] - Columns that will be available for `featureOver` events
- * @param {carto.layer.Aggregation} [options.aggregation={}] - Specify {@link carto.layer.Aggregation|aggregation } options
- * @param {string} [options.id] - An unique identifier for the layer
- * @fires metadataChanged
- * @fires featureClicked
- * @fires featureOut
- * @fires featureOver
- * @fires error
- * @example
- * const citiesSource = new carto.source.SQL('SELECT * FROM cities');
- * const citiesStyle = new carto.style.CartoCSS(`
- *   #layer {
- *     marker-fill: #FABADA;
- *     marker-width: 10;
- *   }
- * `);
- * // Create a layer with no options
- * new carto.layer.Layer(citiesSource, citiesStyle);
- * @example
- * const citiesSource = new carto.source.SQL('SELECT * FROM cities');
- * const citiesStyle = new carto.style.CartoCSS(`
- *   #layer {
- *     marker-fill: #FABADA;
- *     marker-width: 10;
- *   }
- * `);
- * // Create a layer indicating what columns will be included in the featureOver event.
- * new carto.layer.Layer(citiesSource, citiesStyle, {
- *   featureOverColumns: [ 'name' ]
- * });
- * @example
- * const citiesSource = new carto.source.SQL('SELECT * FROM cities');
- * const citiesStyle = new carto.style.CartoCSS(`
- *   #layer {
- *     marker-fill: #FABADA;
- *     marker-width: 10;
- *   }
- * `);
- * // Create a hidden layer
- * new carto.layer.Layer(citiesSource, citiesStyle, { visible: false });
- * @example
- * // Listen to the event thrown when the mouse is over a feature
- * layer.on('featureOver', featureEvent => {
- *   console.log(`Mouse over city with name: ${featureEvent.data.name}`);
- * });
- * @constructor
- * @extends carto.layer.Base
- * @memberof carto.layer
- * @api
- */
-function Layer(source, style) {
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  Base.apply(this, arguments);
-
-  _checkSource(source);
-  _checkStyle(style);
-
-  this._client = undefined;
-  this._engine = undefined;
-  this._internalModel = undefined;
-
-  this._source = source;
-  this._style = style;
-  this._visible = _.isBoolean(options.visible) ? options.visible : true;
-  this._featureClickColumns = options.featureClickColumns || [];
-  this._featureOverColumns = options.featureOverColumns || [];
-  this._minzoom = options.minzoom || 0;
-  this._maxzoom = options.maxzoom || undefined;
-  this._aggregation = options.aggregation || {};
-
-  _validateAggregationColumnsAndInteractivity(this._aggregation.columns, this._featureClickColumns, this._featureOverColumns);
-}
-
-Layer.prototype = Object.create(Base.prototype);
-
-/**
- * Set a new style for this layer.
- *
- * @param {carto.style.CartoCSS} style - New style
- * @fires styleChanged
- * @fires error
- * @return {Promise} A promise that will be fulfilled when the style is applied to the layer or rejected with a
- * {@link CartoError} if something goes bad
- */
-Layer.prototype.setStyle = function (style, opts) {
-  var prevStyle = this._style;
-  _checkStyle(style);
-  opts = opts || {};
-  if (prevStyle === style) {
-    return Promise.resolve();
-  }
-  if (!this._internalModel) {
-    this._style = style;
-    this.trigger('styleChanged', this);
-    return Promise.resolve();
-  }
-  // If style has an engine and is different from the layer`s engine throw an error
-  if (style.$getEngine() && style.$getEngine() !== this._internalModel._engine) {
-    throw new CartoValidationError('layer', 'differentStyleClient');
-  }
-  // If style has no engine, set the layer engine in the style.
-  if (!style.$getEngine()) {
-    style.$setEngine(this._engine);
-  }
-
-  this._internalModel.set('cartocss', style.getContent(), { silent: true });
-  return this._engine.reload().then(function () {
-    this._style = style;
-    this.trigger('styleChanged', this);
-  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
-};
-
-/**
- * Get the current style for this layer.
- *
- * @return {carto.style.CartoCSS} Current style
- * @api
- */
-Layer.prototype.getStyle = function () {
-  return this._style;
-};
-
-/**
- * Set a new source for this layer.
- *
- * A source and a layer must belong to the same client so you can't
- * add a source belonging to a different client.
- *
- * @param {carto.source.Base} source - New source
- * @fires sourceChanged
- * @fires error
- * @return {Promise} A promise that will be fulfilled when the style is applied to the layer or rejected with a
- * {@link CartoError} if something goes bad
- */
-Layer.prototype.setSource = function (source) {
-  var prevSource = this._source;
-  _checkSource(source);
-  if (prevSource === source) {
-    return Promise.resolve();
-  }
-  // If layer is not instantiated just store the new status
-  if (!this._internalModel) {
-    this._source = source;
-    this.trigger('sourceChanged', this);
-    return Promise.resolve();
-  }
-  // If layer has been instantiated
-  // If the source already has an engine and is different from the layer's engine throw an error.
-  if (source.$getEngine() && source.$getEngine() !== this._internalModel._engine) {
-    throw new CartoValidationError('layer', 'differentSourceClient');
-  }
-  // If source has no engine use the layer engine.
-  if (!source.$getEngine()) {
-    source.$setEngine(this._engine);
-  }
-  // Update the internalModel and return a promise
-  this._internalModel.set('source', source.$getInternalModel(), { silent: true });
-  return this._engine.reload().then(function () {
-    this._source = source;
-    this.trigger('sourceChanged', this);
-  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
-};
-
-/**
- * Get the current source for this layer.
- *
- * @return {carto.source.Base} Current source
- * @api
- */
-Layer.prototype.getSource = function () {
-  return this._source;
-};
-
-/**
- * Set new columns for featureClick events.
- *
- * @param {Array<string>} columns - An array containing column names
- * @fires error
- * @return {Promise}
- * @api
- */
-Layer.prototype.setFeatureClickColumns = function (columns) {
-  var prevColumns = this._featureClickColumns;
-  _checkColumns(columns);
-  if (_areColumnsTheSame(columns, prevColumns)) {
-    return Promise.resolve();
-  }
-  // If layer is not instantiated just store the new status
-  if (!this._internalModel) {
-    this._featureClickColumns = columns;
-    return Promise.resolve();
-  }
-  // Update the internalModel and return a promise
-  this._internalModel.infowindow.fields.set(_getInteractivityFields(columns).fields, { silent: true });
-  return this._engine.reload().then(function () {
-    this._featureClickColumns = columns;
-  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
-};
-
-/**
- * Get the columns available in featureClicked events.
- *
- * @return  {Array<string>} Column names available in featureClicked events
- * @api
- */
-Layer.prototype.getFeatureClickColumns = function () {
-  return this._featureClickColumns;
-};
-
-/**
- * Set new columns for featureOver events.
- *
- * @param {Array<string>} columns - An array containing column names
- * @fires error
- * @return {Promise}
- * @api
- */
-Layer.prototype.setFeatureOverColumns = function (columns) {
-  var prevColumns = this._featureOverColumns;
-  _checkColumns(columns);
-  if (_areColumnsTheSame(columns, prevColumns)) {
-    return Promise.resolve();
-  }
-  // If layer is not instantiated just store the new status
-  if (!this._internalModel) {
-    this._featureOverColumns = columns;
-    return Promise.resolve();
-  }
-  // Update the internalModel and return a promise
-  this._internalModel.tooltip.fields.set(_getInteractivityFields(columns).fields, { silent: true });
-  return this._engine.reload().then(function () {
-    this._featureOverColumns = columns;
-  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
-};
-
-/**
- * Get the columns available in featureOver events.
- *
- * @return  {Array<string>} Column names available in featureOver events
- * @api
- */
-Layer.prototype.getFeatureOverColumns = function () {
-  return this._featureOverColumns;
-};
-
-/**
- * Hides the layer.
- *
- * @fires visibilityChanged
- * @return {carto.layer.Layer} this
- * @api
- */
-Layer.prototype.hide = function () {
-  var prevStatus = this._visible;
-  this._visible = false;
-  if (this._internalModel) {
-    this._internalModel.set('visible', false);
-  }
-  if (prevStatus) {
-    this.trigger('visibilityChanged', false);
-  }
-  return this;
-};
-
-/**
- * Shows the layer.
- *
- * @fires visibilityChanged
- * @return {carto.layer.Layer} this
- * @api
- */
-Layer.prototype.show = function () {
-  var prevStatus = this._visible;
-  this._visible = true;
-  if (this._internalModel) {
-    this._internalModel.set('visible', true);
-  }
-  if (!prevStatus) {
-    this.trigger('visibilityChanged', false);
-  }
-  return this;
-};
-
-/**
- * Change the layer's visibility.
- *
- * @fires visibilityChanged
- * @return {carto.layer.Layer} this
- */
-Layer.prototype.toggle = function () {
-  return this.isVisible() ? this.hide() : this.show();
-};
-
-/**
- * Return true if the layer is visible and false when not visible.
- *
- * @return {boolean} - A boolean value indicating the layer's visibility
- * @api
- */
-Layer.prototype.isVisible = function () {
-  return this._visible;
-};
-
-/**
- * Return `true` if the layer is not visible and `false` when visible.
- *
- * @return {boolean} - A boolean value indicating the layer's visibility
- * @api
- */
-Layer.prototype.isHidden = function () {
-  return !this.isVisible();
-};
-
-/**
- * Return true if the layer has interactivity.
- *
- * @return {boolean} - A boolean value indicating the layer's interactivity
- * @api
- */
-Layer.prototype.isInteractive = function () {
-  return this.getFeatureClickColumns().length > 0 || this.getFeatureOverColumns().length > 0;
-};
-
-/**
- * Set the layer's order.
- *
- * @param {number} index - new order index for the layer.
- *
- * @return {Promise}
- * @api
- */
-Layer.prototype.setOrder = function (index) {
-  if (!this._client) {
-    return Promise.resolve();
-  }
-  return this._client.moveLayer(this, index);
-};
-
-/**
- * Move the layer to the back.
- *
- * @return {Promise}
- * @api
- */
-Layer.prototype.bringToBack = function () {
-  return this.setOrder(0);
-};
-
-/**
- * Move the layer to the front.
- *
- * @return {Promise}
- * @api
- */
-Layer.prototype.bringToFront = function () {
-  return this.setOrder(this._client._layers.size() - 1);
-};
-
-// Private functions.
-
-Layer.prototype._createInternalModel = function (engine) {
-  var internalModel = new CartoDBLayer({
-    id: this._id,
-    source: this._source.$getInternalModel(),
-    cartocss: this._style.getContent(),
-    visible: this._visible,
-    infowindow: _getInteractivityFields(this._featureClickColumns),
-    tooltip: _getInteractivityFields(this._featureOverColumns),
-    minzoom: this._minzoom,
-    maxzoom: this._maxzoom
-  }, {
-    engine: engine,
-    aggregation: this._aggregation
-  });
-
-  internalModel.on('change:meta', function (layer, data) {
-    var rules = data.cartocss_meta.rules;
-    var styleMetadataList = metadataParser.getMetadataFromRules(rules);
-
-    /**
-     * Event fired by {@link carto.layer.Layer} when the style contains any TurboCarto ramp.
-     *
-     * @typedef {object} carto.layer.MetadataEvent
-     * @property {carto.layer.metadata.Base[]} styles - List of style metadata objects
-     * @api
-     */
-    var metadata = { styles: styleMetadataList };
-
-    this.trigger('metadataChanged', metadata);
-  }, this);
-
-  internalModel.on('change:error', function (model, value) {
-    if (value && _isStyleError(value)) {
-      this._style.$setError(new CartoError(value));
-    } else if (value) {
-      this.trigger(EVENTS.ERROR, new CartoError(value));
-    }
-  }, this);
-
-  return internalModel;
-};
-
-// Internal functions.
-
-Layer.prototype.$setClient = function (client) {
-  // Exit if the client is already set or
-  // it has a different engine than the layer
-  if (this._client || this._engine && client._engine !== this._engine) {
-    return;
-  }
-  this._client = client;
-};
-
-Layer.prototype.$setEngine = function (engine) {
-  if (this._engine) {
-    return;
-  }
-  this._engine = engine;
-  this._source.$setEngine(engine);
-  this._style.$setEngine(engine);
-  if (!this._internalModel) {
-    this._internalModel = this._createInternalModel(engine);
-    this._style.on('$changed', function (style) {
-      this._internalModel.set('cartocss', style.getContent(), { silent: true });
-    }, this);
-  }
-};
-
-// Scope functions
-
-/**
- * Transform the columns array into the format expected by the CartoDBLayer.
- */
-function _getInteractivityFields(columns) {
-  var fields = columns.map(function (column, index) {
-    return {
-      name: column,
-      title: true,
-      position: index
-    };
-  });
-
-  return {
-    fields: fields
-  };
-}
-
-function _checkStyle(style) {
-  if (!(style instanceof StyleBase)) {
-    throw new CartoValidationError('layer', 'nonValidStyle');
-  }
-}
-
-function _checkSource(source) {
-  if (!(source instanceof SourceBase)) {
-    throw new CartoValidationError('layer', 'nonValidSource');
-  }
-}
-
-function _checkColumns(columns) {
-  if (_.any(columns, function (item) {
-    return !_.isString(item);
-  })) {
-    throw new CartoValidationError('layer', 'nonValidColumns');
-  }
-}
-
-/**
- * Return true when a windshaft error is because a styling error.
- */
-function _isStyleError(windshaftError) {
-  return windshaftError.message && windshaftError.message.indexOf('style') >= 0;
-}
-
-function _rejectAndTriggerError(err) {
-  var error = new CartoError(err);
-  this.trigger(EVENTS.ERROR, error);
-  return Promise.reject(error);
-}
-
-function _areColumnsTheSame(newColumns, oldColumns) {
-  return newColumns.length === oldColumns.length && _.isEmpty(_.difference(newColumns, oldColumns));
-}
-
-/**
- * When there are aggregated columns and interactivity columns they must agree
- */
-function _validateAggregationColumnsAndInteractivity(aggregationColumns, clickColumns, overColumns) {
-  var aggColumns = aggregationColumns && Object.keys(aggregationColumns) || [];
-
-  _validateColumnsConcordance(aggColumns, clickColumns, 'featureClick');
-  _validateColumnsConcordance(aggColumns, overColumns, 'featureOver');
-}
-
-function _validateColumnsConcordance(aggColumns, interactivityColumns, interactivity) {
-  if (interactivityColumns.length > 0 && aggColumns.length > 0) {
-    var notInAggregation = _.filter(interactivityColumns, function (clickColumn) {
-      return !_.contains(aggColumns, clickColumn);
-    });
-
-    if (notInAggregation.length > 0) {
-      throw new CartoValidationError('layer', 'wrongInteractivityColumns[' + notInAggregation.join(', ') + ']#' + interactivity);
-    }
-  }
-}
-
-/**
- * @typedef {object} LatLng
- * @property {number} lat - Latitude
- * @property {number} lng - Longitude
- * @api
- */
-
-/**
- * Fired when the source has changed. Handler gets a parameter with the new source.
- *
- * @event sourceChanged
- * @type {carto.layer.Layer}
- * @api
- */
-
-/**
- * Fired when the style has changed. Handler gets a parameter with the new style.
- *
- * @event styleChanged
- * @type {carto.layer.Layer}
- * @api
- */
-
-/**
- * Fired when style metadata has changed.
- *
- * @event metadataChanged
- * @type {carto.layer.MetadataEvent}
- * @api
- */
-
-module.exports = Layer;
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* global L */
-var _ = __webpack_require__(0);
-var Layer = __webpack_require__(24);
-var constants = __webpack_require__(5);
-var triggerLayerFeatureEvent = __webpack_require__(36);
-var LeafletCartoLayerGroupView = __webpack_require__(89);
-var CartoError = __webpack_require__(4);
-
-/**
- * This object is a custom Leaflet layer to enable feature interactivity
- * using an internal LeafletCartoLayerGroupView instance.
- *
- * There are two overwritten functions:
- * - addTo: when the layer is added to a map it also creates a LeafletCartoLayerGroupView
- *          object called `_internalView` in order to enable the feature events
- * - removeFrom: when the layer is removed from a map it also removes the feature events
- *               listeners, triggers a 'remove' event and removes the `_internalView`
- *
- * NOTE: It also contains the feature events handlers. That's why it requires the carto layers array.
- */
-var LeafletLayer = L.TileLayer.extend({
-  options: {
-    opacity: 0.99,
-    maxZoom: 30,
-    attribution: constants.ATTRIBUTION
-  },
-
-  initialize: function initialize(layers, engine, options) {
-    _.extend(this.options, options);
-
-    this._layers = layers;
-    this._engine = engine;
-    this._internalView = null;
-
-    this._hoveredLayers = [];
-  },
-
-  addTo: function addTo(map) {
-    if (!this._internalView) {
-      this._internalView = new LeafletCartoLayerGroupView(this._engine._cartoLayerGroup, {
-        nativeMap: map,
-        nativeLayer: this
-      });
-      this._internalView.on('featureClick', this._onFeatureClick, this);
-      this._internalView.on('featureOver', this._onFeatureOver, this);
-      this._internalView.on('featureOut', this._onFeatureOut, this);
-      this._internalView.on('featureError', this._onFeatureError, this);
-    }
-
-    return L.TileLayer.prototype.addTo.call(this, map);
-  },
-
-  removeFrom: function removeFrom(map) {
-    if (this._internalView) {
-      this._internalView.off('featureClick');
-      this._internalView.off('featureOver');
-      this._internalView.off('featureOut');
-      this._internalView.off('featureError');
-      this._internalView.notifyRemove();
-    }
-    this._internalView = null;
-
-    return L.TileLayer.prototype.removeFrom.call(this, map);
-  },
-
-  setUrl: undefined,
-
-  _setUrl: function _setUrl(url, noDraw) {
-    return L.TileLayer.prototype.setUrl.call(this, url, noDraw);
-  },
-
-  _onFeatureClick: function _onFeatureClick(internalEvent) {
-    var layer = this._layers.findById(internalEvent.layer.id);
-    triggerLayerFeatureEvent(Layer.events.FEATURE_CLICKED, internalEvent, layer);
-  },
-
-  _onFeatureOver: function _onFeatureOver(internalEvent) {
-    var layer = this._layers.findById(internalEvent.layer.id);
-    if (layer.isInteractive()) {
-      this._hoveredLayers[internalEvent.layerIndex] = true;
-      this._map.getContainer().style.cursor = 'pointer';
-    }
-    triggerLayerFeatureEvent(Layer.events.FEATURE_OVER, internalEvent, layer);
-  },
-
-  _onFeatureOut: function _onFeatureOut(internalEvent) {
-    var layer = this._layers.findById(internalEvent.layer.id);
-    this._hoveredLayers[internalEvent.layerIndex] = false;
-    if (_.any(this._hoveredLayers)) {
-      this._map.getContainer().style.cursor = 'pointer';
-    } else {
-      this._map.getContainer().style.cursor = 'auto';
-    }
-    triggerLayerFeatureEvent(Layer.events.FEATURE_OUT, internalEvent, layer);
-  },
-
-  _onFeatureError: function _onFeatureError(error) {
-    var cartoError = new CartoError(error);
-    _.each(this._layers.toArray(), function (layer) {
-      if (layer.isInteractive()) {
-        layer.trigger(Layer.events.TILE_ERROR, cartoError);
-      }
-    });
-  }
-});
-
-module.exports = LeafletLayer;
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-
-function Layers(layers) {
-  this._layers = layers || [];
-}
-
-Layers.prototype.add = function (layer) {
-  this._layers.push(layer);
-  return layer;
-};
-
-Layers.prototype.remove = function (layer) {
-  return this._layers.splice(this._layers.indexOf(layer), 1);
-};
-
-Layers.prototype.size = function () {
-  return this._layers.length;
-};
-
-Layers.prototype.indexOf = function (layer) {
-  return this._layers.indexOf(layer);
-};
-
-Layers.prototype.contains = function (layer) {
-  return this._layers.indexOf(layer) >= 0;
-};
-
-Layers.prototype.findById = function (layerId) {
-  return _.find(this._layers, function (layer) {
-    return layer.getId() === layerId;
-  }, this);
-};
-
-Layers.prototype.toArray = function () {
-  return this._layers;
-};
-
-Layers.prototype.move = function (layer, toIndex) {
-  var fromIndex = this._layers.indexOf(layer);
-  if (fromIndex >= 0 && fromIndex !== toIndex) {
-    this._layers.splice(toIndex, 0, this._layers.splice(fromIndex, 1)[0]);
-  }
-};
-
-module.exports = Layers;
-
-/***/ }),
-/* 112 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-
-/**
- * Keeps track of subsequent equal requests to the Maps API
- * @param {number} maxNumberOfRequests Maximum number of subsequent requests allowed
- */
-var RequestTracker = function RequestTracker(maxNumberOfRequests) {
-  this._maxNumberOfRequests = maxNumberOfRequests || 3;
-  this.reset();
-};
-
-RequestTracker.prototype.track = function (request, response) {
-  if (!this.lastRequestEquals(request) || !this.lastResponseEquals(response)) {
-    this.reset();
-  }
-
-  if (!this.maxNumberOfRequestsReached()) {
-    this._lastRequest = request;
-    this._lastResponse = response;
-    this._numberOfRequests += 1;
-  }
-};
-
-RequestTracker.prototype.reset = function () {
-  this._lastRequest = undefined;
-  this._lastResponse = undefined;
-  this._numberOfRequests = 0;
-};
-
-RequestTracker.prototype.canRequestBePerformed = function (request) {
-  return !this.maxNumberOfRequestsReached() || this.maxNumberOfRequestsReached() && !this.lastRequestEquals(request);
-};
-
-RequestTracker.prototype.maxNumberOfRequestsReached = function () {
-  return this._numberOfRequests === this._maxNumberOfRequests;
-};
-
-RequestTracker.prototype.lastRequestEquals = function (request) {
-  return this._lastRequest && this._lastRequest.equals(request);
-};
-
-RequestTracker.prototype.lastResponseEquals = function (response) {
-  return _.isEqual(this._lastResponse, response);
-};
-
-module.exports = RequestTracker;
-
-/***/ }),
-/* 113 */
 /***/ (function(module, exports) {
 
 var LZMA = (function () {
@@ -30935,196 +28125,2853 @@ module.exports = LZMA;
 
 
 /***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+
+/**
+ * Keeps track of subsequent equal requests to the Maps API
+ * @param {number} maxNumberOfRequests Maximum number of subsequent requests allowed
+ */
+var RequestTracker = function RequestTracker(maxNumberOfRequests) {
+  this._maxNumberOfRequests = maxNumberOfRequests || 3;
+  this.reset();
+};
+
+RequestTracker.prototype.track = function (request, response) {
+  if (!this.lastRequestEquals(request) || !this.lastResponseEquals(response)) {
+    this.reset();
+  }
+
+  if (!this.maxNumberOfRequestsReached()) {
+    this._lastRequest = request;
+    this._lastResponse = response;
+    this._numberOfRequests += 1;
+  }
+};
+
+RequestTracker.prototype.reset = function () {
+  this._lastRequest = undefined;
+  this._lastResponse = undefined;
+  this._numberOfRequests = 0;
+};
+
+RequestTracker.prototype.canRequestBePerformed = function (request) {
+  return !this.maxNumberOfRequestsReached() || this.maxNumberOfRequestsReached() && !this.lastRequestEquals(request);
+};
+
+RequestTracker.prototype.maxNumberOfRequestsReached = function () {
+  return this._numberOfRequests === this._maxNumberOfRequests;
+};
+
+RequestTracker.prototype.lastRequestEquals = function (request) {
+  return this._lastRequest && this._lastRequest.equals(request);
+};
+
+RequestTracker.prototype.lastResponseEquals = function (response) {
+  return _.isEqual(this._lastResponse, response);
+};
+
+module.exports = RequestTracker;
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+
+function Layers(layers) {
+  this._layers = layers || [];
+}
+
+Layers.prototype.add = function (layer) {
+  this._layers.push(layer);
+  return layer;
+};
+
+Layers.prototype.remove = function (layer) {
+  return this._layers.splice(this._layers.indexOf(layer), 1);
+};
+
+Layers.prototype.size = function () {
+  return this._layers.length;
+};
+
+Layers.prototype.indexOf = function (layer) {
+  return this._layers.indexOf(layer);
+};
+
+Layers.prototype.contains = function (layer) {
+  return this._layers.indexOf(layer) >= 0;
+};
+
+Layers.prototype.findById = function (layerId) {
+  return _.find(this._layers, function (layer) {
+    return layer.getId() === layerId;
+  }, this);
+};
+
+Layers.prototype.toArray = function () {
+  return this._layers;
+};
+
+Layers.prototype.move = function (layer, toIndex) {
+  var fromIndex = this._layers.indexOf(layer);
+  if (fromIndex >= 0 && fromIndex !== toIndex) {
+    this._layers.splice(toIndex, 0, this._layers.splice(fromIndex, 1)[0]);
+  }
+};
+
+module.exports = Layers;
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global L */
+var _ = __webpack_require__(0);
+var Layer = __webpack_require__(25);
+var constants = __webpack_require__(5);
+var triggerLayerFeatureEvent = __webpack_require__(39);
+var LeafletCartoLayerGroupView = __webpack_require__(107);
+var CartoError = __webpack_require__(4);
+
+/**
+ * This object is a custom Leaflet layer to enable feature interactivity
+ * using an internal LeafletCartoLayerGroupView instance.
+ *
+ * There are two overwritten functions:
+ * - addTo: when the layer is added to a map it also creates a LeafletCartoLayerGroupView
+ *          object called `_internalView` in order to enable the feature events
+ * - removeFrom: when the layer is removed from a map it also removes the feature events
+ *               listeners, triggers a 'remove' event and removes the `_internalView`
+ *
+ * NOTE: It also contains the feature events handlers. That's why it requires the carto layers array.
+ */
+var LeafletLayer = L.TileLayer.extend({
+  options: {
+    opacity: 0.99,
+    maxZoom: 30,
+    attribution: constants.ATTRIBUTION
+  },
+
+  initialize: function initialize(layers, engine, options) {
+    _.extend(this.options, options);
+
+    this._layers = layers;
+    this._engine = engine;
+    this._internalView = null;
+
+    this._hoveredLayers = [];
+  },
+
+  addTo: function addTo(map) {
+    if (!this._internalView) {
+      this._internalView = new LeafletCartoLayerGroupView(this._engine._cartoLayerGroup, {
+        nativeMap: map,
+        nativeLayer: this
+      });
+      this._internalView.on('featureClick', this._onFeatureClick, this);
+      this._internalView.on('featureOver', this._onFeatureOver, this);
+      this._internalView.on('featureOut', this._onFeatureOut, this);
+      this._internalView.on('featureError', this._onFeatureError, this);
+    }
+
+    return L.TileLayer.prototype.addTo.call(this, map);
+  },
+
+  removeFrom: function removeFrom(map) {
+    if (this._internalView) {
+      this._internalView.off('featureClick');
+      this._internalView.off('featureOver');
+      this._internalView.off('featureOut');
+      this._internalView.off('featureError');
+      this._internalView.notifyRemove();
+    }
+    this._internalView = null;
+
+    return L.TileLayer.prototype.removeFrom.call(this, map);
+  },
+
+  setUrl: undefined,
+
+  _setUrl: function _setUrl(url, noDraw) {
+    return L.TileLayer.prototype.setUrl.call(this, url, noDraw);
+  },
+
+  _onFeatureClick: function _onFeatureClick(internalEvent) {
+    var layer = this._layers.findById(internalEvent.layer.id);
+    triggerLayerFeatureEvent(Layer.events.FEATURE_CLICKED, internalEvent, layer);
+  },
+
+  _onFeatureOver: function _onFeatureOver(internalEvent) {
+    var layer = this._layers.findById(internalEvent.layer.id);
+    if (layer.isInteractive()) {
+      this._hoveredLayers[internalEvent.layerIndex] = true;
+      this._map.getContainer().style.cursor = 'pointer';
+    }
+    triggerLayerFeatureEvent(Layer.events.FEATURE_OVER, internalEvent, layer);
+  },
+
+  _onFeatureOut: function _onFeatureOut(internalEvent) {
+    var layer = this._layers.findById(internalEvent.layer.id);
+    this._hoveredLayers[internalEvent.layerIndex] = false;
+    if (_.any(this._hoveredLayers)) {
+      this._map.getContainer().style.cursor = 'pointer';
+    } else {
+      this._map.getContainer().style.cursor = 'auto';
+    }
+    triggerLayerFeatureEvent(Layer.events.FEATURE_OUT, internalEvent, layer);
+  },
+
+  _onFeatureError: function _onFeatureError(error) {
+    var cartoError = new CartoError(error);
+    _.each(this._layers.toArray(), function (layer) {
+      if (layer.isInteractive()) {
+        layer.trigger(Layer.events.TILE_ERROR, cartoError);
+      }
+    });
+  }
+});
+
+module.exports = LeafletLayer;
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(35);
+var CartoDBLayer = __webpack_require__(88);
+var SourceBase = __webpack_require__(16);
+var StyleBase = __webpack_require__(37);
+var CartoError = __webpack_require__(4);
+var CartoValidationError = __webpack_require__(3);
+var EVENTS = __webpack_require__(14);
+var metadataParser = __webpack_require__(102);
+
+/**
+ * Represents a layer Object.
+ *
+ * A layer is the primary way to visualize geospatial data.
+ *
+ * To create a layer a {@link carto.source.Base|source} and {@link carto.style.Base|styles}
+ * are required:
+ *
+ * - The {@link carto.source.Base|source} is used to know **what** data will be displayed in the Layer.
+ * - The {@link carto.style.Base|style} is used to know **how** to draw the data in the Layer.
+ *
+ * A layer alone won't do too much. In order to get data from the CARTO server you must add the Layer to a {@link carto.Client|client}.
+ *
+ * ```
+ * // Create a layer. Remember this won't do anything unless the layer is added to a client.
+ * const layer = new carto.layer.Layer(source, style);
+ *```
+ *
+ * @param {carto.source.Base} source - The source where the layer will fetch the data
+ * @param {carto.style.CartoCSS} style - A CartoCSS object with the layer styling
+ * @param {object} [options]
+ * @param {Array<string>} [options.featureClickColumns=[]] - Columns that will be available for `featureClick` events
+ * @param {boolean} [options.visible=true] - A boolean value indicating the layer's visibility
+ * @param {Array<string>} [options.featureOverColumns=[]] - Columns that will be available for `featureOver` events
+ * @param {carto.layer.Aggregation} [options.aggregation={}] - Specify {@link carto.layer.Aggregation|aggregation } options
+ * @param {string} [options.id] - An unique identifier for the layer
+ * @fires metadataChanged
+ * @fires featureClicked
+ * @fires featureOut
+ * @fires featureOver
+ * @fires error
+ * @example
+ * const citiesSource = new carto.source.SQL('SELECT * FROM cities');
+ * const citiesStyle = new carto.style.CartoCSS(`
+ *   #layer {
+ *     marker-fill: #FABADA;
+ *     marker-width: 10;
+ *   }
+ * `);
+ * // Create a layer with no options
+ * new carto.layer.Layer(citiesSource, citiesStyle);
+ * @example
+ * const citiesSource = new carto.source.SQL('SELECT * FROM cities');
+ * const citiesStyle = new carto.style.CartoCSS(`
+ *   #layer {
+ *     marker-fill: #FABADA;
+ *     marker-width: 10;
+ *   }
+ * `);
+ * // Create a layer indicating what columns will be included in the featureOver event.
+ * new carto.layer.Layer(citiesSource, citiesStyle, {
+ *   featureOverColumns: [ 'name' ]
+ * });
+ * @example
+ * const citiesSource = new carto.source.SQL('SELECT * FROM cities');
+ * const citiesStyle = new carto.style.CartoCSS(`
+ *   #layer {
+ *     marker-fill: #FABADA;
+ *     marker-width: 10;
+ *   }
+ * `);
+ * // Create a hidden layer
+ * new carto.layer.Layer(citiesSource, citiesStyle, { visible: false });
+ * @example
+ * // Listen to the event thrown when the mouse is over a feature
+ * layer.on('featureOver', featureEvent => {
+ *   console.log(`Mouse over city with name: ${featureEvent.data.name}`);
+ * });
+ * @constructor
+ * @extends carto.layer.Base
+ * @memberof carto.layer
+ * @api
+ */
+function Layer(source, style) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  Base.apply(this, arguments);
+
+  _checkSource(source);
+  _checkStyle(style);
+
+  this._client = undefined;
+  this._engine = undefined;
+  this._internalModel = undefined;
+
+  this._source = source;
+  this._style = style;
+  this._visible = _.isBoolean(options.visible) ? options.visible : true;
+  this._featureClickColumns = options.featureClickColumns || [];
+  this._featureOverColumns = options.featureOverColumns || [];
+  this._minzoom = options.minzoom || 0;
+  this._maxzoom = options.maxzoom || undefined;
+  this._aggregation = options.aggregation || {};
+
+  _validateAggregationColumnsAndInteractivity(this._aggregation.columns, this._featureClickColumns, this._featureOverColumns);
+}
+
+Layer.prototype = Object.create(Base.prototype);
+
+/**
+ * Set a new style for this layer.
+ *
+ * @param {carto.style.CartoCSS} style - New style
+ * @fires styleChanged
+ * @fires error
+ * @return {Promise} A promise that will be fulfilled when the style is applied to the layer or rejected with a
+ * {@link CartoError} if something goes bad
+ */
+Layer.prototype.setStyle = function (style, opts) {
+  var prevStyle = this._style;
+  _checkStyle(style);
+  opts = opts || {};
+  if (prevStyle === style) {
+    return Promise.resolve();
+  }
+  if (!this._internalModel) {
+    this._style = style;
+    this.trigger('styleChanged', this);
+    return Promise.resolve();
+  }
+  // If style has an engine and is different from the layer`s engine throw an error
+  if (style.$getEngine() && style.$getEngine() !== this._internalModel._engine) {
+    throw new CartoValidationError('layer', 'differentStyleClient');
+  }
+  // If style has no engine, set the layer engine in the style.
+  if (!style.$getEngine()) {
+    style.$setEngine(this._engine);
+  }
+
+  this._internalModel.set('cartocss', style.getContent(), { silent: true });
+  return this._engine.reload().then(function () {
+    this._style = style;
+    this.trigger('styleChanged', this);
+  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
+};
+
+/**
+ * Get the current style for this layer.
+ *
+ * @return {carto.style.CartoCSS} Current style
+ * @api
+ */
+Layer.prototype.getStyle = function () {
+  return this._style;
+};
+
+/**
+ * Set a new source for this layer.
+ *
+ * A source and a layer must belong to the same client so you can't
+ * add a source belonging to a different client.
+ *
+ * @param {carto.source.Base} source - New source
+ * @fires sourceChanged
+ * @fires error
+ * @return {Promise} A promise that will be fulfilled when the style is applied to the layer or rejected with a
+ * {@link CartoError} if something goes bad
+ */
+Layer.prototype.setSource = function (source) {
+  var prevSource = this._source;
+  _checkSource(source);
+  if (prevSource === source) {
+    return Promise.resolve();
+  }
+  // If layer is not instantiated just store the new status
+  if (!this._internalModel) {
+    this._source = source;
+    this.trigger('sourceChanged', this);
+    return Promise.resolve();
+  }
+  // If layer has been instantiated
+  // If the source already has an engine and is different from the layer's engine throw an error.
+  if (source.$getEngine() && source.$getEngine() !== this._internalModel._engine) {
+    throw new CartoValidationError('layer', 'differentSourceClient');
+  }
+  // If source has no engine use the layer engine.
+  if (!source.$getEngine()) {
+    source.$setEngine(this._engine);
+  }
+  // Update the internalModel and return a promise
+  this._internalModel.set('source', source.$getInternalModel(), { silent: true });
+  return this._engine.reload().then(function () {
+    this._source = source;
+    this.trigger('sourceChanged', this);
+  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
+};
+
+/**
+ * Get the current source for this layer.
+ *
+ * @return {carto.source.Base} Current source
+ * @api
+ */
+Layer.prototype.getSource = function () {
+  return this._source;
+};
+
+/**
+ * Set new columns for featureClick events.
+ *
+ * @param {Array<string>} columns - An array containing column names
+ * @fires error
+ * @return {Promise}
+ * @api
+ */
+Layer.prototype.setFeatureClickColumns = function (columns) {
+  var prevColumns = this._featureClickColumns;
+  _checkColumns(columns);
+  if (_areColumnsTheSame(columns, prevColumns)) {
+    return Promise.resolve();
+  }
+  // If layer is not instantiated just store the new status
+  if (!this._internalModel) {
+    this._featureClickColumns = columns;
+    return Promise.resolve();
+  }
+  // Update the internalModel and return a promise
+  this._internalModel.infowindow.fields.set(_getInteractivityFields(columns).fields, { silent: true });
+  return this._engine.reload().then(function () {
+    this._featureClickColumns = columns;
+  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
+};
+
+/**
+ * Get the columns available in featureClicked events.
+ *
+ * @return  {Array<string>} Column names available in featureClicked events
+ * @api
+ */
+Layer.prototype.getFeatureClickColumns = function () {
+  return this._featureClickColumns;
+};
+
+/**
+ * Set new columns for featureOver events.
+ *
+ * @param {Array<string>} columns - An array containing column names
+ * @fires error
+ * @return {Promise}
+ * @api
+ */
+Layer.prototype.setFeatureOverColumns = function (columns) {
+  var prevColumns = this._featureOverColumns;
+  _checkColumns(columns);
+  if (_areColumnsTheSame(columns, prevColumns)) {
+    return Promise.resolve();
+  }
+  // If layer is not instantiated just store the new status
+  if (!this._internalModel) {
+    this._featureOverColumns = columns;
+    return Promise.resolve();
+  }
+  // Update the internalModel and return a promise
+  this._internalModel.tooltip.fields.set(_getInteractivityFields(columns).fields, { silent: true });
+  return this._engine.reload().then(function () {
+    this._featureOverColumns = columns;
+  }.bind(this)).catch(_rejectAndTriggerError.bind(this));
+};
+
+/**
+ * Get the columns available in featureOver events.
+ *
+ * @return  {Array<string>} Column names available in featureOver events
+ * @api
+ */
+Layer.prototype.getFeatureOverColumns = function () {
+  return this._featureOverColumns;
+};
+
+/**
+ * Hides the layer.
+ *
+ * @fires visibilityChanged
+ * @return {carto.layer.Layer} this
+ * @api
+ */
+Layer.prototype.hide = function () {
+  var prevStatus = this._visible;
+  this._visible = false;
+  if (this._internalModel) {
+    this._internalModel.set('visible', false);
+  }
+  if (prevStatus) {
+    this.trigger('visibilityChanged', false);
+  }
+  return this;
+};
+
+/**
+ * Shows the layer.
+ *
+ * @fires visibilityChanged
+ * @return {carto.layer.Layer} this
+ * @api
+ */
+Layer.prototype.show = function () {
+  var prevStatus = this._visible;
+  this._visible = true;
+  if (this._internalModel) {
+    this._internalModel.set('visible', true);
+  }
+  if (!prevStatus) {
+    this.trigger('visibilityChanged', false);
+  }
+  return this;
+};
+
+/**
+ * Change the layer's visibility.
+ *
+ * @fires visibilityChanged
+ * @return {carto.layer.Layer} this
+ */
+Layer.prototype.toggle = function () {
+  return this.isVisible() ? this.hide() : this.show();
+};
+
+/**
+ * Return true if the layer is visible and false when not visible.
+ *
+ * @return {boolean} - A boolean value indicating the layer's visibility
+ * @api
+ */
+Layer.prototype.isVisible = function () {
+  return this._visible;
+};
+
+/**
+ * Return `true` if the layer is not visible and `false` when visible.
+ *
+ * @return {boolean} - A boolean value indicating the layer's visibility
+ * @api
+ */
+Layer.prototype.isHidden = function () {
+  return !this.isVisible();
+};
+
+/**
+ * Return true if the layer has interactivity.
+ *
+ * @return {boolean} - A boolean value indicating the layer's interactivity
+ * @api
+ */
+Layer.prototype.isInteractive = function () {
+  return this.getFeatureClickColumns().length > 0 || this.getFeatureOverColumns().length > 0;
+};
+
+/**
+ * Set the layer's order.
+ *
+ * @param {number} index - new order index for the layer.
+ *
+ * @return {Promise}
+ * @api
+ */
+Layer.prototype.setOrder = function (index) {
+  if (!this._client) {
+    return Promise.resolve();
+  }
+  return this._client.moveLayer(this, index);
+};
+
+/**
+ * Move the layer to the back.
+ *
+ * @return {Promise}
+ * @api
+ */
+Layer.prototype.bringToBack = function () {
+  return this.setOrder(0);
+};
+
+/**
+ * Move the layer to the front.
+ *
+ * @return {Promise}
+ * @api
+ */
+Layer.prototype.bringToFront = function () {
+  return this.setOrder(this._client._layers.size() - 1);
+};
+
+// Private functions.
+
+Layer.prototype._createInternalModel = function (engine) {
+  var internalModel = new CartoDBLayer({
+    id: this._id,
+    source: this._source.$getInternalModel(),
+    cartocss: this._style.getContent(),
+    visible: this._visible,
+    infowindow: _getInteractivityFields(this._featureClickColumns),
+    tooltip: _getInteractivityFields(this._featureOverColumns),
+    minzoom: this._minzoom,
+    maxzoom: this._maxzoom
+  }, {
+    engine: engine,
+    aggregation: this._aggregation
+  });
+
+  internalModel.on('change:meta', function (layer, data) {
+    var rules = data.cartocss_meta.rules;
+    var styleMetadataList = metadataParser.getMetadataFromRules(rules);
+
+    /**
+     * Event fired by {@link carto.layer.Layer} when the style contains any TurboCarto ramp.
+     *
+     * @typedef {object} carto.layer.MetadataEvent
+     * @property {carto.layer.metadata.Base[]} styles - List of style metadata objects
+     * @api
+     */
+    var metadata = { styles: styleMetadataList };
+
+    this.trigger('metadataChanged', metadata);
+  }, this);
+
+  internalModel.on('change:error', function (model, value) {
+    if (value && _isStyleError(value)) {
+      this._style.$setError(new CartoError(value));
+    } else if (value) {
+      this.trigger(EVENTS.ERROR, new CartoError(value));
+    }
+  }, this);
+
+  return internalModel;
+};
+
+// Internal functions.
+
+Layer.prototype.$setClient = function (client) {
+  // Exit if the client is already set or
+  // it has a different engine than the layer
+  if (this._client || this._engine && client._engine !== this._engine) {
+    return;
+  }
+  this._client = client;
+};
+
+Layer.prototype.$setEngine = function (engine) {
+  if (this._engine) {
+    return;
+  }
+  this._engine = engine;
+  this._source.$setEngine(engine);
+  this._style.$setEngine(engine);
+  if (!this._internalModel) {
+    this._internalModel = this._createInternalModel(engine);
+    this._style.on('$changed', function (style) {
+      this._internalModel.set('cartocss', style.getContent(), { silent: true });
+    }, this);
+  }
+};
+
+// Scope functions
+
+/**
+ * Transform the columns array into the format expected by the CartoDBLayer.
+ */
+function _getInteractivityFields(columns) {
+  var fields = columns.map(function (column, index) {
+    return {
+      name: column,
+      title: true,
+      position: index
+    };
+  });
+
+  return {
+    fields: fields
+  };
+}
+
+function _checkStyle(style) {
+  if (!(style instanceof StyleBase)) {
+    throw new CartoValidationError('layer', 'nonValidStyle');
+  }
+}
+
+function _checkSource(source) {
+  if (!(source instanceof SourceBase)) {
+    throw new CartoValidationError('layer', 'nonValidSource');
+  }
+}
+
+function _checkColumns(columns) {
+  if (_.any(columns, function (item) {
+    return !_.isString(item);
+  })) {
+    throw new CartoValidationError('layer', 'nonValidColumns');
+  }
+}
+
+/**
+ * Return true when a windshaft error is because a styling error.
+ */
+function _isStyleError(windshaftError) {
+  return windshaftError.message && windshaftError.message.indexOf('style') >= 0;
+}
+
+function _rejectAndTriggerError(err) {
+  var error = new CartoError(err);
+  this.trigger(EVENTS.ERROR, error);
+  return Promise.reject(error);
+}
+
+function _areColumnsTheSame(newColumns, oldColumns) {
+  return newColumns.length === oldColumns.length && _.isEmpty(_.difference(newColumns, oldColumns));
+}
+
+/**
+ * When there are aggregated columns and interactivity columns they must agree
+ */
+function _validateAggregationColumnsAndInteractivity(aggregationColumns, clickColumns, overColumns) {
+  var aggColumns = aggregationColumns && Object.keys(aggregationColumns) || [];
+
+  _validateColumnsConcordance(aggColumns, clickColumns, 'featureClick');
+  _validateColumnsConcordance(aggColumns, overColumns, 'featureOver');
+}
+
+function _validateColumnsConcordance(aggColumns, interactivityColumns, interactivity) {
+  if (interactivityColumns.length > 0 && aggColumns.length > 0) {
+    var notInAggregation = _.filter(interactivityColumns, function (clickColumn) {
+      return !_.contains(aggColumns, clickColumn);
+    });
+
+    if (notInAggregation.length > 0) {
+      throw new CartoValidationError('layer', 'wrongInteractivityColumns[' + notInAggregation.join(', ') + ']#' + interactivity);
+    }
+  }
+}
+
+/**
+ * @typedef {object} LatLng
+ * @property {number} lat - Latitude
+ * @property {number} lng - Longitude
+ * @api
+ */
+
+/**
+ * Fired when the source has changed. Handler gets a parameter with the new source.
+ *
+ * @event sourceChanged
+ * @type {carto.layer.Layer}
+ * @api
+ */
+
+/**
+ * Fired when the style has changed. Handler gets a parameter with the new style.
+ *
+ * @event styleChanged
+ * @type {carto.layer.Layer}
+ * @api
+ */
+
+/**
+ * Fired when style metadata has changed.
+ *
+ * @event metadataChanged
+ * @type {carto.layer.MetadataEvent}
+ * @api
+ */
+
+module.exports = Layer;
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var config = __webpack_require__(89);
+var LayerModelBase = __webpack_require__(91);
+var InfowindowTemplate = __webpack_require__(92);
+var TooltipTemplate = __webpack_require__(93);
+var Legends = __webpack_require__(94);
+var AnalysisModel = __webpack_require__(9);
+
+var ATTRIBUTES_THAT_TRIGGER_VIS_RELOAD = ['sql', 'source', 'sql_wrap', 'cartocss'];
+
+var CartoDBLayer = LayerModelBase.extend({
+  defaults: {
+    type: 'CartoDB',
+    attribution: config.get('cartodb_attributions'),
+    visible: true
+  },
+
+  initialize: function initialize(attrs, options) {
+    attrs = attrs || {};
+    options = options || {};
+    if (!options.engine) throw new Error('engine is required');
+
+    this._engine = options.engine;
+    if (attrs && attrs.cartocss) {
+      this.set('initialStyle', attrs.cartocss);
+    }
+
+    if (attrs.source) {
+      this.setSource(attrs.source);
+    }
+
+    // PUBLIC PROPERTIES
+    this.infowindow = new InfowindowTemplate(attrs.infowindow);
+    this.tooltip = new TooltipTemplate(attrs.tooltip);
+    this.unset('infowindow');
+    this.unset('tooltip');
+
+    this.legends = new Legends(attrs.legends, { engine: this._engine });
+    this.unset('legends');
+
+    this.bind('change', this._onAttributeChanged, this);
+    this.infowindow.fields.bind('reset add remove', this._reload, this);
+    this.tooltip.fields.bind('reset add remove', this._reload, this);
+
+    this.aggregation = options.aggregation;
+
+    LayerModelBase.prototype.initialize.apply(this, arguments);
+  },
+
+  _onAttributeChanged: function _onAttributeChanged() {
+    var reload = _.any(ATTRIBUTES_THAT_TRIGGER_VIS_RELOAD, function (attr) {
+      if (this.hasChanged(attr)) {
+        return true;
+      }
+    }, this);
+
+    if (reload) {
+      this._reload();
+    }
+  },
+
+  _reload: function _reload() {
+    this._engine.reload({
+      sourceId: this.get('id')
+    });
+  },
+
+  restoreCartoCSS: function restoreCartoCSS() {
+    this.set('cartocss', this.get('initialStyle'));
+  },
+
+  isVisible: function isVisible() {
+    return this.get('visible');
+  },
+
+  isInteractive: function isInteractive() {
+    return this._hasInfowindowFields() || this._hasTooltipFields();
+  },
+
+  _hasInfowindowFields: function _hasInfowindowFields() {
+    return this.infowindow.hasFields();
+  },
+
+  _hasTooltipFields: function _hasTooltipFields() {
+    return this.tooltip.hasFields();
+  },
+
+  getInteractiveColumnNames: function getInteractiveColumnNames() {
+    return _.chain(['cartodb_id']).union(this.infowindow.getFieldNames()).union(this.tooltip.getFieldNames()).uniq().value();
+  },
+
+  isInfowindowEnabled: function isInfowindowEnabled() {
+    return this.infowindow.hasTemplate();
+  },
+
+  isTooltipEnabled: function isTooltipEnabled() {
+    return this.tooltip.hasTemplate();
+  },
+
+  getName: function getName() {
+    return this.get('layer_name');
+  },
+
+  getEstimatedFeatureCount: function getEstimatedFeatureCount() {
+    var meta = this.get('meta');
+    var stats = meta && meta.stats;
+    return stats && stats.estimatedFeatureCount;
+  },
+
+  getSourceId: function getSourceId() {
+    var source = this.getSource();
+    return source && source.id;
+  },
+
+  getSource: function getSource() {
+    return this.get('source');
+  },
+
+  setSource: function setSource(newSource, options) {
+    if (this.getSource()) {
+      this.getSource().unmarkAsSourceOf(this);
+    }
+    newSource.markAsSourceOf(this);
+    this.set('source', newSource, options);
+  },
+
+  /**
+   * Check if an analysis node is the layer's source.
+   * Only torque and cartodb layers have a source otherwise return false.
+   */
+  hasSource: function hasSource(analysisModel) {
+    return this.getSource().equals(analysisModel);
+  },
+
+  update: function update(attrs) {
+    if (attrs.source) {
+      throw new Error('Use ".setSource" to update a layer\'s source instead of the update method');
+    }
+    LayerModelBase.prototype.update.apply(this, arguments);
+  },
+
+  remove: function remove() {
+    this.getSource().unmarkAsSourceOf(this);
+    LayerModelBase.prototype.remove.apply(this, arguments);
+  },
+
+  getTableName: function getTableName() {
+    if (this.get('source').has('options')) {
+      return this.get('source').get('options').table_name;
+    }
+  },
+
+  getApiKey: function getApiKey() {
+    return this._engine.getApiKey();
+  }
+},
+// Static methods and properties
+{
+  _checkSourceAttribute: function _checkSourceAttribute(source) {
+    if (!(source instanceof AnalysisModel)) {
+      throw new Error('Source must be an instance of AnalysisModel');
+    }
+  }
+});
+
+module.exports = CartoDBLayer;
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Config = __webpack_require__(90);
+
+var config = new Config();
+config.set({
+  cartodb_attributions: '© <a href="https://carto.com/attributions" target="_blank">CARTO</a>',
+  cartodb_logo_link: 'http://www.carto.com'
+});
+
+module.exports = config;
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Backbone = __webpack_require__(1);
+
+/**
+ * global configuration
+ */
+var Config = Backbone.Model.extend({
+  VERSION: 4,
+
+  initialize: function initialize() {},
+
+  // error track
+  REPORT_ERROR_URL: '/api/v0/error',
+  ERROR_TRACK_ENABLED: false
+});
+
+module.exports = Config;
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var log = __webpack_require__(21);
+var Model = __webpack_require__(2);
+
+// Map layer, could be tiled or whatever
+var MapLayer = Model.extend({
+
+  initialize: function initialize() {
+    this.bind('change:type', function () {
+      log.error('changing layer type is not allowed, remove it and add a new one instead');
+    });
+  },
+
+  // PUBLIC API METHODS
+
+  remove: function remove(opts) {
+    opts = opts || {};
+    this.trigger('destroy', this, this.collection, opts);
+  },
+
+  update: function update(attrs, options) {
+    options = options || {};
+
+    // TODO: Pick the attributes for the specific type of layer
+    // Eg: this.set(_.pick(attrs, this.ATTR_NAMES))
+    this.set(attrs, {
+      silent: options.silent
+    });
+  },
+
+  show: function show() {
+    this.set('visible', true);
+  },
+
+  hide: function hide() {
+    this.set('visible', false);
+  },
+
+  isVisible: function isVisible() {
+    return !!this.get('visible');
+  },
+
+  isHidden: function isHidden() {
+    return !this.isVisible();
+  },
+
+  toggle: function toggle() {
+    this.set('visible', !this.get('visible'));
+  },
+
+  // INTERNAL CartoDB.js METHODS
+
+  setOk: function setOk() {
+    this.unset('error');
+  },
+
+  setError: function setError(error) {
+    this.set('error', error);
+  },
+
+  /**
+   * Only torque and cartodb layers have a source.
+   * @abstract
+   */
+  getSourceId: function getSourceId() {
+    throw new Error('.getSourceId called on a non torque/cartodb layer.');
+  },
+
+  /**
+   * Check if an analysis node is the layer's source.
+   * Only torque and cartodb layers have a source otherwise return false.
+   */
+  hasSource: function hasSource(analysisNode) {
+    return false;
+  }
+});
+
+module.exports = MapLayer;
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var PopupFields = __webpack_require__(36);
+
+var InfowindowTemplate = Backbone.Model.extend({
+  defaults: {
+    offset: [28, 0], // offset of the tip calculated from the bottom left corner
+    maxHeight: 180, // max height of the content, not the whole infowindow
+    alternative_names: {},
+    template_type: 'mustache'
+  },
+
+  initialize: function initialize(attrs) {
+    attrs = attrs || {};
+    this.fields = new PopupFields(attrs.fields || []);
+    this.unset('fields');
+  },
+
+  update: function update(attrs) {
+    attrs = _.clone(attrs);
+
+    if (!this.fields.equals(attrs.fields)) {
+      this.fields.reset(attrs.fields);
+    }
+    delete attrs.fields;
+
+    if (attrs.alternative_names) {
+      attrs.alternative_names = JSON.parse(JSON.stringify(attrs.alternative_names));
+    }
+
+    this.set(attrs);
+  },
+
+  getFieldNames: function getFieldNames() {
+    return this.fields.pluck('name');
+  },
+
+  hasFields: function hasFields() {
+    return !this.fields.isEmpty();
+  },
+
+  hasTemplate: function hasTemplate() {
+    return !!this.get('template');
+  }
+});
+
+module.exports = InfowindowTemplate;
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+var PopupFields = __webpack_require__(36);
+
+var TooltipTemplate = Backbone.Model.extend({
+  defaults: {
+    vertical_offset: 0,
+    horizontal_offset: 0,
+    position: 'top|center',
+    template: '',
+    alternative_names: {}
+  },
+
+  initialize: function initialize(attrs) {
+    attrs = attrs || {};
+    this.fields = new PopupFields(attrs.fields || []);
+    this.unset('fields');
+  },
+
+  update: function update(attrs) {
+    attrs = _.clone(attrs);
+
+    if (!this.fields.equals(attrs.fields)) {
+      this.fields.reset(attrs.fields);
+    }
+    delete attrs.fields;
+
+    if (attrs.alternative_names) {
+      attrs.alternative_names = JSON.parse(JSON.stringify(attrs.alternative_names));
+    }
+
+    this.set(attrs);
+  },
+
+  getFieldNames: function getFieldNames() {
+    return this.fields.pluck('name');
+  },
+
+  hasFields: function hasFields() {
+    return !this.fields.isEmpty();
+  },
+
+  hasTemplate: function hasTemplate() {
+    return !!this.get('template');
+  }
+});
+
+module.exports = TooltipTemplate;
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var CategoryLegendModel = __webpack_require__(95);
+var BubbleLegendModel = __webpack_require__(96);
+var ChoroplethLegendModel = __webpack_require__(97);
+var CustomLegendModel = __webpack_require__(98);
+var CustomChoroplethLegendModel = __webpack_require__(99);
+var TorqueLegendModel = __webpack_require__(100);
+
+var LEGENDS_METADATA = {
+  bubble: {
+    modelClass: BubbleLegendModel,
+    definitionAttrs: [{ 'fillColor': 'color' }, { 'topLabel': 'top_label' }, { 'bottomLabel': 'bottom_label' }],
+    dynamic: true
+  },
+  category: {
+    modelClass: CategoryLegendModel,
+    definitionAttrs: ['prefix', 'suffix'],
+    dynamic: true
+  },
+  choropleth: {
+    modelClass: ChoroplethLegendModel,
+    definitionAttrs: ['prefix', 'suffix', { 'leftLabel': 'left_label' }, { 'rightLabel': 'right_label' }],
+    dynamic: true
+  },
+  custom: {
+    modelClass: CustomLegendModel,
+    definitionAttrs: [{ 'items': 'categories' }, 'html']
+  },
+  html: {
+    modelClass: CustomLegendModel,
+    definitionAttrs: [{ 'items': 'categories' }, 'html']
+  },
+  custom_choropleth: {
+    modelClass: CustomChoroplethLegendModel,
+    definitionAttrs: ['prefix', 'suffix', { 'leftLabel': 'left_label' }, { 'rightLabel': 'right_label' }, 'colors']
+  },
+  torque: {
+    modelClass: TorqueLegendModel,
+    definitionAttrs: [{ 'items': 'categories' }, 'html']
+  }
+};
+
+var SHARED_ATTRS = ['title', { 'preHTMLSnippet': 'pre_html' }, { 'postHTMLSnippet': 'post_html' }];
+
+var Legends = function Legends(legendsData, deps) {
+  if (!deps.engine) throw new Error('engine is required');
+
+  this._legendsData = legendsData || [];
+  this._engine = deps.engine;
+
+  _.each(LEGENDS_METADATA, function (legendMetadata, legendType) {
+    this[legendType] = this._createLegendModel(legendType, legendMetadata);
+  }, this);
+
+  // HOTFIX: TO BE DELETED ONCE MIGRATED
+  var data = this._findDataForLegend('html');
+  if (data) {
+    this['custom'] = this['html'];
+  }
+
+  delete this['html'];
+};
+
+Legends.prototype._createLegendModel = function (legendType, legendMetadata) {
+  var ModelClass = legendMetadata.modelClass;
+  var attrs = SHARED_ATTRS.concat(legendMetadata.definitionAttrs);
+  var data = this._findDataForLegend(legendType);
+
+  // Flatten data.definition
+  data = data && _.extend({}, _.omit(data, 'definition'), data.definition);
+
+  var modelAttrs = {};
+  _.each(attrs, function (attr) {
+    var attrNameInData = attr;
+    var attrNameForModel = attr;
+    if (_.isObject(attr)) {
+      attrNameForModel = Object.keys(attr)[0];
+      attrNameInData = attr[attrNameForModel];
+    }
+
+    modelAttrs[attrNameForModel] = data && data[attrNameInData];
+  });
+
+  var legendModel = new ModelClass(modelAttrs, {
+    engine: this._engine
+  });
+
+  if (data) {
+    legendModel.show();
+  }
+  return legendModel;
+};
+
+Legends.prototype._findDataForLegend = function (legendType) {
+  return _.find(this._legendsData, { type: legendType });
+};
+
+Legends.prototype.hasAnyLegend = function () {
+  var legendTypes = _.keys(LEGENDS_METADATA);
+  return _.some(legendTypes, function (legendType) {
+    var legend = this[legendType];
+    return legend && legend.isVisible();
+  }, this);
+};
+
+module.exports = Legends;
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var LegendModelBase = __webpack_require__(15);
+
+var CategoryLegendModel = LegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
+      type: 'category',
+      categories: []
+    });
+  },
+
+  getNonResettableAttrs: function getNonResettableAttrs() {
+    return _.union(LegendModelBase.prototype.getNonResettableAttrs.apply(this), ['categories']);
+  },
+
+  isAvailable: function isAvailable() {
+    return this.get('categories') && this.get('categories').length > 0;
+  }
+});
+
+module.exports = CategoryLegendModel;
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var LegendModelBase = __webpack_require__(15);
+
+var BubbleLegendModel = LegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
+      type: 'bubble',
+      fillColor: '',
+      prefix: '',
+      suffix: '',
+      values: []
+    });
+  },
+
+  getNonResettableAttrs: function getNonResettableAttrs() {
+    return _.union(LegendModelBase.prototype.getNonResettableAttrs.apply(this), ['values']);
+  },
+
+  isAvailable: function isAvailable() {
+    return this.get('values') && this.get('values').length > 0;
+  }
+});
+
+module.exports = BubbleLegendModel;
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var LegendModelBase = __webpack_require__(15);
+
+var ChoroplethLegendModel = LegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(LegendModelBase.prototype.defaults.apply(this), {
+      type: 'choropleth',
+      prefix: '',
+      suffix: '',
+      leftLabel: '',
+      rightLabel: '',
+      colors: []
+    });
+  },
+
+  getNonResettableAttrs: function getNonResettableAttrs() {
+    return _.union(LegendModelBase.prototype.getNonResettableAttrs.apply(this), ['colors']);
+  },
+
+  isAvailable: function isAvailable() {
+    return this.get('colors') && this.get('colors').length > 0;
+  }
+});
+
+module.exports = ChoroplethLegendModel;
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var StaticLegendModelBase = __webpack_require__(26);
+
+var CustomLegendModel = StaticLegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(StaticLegendModelBase.prototype.defaults.apply(this), {
+      type: 'custom',
+      items: [],
+      html: ''
+    });
+  }
+});
+
+module.exports = CustomLegendModel;
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var StaticLegendModelBase = __webpack_require__(26);
+
+var CustomChoroplethLegendModel = StaticLegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(StaticLegendModelBase.prototype.defaults.apply(this), {
+      type: 'custom_choropleth',
+      prefix: '',
+      suffix: '',
+      leftLabel: '',
+      rightLabel: '',
+      colors: []
+    });
+  }
+});
+
+module.exports = CustomChoroplethLegendModel;
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var StaticLegendModelBase = __webpack_require__(26);
+
+var TorqueLegendModel = StaticLegendModelBase.extend({
+  defaults: function defaults() {
+    return _.extend(StaticLegendModelBase.prototype.defaults.apply(this), {
+      type: 'torque',
+      items: [],
+      html: ''
+    });
+  }
+});
+
+module.exports = TorqueLegendModel;
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+
+/**
+  * Gets the value at path of object. If the resolved value is undefined, the defaultValue is returned in its place.
+  * @param {Object} object The object to query.
+  * @param {String} path The path of the property to get.
+  * @param {Any} defaultValue The value returned for undefined resolved values.
+  * @return {Any} Returns the resolved value.
+  */
+module.exports = function (object, path, defaultValue) {
+  var keys = path.split('.');
+  var value = keys.reduce(function (a, b) {
+    return (a || {})[b];
+  }, object);
+
+  return _.isUndefined(value) ? defaultValue : value;
+};
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var BucketsMetadata = __webpack_require__(103);
+var CategoriesMetadata = __webpack_require__(104);
+var Rule = __webpack_require__(13);
+
+/**
+ * Generates a list of Metadata objects from the original cartocss_meta rules
+ *
+ * @param  {Rules} rulesData
+ * @return {metadata.Base[]}
+ */
+function getMetadataFromRules(rulesData) {
+  var metadata = [];
+
+  rulesData.forEach(function (ruleData) {
+    var rule = new Rule(ruleData);
+
+    if (_isBucketsMetadata(rule)) {
+      metadata.push(new BucketsMetadata(rule));
+    } else if (_isCategoriesMetadata(rule)) {
+      metadata.push(new CategoriesMetadata(rule));
+    }
+  });
+
+  return metadata;
+}
+
+function _isBucketsMetadata(rule) {
+  return rule.getBucketsWithRangeFilter().length > 0;
+}
+
+function _isCategoriesMetadata(rule) {
+  return rule.getBucketsWithCategoryFilter().length > 0;
+}
+
+module.exports = {
+  getMetadataFromRules: getMetadataFromRules
+};
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Base = __webpack_require__(38);
+
+/**
+ * Metadata type buckets
+ *
+ * Adding a Turbocarto ramp (with ranges) in the style generates a response
+ * from the server with the resulting information, after computing the ramp.
+ * This information is wrapped in a metadata object of type 'buckets', that
+ * contains a list of buckets with the range (min, max) and the value. And
+ * also the total min, max range and the average of the total values.
+ *
+ * For example, the following ramp will generate a metadata of type 'buckets'
+ * with numeric values (the size) in its buckets:
+ *
+ *   marker-width: ramp([scalerank], range(5, 20), quantiles(5));
+ *
+ * In another example, this ramp will generate a metadata of type 'buckets'
+ * with string values (the color) in its buckets:
+ *
+ *   marker-fill: ramp([scalerank], (#FFC6C4, #EE919B, #CC607D), quantiles);
+ *
+ * @param {object} rule - Rule with the cartocss metadata
+ * @constructor
+ * @hideconstructor
+ * @extends carto.layer.metadata.Base
+ * @memberof carto.layer.metadata
+ * @api
+ */
+function Buckets(rule) {
+  var rangeBuckets = rule.getBucketsWithRangeFilter();
+
+  /**
+   * @typedef {object} carto.layer.metadata.Bucket
+   * @property {number} min - The minimum range value
+   * @property {number} max - The maximum range value
+   * @property {number|string} value - The value of the bucket
+   * @api
+   */
+  this._buckets = rangeBuckets.map(function (bucket) {
+    return {
+      min: bucket.filter.start,
+      max: bucket.filter.end,
+      value: bucket.value
+    };
+  });
+  this._avg = rule.getFilterAvg();
+  this._min = rangeBuckets.length > 0 ? rangeBuckets[0].filter.start : undefined;
+  this._max = rangeBuckets.length > 0 ? rangeBuckets[rangeBuckets.length - 1].filter.end : undefined;
+
+  Base.call(this, 'buckets', rule);
+}
+
+Buckets.prototype = Object.create(Base.prototype);
+
+/**
+ * Return the buckets
+ *
+ * @return {carto.layer.metadata.Bucket[]}
+ * @api
+ */
+Buckets.prototype.getBuckets = function () {
+  return this._buckets;
+};
+
+/**
+ * Return the average of the column
+ *
+ * @return {number}
+ * @api
+ */
+Buckets.prototype.getAverage = function () {
+  return this._avg;
+};
+
+/**
+ * Return the minimum value in the ranges
+ *
+ * @return {number}
+ * @api
+ */
+Buckets.prototype.getMin = function () {
+  return this._min;
+};
+
+/**
+ * Return the maximum value in the ranges
+ *
+ * @return {number}
+ * @api
+ */
+Buckets.prototype.getMax = function () {
+  return this._max;
+};
+
+module.exports = Buckets;
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Base = __webpack_require__(38);
+
+/**
+ * Metadata type categories
+ *
+ * Adding a Turbocarto ramp (with categories) in the style generates a response
+ * from the server with the resulting information after computing the ramp.
+ * This information is wrapped in a metadata object of type 'categories', that
+ * contains a list of categories with the name of the category and the value. And
+ * also the default value if it has been defined in the ramp.
+ *
+ * For example, the following ramp will generate a metadata of type 'categories'
+ * with string values (the color) in its categories. The #CCCCCC is the default
+ * value in this case:
+ *
+ *   marker-fill: ramp([scalerank], (#F54690, #D16996, #CCCCCC), (1, 2), "=", category);
+ *
+ * @param {object} rule - Rule with the cartocss metadata
+ * @constructor
+ * @hideconstructor
+ * @extends carto.layer.metadata.Base
+ * @memberof carto.layer.metadata
+ * @api
+ */
+function Categories(rule) {
+  var categoryBuckets = rule.getBucketsWithCategoryFilter();
+  var defaultBuckets = rule.getBucketsWithDefaultFilter();
+
+  /**
+   * @typedef {object} carto.layer.metadata.Category
+   * @property {number|string} name - The name of the category
+   * @property {string} value - The value of the category
+   * @api
+   */
+  this._categories = categoryBuckets.map(function (bucket) {
+    return {
+      name: bucket.filter.name,
+      value: bucket.value
+    };
+  });
+  this._defaultValue = defaultBuckets.length > 0 ? defaultBuckets[0].value : undefined;
+
+  Base.call(this, 'categories', rule);
+}
+
+Categories.prototype = Object.create(Base.prototype);
+
+/**
+ * Return the buckets
+ *
+ * @return {carto.layer.metadata.Category[]}
+ * @api
+ */
+Categories.prototype.getCategories = function () {
+  return this._categories;
+};
+
+/**
+ * Return the default value
+ *
+ * @return {string}
+ * @api
+ */
+Categories.prototype.getDefaultValue = function () {
+  return this._defaultValue;
+};
+
+module.exports = Categories;
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Events fired by a layer
+ *
+ * @enum {string}
+ * @readonly
+ * @memberof carto.layer
+ */
+var events = {
+  /**
+   * A feature has been clicked, fired every time the user clicks on a feature.
+   */
+  FEATURE_CLICKED: 'featureClicked',
+  /**
+   * The mouse is over a feature, fired every time the user moves over a feature.
+   */
+  FEATURE_OVER: 'featureOver',
+  /**
+   * The mouse exits a feature, fired every time the user moves out of a feature.
+   */
+  FEATURE_OUT: 'featureOut',
+  /**
+   * There has been an error related to tiles, fired every time the features are not rendered due to an error.
+   */
+  TILE_ERROR: 'featureError'
+};
+
+module.exports = events;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var CartoValidationError = __webpack_require__(3);
+
+/**
+ * List of possible aggregation operations.
+ * See {@link https://carto.com/developers/maps-api/tile-aggregation#columns } for more info.
+ * @enum {string} carto.layer.Aggregation.operation
+ * @memberof carto.layer.Aggregation
+ * @api
+ */
+var OPERATIONS = {
+  /** The new point will contain the average value of the or the aggregated ones */
+  AVG: 'avg',
+  /** The new point will contain the sum of the aggregated values */
+  SUM: 'sum',
+  /** The new point will contain the minimal value existing the aggregated features */
+  MIN: 'min',
+  /** The new point will contain the maximun value existing the aggregated features */
+  MAX: 'max',
+  /** The new point will contain the mode of the aggregated values */
+  MODE: 'mode'
+};
+
+/**
+ * List of possible aggregation feature placements.
+ * See {@link https://carto.com/developers/maps-api/tile-aggregation#placement } for more info.
+ * @enum {string} carto.layer.Aggregation.placement
+ * @memberof carto.layer.Aggregation
+ * @api
+ */
+var PLACEMENTS = {
+  /** The new point will be placed at a random sample of the aggregated points */
+  SAMPLE: 'point-sample',
+  /** The new point will be placed at the center of the aggregation grid cells */
+  GRID: 'point-grid',
+  /** The new point will be placed at averaged coordinated of the grouped points */
+  CENTROID: 'centroid'
+};
+
+var VALID_RESOLUTIONS = [0.5, 1, 2, 4, 8, 16, 32, 64, 128, 256];
+
+/**
+ * An aggregation can be passed to a {@link carto.layer.Layer} to reduce the number of visible points
+ * increasing the performance.
+ *
+ * See {@link https://carto.com/developers/maps-api/guides/tile-aggregation/} for more info.
+ *
+ * @param {object} opts
+ * @param {number} opts.threshold - The minimum number of rows in the dataset for aggregation to be applied
+ * @param {number} opts.resolution - The cell-size of the spatial aggregation grid [more info]{@link https://carto.com/developers/maps-api/tile-aggregation#resolution}
+ * @param {string} opts.placement - The kind of [aggregated geometry]{@link https://carto.com/developers/maps-api/tile-aggregation#placement} generated
+ * @param {object} opts.columns - The new columns are computed by a applying an aggregate function to all the points in each group
+ * @param {string} opts.columns.aggregatedFunction - The Function used to aggregate the points: avg (average), sum, min (minimum), max (maximum) and mode (the most frequent value in the group)
+ * @param {string} opts.columns.aggregatedColumn - The name of the original column to be aggregated.
+ *
+ * @example
+ * // Create a layer with aggregated data.
+ * const aggregationOptions = {
+ *   // CARTO applies aggregation if your dataset has more than threshold rows. In this case, more than 1 row.
+ *   threshold: 1,
+ *   // Defines the cell-size of the aggregation grid. In this case, 1x1 pixel.
+ *   resolution: 1,
+ *   // Where the new point will be placed. In this case, at the center of the grid.
+ *   placement: carto.layer.Aggregation.placement.GRID,
+ *   // Here we define the aggregated columns that we want to obtain.
+ *   columns: {
+ *     // Each property key is the name of the new generated column
+ *     avg_population: {
+ *       // The aggregated column will contain the average of the original data.
+ *       aggregateFunction: carto.layer.Aggregation.operation.AVG,
+ *       // The column to be aggregated
+ *       aggregatedColumn: 'population'
+ *     }, {
+ *     min_population: {
+ *       aggregateFunction: carto.layer.Aggregation.operation.MIN,
+ *       aggregatedColumn: 'population'
+ *   }
+ * };
+ * const aggregation = new Aggregation(options);
+ * const layer = new carto.layer.Layer(source, style, { aggregation: aggregation });
+ *
+ * @constructor
+ * @api
+ * @memberof carto.layer
+ */
+function Aggregation(opts) {
+  if (!_.isFinite(opts.threshold)) {
+    throw _getValidationError('thresholdRequired');
+  }
+
+  if (!_.isFinite(opts.threshold) || opts.threshold < 1 || Math.floor(opts.threshold) !== opts.threshold) {
+    throw _getValidationError('invalidThreshold');
+  }
+
+  if (!_.isFinite(opts.resolution)) {
+    throw _getValidationError('resolutionRequired');
+  }
+
+  if (!_.contains(VALID_RESOLUTIONS, opts.resolution)) {
+    throw _getValidationError('invalidResolution');
+  }
+
+  _checkValidPlacement(opts.placement);
+
+  var columns = _checkAndTransformColumns(opts.columns);
+
+  var aggregation = {
+    threshold: opts.threshold,
+    resolution: opts.resolution,
+    placement: opts.placement,
+    columns: columns
+  };
+
+  return _.pick(aggregation, _.identity); // Remove empty values
+}
+
+Aggregation.operation = OPERATIONS;
+
+Aggregation.placement = PLACEMENTS;
+
+function _checkColumns(columns) {
+  Object.keys(columns).forEach(function (key) {
+    _checkColumn(columns, key);
+  });
+}
+
+function _checkColumn(columns, key) {
+  if (!columns[key].aggregatedColumn) {
+    throw _getValidationError('columnAggregatedColumnRequired' + key);
+  }
+
+  if (!_.isString(columns[key].aggregatedColumn)) {
+    throw _getValidationError('invalidColumnAggregatedColumn' + key);
+  }
+
+  if (!columns[key].aggregateFunction) {
+    throw _getValidationError('columnFunctionRequired' + key);
+  }
+
+  if (!_.contains(_.values(OPERATIONS), columns[key].aggregateFunction)) {
+    throw _getValidationError('invalidColumnFunction' + key);
+  }
+}
+
+function _getValidationError(code) {
+  return new CartoValidationError('aggregation', code);
+}
+
+// Windshaft uses snake_case for column parameters
+function _checkAndTransformColumns(columns) {
+  var returnValue = null;
+
+  if (columns) {
+    _checkColumns(columns);
+
+    returnValue = {};
+    Object.keys(columns).forEach(function (key) {
+      returnValue[key] = _columnToSnakeCase(columns[key]);
+    });
+  }
+  return returnValue;
+}
+
+// Windshaft uses snake_case for column parameters
+function _columnToSnakeCase(column) {
+  return {
+    aggregate_function: column.aggregateFunction,
+    aggregated_column: column.aggregatedColumn
+  };
+}
+
+function _checkValidPlacement(placement) {
+  if (placement && !_.contains(_.values(PLACEMENTS), placement)) {
+    throw _getValidationError('invalidPlacement');
+  }
+}
+
+module.exports = Aggregation;
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global L */
+var _ = __webpack_require__(0);
+var C = __webpack_require__(24);
+var LeafletLayerView = __webpack_require__(108);
+var CartoDBLayerGroupViewBase = __webpack_require__(40);
+var zera = __webpack_require__(41);
+var EMPTY_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+var LeafletCartoDBLayerGroupView = function LeafletCartoDBLayerGroupView(layerModel, opts) {
+  LeafletLayerView.apply(this, arguments);
+  CartoDBLayerGroupViewBase.apply(this, arguments);
+
+  this.leafletLayer.on('load', function () {
+    this.trigger('load');
+  }.bind(this));
+
+  this.leafletLayer.on('loading', function () {
+    this.trigger('loading');
+  }.bind(this));
+
+  this.leafletLayer.on('tileerror', function (layer) {
+    this.model.addError({ type: C.WINDSHAFT_ERRORS.TILE });
+  }.bind(this));
+};
+
+LeafletCartoDBLayerGroupView.prototype = _.extend({}, LeafletLayerView.prototype, CartoDBLayerGroupViewBase.prototype, {
+  interactionClass: zera.Interactive,
+
+  _createLeafletLayer: function _createLeafletLayer() {
+    var tileLayer = new L.TileLayer(null, {
+      opacity: 0.99,
+      maxZoom: 30
+    });
+    tileLayer._setUrl = function (url, noDraw) {
+      return L.TileLayer.prototype.setUrl.call(this, url, noDraw);
+    };
+    return tileLayer;
+  },
+
+  _reload: function _reload() {
+    var tileURLTemplate = this.model.getTileURLTemplate();
+    var subdomains = this.model.getSubdomains();
+
+    if (!tileURLTemplate) {
+      tileURLTemplate = EMPTY_GIF;
+    }
+
+    if (subdomains) {
+      L.Util.setOptions(this.leafletLayer, { subdomains: subdomains });
+    }
+
+    this.leafletLayer._setUrl(tileURLTemplate);
+
+    this._reloadInteraction();
+  },
+
+  _manageOffEvents: function _manageOffEvents(nativeMap, zeraEvent) {
+    this._onFeatureOut(zeraEvent.layer);
+  },
+
+  _manageOnEvents: function _manageOnEvents(nativeMap, zeraEvent) {
+    var containerPoint = nativeMap.layerPointToContainerPoint(zeraEvent.layerPoint);
+
+    if (!containerPoint || isNaN(containerPoint.x) || isNaN(containerPoint.y)) {
+      return false;
+    }
+
+    var latlng = nativeMap.containerPointToLatLng(containerPoint);
+
+    var eventType = zeraEvent.e.type.toLowerCase();
+
+    switch (eventType) {
+      case 'mousemove':
+        this._onFeatureOver(latlng, containerPoint, zeraEvent.data, zeraEvent.layer);
+        break;
+      case 'click':
+        this._onFeatureClicked(latlng, containerPoint, zeraEvent.data, zeraEvent.layer);
+        break;
+    }
+  },
+
+  _onFeatureClicked: function _onFeatureClicked(latlon, containerPoint, data, layer) {
+    var layerModel = this.model.getLayerInLayerGroupAt(layer);
+    if (layerModel) {
+      this.trigger('featureClick', {
+        layer: layerModel,
+        layerIndex: layer,
+        latlng: [latlon.lat, latlon.lng],
+        position: containerPoint,
+        feature: data
+      });
+    }
+  },
+
+  _onFeatureOver: function _onFeatureOver(latlon, containerPoint, data, layer) {
+    var layerModel = this.model.getLayerInLayerGroupAt(layer);
+    if (layerModel) {
+      this.trigger('featureOver', {
+        layer: layerModel,
+        layerIndex: layer,
+        latlng: [latlon.lat, latlon.lng],
+        position: containerPoint,
+        feature: data
+      });
+    }
+  },
+
+  _onFeatureOut: function _onFeatureOut(layerIndex) {
+    var layerModel = this.model.getLayerInLayerGroupAt(layerIndex);
+    if (layerModel) {
+      this.trigger('featureOut', {
+        layer: layerModel,
+        layerIndex: layerIndex
+      });
+    }
+  }
+});
+
+LeafletCartoDBLayerGroupView.prototype.constructor = LeafletLayerView;
+
+module.exports = LeafletCartoDBLayerGroupView;
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+
+var LeafletLayerView = function LeafletLayerView(layerModel, opts) {
+  opts = opts || {};
+  this.model = layerModel;
+  this.mapModel = opts.mapModel;
+  this.leafletMap = opts.nativeMap;
+  this.leafletLayer = opts.nativeLayer || this._createLeafletLayer();
+  this.showLimitErrors = opts.showLimitErrors;
+
+  this.setModel(layerModel);
+
+  var type = layerModel.get('type') || layerModel.get('kind');
+  this.type = type && type.toLowerCase();
+};
+
+_.extend(LeafletLayerView.prototype, Backbone.Events);
+_.extend(LeafletLayerView.prototype, {
+
+  setZIndex: function setZIndex(index) {
+    this.leafletLayer.setZIndex(index);
+  },
+
+  setModel: function setModel(model) {
+    if (this.model) {
+      this.model.unbind('change', this._modelUpdated, this);
+    }
+    this.model = model;
+    this.model.bind('change', this._modelUpdated, this);
+  },
+
+  remove: function remove() {
+    this.leafletMap.removeLayer(this.leafletLayer);
+    this.notifyRemove();
+  },
+
+  notifyRemove: function notifyRemove() {
+    this.trigger('remove', this);
+    this.model.unbind(null, null, this);
+    this.unbind();
+  },
+
+  reload: function reload() {
+    this.leafletLayer.redraw();
+  },
+
+  _createLeafletLayer: function _createLeafletLayer() {
+    throw new Error('subclasses of LeafletLayerView must implement _createLeafletLayer');
+  }
+});
+
+module.exports = LeafletLayerView;
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global google */
+var _ = __webpack_require__(0);
+var Layer = __webpack_require__(25);
+var triggerLayerFeatureEvent = __webpack_require__(39);
+var GMapsCartoDBLayerGroupView = __webpack_require__(110);
+var CartoError = __webpack_require__(4);
+
+/**
+ * This object is a custom Google Maps MapType to enable feature interactivity
+ * using an internal GMapsCartoDBLayerGroupView instance.
+ *
+ * NOTE: It also contains the feature events handlers. That's why it requires the carto layers array.
+ */
+function GoogleMapsMapType(layers, engine, map) {
+  this._layers = layers;
+  this._engine = engine;
+  this._map = map;
+
+  this._hoveredLayers = [];
+
+  this.tileSize = new google.maps.Size(256, 256);
+  this._internalView = new GMapsCartoDBLayerGroupView(this._engine._cartoLayerGroup, {
+    nativeMap: map
+  });
+  this._id = this._internalView._id;
+  this._internalView.on('featureClick', this._onFeatureClick, this);
+  this._internalView.on('featureOver', this._onFeatureOver, this);
+  this._internalView.on('featureOut', this._onFeatureOut, this);
+  this._internalView.on('featureError', this._onFeatureError, this);
+}
+
+GoogleMapsMapType.prototype.getTile = function (coord, zoom, ownerDocument) {
+  return this._internalView.getTile(coord, zoom, ownerDocument);
+};
+
+GoogleMapsMapType.prototype._onFeatureClick = function (internalEvent) {
+  var layer = this._layers.findById(internalEvent.layer.id);
+  triggerLayerFeatureEvent(Layer.events.FEATURE_CLICKED, internalEvent, layer);
+};
+
+GoogleMapsMapType.prototype._onFeatureOver = function (internalEvent) {
+  var layer = this._layers.findById(internalEvent.layer.id);
+  if (layer.isInteractive()) {
+    this._hoveredLayers[internalEvent.layerIndex] = true;
+    this._map.setOptions({ draggableCursor: 'pointer' });
+  }
+  triggerLayerFeatureEvent(Layer.events.FEATURE_OVER, internalEvent, layer);
+};
+
+GoogleMapsMapType.prototype._onFeatureOut = function (internalEvent) {
+  var layer = this._layers.findById(internalEvent.layer.id);
+  this._hoveredLayers[internalEvent.layerIndex] = false;
+  if (_.any(this._hoveredLayers)) {
+    this._map.setOptions({ draggableCursor: 'pointer' });
+  } else {
+    this._map.setOptions({ draggableCursor: 'auto' });
+  }
+  triggerLayerFeatureEvent(Layer.events.FEATURE_OUT, internalEvent, layer);
+};
+
+GoogleMapsMapType.prototype._onFeatureError = function (error) {
+  var cartoError = new CartoError(error);
+  _.each(this._layers.toArray(), function (layer) {
+    if (layer.isInteractive()) {
+      layer.trigger(Layer.events.TILE_ERROR, cartoError);
+    }
+  });
+};
+
+module.exports = GoogleMapsMapType;
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global Image, google */
+var _ = __webpack_require__(0);
+var GMapsLayerView = __webpack_require__(111);
+var zera = __webpack_require__(41);
+
+var C = __webpack_require__(24);
+var Projector = __webpack_require__(112);
+var CartoDBLayerGroupViewBase = __webpack_require__(40);
+var Profiler = __webpack_require__(113);
+
+var OPACITY_FILTER = 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)';
+var EMPTY_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+function setImageOpacityIE8(img, opacity) {
+  var v = Math.round(opacity * 100);
+  if (v >= 99) {
+    img.style.filter = OPACITY_FILTER;
+  } else {
+    img.style.filter = 'alpha(opacity=' + opacity + ');';
+  }
+}
+
+function generateId() {
+  return ((1 + Math.random()) * 0x100000000 | 0).toString(16).substring(1);
+}
+
+var GMapsCartoDBLayerGroupView = function GMapsCartoDBLayerGroupView(layerModel, options) {
+  var self = this;
+  var hovers = [];
+  var gmapsMap = options.nativeMap;
+
+  _.bindAll(this, 'featureOut', 'featureOver', 'featureClick');
+
+  var opts = _.clone(layerModel.attributes);
+
+  opts.map = gmapsMap;
+
+  var _featureOver = opts.featureOver;
+  var _featureOut = opts.featureOut;
+  var _featureClick = opts.featureClick;
+
+  var previousEvent;
+  var eventTimeout = -1;
+
+  opts.featureOver = function (e, latlon, pxPos, data, layer) {
+    if (!hovers[layer]) {
+      self.trigger('layerenter', e, latlon, pxPos, data, layer);
+    }
+    hovers[layer] = 1;
+    _featureOver && _featureOver.apply(this, arguments);
+    self.featureOver && self.featureOver.apply(this, arguments);
+
+    // if the event is the same than before just cancel the event
+    // firing because there is a layer on top of it
+    if (e.timeStamp === previousEvent) {
+      clearTimeout(eventTimeout);
+    }
+    eventTimeout = setTimeout(function () {
+      self.trigger('mouseover', e, latlon, pxPos, data, layer);
+      self.trigger('layermouseover', e, latlon, pxPos, data, layer);
+    }, 0);
+    previousEvent = e.timeStamp;
+  };
+
+  opts.featureOut = function (m, layer) {
+    if (hovers[layer]) {
+      self.trigger('layermouseout', layer);
+    }
+    hovers[layer] = 0;
+    if (!_.any(hovers)) {
+      self.trigger('mouseout');
+    }
+    _featureOut && _featureOut.apply(this, arguments);
+    self.featureOut && self.featureOut.apply(this, arguments);
+  };
+
+  opts.featureClick = _.debounce(function () {
+    _featureClick && _featureClick.apply(this, arguments);
+    self.featureClick && self.featureClick.apply(opts, arguments);
+  }, 10);
+
+  this.tiles = 0;
+
+  this.options = {
+    tiles: options.tiles,
+    scheme: options.scheme || 'xyz',
+    blankImage: options.blankImage || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+  };
+
+  // internal id
+  this._id = generateId();
+
+  // non-configurable options
+  this.interactive = true;
+  this.tileSize = new google.maps.Size(256, 256);
+
+  // DOM element cache
+  this.cache = {};
+
+  _.extend(this.options, opts);
+  GMapsLayerView.apply(this, arguments);
+  this.projector = new Projector(opts.map);
+  CartoDBLayerGroupViewBase.apply(this, arguments);
+};
+
+GMapsCartoDBLayerGroupView.prototype.interactionClass = zera.Interactive;
+_.extend(GMapsCartoDBLayerGroupView.prototype, CartoDBLayerGroupViewBase.prototype, GMapsLayerView.prototype, {
+  addToMap: function addToMap() {
+    this.gmapsMap.overlayMapTypes.setAt(0, this);
+  },
+
+  remove: function remove() {
+    var overlayIndex = this._getOverlayIndex();
+
+    if (overlayIndex >= 0) {
+      this.gmapsMap.overlayMapTypes.removeAt(overlayIndex);
+    }
+
+    this._clearInteraction();
+    this.finishLoading && this.finishLoading();
+  },
+
+  reload: function reload() {
+    this.model.invalidate();
+  },
+
+  featureOver: function featureOver(e, latlon, pixelPos, data, layer) {
+    var layerModel = this.model.getLayerInLayerGroupAt(layer);
+    if (layerModel) {
+      this.trigger('featureOver', {
+        layer: layerModel,
+        layerIndex: layer,
+        latlng: [latlon.lat(), latlon.lng()],
+        position: { x: pixelPos.x, y: pixelPos.y },
+        feature: data
+      });
+    }
+  },
+
+  featureOut: function featureOut(e, layer) {
+    var layerModel = this.model.getLayerInLayerGroupAt(layer);
+    if (layerModel) {
+      this.trigger('featureOut', {
+        layer: layerModel,
+        layerIndex: layer
+      });
+    }
+  },
+
+  featureClick: function featureClick(e, latlon, pixelPos, data, layer) {
+    var layerModel = this.model.getLayerInLayerGroupAt(layer);
+    if (layerModel) {
+      this.trigger('featureClick', {
+        layer: layerModel,
+        layerIndex: layer,
+        latlng: [latlon.lat(), latlon.lng()],
+        position: { x: pixelPos.x, y: pixelPos.y },
+        feature: data
+      });
+    }
+  },
+
+  error: function error(e) {
+    if (this.model) {
+      this.model.trigger('error', e ? e.errors : 'unknown error');
+      this.model.trigger('tileError', e ? e.errors : 'unknown error');
+    }
+  },
+
+  ok: function ok(e) {
+    this.model.trigger('tileOk');
+  },
+
+  tilesOk: function tilesOk(e) {
+    this.model.trigger('tileOk');
+  },
+
+  loading: function loading() {
+    this.trigger('loading');
+  },
+
+  finishLoading: function finishLoading() {
+    this.trigger('load');
+  },
+
+  setOpacity: function setOpacity(opacity) {
+    if (isNaN(opacity) || opacity > 1 || opacity < 0) {
+      throw new Error(opacity + ' is not a valid value, should be in [0, 1] range');
+    }
+    this.opacity = this.options.opacity = opacity;
+    for (var key in this.cache) {
+      var img = this.cache[key];
+      img.style.opacity = opacity;
+      setImageOpacityIE8(img, opacity);
+    }
+  },
+
+  getTile: function getTile(coord, zoom, ownerDocument) {
+    var self = this;
+    var ie = 'ActiveXObject' in window;
+    var ielt9 = ie && !document.addEventListener;
+
+    this.options.added = true;
+    if (!this.model.hasTileURLTemplates()) {
+      var key = zoom + '/' + coord.x + '/' + coord.y;
+      var image = this.cache[key] = new Image(256, 256);
+      image.src = EMPTY_GIF;
+      image.setAttribute('gTileKey', key);
+      image.style.opacity = this.options.opacity;
+      return image;
+    }
+
+    var tile = this._getTile(coord, zoom, ownerDocument);
+
+    // in IE8 semi transparency does not work and needs filter
+    if (ielt9) {
+      setImageOpacityIE8(tile, this.options.opacity);
+    }
+    tile.style.opacity = this.options.opacity;
+    if (this.tiles === 0) {
+      this.loading && this.loading();
+    }
+
+    this.tiles++;
+
+    var loadTime = Profiler.metric('cartodb-js.tile.png.load.time').start();
+
+    var finished = function finished() {
+      loadTime.end();
+      self.tiles--;
+      if (self.tiles === 0) {
+        self.finishLoading && self.finishLoading();
+      }
+    };
+
+    tile.onload = finished;
+
+    tile.onerror = function () {
+      Profiler.metric('cartodb-js.tile.png.error').inc();
+      self.model.addError({ type: C.WINDSHAFT_ERRORS.TILE });
+      finished();
+    };
+
+    return tile;
+  },
+
+  // Get a tile element from a coordinate, zoom level, and an ownerDocument.
+  _getTile: function _getTile(coord, zoom, ownerDocument) {
+    var key = zoom + '/' + coord.x + '/' + coord.y;
+    if (!this.cache[key]) {
+      var img = this.cache[key] = new Image(256, 256);
+      this.cache[key].src = this._getTileUrl(coord, zoom);
+      this.cache[key].setAttribute('gTileKey', key);
+      this.cache[key].onerror = function () {
+        img.style.display = 'none';
+      };
+    }
+    return this.cache[key];
+  },
+
+  // Get a tile url, based on x, y coordinates and a z value.
+  _getTileUrl: function _getTileUrl(coord, z) {
+    // Y coordinate is flipped in Mapbox, compared to Google
+    var mod = Math.pow(2, z);
+    var y = this.options.scheme === 'tms' ? mod - 1 - coord.y : coord.y;
+    var x = coord.x % mod;
+
+    x = x < 0 ? coord.x % mod + mod : x;
+
+    if (y < 0) return this.options.blankImage;
+
+    return this.options.tiles[parseInt(x + y, 10) % this.options.tiles.length].replace(/\{z\}/g, z).replace(/\{x\}/g, x).replace(/\{y\}/g, y);
+  },
+
+  _reload: function _reload() {
+    var tileURLTemplates;
+    if (this.model.hasTileURLTemplates()) {
+      tileURLTemplates = [this.model.getTileURLTemplatesWithSubdomains()[0]];
+    } else {
+      tileURLTemplates = [EMPTY_GIF];
+    }
+
+    this.options.tiles = tileURLTemplates;
+    this.tiles = 0;
+    this.cache = {};
+    this._reloadInteraction();
+    this._refreshView();
+  },
+
+  _refreshView: function _refreshView() {
+    var overlays = this.gmapsMap.overlayMapTypes;
+    var overlayIndex = this._getOverlayIndex();
+
+    if (overlayIndex >= 0) {
+      overlays.setAt(overlayIndex, overlays.getAt(overlayIndex));
+    }
+  },
+
+  _checkLayer: function _checkLayer() {
+    if (!this.options.added) {
+      throw new Error('the layer is not still added to the map');
+    }
+  },
+
+  _getOverlayIndex: function _getOverlayIndex() {
+    var overlays = this.gmapsMap.overlayMapTypes.getArray();
+
+    return _.findIndex(overlays, function (overlay) {
+      return overlay && overlay._id === this._id;
+    }, this);
+  },
+
+  /**
+   * Creates an instance of a googleMaps Point
+   */
+  _newPoint: function _newPoint(x, y) {
+    return new google.maps.Point(x, y);
+  },
+
+  _manageOffEvents: function _manageOffEvents(map, o) {
+    if (this.options.featureOut) {
+      return this.options.featureOut && this.options.featureOut(o.e, o.layer);
+    }
+  },
+
+  _manageOnEvents: function _manageOnEvents(map, o) {
+    var point = o.pixel;
+    var latlng = this.projector.pixelToLatLng(point);
+    var eventType = o.e.type.toLowerCase();
+
+    switch (eventType) {
+      case 'mousemove':
+        if (this.options.featureOver) {
+          return this.options.featureOver(o.e, latlng, point, o.data, o.layer);
+        }
+        break;
+
+      case 'click':
+      case 'touchend':
+      case 'touchmove': // for some reason android browser does not send touchend
+      case 'mspointerup':
+      case 'pointerup':
+      case 'pointermove':
+        if (this.options.featureClick) {
+          this.options.featureClick(o.e, latlng, point, o.data, o.layer);
+        }
+        break;
+      default:
+        break;
+    }
+  }
+});
+
+module.exports = GMapsCartoDBLayerGroupView;
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Backbone = __webpack_require__(1);
+
+/**
+ * base layer for all google maps layers
+ */
+var GMapsLayerView = function GMapsLayerView(layerModel, opts) {
+  opts = opts || {};
+  this.model = layerModel;
+  this.model.bind('change', this._onModelUpdated, this);
+  this.mapModel = opts.mapModel;
+  this.gmapsMap = opts.nativeMap;
+  this.showLimitErrors = opts.showLimitErrors;
+};
+
+_.extend(GMapsLayerView.prototype, Backbone.Events);
+_.extend(GMapsLayerView.prototype, {
+  addToMap: function addToMap() {
+    throw new Error('Subclasses of GMapsLayerView must implement addToMap');
+  },
+
+  remove: function remove() {
+    throw new Error('Subclasses of GMapsLayerView must implement remove');
+  },
+
+  _onModelUpdated: function _onModelUpdated() {}
+});
+
+module.exports = GMapsLayerView;
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global google */
+// helper to get pixel position from latlon
+
+function Projector(map) {
+  this.setMap(map);
+}
+Projector.prototype = new google.maps.OverlayView();
+Projector.prototype.draw = function () {};
+Projector.prototype.latLngToPixel = function (latlng) {
+  var projection = this.getProjection();
+  if (projection) {
+    return projection.fromLatLngToContainerPixel(latlng);
+  }
+  console.warn('Projector has no projection');
+  return new google.maps.Point(0, 0);
+};
+
+Projector.prototype.pixelToLatLng = function (point) {
+  var projection = this.getProjection();
+  if (projection) {
+    return projection.fromContainerPixelToLatLng(point);
+  }
+  console.warn('Projector has no projection');
+  return new google.maps.LatLng(0, 0);
+};
+
+module.exports = Projector;
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+# metrics profiler
+
+## timing
+
+```
+ var timer = Profiler.metric('resource:load')
+ time.start();
+ ...
+ time.end();
+```
+
+## counters
+
+```
+ var counter = Profiler.metric('requests')
+ counter.inc();   // 1
+ counter.inc(10); // 11
+ counter.dec()    // 10
+ counter.dec(10)  // 0
+```
+
+## Calls per second
+```
+  var fps = Profiler.metric('fps')
+  function render() {
+    fps.mark();
+  }
+```
+*/
+var MAX_HISTORY = 1024;
+function Profiler() {}
+Profiler.metrics = {};
+Profiler._backend = null;
+
+Profiler.get = function (name) {
+  return Profiler.metrics[name] || {
+    max: 0,
+    min: Number.MAX_VALUE,
+    avg: 0,
+    total: 0,
+    count: 0,
+    last: 0,
+    history: typeof Float32Array !== 'undefined' ? new Float32Array(MAX_HISTORY) : []
+  };
+};
+
+Profiler.backend = function (_) {
+  Profiler._backend = _;
+};
+
+Profiler.new_value = function (name, value, type, defer) {
+  type = type || 'i';
+  var t = Profiler.metrics[name] = Profiler.get(name);
+
+  t.max = Math.max(t.max, value);
+  t.min = Math.min(t.min, value);
+  t.total += value;
+  ++t.count;
+  t.avg = t.total / t.count;
+  t.history[t.count % MAX_HISTORY] = value;
+
+  if (!defer) {
+    Profiler._backend && Profiler._backend([type, name, value]);
+  } else {
+    var n = performance.now();
+    // don't allow to send stats quick
+    if (n - t.last > 1000) {
+      Profiler._backend && Profiler._backend([type, name, t.avg]);
+      t.last = n;
+    }
+  }
+};
+
+Profiler.print_stats = function () {
+  for (var k in Profiler.metrics) {
+    var t = Profiler.metrics[k];
+    console.log(' === ' + k + ' === ');
+    console.log(' max: ' + t.max);
+    console.log(' min: ' + t.min);
+    console.log(' avg: ' + t.avg);
+    console.log(' count: ' + t.count);
+    console.log(' total: ' + t.total);
+  }
+};
+
+function Metric(name) {
+  this.t0 = null;
+  this.name = name;
+  this.count = 0;
+}
+
+Metric.prototype = {
+
+  //
+  // start a time measurement
+  //
+  start: function start() {
+    this.t0 = performance.now();
+    return this;
+  },
+
+  // elapsed time since start was called
+  _elapsed: function _elapsed() {
+    return performance.now() - this.t0;
+  },
+
+  //
+  // finish a time measurement and register it
+  // ``start`` should be called first, if not this
+  // function does not take effect
+  //
+  end: function end(defer) {
+    if (this.t0 !== null) {
+      Profiler.new_value(this.name, this._elapsed(), 't', defer);
+      this.t0 = null;
+    }
+  },
+
+  //
+  // increments the value
+  // qty: how many, default = 1
+  //
+  inc: function inc(qty) {
+    qty = qty === undefined ? 1 : qty;
+    Profiler.new_value(this.name, qty, 'i');
+  },
+
+  //
+  // decrements the value
+  // qty: how many, default = 1
+  //
+  dec: function dec(qty) {
+    qty = qty === undefined ? 1 : qty;
+    Profiler.new_value(this.name, qty, 'd');
+  },
+
+  //
+  // measures how many times per second this function is called
+  //
+  mark: function mark() {
+    ++this.count;
+    if (this.t0 === null) {
+      this.start();
+      return;
+    }
+    var elapsed = this._elapsed();
+    if (elapsed > 1) {
+      Profiler.new_value(this.name, this.count);
+      this.count = 0;
+      this.start();
+    }
+  }
+};
+
+Profiler.metric = function (name) {
+  return new Metric(name);
+};
+
+module.exports = Profiler;
+
+/***/ }),
 /* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var $ = __webpack_require__(17);
-var _ = __webpack_require__(0);
-var LZMA = __webpack_require__(113);
-var util = __webpack_require__(7);
-var WindshaftConfig = __webpack_require__(42);
-var RequestTracker = __webpack_require__(112);
-var log = __webpack_require__(28);
-var parseWindshaftErrors = __webpack_require__(26);
-
-var validatePresenceOfOptions = function validatePresenceOfOptions(options, requiredOptions) {
-  var missingOptions = _.filter(requiredOptions, function (option) {
-    return !options[option];
-  });
-  if (missingOptions.length) {
-    throw new Error('WindshaftClient could not be initialized. The following options are missing: ' + missingOptions.join(', '));
-  }
-};
-
-var MAX_URL_LENGTH = 2033;
-var COMPRESSION_LEVEL = 3;
-/* The max number of times the same map can be instantiated */
-var MAP_INSTANTIATION_LIMIT = 3;
+var Dataset = __webpack_require__(115);
+var SQL = __webpack_require__(116);
 
 /**
- * Windshaft client. It provides a method to create instances of maps in Windshaft.
- * @param {object} options Options to set up the client
+ *  @namespace carto.source
+ *  @api
  */
-var WindshaftClient = function WindshaftClient(settings) {
-  validatePresenceOfOptions(settings, ['urlTemplate', 'userName']);
-
-  if (settings.templateName) {
-    this.endpoints = {
-      get: [WindshaftConfig.MAPS_API_BASE_URL, 'named', settings.templateName, 'jsonp'].join('/'),
-      post: [WindshaftConfig.MAPS_API_BASE_URL, 'named', settings.templateName].join('/')
-    };
-  } else {
-    this.endpoints = {
-      get: WindshaftConfig.MAPS_API_BASE_URL,
-      post: WindshaftConfig.MAPS_API_BASE_URL
-    };
-  }
-
-  this.url = settings.urlTemplate.replace('{user}', settings.userName);
-  this._requestTracker = new RequestTracker(MAP_INSTANTIATION_LIMIT);
+module.exports = {
+  Dataset: Dataset,
+  SQL: SQL
 };
-
-WindshaftClient.prototype.instantiateMap = function (request) {
-  // TODO: update options, use promises or explicit callbacks function (error, params).
-  if (this._requestTracker.canRequestBePerformed(request)) {
-    this._performRequest(request, {
-      success: function (response) {
-        this._requestTracker.track(request, response);
-        if (response.errors) {
-          var parsedErrors = parseWindshaftErrors(response);
-          request.options.error && request.options.error(parsedErrors);
-        } else {
-          request.options.success && request.options.success(response);
-        }
-      }.bind(this),
-      error: function (xhr, textStatus) {
-        // Ignore error if request was explicitly aborted
-        if (textStatus === 'abort') return;
-        var errors = {};
-        var parsedErrors = {};
-        try {
-          errors = JSON.parse(xhr.responseText);
-          parsedErrors = parseWindshaftErrors(errors);
-        } catch (e) {}
-        this._requestTracker.track(request, errors);
-        request.options.error && request.options.error(parsedErrors);
-      }.bind(this)
-    });
-  } else {
-    log.error('Maximum number of subsequent equal requests to the Maps API reached (' + MAP_INSTANTIATION_LIMIT + '):', request.payload, request.params);
-    request.options.error && request.options.error({});
-  }
-};
-
-WindshaftClient.prototype._performRequest = function (request, ajaxOptions) {
-  var mapDefinition = request.payload;
-  var params = request.params;
-
-  var encodedURL = this._generateEncodedURL(mapDefinition, params);
-  if (this._isURLValid(encodedURL)) {
-    this._get(encodedURL, ajaxOptions);
-  } else {
-    this._generateCompressedURL(mapDefinition, params, function (compressedURL) {
-      if (this._isURLValid(compressedURL)) {
-        this._get(compressedURL, ajaxOptions);
-      } else {
-        var url = this._getURL(params, 'post');
-        this._post(url, mapDefinition, ajaxOptions);
-      }
-    }.bind(this));
-  }
-};
-
-WindshaftClient.prototype._generateEncodedURL = function (payload, params) {
-  params = _.extend({
-    config: JSON.stringify(payload)
-  }, params);
-
-  return this._getURL(params);
-};
-
-WindshaftClient.prototype._generateCompressedURL = function (payload, params, callback) {
-  var data = JSON.stringify({
-    config: JSON.stringify(payload)
-  });
-
-  LZMA.compress(data, COMPRESSION_LEVEL, function (compressedPayload) {
-    params = _.extend({
-      lzma: util.array2hex(compressedPayload)
-    }, params);
-
-    callback(this._getURL(params));
-  }.bind(this));
-};
-
-WindshaftClient.prototype._isURLValid = function (url) {
-  return url.length < MAX_URL_LENGTH;
-};
-
-WindshaftClient.prototype._post = function (url, payload, options) {
-  this._abortPreviousRequest();
-  this._previousRequest = $.ajax({
-    url: url,
-    crossOrigin: true,
-    method: 'POST',
-    dataType: 'json',
-    contentType: 'application/json',
-    data: JSON.stringify(payload),
-    success: options.success,
-    error: options.error
-  });
-};
-
-WindshaftClient.prototype._get = function (url, options) {
-  this._abortPreviousRequest();
-  this._previousRequest = $.ajax({
-    url: url,
-    method: 'GET',
-    dataType: 'jsonp',
-    jsonpCallback: this._jsonpCallbackName(url),
-    cache: true,
-    success: options.success,
-    error: options.error
-  });
-};
-
-WindshaftClient.prototype._abortPreviousRequest = function () {
-  if (this._previousRequest) {
-    this._previousRequest.abort();
-  }
-};
-
-WindshaftClient.prototype._getURL = function (params, method) {
-  method = method || 'get';
-  var queryString = this._convertParamsToQueryString(params);
-  var endpoint = this.endpoints[method];
-  return [this.url, endpoint].join('/') + queryString;
-};
-
-WindshaftClient.prototype._convertParamsToQueryString = function (params) {
-  var queryString = [];
-  _.each(params, function (value, name) {
-    if (value instanceof Array) {
-      _.each(value, function (oneValue) {
-        queryString.push(name + '[]=' + oneValue);
-      });
-    } else if (value instanceof Object) {
-      queryString.push(name + '=' + encodeURIComponent(JSON.stringify(value)));
-    } else {
-      queryString.push(name + '=' + encodeURIComponent(value));
-    }
-  });
-  return queryString.length > 0 ? '?' + queryString.join('&') : '';
-};
-
-WindshaftClient.prototype._jsonpCallbackName = function (payload) {
-  return '_cdbc_' + util.uniqueCallbackName(payload);
-};
-
-module.exports = WindshaftClient;
 
 /***/ }),
 /* 115 */
@@ -31134,149 +30981,141 @@ module.exports = WindshaftClient;
 
 
 var _ = __webpack_require__(0);
-var WindshaftConfig = __webpack_require__(42);
+var Base = __webpack_require__(16);
+var AnalysisModel = __webpack_require__(9);
+var CamshaftReference = __webpack_require__(20);
+var CartoValidationError = __webpack_require__(3);
+var CartoError = __webpack_require__(4);
 
 /**
- * Wrapper over a server response to a map instantiation giving some utility methods.
+ * A Dataset that can be used as the data source for layers and dataviews.
+ *
+ * @param {string} tableName The name of an existing table
+ * @example
+ * new carto.source.Dataset('european_cities');
  * @constructor
- * @param {object} windshaftSettings - Object containing the request options.
- * @param {string} serverResponse - The json string representing a windshaft response to a map instantiation.
+ * @fires error
+ * @extends carto.source.Base
+ * @memberof carto.source
+ * @api
  */
-function Response(windshaftSettings, serverResponse) {
-  this._windshaftSettings = windshaftSettings;
-  this._layerGroupId = serverResponse.layergroupid;
-  this._layers = serverResponse.metadata.layers;
-  this._dataviews = serverResponse.metadata.dataviews;
-  this._analyses = serverResponse.metadata.analyses;
-  this._cdnUrl = serverResponse.cdn_url;
+function Dataset(tableName) {
+  var _this = this;
+
+  _checkTableName(tableName);
+  this._tableName = tableName;
+
+  Base.apply(this, arguments);
+
+  this._appliedFilters.on('change:filters', function () {
+    return _this._updateInternalModelQuery(_this._getQueryToApply());
+  });
 }
 
-/**
- * Return the indexes of the layers for a certain type.
- * @example
- * // layers = [ carto, carto, tiled, plain, tiled, torque];
- * getLayerIndexesByType('mapnik') // [0, 1]
- * getLayerIndexesByType('tiled') // [2, 4]
- * getLayerIndexesByType('torque') // [5]
- * @param {string} Type - The type of the layers: mapnik, torque, plain, tiled.
- */
-Response.prototype.getLayerIndexesByType = function getLayerIndexesByType(layerType) {
-  return _.reduce(this._getLayers(), function (layerIndexes, layer, index) {
-    if (layer.type === layerType) {
-      layerIndexes.push(index);
-    }
-    return layerIndexes;
-  }, []);
-};
+Dataset.prototype = Object.create(Base.prototype);
 
 /**
- * Build the base url to build windshaft map requests.
+ * Update the table name. This method is asyncronous and returns a promise which is resolved when the style
+ * is changed succesfully. It also fires a 'tableNameChanged' event.
+ *
+ * @param {string} tableName The name of an existing table
+ * @fires TableNameChanged
+ * @returns {Promise} - A promise that will be fulfilled when the reload cycle is completed
+ * @api
  */
-Response.prototype.getBaseURL = function getBaseURL() {
-  return [this._getHost(), WindshaftConfig.MAPS_API_BASE_URL, this._layerGroupId].join('/');
+Dataset.prototype.setTableName = function (tableName) {
+  _checkTableName(tableName);
+
+  this._tableName = tableName;
+
+  if (!this._internalModel) {
+    this._triggerTableNameChanged(this, tableName);
+    return Promise.resolve();
+  }
+
+  return this._updateInternalModelQuery(this._getQueryToApply());
 };
 
 /**
- * Build the base url for static maps.
+ * Return the table name being used in  this Dataset object.
+ *
+ * @return {string} The table name being used in  this Dataset object
+ * @api
  */
-Response.prototype.getStaticBaseURL = function getStaticBaseURL() {
-  return [this._getHost(), WindshaftConfig.MAPS_API_BASE_URL, 'static/center', this._layerGroupId].join('/');
+Dataset.prototype.getTableName = function () {
+  return this._tableName;
 };
 
-Response.prototype._getHost = function _getHost() {
-  var urlTemplate = this._windshaftSettings.urlTemplate;
-  var userName = this._windshaftSettings.userName;
-  var protocol = this.getProtocol();
-  var cdnUrl = this._cdnUrl;
-  var cdnHost = cdnUrl && cdnUrl[protocol];
-  var templates = cdnUrl && cdnUrl.templates;
-
-  if (templates && templates[protocol]) {
-    var template = templates[protocol];
-    return template.url + '/' + userName;
-  }
-
-  if (cdnHost) {
-    return [protocol, '://', cdnHost, '/', userName].join('');
-  }
-
-  return urlTemplate.replace('{user}', userName);
-};
-
-Response.prototype.getProtocol = function getProtocol() {
-  return this._isHttps() ? 'https' : 'http';
-};
-
-Response.prototype._isHttps = function isHttps() {
-  return this._windshaftSettings.urlTemplate.indexOf('https') === 0;
-};
-
-Response.prototype.getSupportedSubdomains = function getSupportedSubdomains() {
-  var templates = this._cdnUrl && this._cdnUrl.templates;
-  var protocol = this.getProtocol();
-  if (templates && templates[protocol]) {
-    return templates[protocol].subdomains;
-  }
-  return [];
-};
-
-Response.prototype.getLayerMetadata = function getLayerMetadata(layerIndex) {
-  var layerMeta = {};
-  var layers = this._getLayers();
-  if (layers && layers[layerIndex]) {
-    layerMeta = layers[layerIndex].meta || {};
-  }
-  return layerMeta;
-};
-
-Response.prototype.getDataviewMetadata = function getDataviewMetadata(dataviewId) {
-  var dataviews = this._getDataviews();
-  if (dataviews && dataviews[dataviewId]) {
-    return dataviews[dataviewId];
-  }
-
-  // Try to get dataview's metatadta from the 'widgets' dictionary inside the metadata of each of the layers
-  dataviews = {};
-  var layersDataviews = _.compact(_.map(this._getLayers(), function (layer) {
-    return layer.widgets;
-  }));
-  _.each(layersDataviews, function (layerDataviews) {
-    _.extend(dataviews, layerDataviews);
+/**
+ * Creates a new internal model with the given engine and attributes initialized in the constructor.
+ *
+ * @param {Engine} engine - The engine object to be assigned to the internalModel
+ */
+Dataset.prototype._createInternalModel = function (engine) {
+  var internalModel = new AnalysisModel({
+    id: this.getId(),
+    type: 'source',
+    query: this._getQueryToApply()
+  }, {
+    camshaftReference: CamshaftReference,
+    engine: engine
   });
 
-  if (dataviews && dataviews[dataviewId]) {
-    return dataviews[dataviewId];
+  return internalModel;
+};
+
+Dataset.prototype._updateInternalModelQuery = function (query) {
+  var _this2 = this;
+
+  if (!this._internalModel) return;
+
+  this._internalModel.set('query', query, { silent: true });
+
+  return this._internalModel._engine.reload().then(function () {
+    return _this2._triggerTableNameChanged(_this2, _this2._tableName);
+  }).catch(function (windshaftError) {
+    return Promise.reject(new CartoError(windshaftError));
+  });
+};
+
+Dataset.prototype._getQueryToApply = function () {
+  var whereClause = this._appliedFilters.$getSQL();
+  var datasetQuery = 'SELECT * from ' + this._tableName;
+
+  if (_.isEmpty(whereClause)) {
+    return datasetQuery;
   }
+
+  return 'SELECT * FROM (' + datasetQuery + ') as datasetQuery WHERE ' + whereClause;
 };
 
-Response.prototype.getAnalysisNodeMetadata = function (analysisId) {
-  var metadata = {};
-  var nodes = _.map(this._getAnalyses(), function (analysis) {
-    return analysis.nodes;
-  });
-  _.each(nodes, function (node) {
-    _.extend(metadata, node);
-  });
-
-  return metadata[analysisId];
+Dataset.prototype.addFilter = function (filter) {
+  Base.prototype.addFilter.apply(this, arguments);
+  this._updateInternalModelQuery(this._getQueryToApply());
 };
 
-/**
- * Return the array with all the layers in the response
- */
-Response.prototype._getLayers = function _getLayers() {
-  return this._layers;
+Dataset.prototype.removeFilter = function (filters) {
+  Base.prototype.removeFilter.apply(this, arguments);
+  this._updateInternalModelQuery(this._getQueryToApply());
 };
 
-Response.prototype._getDataviews = function _getDataviews() {
-  return this._dataviews;
+Dataset.prototype._triggerTableNameChanged = function (model, value) {
+  this.trigger('tableNameChanged', value);
 };
 
-Response.prototype._getAnalyses = function _getAnalyses() {
-  return this._analyses;
-};
+function _checkTableName(tableName) {
+  if (_.isUndefined(tableName)) {
+    throw new CartoValidationError('source', 'noDatasetName');
+  }
+  if (!_.isString(tableName)) {
+    throw new CartoValidationError('source', 'requiredDatasetString');
+  }
+  if (_.isEmpty(tableName)) {
+    throw new CartoValidationError('source', 'requiredDataset');
+  }
+}
 
-module.exports = Response;
+module.exports = Dataset;
 
 /***/ }),
 /* 116 */
@@ -31285,24 +31124,151 @@ module.exports = Response;
 "use strict";
 
 
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(16);
+var AnalysisModel = __webpack_require__(9);
+var CamshaftReference = __webpack_require__(20);
+var CartoValidationError = __webpack_require__(3);
+var CartoError = __webpack_require__(4);
+
 /**
- * Simple value object that holds everything need to instantiate a map using the Maps API
+ * A SQL Query that can be used as the data source for layers and dataviews.
+ *
+ * @param {string} query A SQL query containing a SELECT statement
+ * @fires error
+ * @example
+ * new carto.source.SQL('SELECT * FROM european_cities');
+ * @constructor
+ * @extends carto.source.Base
+ * @memberof carto.source
+ * @fires queryChanged
+ * @api
  */
-var Request = function Request(payload, params, options) {
-  this.payload = payload;
-  this.params = params;
-  this.options = options;
+function SQL(query) {
+  var _this = this;
+
+  _checkQuery(query);
+  this._query = query;
+
+  Base.apply(this, arguments);
+
+  this._appliedFilters.on('change:filters', function () {
+    return _this._updateInternalModelQuery(_this._getQueryToApply());
+  });
+}
+
+SQL.prototype = Object.create(Base.prototype);
+
+/**
+ * Update the query. This method is asyncronous and returns a promise which is resolved when the style
+ * is changed succesfully. It also fires a 'queryChanged' event.
+ *
+ * @param {string} query - The sql query that will be the source of the data
+ * @fires queryChanged
+ * @returns {Promise} - A promise that will be fulfilled when the reload cycle is completed
+ * @api
+ */
+SQL.prototype.setQuery = function (query) {
+  _checkQuery(query);
+  this._query = query;
+
+  var sqlString = this._getQueryToApply();
+
+  if (!this._internalModel) {
+    this._triggerQueryChanged(this, sqlString);
+    return Promise.resolve();
+  }
+
+  return this._updateInternalModelQuery(sqlString);
 };
 
-Request.prototype.toHashCode = function () {
-  return JSON.stringify(this.payload) + JSON.stringify(this.params) + JSON.stringify(this.options);
+/**
+ * Get the query being used in this SQL source.
+ *
+ * @return {string} The query being used in this SQL object
+ * @api
+ */
+SQL.prototype.getQuery = function () {
+  return this._query;
 };
 
-Request.prototype.equals = function (request) {
-  return this.toHashCode() === request.toHashCode();
+/**
+ * Creates a new internal model with the given engine and attributes initialized in the constructor.
+ *
+ * @param {Engine} engine - The engine object to be assigned to the internalModel
+ */
+SQL.prototype._createInternalModel = function (engine) {
+  var internalModel = new AnalysisModel({
+    id: this.getId(),
+    type: 'source',
+    query: this._getQueryToApply()
+  }, {
+    camshaftReference: CamshaftReference,
+    engine: engine
+  });
+
+  internalModel.on('change:query', this._triggerQueryChanged, this);
+
+  return internalModel;
 };
 
-module.exports = Request;
+SQL.prototype._updateInternalModelQuery = function (query) {
+  var _this2 = this;
+
+  if (!this._internalModel) return;
+
+  this._internalModel.set('query', query, { silent: true });
+
+  return this._internalModel._engine.reload().then(function () {
+    return _this2._triggerQueryChanged(_this2, query);
+  }).catch(function (windshaftError) {
+    return Promise.reject(new CartoError(windshaftError));
+  });
+};
+
+SQL.prototype._getQueryToApply = function () {
+  var whereClause = this._appliedFilters.$getSQL();
+
+  if (!this._hasFiltersApplied || _.isEmpty(whereClause)) {
+    return this._query;
+  }
+
+  return 'SELECT * FROM (' + this._query + ') as originalQuery WHERE ' + whereClause;
+};
+
+SQL.prototype.addFilter = function (filter) {
+  Base.prototype.addFilter.apply(this, arguments);
+  this._updateInternalModelQuery(this._getQueryToApply());
+};
+
+SQL.prototype.removeFilter = function (filters) {
+  Base.prototype.removeFilter.apply(this, arguments);
+  this._updateInternalModelQuery(this._getQueryToApply());
+};
+
+SQL.prototype._triggerQueryChanged = function (model, value) {
+  this.trigger('queryChanged', value);
+};
+
+function _checkQuery(query) {
+  if (!query) {
+    throw new CartoValidationError('source', 'requiredQuery');
+  }
+
+  if (!_.isString(query)) {
+    throw new CartoValidationError('source', 'requiredString');
+  }
+}
+
+module.exports = SQL;
+
+/**
+ * Fired when the query has changed. Handler gets a parameter with the new query.
+ *
+ * @event queryChanged
+ * @type {string}
+ * @api
+ */
 
 /***/ }),
 /* 117 */
@@ -31311,40 +31277,14 @@ module.exports = Request;
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var LayerTypes = __webpack_require__(16);
+var CartoCSS = __webpack_require__(118);
 
 /**
- * Transform a map visualization into a json payload compatible with the windshaft API.
+ * @namespace carto.style
+ * @api
  */
-function serialize(layersCollection, dataviewsCollection) {
-  // Named map templates include both http, cartodb and torque layers
-  // so we need to iterate through all the layers in the collection to
-  // get the indexes rights. Templates are not aware of Google Maps
-  // base layers, so we have to ignore them to get indexes right.
-  var layers = layersCollection.filter(function (layer) {
-    return !LayerTypes.isGoogleMapsBaseLayer(layer);
-  });
-
-  return {
-    buffersize: {
-      mvt: 0
-    },
-    styles: _getStylesFromLayers(layers)
-  };
-}
-
-function _getStylesFromLayers(layers) {
-  return _.reduce(layers, function (styles, layer, index) {
-    if (layer.get('cartocss')) {
-      styles[index] = layer.get('cartocss');
-    }
-    return styles;
-  }, {});
-}
-
 module.exports = {
-  serialize: serialize
+  CartoCSS: CartoCSS
 };
 
 /***/ }),
@@ -31355,65 +31295,99 @@ module.exports = {
 
 
 var _ = __webpack_require__(0);
-var Rule = __webpack_require__(15);
+var Base = __webpack_require__(37);
+var CartoValidationError = __webpack_require__(3);
+var CartoError = __webpack_require__(4);
 
-var VALID_PROPS = ['line-color', 'marker-fill', 'polygon-fill', 'marker-file'];
-var VALID_MAPPINGS = ['='];
+// Event constants
+var CONTENT_CHANGED = 'contentChanged';
 
-var isEveryBucketValid = function isEveryBucketValid(rule) {
-  var buckets = rule.getBucketsWithCategoryFilter();
-  return _.every(buckets, function (bucket) {
-    return bucket.filter.name != null && bucket.value != null;
+/**
+ * A CartoCSS/TurboCarto style that can be applied to a {@link carto.layer.Layer}.
+ * @param {string} content - A CartoCSS string
+ * @example
+ * var style = new carto.style.CartoCSS(`
+ *   #layer {
+ *     marker-fill: #FABADA;
+ *     marker-width: 10;
+ *   }
+ * `);
+ * @constructor
+ * @extends carto.style.Base
+ * @memberof carto.style
+ * @api
+ */
+function CartoCSS(content) {
+  _checkContent(content);
+  this._content = content;
+}
+
+CartoCSS.prototype = Object.create(Base.prototype);
+
+/**
+ * Get the current CartoCSS/TurboCarto style as a string.
+ *
+ * @return {string} - The TurboCarto style for this CartoCSS object
+ * @api
+ */
+CartoCSS.prototype.getContent = function () {
+  return this._content;
+};
+
+/**
+ * Set the CartoCSS/Turbocarto as a string.
+ *
+ * @param {string} newContent - A string containing the new cartocss/turbocarto style
+ * @return {Promise<string>} A promise that will be resolved once the cartocss/turbocarto is updated
+ * @example
+ * // Get the cartoCSS from an exiting layer
+ * let cartoCSS = layer.getStyle();
+ * // Update the cartoCSS content, remember this method is asynchronous!
+ * cartoCSS.setContent(`
+ *  #layer {
+ *    marker-fill: blue;
+ *  }`)
+ *  .then(() => {
+ *    console.log('cartoCSS was updated');
+ *  })
+ *  .catch(() => {
+ *    console.error('Error updating the cartoCSS for the layer');
+ *  });
+ * @api
+ */
+CartoCSS.prototype.setContent = function (newContent) {
+  _checkContent(newContent);
+  this._content = newContent;
+  // Notify layers that the style has been changed so they can update their internalModels.
+  this.trigger('$changed', this);
+  if (!this._engine) {
+    return _onContentChanged.call(this, newContent);
+  }
+
+  return this._engine.reload().then(function () {
+    return _onContentChanged.call(this, newContent);
+  }.bind(this)).catch(function (windshaftError) {
+    return Promise.reject(new CartoError(windshaftError));
   });
 };
 
-var generateCategories = function generateCategories(bucketsColor, bucketsIcon) {
-  return _.map(bucketsColor, function (bucketColor) {
-    var bucketIcon = _.find(bucketsIcon, function (bucket) {
-      return bucket.filter.name === bucketColor.filter.name;
-    });
-    return {
-      title: bucketColor.filter.name,
-      icon: bucketIcon && bucketIcon.value ? _extractURL(bucketIcon.value) : '',
-      color: bucketColor.value
-    };
-  });
-};
+// Once the reload cycle is completed trigger a contentChanged event.
+function _onContentChanged(newContent) {
+  this.trigger(CONTENT_CHANGED, this._content);
+  return Promise.resolve(this._content);
+}
 
-var _extractURL = function _extractURL(str) {
-  var url = '';
-  var pattern = /(http|https):\/\/\S+\.(?:gif|jpeg|jpg|png|webp|svg)/g;
-  var match = str.match(pattern);
-  if (match) {
-    url = match[0];
+function _checkContent(content) {
+  if (!content) {
+    throw new CartoValidationError('style', 'requiredCSS');
   }
-  return url;
-};
 
-module.exports = {
-  canAdapt: function canAdapt(rule) {
-    rule = new Rule(rule);
-    return rule.matchesAnyProperty(VALID_PROPS) && rule.matchesAnyMapping(VALID_MAPPINGS) && isEveryBucketValid(rule);
-  },
-
-  adapt: function adapt(rules) {
-    var ruleColor = new Rule(rules[0]);
-    var ruleIcon = new Rule(rules[1]);
-
-    var categoryBucketsColor = ruleColor.getBucketsWithCategoryFilter();
-    var categoryBucketsIcon = ruleIcon.getBucketsWithCategoryFilter();
-    var defaultBucketsColor = ruleColor.getBucketsWithDefaultFilter();
-    var defaultBucketsIcon = ruleIcon.getBucketsWithDefaultFilter();
-
-    return {
-      categories: generateCategories(categoryBucketsColor, categoryBucketsIcon),
-      default: {
-        icon: _.isEmpty(defaultBucketsIcon) ? '' : _extractURL(defaultBucketsIcon[0].value),
-        color: _.isEmpty(defaultBucketsColor) ? '' : defaultBucketsColor[0].value
-      }
-    };
+  if (!_.isString(content)) {
+    throw new CartoValidationError('style', 'requiredCSSString');
   }
-};
+}
+
+module.exports = CartoCSS;
 
 /***/ }),
 /* 119 */
@@ -31422,57 +31396,24 @@ module.exports = {
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var Rule = __webpack_require__(15);
+var Category = __webpack_require__(120);
+var Formula = __webpack_require__(128);
+var Histogram = __webpack_require__(131);
+var TimeSeries = __webpack_require__(135);
+var status = __webpack_require__(5).status;
+var timeAggregation = __webpack_require__(5).timeAggregation;
 
-var VALID_PROPS = ['line-color', 'marker-fill', 'polygon-fill'];
-var VALID_MAPPINGS = ['>', '>=', '<', '<='];
-
-var isEveryBucketValid = function isEveryBucketValid(rule) {
-  var buckets = rule.getBucketsWithRangeFilter();
-  return _.every(buckets, function (bucket) {
-    return bucket.filter.start != null && bucket.filter.end != null;
-  });
-};
-
-var generateColors = function generateColors(buckets) {
-  if (buckets.length === 1) {
-    var bucket = buckets[0];
-    var labelStart = bucket.filter.start;
-    var labelEnd = bucket.filter.end;
-    return [{ value: bucket.value, label: labelStart.toString() }, { value: bucket.value, label: labelEnd.toString() }];
-  }
-  return _.map(buckets, function (bucket, i) {
-    var label = '';
-    if (i === 0) {
-      label = bucket.filter.start;
-    } else if (i === buckets.length - 1) {
-      label = bucket.filter.end;
-    }
-    return { value: bucket.value, label: label.toString() };
-  });
-};
-
+/**
+ * @namespace carto.dataview
+ * @api
+ */
 module.exports = {
-  canAdapt: function canAdapt(rule) {
-    rule = new Rule(rule);
-    return rule.matchesAnyProperty(VALID_PROPS) && rule.matchesAnyMapping(VALID_MAPPINGS) && isEveryBucketValid(rule);
-  },
-
-  adapt: function adapt(rules) {
-    var rule = new Rule(rules[0]);
-
-    var rangeBuckets = rule.getBucketsWithRangeFilter();
-    var lastBucket = _.last(rangeBuckets);
-    var firstBucket = _.first(rangeBuckets);
-
-    return {
-      colors: generateColors(rangeBuckets),
-      avg: rule.getFilterAvg(),
-      max: lastBucket.filter.end,
-      min: firstBucket.filter.start
-    };
-  }
+  Category: Category,
+  Formula: Formula,
+  Histogram: Histogram,
+  TimeSeries: TimeSeries,
+  status: status,
+  timeAggregation: timeAggregation
 };
 
 /***/ }),
@@ -31483,39 +31424,266 @@ module.exports = {
 
 
 var _ = __webpack_require__(0);
-var Rule = __webpack_require__(15);
+var Base = __webpack_require__(18);
+var constants = __webpack_require__(5);
+var CategoryDataviewModel = __webpack_require__(121);
+var CategoryFilter = __webpack_require__(125);
+var parseCategoryData = __webpack_require__(127);
 
-var VALID_PROPS = ['marker-width', 'line-width'];
+/**
+ *
+ * A category dataview is used to aggregate data performing a operation.
+ *
+ * This is similar to a group by SQL operation, for example:
+ *
+ * ```
+ * SELECT country, AVG(population) GROUP BY country
+ * ```
+ * The following code is the CARTO.js equivalent:
+ *
+ * ```javascript
+ * var categoryDataview = new carto.dataview.Category(citiesSource, 'country', {
+ *     operation: carto.operation.AVG, // Compute the average
+ *     operationColumn: 'population' // The name of the column where the operation will be applied.
+ *  });
+ * ```
+ *
+ * Like every other dataview, this is an async object and you must wait for the data to be available.
+ *
+ * The data format for the category-dataview is described in {@link carto.dataview.CategoryData}
+ *
+ * @param {carto.source.Base} source - The source where the dataview will fetch the data
+ * @param {string} column - The name of the column used to create categories
+ * @param {object} [options]
+ * @param {number} [options.limit=6] - The maximum number of categories in the response
+ * @param {carto.operation} [options.operation] - The operation to apply to the data
+ * @param {string} [options.operationColumn] - The column where the operation will be applied
+ *
+ * @fires dataChanged
+ * @fires columnChanged
+ * @fires statusChanged
+ * @fires error
+ *
+ * @fires limitChanged
+ * @fires operationChanged
+ * @fires operationColumnChanged
+ *
+ * @constructor
+ * @extends carto.dataview.Base
+ * @memberof carto.dataview
+ * @api
+ * @example
+ * // From a cities dataset with name, country and population show the average city population per country:
+ * var column = 'country'; // Aggregate the data by country.
+ * var categoryDataview = new carto.dataview.Category(citiesSource, column, {
+ *     operation: carto.operation.AVG, // Compute the average
+ *     operationColumn: 'population' // The name of the column where the operation will be applied.
+ *  });
+ * @example
+ * // Listen for data updates
+ * categoryDataview.on('dataChanged', newData => {
+ *  console.log(newData); // CategoryData object
+ * });
+ * @example
+ * // You can listen to multiple events emmited by the category-dataview.
+ * categoryDataview.on('statusChanged', (newData, error) => { });
+ * categoryDataview.on('error', cartoError => { });
+ *
+ * // Listen to specific category-dataview events.
+ * categoryDataview.on('columnChanged', newData => {
+ *  console.log(newData); // 'population'
+ * });
+ * categoryDataview.on('limitChanged', newData => {
+ *  console.log(newData); // 11
+ * });
+ * categoryDataview.on('operationChanged', newData => { });
+ * categoryDataview.on('operationColumnChanged', newData => { });
+ */
+function Category(source, column, options) {
+  this.DEFAULTS.operationColumn = column;
 
-var isEveryBucketValid = function isEveryBucketValid(rule) {
-  var buckets = rule.getBucketsWithRangeFilter();
-  return _.every(buckets, function (bucket) {
-    return bucket.filter.start != null && bucket.filter.end != null;
+  this._initialize(source, column, options);
+  this._limit = this._options.limit;
+  this._operation = this._options.operation;
+  this._operationColumn = this._options.operationColumn;
+}
+
+Category.prototype = Object.create(Base.prototype);
+
+/**
+ * Set the categories limit.
+ *
+ * @param  {number} limit
+ * @fires limitChanged
+ * @return {carto.dataview.Category} this
+ * @api
+ */
+Category.prototype.setLimit = function (limit) {
+  this._checkLimit(limit);
+  this._changeProperty('limit', limit, 'categories');
+  return this;
+};
+
+/**
+ * Return the current categories limit.
+ *
+ * @return {number} Current dataview limit
+ * @api
+ */
+Category.prototype.getLimit = function () {
+  return this._limit;
+};
+
+/**
+ * Set the dataview operation.
+ *
+ * @param  {carto.operation} operation
+ * @fires operationChanged
+ * @return {carto.dataview.Category} this
+ * @api
+ */
+Category.prototype.setOperation = function (operation) {
+  this._checkOperation(operation);
+  this._changeProperty('operation', operation, 'aggregation');
+  return this;
+};
+
+/**
+ * Return the current dataview operation.
+ *
+ * @return {carto.operation} Current dataview operation
+ * @api
+ */
+Category.prototype.getOperation = function () {
+  return this._operation;
+};
+
+/**
+ * Set the dataview operationColumn.
+ *
+ * @param  {string} operationColumn
+ * @fires operationColumnChanged
+ * @return {carto.dataview.Category} this
+ * @api
+ */
+Category.prototype.setOperationColumn = function (operationColumn) {
+  this._checkOperationColumn(operationColumn);
+  this._changeProperty('operationColumn', operationColumn, 'aggregation_column');
+  return this;
+};
+
+/**
+ * Return the current dataview operationColumn.
+ *
+ * @return {string} Current dataview operationColumn
+ * @api
+ */
+Category.prototype.getOperationColumn = function () {
+  return this._operationColumn;
+};
+
+/**
+ * Return the resulting data.
+ *
+ * @return {carto.dataview.CategoryData}
+ * @api
+ */
+Category.prototype.getData = function () {
+  if (this._internalModel) {
+    return parseCategoryData(this._internalModel.get('data'), this._internalModel.get('count'), this._internalModel.get('max'), this._internalModel.get('min'), this._internalModel.get('nulls'), this._operation);
+  }
+  return null;
+};
+
+Category.prototype.DEFAULTS = {
+  limit: 6,
+  operation: constants.operation.COUNT
+};
+
+Category.prototype._checkOptions = function (options) {
+  if (_.isUndefined(options)) {
+    throw this._getValidationError('categoryOptionsRequired');
+  }
+  this._checkLimit(options.limit);
+  this._checkOperation(options.operation);
+  this._checkOperationColumn(options.operationColumn);
+};
+
+Category.prototype._checkLimit = function (limit) {
+  if (_.isUndefined(limit)) {
+    throw this._getValidationError('categoryLimitRequired');
+  }
+  if (!_.isNumber(limit)) {
+    throw this._getValidationError('categoryLimitNumber');
+  }
+  if (limit <= 0) {
+    throw this._getValidationError('categoryLimitPositive');
+  }
+};
+
+Category.prototype._checkOperation = function (operation) {
+  if (_.isUndefined(operation) || !constants.isValidOperation(operation)) {
+    throw this._getValidationError('categoryInvalidOperation');
+  }
+};
+
+Category.prototype._checkOperationColumn = function (operationColumn) {
+  if (_.isUndefined(operationColumn)) {
+    throw this._getValidationError('categoryOperationRequired');
+  }
+  if (!_.isString(operationColumn)) {
+    throw this._getValidationError('categoryOperationString');
+  }
+  if (_.isEmpty(operationColumn)) {
+    throw this._getValidationError('categoryOperationEmpty');
+  }
+};
+
+Category.prototype._createInternalModel = function (engine) {
+  this._internalModel = new CategoryDataviewModel({
+    source: this._source.$getInternalModel(),
+    column: this._column,
+    aggregation: this._operation,
+    aggregation_column: this._operationColumn,
+    categories: this._limit,
+    sync_on_bbox_change: !!this._boundingBoxFilter,
+    sync_on_circle_change: !!this._circleFilter,
+    sync_on_polygon_change: !!this._polygonFilter,
+    enabled: this._enabled
+  }, {
+    engine: engine,
+    filter: new CategoryFilter(),
+    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
+    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
+    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
   });
 };
 
-var calculateValues = function calculateValues(buckets) {
-  var lastBucket = _.last(buckets);
-  return _.chain(buckets).map('filter').map('start').concat(lastBucket.filter.end).value();
-};
+module.exports = Category;
 
-module.exports = {
-  canAdapt: function canAdapt(rule) {
-    rule = new Rule(rule);
-    return rule.matchesAnyProperty(VALID_PROPS) && isEveryBucketValid(rule);
-  },
+/**
+ * Fired when limit has changed. Handler gets a parameter with the new limit.
+ *
+ * @event limitChanged
+ * @type {number}
+ * @api
+ */
 
-  adapt: function adapt(rules) {
-    var rule = new Rule(rules[0]);
-    var buckets = rule.getBucketsWithRangeFilter();
+/**
+ * Fired when operation has changed. Handler gets a parameter with the new limit.
+ *
+ * @event operationChanged
+ * @type {string}
+ * @api
+ */
 
-    return {
-      values: calculateValues(buckets),
-      sizes: _.map(buckets, 'value'),
-      avg: rule.getFilterAvg()
-    };
-  }
-};
+/**
+ * Fired when operationColumn has changed. Handler gets a parameter with the new operationColumn.
+ *
+ * @event operationColumnChanged
+ * @type {string}
+ * @api
+ */
 
 /***/ }),
 /* 121 */
@@ -31524,17 +31692,301 @@ module.exports = {
 "use strict";
 
 
-var ADAPTERS = {
-  bubble: __webpack_require__(120),
-  choropleth: __webpack_require__(119),
-  category: __webpack_require__(118)
-};
+var _ = __webpack_require__(0);
+var DataviewModelBase = __webpack_require__(28);
+var SearchModel = __webpack_require__(122);
+var CategoryModelRange = __webpack_require__(124);
+var CategoriesCollection = __webpack_require__(42);
 
-module.exports = {
-  getAdapterForLegend: function getAdapterForLegend(legendModel) {
-    return ADAPTERS[legendModel.get('type')];
+/**
+ * Category dataview model
+ *
+ * - It has several internal models/collections
+ *   - search model: it manages category search results.
+ *   - filter model: it knows which items are accepted or rejected.
+ */
+module.exports = DataviewModelBase.extend({
+
+  defaults: _.extend({
+    type: 'category',
+    filterEnabled: false,
+    categories: 6,
+    allCategoryNames: [] // all (new + previously accepted), updated on data fetch (see parse)
+  }, DataviewModelBase.prototype.defaults),
+
+  _getDataviewSpecificURLParams: function _getDataviewSpecificURLParams() {
+    var params = ['own_filter=' + (this.get('filterEnabled') ? 1 : 0), 'categories=' + this.get('categories')];
+    return params;
+  },
+
+  initialize: function initialize(attrs, opts) {
+    DataviewModelBase.prototype.initialize.call(this, attrs, opts);
+
+    // Internal model for calculating total amount of values in the category
+    this._rangeModel = new CategoryModelRange({
+      apiKey: this._engine.getApiKey(),
+      authToken: this._engine.getAuthToken()
+    });
+
+    this._data = new CategoriesCollection(null, {
+      aggregationModel: this
+    });
+
+    this._searchModel = new SearchModel({
+      apiKey: this._engine.getApiKey(),
+      authToken: this._engine.getAuthToken()
+    }, {
+      aggregationModel: this
+    });
+
+    this.on('change:column change:aggregation change:aggregation_column', this._reloadAndForceFetch, this);
+    this.on('change:categories', this.refresh, this);
+
+    this.bind('change:url', function () {
+      this._searchModel.set({
+        url: this.get('url')
+      });
+    }, this);
+
+    this.once('change:url', function () {
+      this._rangeModel.setUrl(this.get('url'));
+    }, this);
+
+    this._rangeModel.bind('change:totalCount change:categoriesCount', function () {
+      this.set({
+        totalCount: this._rangeModel.get('totalCount'),
+        categoriesCount: this._rangeModel.get('categoriesCount')
+      });
+    }, this);
+
+    this._bindSearchModelEvents();
+    if (attrs && attrs.acceptedCategories) {
+      this.filter.accept(attrs.acceptedCategories);
+    }
+  },
+
+  _onMapBoundsChanged: function _onMapBoundsChanged() {
+    DataviewModelBase.prototype._onMapBoundsChanged.apply(this, arguments);
+    this._searchModel.fetchIfSearchIsApplied();
+  },
+
+  _onCircleChanged: function _onCircleChanged() {
+    DataviewModelBase.prototype._onCircleChanged.apply(this, arguments);
+    this._searchModel.fetchIfSearchIsApplied();
+  },
+
+  _onPolygonChanged: function _onPolygonChanged() {
+    DataviewModelBase.prototype._onPolygonChanged.apply(this, arguments);
+    this._searchModel.fetchIfSearchIsApplied();
+  },
+
+  _bindSearchModelEvents: function _bindSearchModelEvents() {
+    this.listenTo(this._searchModel, 'loading', function () {
+      this.trigger('loading', this);
+    }, this);
+
+    this.listenTo(this._searchModel, 'loaded', function () {
+      this.trigger('loaded', this);
+    }, this);
+
+    this.listenTo(this._searchModel, 'error', function (model, response) {
+      if (!response || response && response.statusText !== 'abort') {
+        this.trigger('error', model, response);
+      }
+    }, this);
+
+    this.listenTo(this._searchModel, 'change:data', this._onSearchDataChange, this);
+  },
+
+  _onSearchDataChange: function _onSearchDataChange() {
+    this.getSearchResult().each(function (m) {
+      var selected = this.filter.isAccepted(m.get('name'));
+      m.set('selected', selected);
+    }, this);
+    this.trigger('change:searchData', this);
+  },
+
+  _shouldFetchOnBoundingBoxChange: function _shouldFetchOnBoundingBoxChange() {
+    return DataviewModelBase.prototype._shouldFetchOnBoundingBoxChange.call(this) && !this.isSearchApplied();
+  },
+
+  _shouldFetchOnCircleChange: function _shouldFetchOnCircleChange() {
+    return DataviewModelBase.prototype._shouldFetchOnCircleChange.call(this) && !this.isSearchApplied();
+  },
+
+  _shouldFetchOnPolygonChange: function _shouldFetchOnPolygonChange() {
+    return DataviewModelBase.prototype._shouldFetchOnPolygonChange.call(this) && !this.isSearchApplied();
+  },
+
+  enableFilter: function enableFilter() {
+    this.set('filterEnabled', true);
+  },
+
+  disableFilter: function disableFilter() {
+    this.set('filterEnabled', false);
+  },
+
+  // Search model helper methods //
+
+  getSearchQuery: function getSearchQuery() {
+    return this._searchModel.getSearchQuery();
+  },
+
+  setSearchQuery: function setSearchQuery(q) {
+    this._searchModel.set('q', q);
+  },
+
+  isSearchValid: function isSearchValid() {
+    return this._searchModel.isValid();
+  },
+
+  getSearchResult: function getSearchResult() {
+    return this._searchModel.getData();
+  },
+
+  getSearchCount: function getSearchCount() {
+    return this._searchModel.getCount();
+  },
+
+  applySearch: function applySearch() {
+    this._searchModel.fetch();
+  },
+
+  isSearchApplied: function isSearchApplied() {
+    return this._searchModel.isSearchApplied();
+  },
+
+  cleanSearch: function cleanSearch() {
+    this._searchModel.resetData();
+  },
+
+  setupSearch: function setupSearch() {
+    if (!this.isSearchApplied()) {
+      this._searchModel.setData(this._data.toJSON());
+    }
+  },
+
+  getData: function getData() {
+    return this._data;
+  },
+
+  getSize: function getSize() {
+    return this._data.size();
+  },
+
+  getCount: function getCount() {
+    return this.get('categoriesCount');
+  },
+
+  isOtherAvailable: function isOtherAvailable() {
+    return this._data.isOtherAvailable();
+  },
+
+  numberOfAcceptedCategories: function numberOfAcceptedCategories() {
+    var acceptedCategories = this.filter.acceptedCategories;
+    var numberOfRejectedCategories = this.numberOfRejectedCategories();
+    var data = this.getData();
+    var totalCategories = data.size();
+    var numberOfAcceptedCategories = data.reduce(function (memo, cat) {
+      var isCategoryInData = acceptedCategories.where({ name: cat.get('name') }).length > 0;
+      return memo + (isCategoryInData ? 1 : 0);
+    }, 0);
+    if (!numberOfRejectedCategories) {
+      return numberOfAcceptedCategories;
+    } else {
+      return totalCategories - numberOfRejectedCategories;
+    }
+  },
+
+  numberOfRejectedCategories: function numberOfRejectedCategories() {
+    var rejectedCategories = this.filter.rejectedCategories;
+    var data = this.getData();
+    return data.reduce(function (memo, cat) {
+      var isCategoryInData = rejectedCategories.where({ name: cat.get('name') }).length > 0;
+      return memo + (isCategoryInData ? 1 : 0);
+    }, 0);
+  },
+
+  refresh: function refresh() {
+    if (this.isSearchApplied()) {
+      this._searchModel.fetch();
+    } else {
+      this.fetch();
+    }
+  },
+
+  parse: function parse(d) {
+    var newData = [];
+    var _tmpArray = {};
+    var allNewCategories = d.categories;
+    var allNewCategoryNames = [];
+    var acceptedCategoryNames = [];
+
+    _.each(allNewCategories, function (datum) {
+      var category = datum.category;
+
+      allNewCategoryNames.push(category);
+      var isRejected = this.filter.isRejected(category);
+      _tmpArray[category] = true;
+
+      newData.push({
+        selected: !isRejected,
+        name: category,
+        agg: datum.agg,
+        value: datum.value
+      });
+    }, this);
+
+    // Only accepted categories should appear when filterEnabled is true
+    if (this.get('filterEnabled')) {
+      // Add accepted items that are not present in the categories data
+      this.filter.acceptedCategories.each(function (mdl) {
+        var category = mdl.get('name');
+        acceptedCategoryNames.push(category);
+        if (!_tmpArray[category]) {
+          newData.push({
+            selected: true,
+            name: category,
+            agg: false,
+            value: 0
+          });
+        }
+      }, this);
+    }
+
+    this._data.reset(newData);
+
+    return {
+      allCategoryNames: _.chain(allNewCategoryNames).union(acceptedCategoryNames).unique().value(),
+      data: newData,
+      nulls: d.nulls,
+      min: d.min,
+      max: d.max,
+      count: d.count
+    };
+  },
+
+  // Backbone toJson function override
+  // This function is used to serialize the server request
+  toJSON: function toJSON() {
+    return {
+      type: 'aggregation',
+      source: { id: this.getSourceId() },
+      options: {
+        column: this.get('column'),
+        aggregation: this.get('aggregation'),
+
+        // TODO server-side is using camelCased attr name, update once fixed
+        aggregationColumn: this.get('aggregation_column')
+      }
+    };
   }
-};
+},
+
+// Class props
+{
+  ATTRS_NAMES: DataviewModelBase.ATTRS_NAMES.concat(['column', 'aggregation', 'aggregation_column', 'acceptedCategories', 'categories'])
+});
 
 /***/ }),
 /* 122 */
@@ -31543,16 +31995,133 @@ module.exports = {
 "use strict";
 
 
-// Creates cdb object, mutated in the entry file cartodb.js
-// Used to avoid circular dependencies
-var cdb = {};
+var _ = __webpack_require__(0);
+var Model = __webpack_require__(2);
+var BackboneAbortSync = __webpack_require__(29);
+var CategoriesCollection = __webpack_require__(42);
 
-cdb.VERSION = __webpack_require__(27).version;
-cdb.DEBUG = false;
+/**
+ * Category search model
+ */
+module.exports = Model.extend({
+  defaults: {
+    q: '',
+    data: [],
+    url: ''
+  },
 
-cdb.helpers = {};
+  url: function url() {
+    var url = this.get('url') + '/search?q=' + encodeURIComponent(this.get('q'));
+    if (this.get('apiKey')) {
+      url += '&api_key=' + this.get('apiKey');
+    } else if (this.get('authToken')) {
+      var authToken = this.get('authToken');
+      if (authToken instanceof Array) {
+        _.each(authToken, function (token) {
+          url += '&auth_token[]=' + token;
+        });
+      } else {
+        url += '&auth_token=' + authToken;
+      }
+    }
+    return url;
+  },
 
-module.exports = cdb;
+  initialize: function initialize(attrs, opts) {
+    this._data = new CategoriesCollection(null, {
+      aggregationModel: opts.aggregationModel
+    });
+    this.sync = BackboneAbortSync.bind(this);
+  },
+
+  fetchIfSearchIsApplied: function fetchIfSearchIsApplied() {
+    if (this.isSearchApplied()) {
+      this.fetch();
+    }
+  },
+
+  setData: function setData(data) {
+    var categories = this._parseData(data);
+    this._data.reset(categories);
+    this.set('data', categories);
+  },
+
+  getData: function getData() {
+    return this._data;
+  },
+
+  getSize: function getSize() {
+    return this._data.size();
+  },
+
+  getCount: function getCount() {
+    return this.getSize();
+  },
+
+  isValid: function isValid() {
+    var str = this.get('q');
+    return !!(str || '');
+  },
+
+  resetData: function resetData() {
+    this.setData([]);
+    this.set('q', '');
+  },
+
+  getSearchQuery: function getSearchQuery() {
+    return this.get('q');
+  },
+
+  isSearchApplied: function isSearchApplied() {
+    return this.isValid() && this.getSize() > 0;
+  },
+
+  _parseData: function _parseData(categories) {
+    var newData = [];
+    _.each(categories, function (d) {
+      if (!d.agg) {
+        newData.push({
+          selected: false,
+          name: (d.category || d.name).toString(),
+          agg: d.agg,
+          value: d.value
+        });
+      }
+    }, this);
+
+    return newData;
+  },
+
+  parse: function parse(r) {
+    var categories = this._parseData(r.categories);
+    this._data.reset(categories);
+    return {
+      data: categories
+    };
+  },
+
+  fetch: function fetch(opts) {
+    opts = opts || {};
+
+    this.trigger('loading', this);
+
+    if (opts.success) {
+      var successCallback = opts && opts.success;
+    }
+
+    return Model.prototype.fetch.call(this, _.extend(opts, {
+      success: function () {
+        successCallback && successCallback(arguments);
+        this.trigger('loaded', this);
+      }.bind(this),
+      error: function (mdl, err) {
+        if (!err || err && err.statusText !== 'abort') {
+          this.trigger('error', mdl, err);
+        }
+      }.bind(this)
+    }));
+  }
+});
 
 /***/ }),
 /* 123 */
@@ -31561,261 +32130,20 @@ module.exports = cdb;
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var log = __webpack_require__(28);
-var util = __webpack_require__(7);
-var RuleToLegendModelAdapters = __webpack_require__(121);
-var AnalysisService = __webpack_require__(30);
-var Backbone = __webpack_require__(1);
-
-function getSubdomain(subdomains, resource) {
-  var index = util.crc32(resource) % subdomains.length;
-  return subdomains[index];
-}
+var Model = __webpack_require__(2);
 
 /**
- * This class exposes a method that knows how to set/update the metadata on internal
- * CartoDB.js models that are linked to a "resource" in the Maps API.
+ * Model for a category
  */
-var ModelUpdater = function ModelUpdater(deps) {
-  if (!deps.layerGroupModel) throw new Error('layerGroupModel is required');
-  if (!deps.layersCollection) throw new Error('layersCollection is required');
-  if (!deps.dataviewsCollection) throw new Error('dataviewsCollection is required');
+module.exports = Model.extend({
 
-  this._layerGroupModel = deps.layerGroupModel;
-  this._layersCollection = deps.layersCollection;
-  this._dataviewsCollection = deps.dataviewsCollection;
-};
-
-ModelUpdater.prototype.updateModels = function (responseWrapper, sourceId, forceFetch) {
-  this._updateLayerModels(responseWrapper);
-  this._updateLayerGroupModel(responseWrapper);
-  this._updateDataviewModels(responseWrapper, sourceId, forceFetch);
-  this._updateAnalysisModels(responseWrapper);
-};
-
-ModelUpdater.prototype._updateLayerGroupModel = function (responseWrapper) {
-  var urls = {
-    tiles: this._generateTileURLTemplate(responseWrapper),
-    subdomains: responseWrapper.getSupportedSubdomains(),
-    grids: this._calculateGridURLTemplatesForCartoDBLayers(responseWrapper),
-    attributes: this._calculateAttributesBaseURLsForCartoDBLayers(responseWrapper),
-    image: this._calculateStaticMapURL(responseWrapper)
-  };
-
-  this._layerGroupModel.set({
-    indexOfLayersInWindshaft: responseWrapper.getLayerIndexesByType('mapnik'),
-    urls: urls
-  });
-};
-
-ModelUpdater.prototype._calculateStaticMapURL = function (responseWrapper) {
-  return [responseWrapper.getStaticBaseURL(), '{z}/{lat}/{lng}/{width}/{height}.{format}'].join('/');
-};
-
-ModelUpdater.prototype._generateTileURLTemplate = function (responseWrapper) {
-  return responseWrapper.getBaseURL() + '/{layerIndexes}/{z}/{x}/{y}.{format}';
-};
-
-ModelUpdater.prototype._calculateGridURLTemplatesForCartoDBLayers = function (responseWrapper) {
-  var urlTemplates = [];
-  var indexesOfMapnikLayers = responseWrapper.getLayerIndexesByType('mapnik');
-  if (indexesOfMapnikLayers.length > 0) {
-    _.each(indexesOfMapnikLayers, function (index) {
-      var layerUrlTemplates = [];
-      var gridURLTemplate = this._generateGridURLTemplate(responseWrapper, index);
-      var subdomains = responseWrapper.getSupportedSubdomains();
-      if (subdomains.length) {
-        _.each(subdomains, function (subdomain) {
-          layerUrlTemplates.push(gridURLTemplate.replace('{s}', subdomain));
-        });
-      } else {
-        layerUrlTemplates.push(gridURLTemplate);
-      }
-
-      urlTemplates.push(layerUrlTemplates);
-    }, this);
+  defaults: {
+    name: '',
+    agg: false,
+    value: 0
   }
-  return urlTemplates;
-};
 
-ModelUpdater.prototype._generateGridURLTemplate = function (responseWrapper, index) {
-  return responseWrapper.getBaseURL() + '/' + index + '/{z}/{x}/{y}.grid.json';
-};
-
-ModelUpdater.prototype._calculateAttributesBaseURLsForCartoDBLayers = function (responseWrapper) {
-  var urls = [];
-  var indexesOfMapnikLayers = responseWrapper.getLayerIndexesByType('mapnik');
-  if (indexesOfMapnikLayers.length > 0) {
-    _.each(indexesOfMapnikLayers, function (index) {
-      urls.push(this._generateAttributesBaseURL(responseWrapper, index));
-    }, this);
-  }
-  return urls;
-};
-
-ModelUpdater.prototype._generateAttributesBaseURL = function (responseWrapper, index) {
-  var baseURL = responseWrapper.getBaseURL() + '/' + index + '/attributes';
-  if (baseURL.indexOf('{s}') >= 0) {
-    var subdomain = getSubdomain(responseWrapper.getSupportedSubdomains(), baseURL);
-    baseURL = baseURL.replace('{s}', subdomain);
-  }
-  return baseURL;
-};
-
-ModelUpdater.prototype._updateLayerModels = function (responseWrapper) {
-  // CartoDB / mapnik layers
-  var indexesOfMapnikLayers = responseWrapper.getLayerIndexesByType('mapnik');
-  _.each(this._layersCollection.getCartoDBLayers(), function (layerModel, localLayerIndex) {
-    var responseWrapperLayerIndex = indexesOfMapnikLayers[localLayerIndex];
-    layerModel.set('meta', responseWrapper.getLayerMetadata(responseWrapperLayerIndex));
-    this._updateLegendModels(layerModel, responseWrapperLayerIndex, responseWrapper);
-
-    layerModel.setOk();
-  }, this);
-
-  // Torque / torque layers
-  var indexesOfTorqueLayers = responseWrapper.getLayerIndexesByType('torque');
-  _.each(this._layersCollection.getTorqueLayers(), function (layerModel, localLayerIndex) {
-    var responseWrapperLayerIndex = indexesOfTorqueLayers[localLayerIndex];
-    var meta = responseWrapper.getLayerMetadata(responseWrapperLayerIndex);
-    layerModel.set('meta', meta);
-    // deep-insight.js expects meta attributes as attributes for some reason
-    layerModel.set(meta);
-    layerModel.set('subdomains', responseWrapper.getSupportedSubdomains());
-    layerModel.set('tileURLTemplates', this._calculateTileURLTemplatesForTorqueLayers(responseWrapper));
-    this._updateLegendModels(layerModel, responseWrapperLayerIndex, responseWrapper);
-
-    layerModel.setOk();
-  }, this);
-};
-
-ModelUpdater.prototype._calculateTileURLTemplatesForTorqueLayers = function (responseWrapper) {
-  var urlTemplates = [];
-  var indexesOfTorqueLayers = responseWrapper.getLayerIndexesByType('torque');
-  if (indexesOfTorqueLayers.length > 0) {
-    urlTemplates.push(this._generateTorqueTileURLTemplate(responseWrapper, indexesOfTorqueLayers));
-  }
-  return urlTemplates;
-};
-
-ModelUpdater.prototype._generateTorqueTileURLTemplate = function (responseWrapper, layerIndexes) {
-  return responseWrapper.getBaseURL() + '/' + layerIndexes.join(',') + '/{z}/{x}/{y}.json.torque';
-};
-
-ModelUpdater.prototype._updateLegendModels = function (layerModel, remoteLayerIndex, responseWrapper) {
-  var layerMetadata = responseWrapper.getLayerMetadata(remoteLayerIndex);
-  _.each(this._getLayerLegends(layerModel), function (legendModel) {
-    this._updateLegendModel(legendModel, layerMetadata);
-  }, this);
-};
-
-ModelUpdater.prototype._updateLegendModel = function (legendModel, layerMetadata) {
-  var cartoCSSRules = layerMetadata && layerMetadata.cartocss_meta && layerMetadata.cartocss_meta.rules;
-  try {
-    var newLegendAttrs = {
-      state: 'success'
-    };
-    if (cartoCSSRules) {
-      var adapter = RuleToLegendModelAdapters.getAdapterForLegend(legendModel);
-      var rulesForLegend = _.filter(cartoCSSRules, adapter.canAdapt);
-      if (!_.isEmpty(rulesForLegend)) {
-        newLegendAttrs = _.extend(newLegendAttrs, adapter.adapt(rulesForLegend));
-      }
-    }
-    legendModel.set(newLegendAttrs);
-  } catch (error) {
-    legendModel.set({ state: 'error' });
-    log.error("legend of type '" + legendModel.get('type') + "' couldn't be updated: " + error.message);
-  }
-};
-
-ModelUpdater.prototype._updateDataviewModels = function (responseWrapper, sourceId, forceFetch) {
-  this._dataviewsCollection.each(function (dataviewModel) {
-    var dataviewMetadata = responseWrapper.getDataviewMetadata(dataviewModel.get('id'));
-    if (dataviewMetadata) {
-      dataviewModel.set({
-        url: dataviewMetadata.url[this._getProtocol()]
-      }, {
-        sourceId: sourceId,
-        forceFetch: forceFetch
-      });
-    }
-  }, this);
-};
-
-ModelUpdater.prototype._updateAnalysisModels = function (responseWrapper) {
-  var analysisNodesCollection = this._getUniqueAnalysisNodesCollection();
-  analysisNodesCollection.each(function (analysisNode) {
-    var analysisMetadata = responseWrapper.getAnalysisNodeMetadata(analysisNode.get('id'));
-    var attrs;
-    if (analysisMetadata) {
-      attrs = {
-        status: analysisMetadata.status,
-        url: analysisMetadata.url[this._getProtocol()],
-        query: analysisMetadata.query
-      };
-
-      attrs = _.omit(attrs, analysisNode.getParamNames());
-
-      if (analysisMetadata.error_message) {
-        attrs = _.extend(attrs, {
-          error: {
-            message: analysisMetadata.error_message
-          }
-        });
-        analysisNode.set(attrs);
-      } else {
-        analysisNode.set(attrs);
-        analysisNode.setOk();
-      }
-    }
-  }, this);
-};
-
-ModelUpdater.prototype._getProtocol = function () {
-  // When running tests window.locationn.protocol using the jasmine test runner,
-  // window.location.protocol returns 'file:'. This is a little hack to make tests happy.
-  if (window.location.protocol === 'file:') {
-    return 'http';
-  }
-  return window.location.protocol.replace(':', '');
-};
-
-ModelUpdater.prototype.setErrors = function (errors) {
-  _.each(errors, this._setError, this);
-  this._setLegendErrors();
-};
-
-ModelUpdater.prototype._setError = function (error) {
-  if (error.isLayerError()) {
-    var layerModel = this._layersCollection.get(error.layerId);
-    layerModel && layerModel.setError(error);
-  } else if (error.isAnalysisError()) {
-    var analysisNodesCollection = this._getUniqueAnalysisNodesCollection();
-    var analysisModel = analysisNodesCollection.get(error.analysisId);
-    analysisModel && analysisModel.setError(error);
-  }
-};
-
-ModelUpdater.prototype._setLegendErrors = function () {
-  var legendModels = this._layersCollection.chain().map(this._getLayerLegends).compact().flatten().value();
-
-  _.each(legendModels, function (legendModel) {
-    legendModel.set('state', 'error');
-  });
-};
-
-ModelUpdater.prototype._getLayerLegends = function (layerModel) {
-  return layerModel.legends && [layerModel.legends.bubble, layerModel.legends.category, layerModel.legends.choropleth];
-};
-
-ModelUpdater.prototype._getUniqueAnalysisNodesCollection = function () {
-  var analysisNodes = AnalysisService.getUniqueAnalysisNodes(this._layersCollection, this._dataviewsCollection);
-  return new Backbone.Collection(analysisNodes);
-};
-
-module.exports = ModelUpdater;
+});
 
 /***/ }),
 /* 124 */
@@ -31825,107 +32153,61 @@ module.exports = ModelUpdater;
 
 
 var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
+var Model = __webpack_require__(2);
 
-var TILED_LAYER_TYPE = 'Tiled';
-var CARTODB_LAYER_TYPE = 'CartoDB';
-var TORQUE_LAYER_TYPE = 'torque';
+/**
+ *  This model is used for getting the total amount of values
+ *  from the category.
+ *
+ */
 
-var Layers = Backbone.Collection.extend({
+module.exports = Model.extend({
+  defaults: {
+    url: '',
+    totalCount: 0,
+    categoriesCount: 0
+  },
+
+  url: function url() {
+    var url = this.get('url');
+    var queryOptions = [];
+    if (this.get('apiKey')) {
+      url += '?api_key=' + this.get('apiKey');
+    } else if (this.get('authToken')) {
+      var authToken = this.get('authToken');
+      if (authToken instanceof Array) {
+        _.each(authToken, function (token) {
+          queryOptions.push('auth_token[]=' + token);
+        });
+      } else {
+        queryOptions.push('auth_token=' + authToken);
+      }
+      url += '?' + queryOptions.join('&');
+    }
+    return url;
+  },
 
   initialize: function initialize() {
-    this.comparator = function (m) {
-      return parseInt(m.get('order'), 10);
+    this.bind('change:url', function () {
+      this.fetch();
+    }, this);
+  },
+
+  setUrl: function setUrl(url) {
+    this.set('url', url);
+  },
+
+  parse: function parse(d) {
+    // Calculating the total amount of all categories with the sum of all
+    // values from this model included the aggregated (Other)
+    return {
+      categoriesCount: d.categoriesCount,
+      totalCount: _.reduce(_.pluck(d.categories, 'value'), function (memo, value) {
+        return memo + value;
+      }, 0)
     };
-    this.bind('add', this._assignIndexes);
-    this.bind('remove', this._assignIndexes);
-  },
-
-  /**
-   * each time a layer is added or removed
-   * the index should be recalculated
-   */
-  _assignIndexes: function _assignIndexes(model, col, options) {
-    if (this.size() > 0) {
-      // Assign an order of 0 to the first layer
-      this.at(0).set({ order: 0 });
-
-      if (this.size() > 1) {
-        var layersByType = this.reduce(function (layersByType, layerModel, index) {
-          var type = layerModel.get('type');
-          if (index === 0 && type === TILED_LAYER_TYPE) {
-            return layersByType;
-          }
-          layersByType[type] = layersByType[type] || [];
-          layersByType[type].push(layerModel);
-          return layersByType;
-        }, {});
-
-        var lastOrder = 1;
-        var sortedTypes = [CARTODB_LAYER_TYPE, TORQUE_LAYER_TYPE, TILED_LAYER_TYPE];
-        _.each(sortedTypes, function (layerType) {
-          var layers = layersByType[layerType] || [];
-          _.each(layers, function (layerModel) {
-            layerModel.set({
-              order: lastOrder
-            });
-            lastOrder += 1;
-          });
-        });
-      }
-    }
-
-    this.sort();
-  },
-
-  getCartoDBLayers: function getCartoDBLayers() {
-    return this._getLayersByType(CARTODB_LAYER_TYPE);
-  },
-
-  getTiledLayers: function getTiledLayers() {
-    return this._getLayersByType(TILED_LAYER_TYPE);
-  },
-
-  getTorqueLayers: function getTorqueLayers() {
-    return this._getLayersByType(TORQUE_LAYER_TYPE);
-  },
-
-  _getLayersByType: function _getLayersByType(layerType) {
-    return this.select(function (layerModel) {
-      return layerModel.get('type') === layerType;
-    });
-  },
-
-  getLayersWithLegends: function getLayersWithLegends() {
-    return this.select(function (layerModel) {
-      return !!layerModel.legends;
-    });
-  },
-
-  moveCartoDBLayer: function moveCartoDBLayer(from, to) {
-    if (from === to) {
-      return false;
-    }
-
-    var movingLayer = this.at(from);
-
-    if (!movingLayer || movingLayer.get('type') !== CARTODB_LAYER_TYPE) {
-      return false;
-    }
-
-    this.remove(movingLayer, { silent: true });
-    this.add(movingLayer, {
-      at: to,
-      silent: true
-    });
-
-    this.trigger('layerMoved', movingLayer);
-
-    return movingLayer;
   }
 });
-
-module.exports = Layers;
 
 /***/ }),
 /* 125 */
@@ -31936,28 +32218,152 @@ module.exports = Layers;
 
 var _ = __webpack_require__(0);
 var Backbone = __webpack_require__(1);
+var WindshaftFilterBase = __webpack_require__(126);
 
-var DataviewsCollection = Backbone.Collection.extend({
-  isAnyDataviewFiltered: function isAnyDataviewFiltered() {
-    return this.any(function (dataviewModel) {
-      var filter = dataviewModel.filter;
-      return filter && !filter.isEmpty();
+/**
+ * Filter used by the category dataview
+ */
+module.exports = WindshaftFilterBase.extend({
+
+  defaults: {
+    rejectAll: false
+  },
+
+  initialize: function initialize() {
+    this.rejectedCategories = new Backbone.Collection();
+    this.acceptedCategories = new Backbone.Collection();
+    this._initBinds();
+  },
+
+  _initBinds: function _initBinds() {
+    this.listenTo(this.rejectedCategories, 'add remove', function () {
+      this.set('rejectAll', false);
+    });
+    this.listenTo(this.acceptedCategories, 'add remove', function () {
+      this.set('rejectAll', false);
     });
   },
 
-  getFilters: function getFilters() {
-    return this.reduce(function (filters, dataviewModel) {
-      var filter = dataviewModel.filter;
-      if (filter && !filter.isEmpty()) {
-        filters['dataviews'] = filters['dataviews'] || {};
-        _.extend(filters['dataviews'], filter.toJSON());
+  isEmpty: function isEmpty() {
+    return this.rejectedCategories.size() === 0 && this.acceptedCategories.size() === 0 && !this.get('rejectAll');
+  },
+
+  accept: function accept(values, applyFilter) {
+    values = !_.isArray(values) ? [values] : values;
+
+    _.each(values, function (value) {
+      var d = { name: value };
+      var rejectedMdls = this.rejectedCategories.where(d);
+      var acceptedMdls = this.acceptedCategories.where(d);
+      if (rejectedMdls.length > 0) {
+        this.rejectedCategories.remove(rejectedMdls);
+      } else if (!acceptedMdls.length) {
+        this.acceptedCategories.add(d);
       }
-      return filters;
-    }, {});
+    }, this);
+
+    if (applyFilter !== false) {
+      this.applyFilter();
+    }
+  },
+
+  acceptAll: function acceptAll() {
+    this.set('rejectAll', false);
+    this.cleanFilter();
+  },
+
+  isAccepted: function isAccepted(name) {
+    return this.acceptedCategories.where({ name: name }).length > 0;
+  },
+
+  reject: function reject(values, applyFilter) {
+    values = !_.isArray(values) ? [values] : values;
+
+    _.each(values, function (value) {
+      var d = { name: value };
+      var acceptedMdls = this.acceptedCategories.where(d);
+      var rejectedMdls = this.rejectedCategories.where(d);
+      if (acceptedMdls.length > 0) {
+        this.acceptedCategories.remove(acceptedMdls);
+      } else {
+        if (!rejectedMdls.length) {
+          this.rejectedCategories.add(d);
+        }
+      }
+    }, this);
+
+    if (applyFilter !== false) {
+      this.applyFilter();
+    }
+  },
+
+  isRejected: function isRejected(name) {
+    var acceptCount = this.acceptedCategories.size();
+    if (this.rejectedCategories.where({ name: name }).length > 0) {
+      return true;
+    } else if (acceptCount > 0 && this.acceptedCategories.where({ name: name }).length === 0) {
+      return true;
+    } else if (this.get('rejectAll')) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  rejectAll: function rejectAll() {
+    this.set('rejectAll', true);
+    this.cleanFilter();
+  },
+
+  cleanFilter: function cleanFilter(triggerChange) {
+    this.acceptedCategories.reset();
+    this.rejectedCategories.reset();
+    if (triggerChange !== false) {
+      this.applyFilter();
+    }
+  },
+
+  applyFilter: function applyFilter() {
+    this.trigger('change', this);
+  },
+
+  areAllRejected: function areAllRejected() {
+    return this.get('rejectAll');
+  },
+
+  toJSON: function toJSON() {
+    var filter = {};
+    var rejectCount = this.rejectedCategories.size();
+    var acceptCount = this.acceptedCategories.size();
+    var acceptedCats = { accept: _.pluck(this.acceptedCategories.toJSON(), 'name') };
+    var rejectedCats = { reject: _.pluck(this.rejectedCategories.toJSON(), 'name') };
+
+    if (this.get('rejectAll')) {
+      filter = { accept: [] };
+    } else if (acceptCount > 0) {
+      filter = acceptedCats;
+    } else if (rejectCount > 0 && acceptCount === 0) {
+      filter = rejectedCats;
+    }
+
+    var json = {};
+    json[this.get('dataviewId')] = filter;
+
+    return json;
+  },
+
+  getAcceptedCategoryNames: function getAcceptedCategoryNames() {
+    return this.acceptedCategories.map(function (category) {
+      return category.get('name');
+    });
+  },
+
+  getRejectedCategoryNames: function getRejectedCategoryNames() {
+    return this.rejectedCategories.map(function (category) {
+      return category.get('name');
+    });
   }
 });
-
-module.exports = DataviewsCollection;
 
 /***/ }),
 /* 126 */
@@ -31966,203 +32372,589 @@ module.exports = DataviewsCollection;
 "use strict";
 
 
+var Model = __webpack_require__(2);
+
+module.exports = Model.extend({
+
+  isEmpty: function isEmpty() {
+    throw new Error('Filters must implement the .isEmpty method');
+  },
+
+  toJSON: function toJSON() {
+    throw new Error('Filters must implement the .toJSON method');
+  },
+
+  remove: function remove() {
+    this.trigger('destroy', this);
+    this.stopListening();
+  }
+});
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _ = __webpack_require__(0);
-var $ = __webpack_require__(17);
-var Backbone = __webpack_require__(1);
-var LayerTypes = __webpack_require__(16);
-var util = __webpack_require__(7);
 
-var CartoDBLayerGroup = Backbone.Model.extend({
+/**
+ * Transform the data obtained from an internal category dataview into a
+ * public object.
+ *
+ * @param  {object[]} data
+ * @param  {number} count
+ * @param  {number} max
+ * @param  {number} min
+ * @param  {number} nulls
+ * @param  {string} operation
+ *
+ * @return {carto.dataview.CategoryData} - The parsed and formatted data for the given parameters
+ */
+function parseCategoryData(data, count, max, min, nulls, operation) {
+  if (!data) {
+    return null;
+  }
+  /**
+   * @typedef {object} carto.dataview.CategoryData
+   * @property {number} count - The total number of categories
+   * @property {number} max - Maximum category value
+   * @property {number} min - Minimum category value
+   * @property {number} nulls - Number of null categories
+   * @property {string} operation - Operation used
+   * @property {carto.dataview.CategoryItem[]} categories
+   * @api
+   */
+  return {
+    count: count,
+    max: max,
+    min: min,
+    nulls: nulls,
+    operation: operation,
+    categories: _createCategories(data)
+  };
+}
+
+/**
+ * Transform the histogram raw data into {@link carto.dataview.CategoryItem}
+ */
+function _createCategories(data) {
+  return _.map(data, function (item) {
+    /**
+     * @typedef {object} carto.dataview.CategoryItem
+     * @property {boolean} group - Category is a group
+     * @property {string} name - Category name
+     * @property {number} value - Category value
+     * @api
+     */
+    return {
+      group: item.agg,
+      name: item.name,
+      value: item.value
+    };
+  });
+}
+
+module.exports = parseCategoryData;
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(18);
+var constants = __webpack_require__(5);
+var FormulaDataviewModel = __webpack_require__(129);
+var parseFormulaData = __webpack_require__(130);
+
+/**
+ * A formula is a simple numeric {@link carto.operation|operation} applied to the column of a {@link carto.source.Base|data source} (dataset or sql query).
+ *
+ * Like all dataviews, it is an async object so you must wait for the data to be available.
+ *
+ * @param {carto.source.Base} source - The source where the dataview will fetch the data from
+ * @param {string} column - The operation will be performed using this column
+ * @param {object} [options]
+ * @param {carto.operation} [options.operation] - The operation to apply to the data
+ *
+ * @fires dataChanged
+ * @fires columnChanged
+ * @fires statusChanged
+ * @fires error
+ *
+ * @fires operationChanged
+ *
+ * @constructor
+ * @extends carto.dataview.Base
+ * @memberof carto.dataview
+ * @api
+ * @example
+ * // Given a cities dataset get the most populated city
+ * var formulaDataview = new carto.dataview.Formula(citiesSource, 'population', {
+ *  operation: carto.operation.MAX,
+ * });
+ * @example
+ * // You can listen to multiple events emitted by a formula dataview.
+ * // Data and status are fired by all dataviews.
+ * formulaDataview.on('dataChanged', newData => { });
+ * formulaDataview.on('statusChanged', (newData, error) => { });
+ * formulaDataview.on('error', cartoError => { });
+ *
+ * // Listen to specific formula-dataview events
+ * formulaDataview.on('columnChanged', newData => { });
+ * formulaDataview.on('operationChanged', newData => { });
+ */
+function Formula(source, column, options) {
+  this._initialize(source, column, options);
+  this._operation = this._options.operation;
+}
+
+Formula.prototype = Object.create(Base.prototype);
+
+/**
+ * Set the dataview operation.
+ *
+ * @param  {carto.operation} operation
+ * @fires operationChanged
+ * @return {carto.dataview.Formula} this
+ * @api
+ */
+Formula.prototype.setOperation = function (operation) {
+  this._checkOperation(operation);
+  this._changeProperty('operation', operation);
+  return this;
+};
+
+/**
+ * Return the current dataview operation.
+ *
+ * @return {carto.operation} Current dataview operation
+ * @api
+ */
+Formula.prototype.getOperation = function () {
+  return this._operation;
+};
+
+/**
+ * Return the resulting data.
+ *
+ * @return {carto.dataview.FormulaData}
+ * @api
+ */
+Formula.prototype.getData = function () {
+  if (this._internalModel) {
+    return parseFormulaData(this._internalModel.get('nulls'), this._operation, this._internalModel.get('data'));
+  }
+  return null;
+};
+
+Formula.prototype.DEFAULTS = {
+  operation: constants.operation.COUNT
+};
+
+Formula.prototype._checkOptions = function (options) {
+  if (_.isUndefined(options)) {
+    throw this._getValidationError('formulaOptionsRequired');
+  }
+  this._checkOperation(options.operation);
+};
+
+Formula.prototype._checkOperation = function (operation) {
+  if (_.isUndefined(operation) || !constants.isValidOperation(operation)) {
+    throw this._getValidationError('formulaInvalidOperation');
+  }
+};
+
+Formula.prototype._createInternalModel = function (engine) {
+  this._internalModel = new FormulaDataviewModel({
+    source: this._source.$getInternalModel(),
+    column: this._column,
+    operation: this._operation,
+    sync_on_bbox_change: !!this._boundingBoxFilter,
+    sync_on_circle_change: !!this._circleFilter,
+    sync_on_polygon_change: !!this._polygonFilter,
+    enabled: this._enabled
+  }, {
+    engine: engine,
+    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
+    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
+    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
+  });
+};
+
+module.exports = Formula;
+
+/**
+ * Fired when the operation has changed. Handler gets a parameter with the new operation.
+ *
+ * @event operationChanged
+ * @type {carto.operation}
+ * @api
+ */
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var DataviewModelBase = __webpack_require__(28);
+
+module.exports = DataviewModelBase.extend({
+  defaults: _.extend({
+    type: 'formula',
+    data: ''
+  }, DataviewModelBase.prototype.defaults),
+
+  initialize: function initialize() {
+    DataviewModelBase.prototype.initialize.apply(this, arguments);
+    this.on('change:column change:operation', this._reloadAndForceFetch, this);
+  },
+
+  parse: function parse(r) {
+    return {
+      data: r.result,
+      nulls: r.nulls
+    };
+  },
+
+  toJSON: function toJSON() {
+    return {
+      type: 'formula',
+      source: { id: this.getSourceId() },
+      options: {
+        column: this.get('column'),
+        operation: this.get('operation')
+      }
+    };
+  }
+},
+
+// Class props
+{
+  ATTRS_NAMES: DataviewModelBase.ATTRS_NAMES.concat(['column', 'operation'])
+});
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Transform the data obtained from an internal formula dataview into a
+ * public object.
+ *
+ * @param  {number} nulls
+ * @param  {string} operation
+ * @param  {number} result
+ *
+ * @return {carto.dataview.FormulaData} - The parsed and formatted data for the given parameters
+ */
+function parseFormulaData(nulls, operation, result) {
+  /**
+   * @description
+   * Object containing formula data
+   *
+   * @typedef {object} carto.dataview.FormulaData
+   * @property {number} nulls - Number of null values in the column
+   * @property {string} operation - Operation used
+   * @property {number} result - Result of the operation
+   * @api
+   */
+  return {
+    nulls: nulls,
+    operation: operation,
+    result: result
+  };
+}
+
+module.exports = parseFormulaData;
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(18);
+var HistogramDataviewModel = __webpack_require__(43);
+var parseHistogramData = __webpack_require__(134);
+
+/**
+ * A histogram is used to represent the distribution of numerical data.
+ *
+ * See {@link https://en.wikipedia.org/wiki/Histogram}.
+ *
+ * @param {carto.source.Base} source - The source where the dataview will fetch the data
+ * @param {string} column - The column name to get the data
+ * @param {object} [options]
+ * @param {number} [options.bins=10] - Number of bins to aggregate the data range into
+ * @param {number} [options.start] - Lower limit of the data range, if not present, the lower limit of the actual data will be used. Start and end values must be used together.
+ * @param {number} [options.end] - Upper limit of the data range, if not present, the upper limit of the actual data will be used. Start and end values must be used together.
+ *
+ * @fires dataChanged
+ * @fires columnChanged
+ * @fires statusChanged
+ * @fires error
+ *
+ * @fires binsChanged
+ *
+ * @constructor
+ * @extends carto.dataview.Base
+ * @memberof carto.dataview
+ * @api
+ * @example
+ * // Create a cities population histogram.
+ * var histogram = new carto.dataview.Histogram(citiesSource, 'population');
+ * // Set up a callback to render the histogram data every time new data is obtained.
+ *  histogram.on('dataChanged', renderData);
+ * // Add the histogram to the client
+ * client.addDataview(histogram);
+ * @example
+ * // Create a cities population histogram with only 4 bins
+ * var histogram = new carto.dataview.Histogram(citiesSource, 'population', {bins: 4});
+ * // Add a bounding box filter, so the data will change when the map is moved.
+ * var bboxFilter = new carto.filter.BoundingBoxLeaflet(map);
+ * // Set up a callback to render the histogram data every time new data is obtained.
+ *  histogram.on('dataChanged', histogramData => {
+ *    console.log(histogramData);
+ *  });
+ * // Add the histogram to the client
+ * client.addDataview(histogram);
+ * @example
+ * // Create a cities population histogram with a range
+ * var histogram = new carto.dataview.Histogram(citiesSource, 'population', { start: 100000, end: 5000000 });
+ * // Set up a callback to render the histogram data every time new data is obtained.
+ *  histogram.on('dataChanged', histogramData => {
+ *    console.log(histogramData);
+ *  });
+ * // Add the histogram to the client
+ * client.addDataview(histogram);
+ * @example
+ * // The histogram is an async object so it can be on different states: LOADING, ERROR...
+ * // Listen to state events
+ * histogram.on('statusChanged', (newStatus, error) => { });
+ * // Listen to histogram errors
+ * histogram.on('error', error => { });
+ */
+function Histogram(source, column, options) {
+  this._initialize(source, column, options);
+  this._bins = this._options.bins;
+  this._start = this._options.start;
+  this._end = this._options.end;
+}
+
+Histogram.prototype = Object.create(Base.prototype);
+
+Histogram.prototype.DEFAULTS = {
+  bins: 10
+};
+
+/**
+ * Return the resulting data.
+ *
+ * @return {carto.dataview.HistogramData}
+ * @api
+ */
+Histogram.prototype.getData = function () {
+  if (this._internalModel) {
+    return parseHistogramData(this._internalModel.get('data'), this._internalModel.get('nulls'), this._internalModel.get('totalAmount'));
+  }
+  return null;
+};
+
+Histogram.prototype.setColumn = function (column) {
+  Base.prototype.setColumn.apply(this, arguments);
+  this._start = null;
+  this._end = null;
+};
+
+/**
+ * Set the number of bins.
+ *
+ * @param {number} bins
+ * @fires binsChanged
+ * @return {carto.dataview.Histogram} this
+ * @api
+ */
+Histogram.prototype.setBins = function (bins) {
+  this._validateBins(bins);
+  this._changeProperty('bins', bins);
+  return this;
+};
+
+/**
+ * Return the current number of bins.
+ *
+ * @return {number} Current number of bins
+ * @api
+ */
+Histogram.prototype.getBins = function () {
+  return this._bins;
+};
+
+/**
+ * Set the lower and upper limit of the bins range
+ *
+ * @param {number} start
+ * @param {number} end
+ * @return {carto.dataview.Histogram} this
+ * @api
+ */
+Histogram.prototype.setStartEnd = function (start, end) {
+  this._validateStartEnd(start, end);
+
+  this._changeProperties({ start: start, end: end });
+
+  return this;
+};
+
+/**
+ * Return the lower limit of the bins' range
+ *
+ * @return {number} Current value of start
+ * @api
+ */
+Histogram.prototype.getStart = function () {
+  return this._start || this._internalModel.get('start');
+};
+
+/**
+ * Return the upper limit of the bins' range
+ *
+ * @return {number} Current value of end
+ * @api
+ */
+Histogram.prototype.getEnd = function () {
+  return this._end || this._internalModel.get('end');
+};
+
+/**
+ * Return the distribution type of the current data according to [Galtung’s AJUS System]{@link https://en.wikipedia.org/wiki/Multimodal_distribution#Galtung.27s_classification}
+ *
+ * @return {string} Distribution type of current data
+ * @api
+ */
+Histogram.prototype.getDistributionType = function () {
+  if (this._internalModel) {
+    var data = this._internalModel.getData();
+    return this._internalModel.getDistributionType(data);
+  }
+  return null;
+};
+
+Histogram.prototype._validateBins = function (bins) {
+  if (!_.isFinite(bins) || bins < 1 || Math.floor(bins) !== bins) {
+    throw this._getValidationError('histogramInvalidBins');
+  }
+};
+
+Histogram.prototype._validateStartEnd = function (start, end) {
+  var values = [start, end];
+
+  if (_.every(values, _.isUndefined)) return;
+
+  var bothAreNumbers = _.every(values, function (number) {
+    return _.isNumber(number) && !_.isNaN(number);
+  });
+  var bothAreNull = _.every(values, _.isNull);
+
+  if (!bothAreNumbers && !bothAreNull) {
+    throw this._getValidationError('histogramInvalidStartEnd');
+  }
+};
+
+Histogram.prototype._checkOptions = function (options) {
+  if (_.isUndefined(options)) {
+    throw this._getValidationError('histogramOptionsRequired');
+  }
+  this._validateBins(options.bins);
+  this._validateStartEnd(options.start, options.end);
+};
+
+Histogram.prototype._createInternalModel = function (engine) {
+  this._internalModel = new HistogramDataviewModel({
+    source: this._source.$getInternalModel(),
+    column: this._column,
+    bins: this._bins,
+    start: this._start,
+    end: this._end,
+    sync_on_bbox_change: !!this._boundingBoxFilter,
+    sync_on_circle_change: !!this._circleFilter,
+    sync_on_polygon_change: !!this._polygonFilter,
+    enabled: this._enabled,
+    column_type: 'number'
+  }, {
+    engine: engine,
+    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
+    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
+    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
+  });
+};
+
+module.exports = Histogram;
+
+/**
+ * Fired when bins have changed. Handler gets a parameter with the new bins.
+ *
+ * @event binsChanged
+ * @type {number}
+ * @api
+ */
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ = __webpack_require__(0);
+var BackboneAbortSync = __webpack_require__(29);
+var Model = __webpack_require__(2);
+var helper = __webpack_require__(44);
+
+/**
+ *  This model is used for getting the total amount of data
+ *  from the histogram widget (without any filter).
+ */
+
+module.exports = Model.extend({
   defaults: {
-    visible: true,
-    type: 'layergroup'
+    url: '',
+    data: [],
+    localTimezone: false,
+    localOffset: 0,
+    hasBeenFetched: false
   },
 
-  initialize: function initialize(attributes, options) {
-    options = options || {};
-
-    if (!options.layersCollection) {
-      throw new Error('layersCollection option is required');
-    }
-    this._layersCollection = options.layersCollection;
-  },
-
-  addError: function addError(error) {
-    var type = error.type;
-
-    if (!type) {
-      throw new Error('Error must have a type property.');
-    }
-
-    this.trigger('error:' + type, error);
-  },
-
-  forEachGroupedLayer: function forEachGroupedLayer(iteratee, context) {
-    _.each(this._getGroupedLayers(), iteratee.bind(context || this));
-  },
-
-  _getGroupedLayers: function _getGroupedLayers() {
-    return this._layersCollection.getCartoDBLayers();
-  },
-
-  _getLayers: function _getLayers() {
-    return this._layersCollection.reject(LayerTypes.isGoogleMapsBaseLayer);
-  },
-
-  getIndexOfLayerInLayerGroup: function getIndexOfLayerInLayerGroup(layerModel) {
-    return this._getGroupedLayers().indexOf(layerModel);
-  },
-
-  getLayerInLayerGroupAt: function getLayerInLayerGroupAt(index) {
-    return this._getGroupedLayers()[index];
-  },
-
-  getCartoLayerById: function getCartoLayerById(id) {
-    return this._layersCollection.get(id);
-  },
-
-  isEqual: function isEqual() {
-    return false;
-  },
-
-  hasURLs: function hasURLs() {
-    return !!this.get('urls');
-  },
-
-  getSubdomains: function getSubdomains() {
-    return this.get('urls') && this.get('urls').subdomains || [];
-  },
-
-  getTileURLTemplatesWithSubdomains: function getTileURLTemplatesWithSubdomains() {
-    var urlTemplate = this.getTileURLTemplate();
-    var subdomains = this.getSubdomains();
-
-    if (subdomains && subdomains.length) {
-      return _.map(subdomains, function (subdomain) {
-        return urlTemplate.replace('{s}', subdomain);
-      });
-    }
-
-    return [urlTemplate];
-  },
-
-  getTileURLTemplate: function getTileURLTemplate(type) {
-    type = type || 'png';
-
-    var tileURLTemplate = this.get('urls') && this.get('urls').tiles;
-
-    if (!tileURLTemplate) return '';
-
-    if (type === 'png') {
-      if (this._areAllLayersHidden()) {
-        return '';
-      }
-      return this._generatePNGTileURLTemplate(tileURLTemplate);
-    } else if (type === 'mvt') {
-      return this._generateMTVTileURLTemplate(tileURLTemplate);
-    }
-  },
-
-  _generatePNGTileURLTemplate: function _generatePNGTileURLTemplate(urlTemplate) {
-    var mapnikLayersIndexes = this._getIndexesOfVisibleMapnikLayers();
-
-    if (mapnikLayersIndexes) {
-      urlTemplate = urlTemplate.replace('{layerIndexes}', mapnikLayersIndexes).replace('{format}', 'png');
-
-      return this._appendAuthParamsToURL(urlTemplate);
-    }
-
-    return '';
-  },
-
-  _generateMTVTileURLTemplate: function _generateMTVTileURLTemplate(urlTemplate) {
-    urlTemplate = urlTemplate.replace('{layerIndexes}', 'mapnik').replace('{format}', 'mvt');
-    return this._appendAuthParamsToURL(urlTemplate);
-  },
-
-  _areAllLayersHidden: function _areAllLayersHidden() {
-    return _.all(this._getGroupedLayers(), function (layerModel) {
-      return !layerModel.isVisible();
-    });
-  },
-
-  _getIndexesOfVisibleMapnikLayers: function _getIndexesOfVisibleMapnikLayers(url) {
-    var indexOfLayersInWindshaft = this.get('indexOfLayersInWindshaft');
-    return _.reduce(this._getGroupedLayers(), function (indexes, layerModel, layerIndex) {
-      if (layerModel.isVisible()) {
-        indexes.push(indexOfLayersInWindshaft[layerIndex]);
-      }
-      return indexes;
-    }, []).join(',');
-  },
-
-  _getIndexesOfVisibleLayers: function _getIndexesOfVisibleLayers(url) {
-    return _.reduce(this._getLayers(), function (indexes, layerModel, layerIndex) {
-      if (layerModel.isVisible()) {
-        indexes.push(layerIndex);
-      }
-      return indexes;
-    }, []).join(',');
-  },
-
-  hasTileURLTemplates: function hasTileURLTemplates() {
-    return !!this.getTileURLTemplate();
-  },
-
-  getGridURLTemplatesWithSubdomains: function getGridURLTemplatesWithSubdomains(layerIndex) {
-    var gridURLTemplates = this.get('urls') && this.get('urls').grids && this.get('urls').grids[layerIndex] || [];
-
-    if (this.get('urls') && this.get('urls').subdomains) {
-      var subdomains = this.get('urls').subdomains;
-      gridURLTemplates = _.map(gridURLTemplates, function (url, i) {
-        return url.replace('{s}', subdomains[i]);
-      });
-    }
-
-    return _.map(gridURLTemplates, this._appendAuthParamsToURL, this);
-  },
-
-  getAttributesBaseURL: function getAttributesBaseURL(layerIndex) {
-    return this.get('urls') && this.get('urls').attributes && this.get('urls').attributes[layerIndex];
-  },
-
-  getStaticImageURLTemplate: function getStaticImageURLTemplate() {
-    var staticImageURLTemplate = this.get('urls') && this.get('urls').image;
-    if (staticImageURLTemplate) {
-      staticImageURLTemplate = this._appendParamsToURL(staticImageURLTemplate, ['layer=' + this._getIndexesOfVisibleLayers()]);
-      staticImageURLTemplate = this._appendAuthParamsToURL(staticImageURLTemplate);
-      staticImageURLTemplate = staticImageURLTemplate.replace('{s}', this.getSubdomains()[0]);
-    }
-    return staticImageURLTemplate;
-  },
-
-  fetchAttributes: function fetchAttributes(layerIndex, featureID, callback) {
-    var attributeBaseURL = this.getAttributesBaseURL(layerIndex);
-    if (!attributeBaseURL) {
-      throw new Error('Attributes cannot be fetched until urls are set');
-    }
-
-    var url = this._appendAuthParamsToURL(attributeBaseURL + '/' + featureID);
-
-    $.ajax({
-      dataType: 'jsonp',
-      url: url,
-      jsonpCallback: '_cdbi_layer_attributes_' + util.uniqueCallbackName(this.toJSON()),
-      cache: true,
-      success: function success(data) {
-        // loadingTime.end();
-        callback(data);
-      },
-      error: function error(data) {
-        // loadingTime.end();
-        // cartodb.core.Profiler.metric('cartodb-js.named_map.attributes.error').inc();
-        callback(null);
-      }
-    });
-  },
-
-  _appendAuthParamsToURL: function _appendAuthParamsToURL(url) {
+  url: function url() {
     var params = [];
+    var columnType = this.get('column_type');
+    var offset = this._getCurrentOffset();
+    var aggregation = this.get('aggregation') || 'auto';
+
+    params.push('no_filters=1');
+
+    if (columnType === 'number' && this.get('bins')) {
+      params.push('bins=' + this.get('bins'));
+    } else if (columnType === 'date') {
+      params.push('aggregation=' + aggregation);
+      if (_.isFinite(offset)) {
+        params.push('offset=' + offset);
+      }
+    }
+
     if (this.get('apiKey')) {
       params.push('api_key=' + this.get('apiKey'));
     } else if (this.get('authToken')) {
@@ -32176,377 +32968,110 @@ var CartoDBLayerGroup = Backbone.Model.extend({
       }
     }
 
-    return this._appendParamsToURL(url, params);
-  },
-
-  _appendParamsToURL: function _appendParamsToURL(url, params) {
-    if (params.length) {
-      var separator = '?';
-      if (url.indexOf('?') !== -1) {
-        separator = '&';
-      }
-      return url + separator + params.join('&');
+    // Start - End
+    var start = this.get('start');
+    var end = this.get('end');
+    if (_.isFinite(start) && _.isFinite(end)) {
+      params.push('start=' + start);
+      params.push('end=' + end);
     }
-    return url;
+
+    return this.get('url') + '?' + params.join('&');
   },
 
-  onLayerVisibilityChanged: function onLayerVisibilityChanged(callback) {
-    this._layersCollection.on('change:visible', function (layerModel) {
-      if (this._isLayerGrouped(layerModel)) {
-        callback(layerModel);
+  initialize: function initialize() {
+    this.sync = BackboneAbortSync.bind(this);
+    this._initBinds();
+  },
+
+  _initBinds: function _initBinds() {
+    this.on('change:url', function () {
+      this.refresh();
+    }, this);
+
+    this.on('change:aggregation change:offset', function () {
+      if (this.get('column_type') === 'date' && this.get('aggregation')) {
+        this.refresh();
       }
     }, this);
-  },
 
-  onLayerAdded: function onLayerAdded(callback) {
-    this._layersCollection.on('add', function (layerModel) {
-      if (this._isLayerGrouped(layerModel)) {
-        callback(layerModel, this.getLayerInLayerGroupAt(layerModel));
+    this.on('change:bins', function () {
+      if (this.get('column_type') === 'number') {
+        this.refresh();
       }
     }, this);
+
+    this.on('change:localTimezone', function () {
+      this.refresh();
+    }, this);
+
+    this.on('change:column', function () {
+      this.set('aggregation', 'auto', { silent: true });
+    });
+
+    this.on('sync', function () {
+      this.set('hasBeenFetched', true);
+    });
   },
 
-  _isLayerGrouped: function _isLayerGrouped(layerModel) {
-    return this._getGroupedLayers().indexOf(layerModel) >= 0;
+  setUrl: function setUrl(url) {
+    if (!url) {
+      throw new Error('url not specified');
+    }
+    this.set('url', url);
+  },
+
+  setBins: function setBins(bins) {
+    this.set('bins', bins, { silent: bins === void 0 });
+  },
+
+  getData: function getData() {
+    return this.get('data');
+  },
+
+  parse: function parse(data) {
+    var aggregation = data.aggregation || this.get('aggregation');
+    var numberOfBins = data.bins_count || 0;
+    var width = data.bin_width;
+    var start = this.get('column_type') === 'date' ? data.timestamp_start : data.bins_start;
+
+    var parsedData = {};
+    parsedData.data = new Array(numberOfBins);
+
+    if (aggregation) {
+      parsedData.aggregation = aggregation;
+      this.set('aggregation', aggregation, { silent: true });
+    }
+
+    _.each(data.bins, function (bin) {
+      parsedData.data[bin.bin] = bin;
+    });
+
+    if (this.get('column_type') === 'date') {
+      parsedData.data = helper.fillTimestampBuckets(parsedData.data, start, aggregation, numberOfBins, 'totals');
+      numberOfBins = parsedData.data.length;
+    } else {
+      helper.fillNumericBuckets(parsedData.data, start, width, numberOfBins);
+    }
+
+    if (parsedData.data.length > 0) {
+      parsedData.start = parsedData.data[0].start;
+      parsedData.end = parsedData.data[parsedData.data.length - 1].end;
+    }
+
+    parsedData.bins = numberOfBins;
+
+    return parsedData;
+  },
+
+  refresh: function refresh() {
+    this.fetch();
+  },
+
+  _getCurrentOffset: function _getCurrentOffset() {
+    return this.get('localTimezone') ? this.get('localOffset') : this.get('offset');
   }
 });
-
-module.exports = CartoDBLayerGroup;
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(0);
-var LayerTypes = __webpack_require__(16);
-
-var DEFAULT_CARTOCSS_VERSION = '2.1.0';
-
-// This types are the understood by the Maps API.
-var HTTP_LAYER_TYPE = 'http';
-var PLAIN_LAYER_TYPE = 'plain';
-var MAPNIK_LAYER_TYPE = 'mapnik';
-var TORQUE_LAYER_TYPE = 'torque';
-
-/**
- * Generate a json payload from a layer collection of a map
- */
-function serialize(layersCollection) {
-  return layersCollection.chain().map(_calculateLayerJSON).compact().value();
-}
-
-function _calculateLayerJSON(layerModel) {
-  if (LayerTypes.isTiledLayer(layerModel)) {
-    return optionsForHTTPLayer(layerModel);
-  } else if (LayerTypes.isPlainLayer(layerModel)) {
-    return optionsForPlainLayer(layerModel);
-  } else if (LayerTypes.isWMSLayer(layerModel)) {
-    return optionsForWMSLayer(layerModel);
-  } else if (LayerTypes.isCartoDBLayer(layerModel)) {
-    return optionsForMapnikLayer(layerModel);
-  } else if (LayerTypes.isTorqueLayer(layerModel)) {
-    return optionsForTorqueLayer(layerModel);
-  }
-}
-
-function optionsForHTTPLayer(layerModel) {
-  return {
-    id: layerModel.get('id'),
-    type: HTTP_LAYER_TYPE,
-    options: {
-      urlTemplate: layerModel.get('urlTemplate'),
-      subdomains: layerModel.get('subdomains'),
-      tms: layerModel.get('tms')
-    }
-  };
-}
-
-function optionsForWMSLayer(layerModel) {
-  return {
-    id: layerModel.get('id'),
-    type: HTTP_LAYER_TYPE,
-    options: {
-      urlTemplate: layerModel.get('urlTemplate'),
-      tms: true
-    }
-  };
-}
-
-function optionsForPlainLayer(layerModel) {
-  return {
-    id: layerModel.get('id'),
-    type: PLAIN_LAYER_TYPE,
-    options: {
-      color: layerModel.get('color'),
-      imageUrl: layerModel.get('image')
-    }
-  };
-}
-
-function optionsForMapnikLayer(layerModel) {
-  var options = sharedOptionsForMapnikAndTorqueLayers(layerModel);
-  options.interactivity = layerModel.getInteractiveColumnNames();
-
-  if (layerModel.infowindow && layerModel.infowindow.hasFields()) {
-    options.attributes = {
-      id: 'cartodb_id',
-      columns: layerModel.infowindow.getFieldNames()
-    };
-  }
-
-  if (isFinite(layerModel.get('minzoom'))) {
-    options.minzoom = layerModel.get('minzoom');
-  }
-
-  if (isFinite(layerModel.get('maxzoom'))) {
-    options.maxzoom = layerModel.get('maxzoom');
-  }
-
-  if (!_.isEmpty(layerModel.aggregation)) {
-    _.extend(options, {
-      aggregation: layerModel.aggregation
-    });
-  }
-
-  return {
-    id: layerModel.get('id'),
-    type: MAPNIK_LAYER_TYPE,
-    options: options
-  };
-}
-
-function optionsForTorqueLayer(layerModel) {
-  var options = sharedOptionsForMapnikAndTorqueLayers(layerModel);
-  return {
-    id: layerModel.get('id'),
-    type: TORQUE_LAYER_TYPE,
-    options: options
-  };
-}
-
-function sharedOptionsForMapnikAndTorqueLayers(layerModel) {
-  var options = {
-    cartocss: layerModel.get('cartocss'),
-    cartocss_version: layerModel.get('cartocss_version') || DEFAULT_CARTOCSS_VERSION
-  };
-
-  options.source = { id: layerModel.getSourceId() };
-
-  if (layerModel.get('sql_wrap')) {
-    options.sql_wrap = layerModel.get('sql_wrap');
-  }
-
-  return options;
-}
-module.exports = { serialize: serialize };
-
-/***/ }),
-/* 128 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function serialize(dataviewsCollection) {
-  return dataviewsCollection.reduce(function (dataviews, dataviewModel) {
-    dataviews[dataviewModel.get('id')] = dataviewModel.toJSON();
-    return dataviews;
-  }, {});
-}
-
-module.exports = {
-  serialize: serialize
-};
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var version = __webpack_require__(43);
-
-function AnalysisGraph(definition, wantedVersion) {
-    wantedVersion = wantedVersion || 'latest';
-
-    this.definition = definition;
-    this.reference = version.getVersion(wantedVersion);
-}
-
-module.exports = AnalysisGraph;
-
-AnalysisGraph.prototype.getNodesWithId = function() {
-    return reduceById({}, this.definition, this.reference);
-};
-
-AnalysisGraph.prototype.getChildNodesNames = function() {
-    return childNodes(this.definition.type, this.reference);
-};
-
-AnalysisGraph.prototype.getNodesList = function() {
-    return appendAllNodes([], this.definition, this.reference);
-};
-
-AnalysisGraph.prototype.getDefinitionWith = function(nodeId, extendedWithParams) {
-    return extendDefinition(this.definition, this.reference, nodeId, extendedWithParams);
-};
-
-function extendDefinition(definition, reference, nodeId, extendedWithParams) {
-    if (definition.id && definition.id === nodeId) {
-        Object.keys(extendedWithParams).forEach(function(extendWithParamsKey) {
-            if (!definition.params.hasOwnProperty(extendWithParamsKey)) {
-                definition.params[extendWithParamsKey] = {};
-            }
-            var obj = extendedWithParams[extendWithParamsKey];
-            Object.keys(obj).forEach(function(objK) {
-                definition.params[extendWithParamsKey][objK] = obj[objK];
-            });
-        });
-    }
-
-    childNodes(definition.type, reference)
-        .filter(filterMissingOptionalNodes(definition, reference))
-        .forEach(function(childNodeParamName) {
-            extendDefinition(definition.params[childNodeParamName], reference, nodeId, extendedWithParams);
-        });
-
-    return definition;
-}
-
-function appendAllNodes(allNodes, definition, reference) {
-    allNodes.push(definition);
-
-    childNodes(definition.type, reference)
-        .filter(filterMissingOptionalNodes(definition, reference))
-        .forEach(function(childNodeParamName) {
-            appendAllNodes(allNodes, definition.params[childNodeParamName], reference);
-        });
-    return allNodes;
-}
-
-function reduceById(nodesMap, definition, reference) {
-    if (definition.id) {
-        nodesMap[definition.id] = definition;
-    }
-    childNodes(definition.type, reference)
-        .filter(filterMissingOptionalNodes(definition, reference))
-        .forEach(function(childNodeParamName) {
-            reduceById(nodesMap, definition.params[childNodeParamName], reference);
-        });
-    return nodesMap;
-}
-
-function childNodes(nodeType, reference) {
-    var nodeRef = reference.analyses[nodeType];
-
-    return Object.keys(nodeRef.params).reduce(function(childNodesNames, paramName) {
-        if (nodeRef.params[paramName].type === 'node') {
-            childNodesNames.push(paramName);
-        }
-        return childNodesNames;
-    }, []);
-}
-
-function filterMissingOptionalNodes(definition, reference) {
-    return function(childNodeParamName) {
-        return !isOptionalParam(definition.type, childNodeParamName, reference) ||
-            !!definition.params[childNodeParamName];
-    };
-}
-
-function isOptionalParam(nodeType, paramName, reference) {
-    var nodeRef = reference.analyses[nodeType];
-    return nodeRef.params[paramName].optional;
-}
-
-
-/***/ }),
-/* 130 */
-/***/ (function(module) {
-
-module.exports = {"version":"0.59.4","analyses":{"aggregate-intersection":{"params":{"source":{"type":"node","geometry":["*"]},"target":{"type":"node","geometry":["*"]},"aggregate_function":{"type":"enum","values":["avg","count","max","min","sum"]},"aggregate_column":{"type":"string","optional":true}}},"bounding-box":{"params":{"source":{"type":"node","geometry":["*"]},"category_column":{"type":"string","optional":true},"aggregation":{"type":"enum","values":["avg","count","max","min","sum"],"optional":true,"default-value":"count"},"aggregation_column":{"type":"string","optional":true}}},"bounding-circle":{"params":{"source":{"type":"node","geometry":["*"]},"category_column":{"type":"string","optional":true},"aggregation":{"type":"enum","values":["avg","count","max","min","sum"],"optional":true,"default-value":"count"},"aggregation_column":{"type":"string","optional":true}}},"buffer":{"params":{"source":{"type":"node","geometry":["*"]},"radius":{"type":"number"},"isolines":{"type":"number","optional":true},"dissolved":{"type":"boolean","optional":true}}},"centroid":{"params":{"source":{"type":"node","geometry":["*"]},"category_column":{"type":"string","optional":true},"aggregation":{"type":"string","optional":true,"default-value":"count"},"aggregation_column":{"type":"string","optional":true}}},"closest":{"params":{"source":{"type":"node","geometry":["*"]},"target":{"type":"node","geometry":["*"]},"responses":{"type":"number","optional":true,"default-value":1},"category":{"type":"string","optional":true}}},"concave-hull":{"params":{"source":{"type":"node","geometry":["*"]},"category_column":{"type":"string","optional":true},"target_percent":{"type":"number","optional":true,"default-value":0.7},"allow_holes":{"type":"boolean","optional":true,"default-value":false},"aggregation":{"type":"enum","values":["avg","count","max","min","sum"],"optional":true,"default-value":"count"},"aggregation_column":{"type":"string","optional":true}}},"contour":{"params":{"source":{"type":"node","geometry":["point"]},"column":{"type":"string"},"buffer":{"type":"number","optional":true,"default-value":0.2},"method":{"type":"enum","values":["nearest_neighbor","barymetric","IDW"],"optional":true,"default-value":"barymetric"},"class_method":{"type":"enum","values":["equals","headstails","jenks","quantiles"],"optional":true,"default-value":"quantiles"},"steps":{"type":"number","optional":true,"default-value":7},"resolution":{"type":"number","optional":true,"default-value":-90}}},"convex-hull":{"params":{"source":{"type":"node","geometry":["*"]},"category_column":{"type":"string","optional":true},"aggregation":{"type":"enum","values":["avg","count","max","min","sum"],"optional":true,"default-value":"count"},"aggregation_column":{"type":"string","optional":true}}},"data-observatory-measure":{"params":{"source":{"type":"node","geometry":["point","polygon"]},"final_column":{"type":"string"},"segment_name":{"type":"string"},"percent":{"type":"boolean","optional":true}}},"data-observatory-multiple-measures":{"params":{"source":{"type":"node","geometry":["point","polygon"]},"numerators":{"type":"array"},"normalizations":{"type":"array"},"denominators":{"type":"array"},"geom_ids":{"type":"array"},"numerator_timespans":{"type":"array"},"column_names":{"type":"array"}}},"deprecated-sql-function":{"params":{"function_name":{"type":"string"},"primary_source":{"type":"node","geometry":["*"]},"secondary_source":{"type":"node","geometry":["*"],"optional":true},"function_args":{"type":"array","optional":true}}},"filter-by-node-column":{"params":{"source":{"type":"node","geometry":["*"]},"column":{"type":"string"},"filter_source":{"type":"node","geometry":["*"]},"filter_column":{"type":"string"}}},"filter-category":{"params":{"source":{"type":"node","geometry":["*"]},"column":{"type":"string"},"accept":{"type":"array","optional":true},"reject":{"type":"array","optional":true}}},"filter-grouped-rank":{"params":{"source":{"type":"node","geometry":["*"]},"column":{"type":"string"},"rank":{"type":"enum","values":["top","bottom"]},"group":{"type":"string"},"min":{"type":"number","optional":true},"max":{"type":"number","optional":true}}},"filter-range":{"params":{"source":{"type":"node","geometry":["*"]},"column":{"type":"string"},"min":{"type":"number","optional":true},"max":{"type":"number","optional":true},"greater_than":{"type":"number","optional":true},"greater_than_or_equal":{"type":"number","optional":true},"less_than":{"type":"number","optional":true},"less_than_or_equal":{"type":"number","optional":true}}},"filter-rank":{"params":{"source":{"type":"node","geometry":["*"]},"column":{"type":"string"},"rank":{"type":"enum","values":["top","bottom"]},"limit":{"type":"number"},"action":{"type":"enum","values":["show","hide"],"optional":true,"default-value":"show"}}},"georeference-admin-region":{"params":{"source":{"type":"node","geometry":["*"]},"admin_region_column":{"type":"string"},"country":{"type":"string","optional":true},"country_column":{"type":"string","optional":true}}},"georeference-city":{"params":{"source":{"type":"node","geometry":["*"]},"city_column":{"type":"string"},"admin_region":{"type":"string","optional":true},"admin_region_column":{"type":"string","optional":true},"country":{"type":"string","optional":true},"country_column":{"type":"string","optional":true}}},"georeference-country":{"params":{"source":{"type":"node","geometry":["*"]},"country_column":{"type":"string"}}},"georeference-ip-address":{"params":{"source":{"type":"node","geometry":["*"]},"ip_address":{"type":"string"}}},"georeference-long-lat":{"params":{"source":{"type":"node","geometry":["*"]},"longitude":{"type":"string"},"latitude":{"type":"string"}}},"georeference-postal-code":{"params":{"source":{"type":"node","geometry":["*"]},"output_geometry_type":{"type":"enum","values":["point","polygon"],"optional":true,"default-value":"point"},"postal_code_column":{"type":"string"},"country":{"type":"string","optional":true},"country_column":{"type":"string","optional":true}}},"georeference-street-address":{"params":{"source":{"type":"node","geometry":["*"]},"street_address_column":{"type":"string","optional":true},"street_address_template":{"type":"string","optional":true},"city":{"type":"string","optional":true},"city_column":{"type":"string","optional":true},"state":{"type":"string","optional":true},"state_column":{"type":"string","optional":true},"country":{"type":"string","optional":true},"country_column":{"type":"string","optional":true}}},"gravity":{"params":{"source":{"type":"node","geometry":["*"]},"target":{"type":"node","geometry":["*"]},"weight_column":{"type":"string"},"weight_threshold":{"type":"number","optional":true,"default-value":-1e+308},"pop_column":{"type":"string"},"max_distance":{"type":"number"},"target_id":{"type":"number"}}},"intersection":{"params":{"source":{"type":"node","geometry":["*"]},"source_columns":{"type":"array","optional":true,"default-value":[]},"target":{"type":"node","geometry":["*"]}}},"kmeans":{"params":{"source":{"type":"node","geometry":["point"]},"clusters":{"type":"number"}}},"line-sequential":{"params":{"source":{"type":"node","geometry":["point"]},"order_column":{"type":"string"},"order_type":{"type":"enum","values":["asc","desc"]},"category_column":{"type":"string","optional":true}}},"line-source-to-target":{"params":{"source":{"type":"node","geometry":["point"]},"source_column":{"type":"string","optional":true},"target":{"type":"node","geometry":["point"]},"target_column":{"type":"string","optional":true},"closest":{"type":"boolean"}}},"line-to-column":{"params":{"source":{"type":"node","geometry":["point"]},"target_column":{"type":"string"}}},"line-to-single-point":{"params":{"source":{"type":"node","geometry":["point"]},"destination_longitude":{"type":"number"},"destination_latitude":{"type":"number"}}},"link-by-line":{"params":{"source_points":{"type":"node","geometry":["point"]},"destination_points":{"type":"node","geometry":["point"]},"source_column":{"type":"string"},"destination_column":{"type":"string"},"use_great_circle":{"type":"boolean","optional":true,"default-value":false}}},"merge":{"params":{"left_source":{"type":"node","geometry":["*"]},"right_source":{"type":"node","geometry":["*"]},"left_source_column":{"type":"string"},"right_source_column":{"type":"string"},"join_operator":{"type":"enum","values":["inner","left","right"],"optional":true,"default-value":"inner"},"source_geometry":{"type":"enum","values":["left_source","right_source"],"optional":true,"default-value":"left_source"},"left_source_columns":{"type":"array","optional":true},"right_source_columns":{"type":"array","optional":true,"default-value":[]}}},"moran":{"params":{"source":{"type":"node","geometry":["polygon","point"]},"numerator_column":{"type":"string"},"denominator_column":{"type":"string","optional":true},"significance":{"type":"number"},"neighbours":{"type":"number","optional":true},"permutations":{"type":"number","optional":true},"w_type":{"type":"enum","values":["knn","queen"],"optional":true,"default-value":"knn"}}},"point-in-polygon":{"params":{"points_source":{"type":"node","geometry":["point"]},"polygons_source":{"type":"node","geometry":["polygon"]}}},"population-in-area":{"params":{"source":{"type":"node","geometry":["polygon"]},"final_column":{"type":"string"}}},"routing-sequential":{"params":{"source":{"type":"node","geometry":["point"]},"mode":{"type":"enum","values":["car","walk","bicycle","public_transport"]},"units":{"type":"enum","values":["kilometers","miles"],"optional":true,"default-value":"kilometers"},"order_column":{"type":"string","optional":true,"default-value":"cartodb_id"},"order_type":{"type":"enum","values":["asc","desc"],"optional":true,"default-value":"asc"}}},"routing-to-layer-all-to-all":{"params":{"source":{"type":"node","geometry":["point"]},"source_column":{"type":"string"},"target":{"type":"node","geometry":["point"]},"target_column":{"type":"string"},"mode":{"type":"enum","values":["car","walk","bicycle","public_transport"]},"units":{"type":"enum","values":["kilometers","miles"],"optional":true,"default-value":"kilometers"},"closest":{"type":"boolean"}}},"routing-to-single-point":{"params":{"source":{"type":"node","geometry":["point"]},"mode":{"type":"enum","values":["car","walk","bicycle","public_transport"]},"destination_longitude":{"type":"number"},"destination_latitude":{"type":"number"},"units":{"type":"enum","values":["kilometers","miles"],"optional":true,"default-value":"kilometers"}}},"sampling":{"params":{"source":{"type":"node","geometry":["*"]},"sampling":{"type":"number"},"seed":{"type":"number","optional":true}}},"source":{"params":{"query":{"type":"string"}}},"spatial-markov-trend":{"params":{"source":{"type":"node","geometry":["*"]},"time_columns":{"type":"array"},"num_classes":{"type":"number","optional":true,"default-value":5},"weight_type":{"type":"string","optional":true,"default-value":"knn"},"num_ngbrs":{"type":"number","optional":true,"default-value":5},"permutations":{"type":"number","optional":true,"default-value":0},"geom_col":{"type":"string","optional":true,"default-value":"the_geom"},"id_col":{"type":"string","optional":true,"default-value":"cartodb_id"}}},"trade-area":{"params":{"source":{"type":"node","geometry":["point"]},"kind":{"type":"enum","values":["walk","car"]},"time":{"type":"number"},"isolines":{"type":"number"},"dissolved":{"type":"boolean"}}},"weighted-centroid":{"params":{"source":{"type":"node","geometry":["*"]},"weight_column":{"type":"string"},"category_column":{"type":"string","optional":true},"aggregation":{"type":"string","optional":true,"default-value":"count"},"aggregation_column":{"type":"string","optional":true}}}}};
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./0.59.4/reference.json": 130
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) { // check for number or string
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return id;
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 131;
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports) {
-
-module.exports.versions = [
-  '0.1.0',
-  '0.2.0',
-  '0.3.0',
-  '0.4.0',
-  '0.6.0',
-  '0.7.0',
-  '0.9.0',
-  '0.10.0',
-  '0.14.0',
-  '0.15.0',
-  '0.16.0',
-  '0.17.0',
-  '0.18.0',
-  '0.19.0',
-  '0.20.0',
-  '0.21.0',
-  '0.22.0',
-  '0.23.0',
-  '0.26.0',
-  '0.27.0',
-  '0.29.0',
-  '0.33.0',
-  '0.34.0',
-  '0.37.0',
-  '0.37.1',
-  '0.38.0',
-  '0.40.0',
-  '0.41.0',
-  '0.43.0',
-  '0.44.0',
-  '0.47.0',
-  '0.51.0',
-  '0.52.0',
-  '0.54.0',
-  '0.55.0',
-  '0.55.1',
-  '0.58.1',
-  '0.59.3',
-  '0.59.4'
-];
-
-module.exports.target = '0.59.4';
-
 
 /***/ }),
 /* 133 */
@@ -32555,13 +33080,15 @@ module.exports.target = '0.59.4';
 "use strict";
 
 
-var version = __webpack_require__(43);
-var AnalysisGraph = __webpack_require__(129);
+var dateUtils = {};
 
-module.exports.getVersion = version.getVersion;
-module.exports.versions = version.versions;
-module.exports.AnalysisGraph = AnalysisGraph;
+dateUtils.getLocalOffset = function () {
+  var date = new Date();
+  // Return local timezone offset in seconds
+  return date.getTimezoneOffset() * -60;
+};
 
+module.exports = dateUtils;
 
 /***/ }),
 /* 134 */
@@ -32571,47 +33098,96 @@ module.exports.AnalysisGraph = AnalysisGraph;
 
 
 var _ = __webpack_require__(0);
-var AnalysisService = __webpack_require__(30);
 
 /**
- * Return a payload with the serialization of all the analyses in the
- * layersCollection and the dataviewsCollection.
+ * Transform the data obtained from an internal histogram dataview into a
+ * public object.
+ *
+ * @param {object[]} data - The raw histogram data
+ * @param {number} nulls - Number of data with a null
+ * @param {number} totalAmount - Total number of data in the histogram
+ *
+ * @return {carto.dataview.HistogramData} - The parsed and formatted data for the given parameters
  */
-function serialize(layersCollection, dataviewsCollection) {
-  var analysisList = AnalysisService.getAnalysisList(layersCollection, dataviewsCollection);
-  return _generateUniqueAnalysisList(analysisList);
+function parseHistogramData(data, nulls, totalAmount) {
+  if (!data) {
+    return null;
+  }
+  var compactData = _.compact(data);
+  var maxBin = _.max(compactData, function (bin) {
+    return bin.freq || 0;
+  });
+  var maxFreq = _.isFinite(maxBin.freq) && maxBin.freq !== 0 ? maxBin.freq : null;
+
+  /**
+   * @description
+   * Object containing histogram data.
+   *
+   * @typedef {object} carto.dataview.HistogramData
+   * @property {number} nulls - The number of items with null value
+   * @property {number} totalAmount - The number of elements returned
+   * @property {carto.dataview.BinItem[]} bins - Array containing the {@link carto.dataview.BinItem|data bins} for the histogram
+   * @property {string} type - String with value: **histogram**
+   * @api
+   */
+  return {
+    bins: _createBins(compactData, maxFreq),
+    nulls: nulls || 0,
+    totalAmount: totalAmount
+  };
 }
 
 /**
- * Return an analysis list without duplicated or nested analyses
+ * Transform the histogram raw data into {@link carto.dataview.BinItem}
  */
-function _generateUniqueAnalysisList(analysisList) {
-  var analysisIds = {};
-  return _.reduce(analysisList, function (list, analysis) {
-    if (!analysisIds[analysis.get('id')] && !_isAnalysisPartOfOtherAnalyses(analysis, analysisList)) {
-      analysisIds[analysis.get('id')] = true; // keep a set of already added analysis.
-      list.push(analysis.toJSON());
-    }
-    return list;
-  }, []);
-}
-
-/**
- * Check if an analysis is referenced by other anylisis in the given
- * analysis collection.
- */
-function _isAnalysisPartOfOtherAnalyses(analysis, analysisList) {
-  return _.any(analysisList, function (otherAnalysisModel) {
-    if (!analysis.equals(otherAnalysisModel)) {
-      return otherAnalysisModel.findAnalysisById(analysis.get('id'));
-    }
-    return false;
+function _createBins(data, maxFreq) {
+  return data.map(function (bin) {
+    /**
+     *  @example
+     *
+     * // We created an histogram containing airBnb prices per night
+     * const histogramDataview = new carto.dataview.Histogram(airbnbDataset, 'price', { bins: 7 });
+     * // Listen to dataChanged events
+     * histogramDataview.on('dataChanged', data => {
+     *  // The first bin contains prices from 0 to 20€ per night, there are 3 rentals in this bin with a cost of 10 15 and 20€.
+     *  const bin = console.log(data.bins[0]);
+     *  // This is the bin index in the bins array
+     *  bin.index; // 0
+     *  // The first bin contains rentals from 0 to 20€ per night
+     *  bin.start; // 0
+     *  // The first bin contains rentals from 0 to 20€ per night
+     *  bin.end; // 20
+     *  // The lower rental in the bin is 10€ per night
+     *  bin.min; // 10
+     *  // The maximun rental in the bin is 20€ per night
+     *  bin.max; // 20
+     *  // The average price in this bin is 15€ per night
+     *  bin.avg; // 15
+     *  // The bin contains 3 prices
+     *  bin.freq; // 3
+     *  // Those 3 prices represent the 20% of the dataset.
+     *  bin.normalized; // 0.2
+     * });
+     *
+     *
+     *
+     *
+     * @typedef {object} carto.dataview.BinItem
+     * @property {number} index - Number indicating the bin order
+     * @property {number} start - The lower limit of the bin
+     * @property {number} end - The higher limit of the bin
+     * @property {number} min - The minimal value appearing in the bin. Only appears if freq > 0
+     * @property {number} max - The minimal value appearing in the bin. Only appears if freq > 0
+     * @property {number} avg - The average value of the elements for this bin. Only appears if freq > 0
+     * @property {number} freq - Number of elements in the bin
+     * @property {number} normalized - Normalized frequency with respect to the whole data
+     * @api
+     */
+    return _.extend(bin, { normalized: _.isFinite(bin.freq) && maxFreq > 0 ? bin.freq / maxFreq : 0 });
   });
 }
 
-module.exports = {
-  serialize: serialize
-};
+module.exports = parseHistogramData;
 
 /***/ }),
 /* 135 */
@@ -32620,270 +33196,312 @@ module.exports = {
 "use strict";
 
 
-var AnalisysSerializer = __webpack_require__(134);
-var DataviewSerializer = __webpack_require__(128);
-var LayerSerializer = __webpack_require__(127);
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(18);
+var HistogramDataviewModel = __webpack_require__(43);
+var parseTimeSeriesData = __webpack_require__(136);
+var timeAggregation = __webpack_require__(5).timeAggregation;
+var isValidTimeAggregation = __webpack_require__(5).isValidTimeAggregation;
 
 /**
- * Transform a map visualization into a json payload compatible with the windshaft API.
+ * A dataview to represent an histogram of temporal data allowing to specify the granularity of the {@link carto.dataview.timeAggregation|temporal bins.}
+ *
+ * @param {carto.source.Base} source - The source where the dataview will fetch the data
+ * @param {string} column - The column name to get the data
+ * @param {object} [options]
+ * @param {carto.dataview.timeAggregation} [options.aggregation=auto] - Granularity of time aggregation
+ * @param {number} [options.offset] - Number of hours to offset the aggregation from UTC
+ * @param {boolean} [options.useLocalTimezone] - Indicates whether to use the local user timezone, or not
+ *
+ * @fires dataChanged
+ * @fires columnChanged
+ * @fires statusChanged
+ * @fires error
+ *
+ * @fires binsChanged
+ * @fires aggregationChanged
+ * @fires offsetChanged
+ * @fires localTimezoneChanged
+ *
+ * @constructor
+ * @extends carto.dataview.Base
+ * @memberof carto.dataview
+ * @api
+ * @example
+ * // We have a tweets dataset and we want to show a "per hour histogram" with the data.
+ * var timeSeries = new carto.dataview.TimeSeries(source0, 'last_review', {
+ *  offset: 0,
+ *  aggregation: 'hour'
+ * });
+ * @example
+ * // You can listen to multiple events emmited by the time-series-dataview.
+ * // Data and status are fired by all dataviews.
+ * timeSeries.on('dataChanged', newData => { });
+ * timeSeries.on('statusChanged', (newData, error) => { });
+ * timeSeries.on('error', cartoError => { });
  */
-function serialize(layersCollection, dataviewsCollection) {
-  return {
-    buffersize: { mvt: 0 },
-    layers: LayerSerializer.serialize(layersCollection),
-    dataviews: DataviewSerializer.serialize(dataviewsCollection),
-    analyses: AnalisysSerializer.serialize(layersCollection, dataviewsCollection)
-  };
+function TimeSeries(source, column, options) {
+  this._initialize(source, column, options);
+  this._aggregation = this._options.aggregation;
+  this._offset = _hoursToSeconds(this._options.offset);
+  this._localTimezone = this._options.useLocalTimezone;
 }
 
-module.exports = {
-  serialize: serialize
+TimeSeries.prototype = Object.create(Base.prototype);
+
+TimeSeries.prototype.DEFAULTS = {
+  aggregation: timeAggregation.AUTO,
+  offset: 0,
+  useLocalTimezone: false
 };
+
+/**
+ * Return the resulting data.
+ *
+ * @return {carto.dataview.TimeSeriesData}
+ * @api
+ */
+TimeSeries.prototype.getData = function () {
+  if (this._internalModel) {
+    return parseTimeSeriesData(this._internalModel.get('data'), this._internalModel.get('nulls'), this._internalModel.get('totalAmount'), this._internalModel.getCurrentOffset());
+  }
+  return null;
+};
+
+/**
+ * Set time aggregation.
+ *
+ * @param {carto.dataview.timeAggregation} aggregation
+ * @fires aggregationChanged
+ * @return {carto.dataview.TimeSeries} this
+ * @api
+ */
+TimeSeries.prototype.setAggregation = function (aggregation) {
+  this._validateAggregation(aggregation);
+  this._changeProperty('aggregation', aggregation);
+  return this;
+};
+
+/**
+ * Return the current time aggregation.
+ *
+ * @return {carto.dataview.timeAggregation} Current time aggregation
+ * @api
+ */
+TimeSeries.prototype.getAggregation = function () {
+  return this._aggregation;
+};
+
+/**
+ * Set time offset in hours.
+ *
+ * @param {number} offset
+ * @fires offsetChanged
+ * @return {carto.dataview.TimeSeries} this
+ * @api
+ */
+TimeSeries.prototype.setOffset = function (offset) {
+  this._validateOffset(offset);
+  this._changeProperty('offset', _hoursToSeconds(offset));
+  return this;
+};
+
+/**
+ * Return the current time offset in hours.
+ *
+ * @return {number} Current time offset
+ * @api
+ */
+TimeSeries.prototype.getOffset = function () {
+  return _secondsToHours(this._offset);
+};
+
+/**
+ * Set the local timezone flag. If enabled, the time offset is overriden by the user's local timezone.
+ *
+ * @param {boolean} localTimezone
+ * @fires localTimezoneChanged
+ * @return {carto.dataview.TimeSeries} this
+ * @api
+ */
+TimeSeries.prototype.useLocalTimezone = function (enable) {
+  this._validateLocalTimezone(enable);
+  this._changeProperty('localTimezone', enable);
+  return this;
+};
+
+/**
+ * Return the current local timezone flag.
+ *
+ * @return {boolean} Current local timezone flag
+ * @api
+ */
+TimeSeries.prototype.isUsingLocalTimezone = function () {
+  return this._localTimezone;
+};
+
+TimeSeries.prototype._checkOptions = function (options) {
+  if (_.isUndefined(options)) {
+    throw this._getValidationError('timeSeriesOptionsRequired');
+  }
+  this._validateAggregation(options.aggregation);
+  this._validateOffset(options.offset);
+  this._validateLocalTimezone(options.useLocalTimezone);
+};
+
+TimeSeries.prototype._validateAggregation = function (aggregation) {
+  if (!isValidTimeAggregation(aggregation)) {
+    throw this._getValidationError('timeSeriesInvalidAggregation');
+  }
+};
+
+TimeSeries.prototype._validateOffset = function (offset) {
+  if (!_.isFinite(offset) || Math.floor(offset) !== offset || offset < -12 || offset > 14) {
+    throw this._getValidationError('timeSeriesInvalidOffset');
+  }
+};
+
+TimeSeries.prototype._validateLocalTimezone = function (localTimezone) {
+  if (!_.isBoolean(localTimezone)) {
+    throw this._getValidationError('timeSeriesInvalidUselocaltimezone');
+  }
+};
+
+TimeSeries.prototype._createInternalModel = function (engine) {
+  this._internalModel = new HistogramDataviewModel({
+    source: this._source.$getInternalModel(),
+    column: this._column,
+    aggregation: this._aggregation,
+    offset: this._offset,
+    localTimezone: this._localTimezone,
+    sync_on_bbox_change: !!this._boundingBoxFilter,
+    sync_on_circle_change: !!this._circleFilter,
+    sync_on_polygon_change: !!this._polygonFilter,
+    enabled: this._enabled,
+    column_type: 'date'
+  }, {
+    engine: engine,
+    bboxFilter: this._boundingBoxFilter && this._boundingBoxFilter.$getInternalModel(),
+    circleFilter: this._circleFilter && this._circleFilter.$getInternalModel(),
+    polygonFilter: this._polygonFilter && this._polygonFilter.$getInternalModel()
+  });
+};
+
+// Utility functions
+
+function _hoursToSeconds(hours) {
+  return hours * 3600;
+}
+
+function _secondsToHours(seconds) {
+  return seconds / 3600;
+}
+module.exports = TimeSeries;
+
+/**
+ * Fired when aggregation has changed. Handler gets a parameter with the new aggregation.
+ *
+ * @event aggregationChanged
+ * @type {string}
+ * @api
+ */
+
+/**
+ * Fired when localTimezone has changed. Handler gets a parameter with the new timezone.
+ *
+ * @event localTimezoneChanged
+ * @type {boolean}
+ * @api
+ */
+
+/**
+ * Fired when offset has changed. Handler gets a parameter with the new offset.
+ *
+ * @event offsetChanged
+ * @type {string}
+ * @api
+ */
 
 /***/ }),
 /* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-(c) 2012 Uzi Kilon, Splunk Inc.
-Backbone Poller 1.1.4
-https://github.com/uzikilon/backbone-poller
-Backbone Poller may be freely distributed under the MIT license.
-*/
-(function (root, factory) {
-  'use strict';
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+"use strict";
+
+
+var _ = __webpack_require__(0);
+
+function secondsToHours(seconds) {
+  return seconds / 3600;
+}
+
+/**
+ * Transform the data obtained from an internal timeseries dataview into a  public object.
+ *
+ * @param {object[]} data - The raw time series data
+ * @param {number} nulls - Number of data with a null
+ * @param {number} totalAmount - Total number of data in the histogram
+ *
+ * @return {TimeSeriesData} - The parsed and formatted data for the given parameters
+ */
+function parseTimeSeriesData(data, nulls, totalAmount, offset) {
+  if (!data) {
+    return null;
   }
-  else {}
-}(this, function (_, Backbone) {
-  'use strict';
-
-  // Default settings
-  var defaults = {
-    delay: 1000,
-    condition: function () {
-      return true;
-    }
-  };
-
-  // Available events
-  var events = ['start', 'stop', 'fetch', 'success', 'error', 'complete'];
-
-  var pollers = [];
-  function findPoller(model) {
-    return _.find(pollers, function (poller) {
-      return poller.model === model;
-    });
-  }
-
-  var PollingManager = {
-
-    // **Backbone.Poller.get(model[, options])**
-    // <pre>
-    // Returns a singleton instance of a poller for a model
-    // Stops it if running
-    // If options.autostart is true, will start it
-    // Returns a poller instance
-    // </pre>
-    get: function (model, options) {
-      var poller = findPoller(model);
-      if (!poller) {
-        poller = new Poller(model, options);
-        pollers.push(poller);
-      }
-      else {
-        poller.set(options);
-      }
-      if (options && options.autostart === true) {
-        poller.start({silent: true});
-      }
-      return poller;
-    },
-
-    // **Backbone.Poller.size()**
-    // <pre>
-    // Returns the number of instantiated pollers
-    // </pre>
-    size: function () {
-      return pollers.length;
-    },
-
-    // **Backbone.Poller.reset()**
-    // <pre>
-    // Stops all pollers and removes from the pollers pool
-    // </pre>
-    reset: function () {
-      while (pollers.length) {
-        pollers[0].destroy();
-      }
-    }
-  };
-
-  function Poller(model, options) {
-    this.model = model;
-    this.cid = _.uniqueId('poller');
-    this.set(options);
-
-    if (this.model instanceof Backbone.Model) {
-      this.listenTo(this.model, 'destroy', this.destroy);
-    }
-  }
-
-  _.extend(Poller.prototype, Backbone.Events, {
-
-    // **poller.set([options])**
-    // <pre>
-    // Reset poller options and stops the poller
-    // </pre>
-    set: function (options) {
-      this.options = _.extend({}, defaults, options || {});
-      if (this.options.flush) {
-        this.off();
-      }
-      _.each(events, _.bind(function (name) {
-        var callback = this.options[name];
-        if (_.isFunction(callback)) {
-          this.off(name, callback, this);
-          this.on(name, callback, this);
-        }
-      }, this));
-
-      return this.stop({silent: true});
-    },
-    //
-    // **poller.start([options])**
-    // <pre>
-    // Start the poller
-    // Returns a poller instance
-    // Triggers a 'start' events unless options.silent is set to true
-    // </pre>
-    start: function (options) {
-      if (!this.active()) {
-        options && options.silent || this.trigger('start', this.model);
-        this.options.active = true;
-        if (this.options.delayed) {
-          delayedRun(this, _.isNumber(this.options.delayed) && this.options.delayed);
-        }
-        else {
-          run(this);
-        }
-      }
-      return this;
-    },
-    // **poller.stop([options])**
-    // <pre>
-    // Stops the poller
-    // Aborts any running XHR call
-    // Returns a poller instance
-    // Triggers a 'stop' events unless options.silent is set to true
-    // </pre>
-    stop: function (options) {
-      options && options.silent || this.trigger('stop', this.model);
-      this.options.active = false;
-      this.xhr && this.xhr.abort && this.xhr.abort();
-      this.xhr = null;
-      clearTimeout(this.timeoutId);
-      this.timeoutId = null;
-      return this;
-    },
-    // **poller.active()**
-    // <pre>
-    // Returns a boolean for poller status
-    // </pre>
-    active: function () {
-      return this.options.active === true;
-    },
-
-    destroy: function () {
-      var index = _.indexOf(pollers, this);
-      if (index > -1) {
-        this.stop().stopListening().off();
-        pollers.splice(index, 1);
-      }
-    }
+  var compactData = _.compact(data);
+  var maxBin = _.max(compactData, function (bin) {
+    return bin.freq || 0;
   });
+  var maxFreq = _.isFinite(maxBin.freq) && maxBin.freq !== 0 ? maxBin.freq : null;
 
-  function run(poller) {
-    if (validate(poller)) {
-      var options = _.extend({}, poller.options, {
-        success: function (model, resp) {
-          poller.trigger('success', model, resp);
-          delayedRun(poller);
-        },
-        error: function (model, resp) {
-          if (poller.options.continueOnError) {
-            poller.trigger('error', model, resp);
-            delayedRun(poller);
-          }
-          else {
-            poller.stop({silent: true});
-            poller.trigger('error', model, resp);
-          }
-        }
-      });
-      poller.trigger('fetch', poller.model);
-      poller.xhr = poller.model.fetch(options);
-    }
-  }
+  /**
+   * @description
+   * Object containing time series data.
+   *
+   * @typedef {object} carto.dataview.TimeSeriesData
+   * @property {number} nulls - The number of items with null value
+   * @property {number} totalAmount - The number of elements returned
+   * @property {number} offset - The time offset in hours. Needed to format UTC timestamps into the proper timezone format
+   * @property {carto.dataview.TimeSeriesBinItem[]} bins - Array containing the {@link carto.dataview.TimeSeriesBinItem|data bins} for the time series
+   * @api
+   */
+  return {
+    bins: _createBins(compactData, maxFreq),
+    nulls: nulls || 0,
+    offset: secondsToHours(offset),
+    totalAmount: totalAmount
+  };
+}
 
-  var backoff = {};
-  function getDelay(poller) {
-    if (_.isNumber(poller.options.delay)) {
-      return poller.options.delay;
-    }
+/**
+ * Transform the time series raw data into {@link carto.dataview.TimeSeriesBinItem}.
+ */
+function _createBins(data, maxFreq) {
+  return data.map(function (bin) {
+    /**
+      * @typedef {object} carto.dataview.TimeSeriesBinItem
+      * @property {number} index - Number indicating the bin order
+      * @property {number} start - Starting UTC timestamp of the bin
+      * @property {number} end - End UTC timestamp of the bin
+      * @property {number} min - Minimum UTC timestamp present in the bin. Only appears if freq > 0
+      * @property {number} max - Maximum UTC timestamp present in the bin. Only appears if freq > 0
+      * @property {number} freq - Numbers of elements present in the bin
+      * @property {number} normalized - Normalized frequency with respect to the whole dataset
+      * @api
+      */
+    return {
+      index: bin.bin,
+      start: bin.start,
+      end: bin.end,
+      min: bin.min,
+      max: bin.max,
+      freq: bin.freq,
+      normalized: _.isFinite(bin.freq) && maxFreq > 0 ? bin.freq / maxFreq : 0
+    };
+  });
+}
 
-    var min = poller.options.delay[0],
-        max = poller.options.delay[1],
-        interval = poller.options.delay[2] || 2;
-
-    if (backoff[poller.cid]) {
-      if (_.isFunction(interval)) {
-        backoff[poller.cid] = interval(backoff[poller.cid]);
-      }
-      else {
-        backoff[poller.cid] *= interval;
-      }
-    }
-    else {
-      backoff[poller.cid] = 1;
-    }
-
-    var res = Math.round(min * backoff[poller.cid]);
-    if (max && max > 0) {
-      res = Math.min(res, max);
-    }
-    return res;
-  }
-
-  function delayedRun(poller, delay) {
-    if (validate(poller)) {
-      poller.timeoutId = _.delay(run, delay || getDelay(poller), poller);
-    }
-  }
-
-  function validate(poller) {
-    if (!poller.options.active) {
-      return false;
-    }
-    if (poller.options.condition(poller.model) !== true) {
-      poller.stop({silent: true});
-      poller.trigger('complete', poller.model);
-      return false;
-    }
-    return true;
-  }
-
-  /* Test hooks */
-  PollingManager.getDelay = getDelay;
-  PollingManager.prototype = Poller.prototype;
-
-  return PollingManager;
-}));
-
+module.exports = parseTimeSeriesData;
 
 /***/ }),
 /* 137 */
@@ -32892,62 +33510,31 @@ Backbone Poller may be freely distributed under the MIT license.
 "use strict";
 
 
-var _ = __webpack_require__(0);
-var BackbonePoller = __webpack_require__(136);
+var BoundingBox = __webpack_require__(138);
+var BoundingBoxLeaflet = __webpack_require__(139);
+var BoundingBoxGoogleMaps = __webpack_require__(141);
+var Circle = __webpack_require__(143);
+var Polygon = __webpack_require__(145);
+var Category = __webpack_require__(147);
+var Range = __webpack_require__(148);
+var AND = __webpack_require__(149);
+var OR = __webpack_require__(150);
 
-function AnalysisPoller() {
-  this._pollers = [];
-}
-
-AnalysisPoller.CONFIG = {
-  START_DELAY: 1000,
-  MAX_DELAY: Infinity,
-  DELAY_MULTIPLIER: 1.5
+/**
+ *  @namespace carto.filter
+ *  @api
+ */
+module.exports = {
+  BoundingBox: BoundingBox,
+  BoundingBoxLeaflet: BoundingBoxLeaflet,
+  BoundingBoxGoogleMaps: BoundingBoxGoogleMaps,
+  Circle: Circle,
+  Polygon: Polygon,
+  Category: Category,
+  Range: Range,
+  AND: AND,
+  OR: OR
 };
-
-AnalysisPoller.prototype.resetAnalysisNodes = function (analysisModels) {
-  this.reset();
-  _.each(analysisModels, function (analysisModel) {
-    this._poll(analysisModel);
-  }, this);
-};
-
-AnalysisPoller.prototype._poll = function (analysisModel) {
-  if (this._canBePolled(analysisModel)) {
-    var poller = this._createPoller(analysisModel);
-    poller.start();
-  }
-};
-
-AnalysisPoller.prototype._canBePolled = function (analysisModel) {
-  return analysisModel.url() && !analysisModel.isDone();
-};
-
-AnalysisPoller.prototype._findPoller = function (analysisModel) {
-  return _.find(this._pollers, function (poller) {
-    return poller.model === analysisModel;
-  });
-};
-
-AnalysisPoller.prototype._createPoller = function (analysisModel) {
-  var pollerOptions = {
-    delay: [AnalysisPoller.CONFIG.START_DELAY, AnalysisPoller.CONFIG.MAX_DELAY, AnalysisPoller.CONFIG.DELAY_MULTIPLIER],
-    condition: function condition(analysisModel) {
-      return !analysisModel.isDone();
-    }
-  };
-
-  var poller = BackbonePoller.get(analysisModel, pollerOptions);
-  this._pollers.push(poller);
-  return poller;
-};
-
-AnalysisPoller.prototype.reset = function () {
-  BackbonePoller.reset();
-  this._pollers = [];
-};
-
-module.exports = AnalysisPoller;
 
 /***/ }),
 /* 138 */
@@ -32956,21 +33543,91 @@ module.exports = AnalysisPoller;
 "use strict";
 
 
+var _ = __webpack_require__(0);
+var Base = __webpack_require__(7);
+var BoundingBoxFilterModel = __webpack_require__(30);
+var CartoValidationError = __webpack_require__(3);
+var SpatialFilterTypes = __webpack_require__(8);
+
 /**
- * Use {@link http://docs.trackjs.com/tracker/top-level-api} for error logging.
+ * Generic bounding box filter.
+ *
+ * When this filter is included into a dataview only the data inside a custom bounding box will be taken into account.
+ *
+ * You can manually set the bounds via the `.setBounds()` method.
+ *
+ * This filter could be useful if you want give the users to ability to select a portion of the map and update the dataviews accordingly.
+ *
+ *
+ * @constructor
+ * @fires boundsChanged
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ *
  */
-function track(error) {
-  if (window.trackJs) {
-    try {
-      var message = error ? error.message + ' - code: ' + error.errorCode : JSON.stringify(error);
-      window.trackJs.track(new Error(message));
-    } catch (exc) {
-      // Swallow
-    }
-  }
+function BoundingBox() {
+  this._internalModel = new BoundingBoxFilterModel();
+  this.type = SpatialFilterTypes.BBOX;
 }
 
-module.exports = { track: track };
+BoundingBox.prototype = Object.create(Base.prototype);
+
+/**
+ * Set the bounds.
+ *
+ * @param  {carto.filter.Bounds} bounds
+ * @fires boundsChanged
+ * @return {carto.filter.BoundingBox} this
+ * @api
+ */
+BoundingBox.prototype.setBounds = function (bounds) {
+  this._checkBounds(bounds);
+  this._internalModel.setBounds(bounds);
+  this.trigger('boundsChanged', bounds);
+  return this;
+};
+
+/**
+ * Reset the bounds.
+ *
+ * @fires boundsChanged
+ * @return {carto.filter.BoundingBox} this
+ * @api
+ */
+BoundingBox.prototype.resetBounds = function () {
+  return this.setBounds({ west: 0, south: 0, east: 0, north: 0 });
+};
+
+/**
+ * Return the current bounds.
+ *
+ * @return {carto.filter.Bounds} Current bounds
+ * @api
+ */
+BoundingBox.prototype.getBounds = function () {
+  /**
+   * @typedef {object} carto.filter.Bounds
+   * @property {number} west - West coordinate
+   * @property {number} south - South coordinate
+   * @property {number} east - East coordinate
+   * @property {number} north - North coordinate
+   * @api
+   */
+  return this._internalModel.getBounds();
+};
+
+BoundingBox.prototype._checkBounds = function (bounds) {
+  if (_.isUndefined(bounds) || _.isUndefined(bounds.west) || _.isUndefined(bounds.south) || _.isUndefined(bounds.east) || _.isUndefined(bounds.north) || !_.isNumber(bounds.west) || !_.isNumber(bounds.south) || !_.isNumber(bounds.east) || !_.isNumber(bounds.north)) {
+    throw new CartoValidationError('filter', 'invalidBoundsObject');
+  }
+};
+
+BoundingBox.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+module.exports = BoundingBox;
 
 /***/ }),
 /* 139 */
@@ -32979,278 +33636,77 @@ module.exports = { track: track };
 "use strict";
 
 
-module.exports = {
-  layer: {
-    'non-valid-source': {
-      messageRegex: /nonValidSource/,
-      friendlyMessage: 'The given object is not a valid source. See "carto.source.Base".'
-    },
-    'non-valid-style': {
-      messageRegex: /nonValidStyle/,
-      friendlyMessage: 'The given object is not a valid style. See "carto.style.Base".'
-    },
-    'non-valid-columns': {
-      messageRegex: /nonValidColumns/,
-      friendlyMessage: 'The given object is not a valid array of string columns.'
-    },
-    'source-with-different-client': {
-      messageRegex: /differentSourceClient/,
-      friendlyMessage: "A layer can't have a source which belongs to a different client."
-    },
-    'style-with-different-client': {
-      messageRegex: /differentStyleClient/,
-      friendlyMessage: "A layer can't have a style which belongs to a different client."
-    },
-    'wrong-interactivity-columns': {
-      messageRegex: /wrongInteractivityColumns\[(.+)\]#(.+)$/,
-      friendlyMessage: 'Columns [$0] set on `$1` do not match the columns set in aggregation options.'
-    }
-  },
-  source: {
-    'query-required': {
-      messageRegex: /requiredQuery/,
-      friendlyMessage: 'SQL Source must have a SQL query.'
-    },
-    'query-string': {
-      messageRegex: /requiredString/,
-      friendlyMessage: 'SQL Query must be a string.'
-    },
-    'no-dataset-name': {
-      messageRegex: /noDatasetName/,
-      friendlyMessage: 'Table name is required.'
-    },
-    'dataset-string': {
-      messageRegex: /requiredDatasetString$/,
-      friendlyMessage: 'Table name must be a string.'
-    },
-    'dataset-required': {
-      messageRegex: /requiredDataset$/,
-      friendlyMessage: 'Table name must be not empty.'
-    }
-  },
-  style: {
-    'required-css': {
-      messageRegex: /requiredCSS$/,
-      friendlyMessage: 'CartoCSS is required.'
-    },
-    'css-string': {
-      messageRegex: /requiredCSSString$/,
-      friendlyMessage: 'CartoCSS must be a string.'
-    }
-  },
-  client: {
-    'bad-layer-type': {
-      messageRegex: /badLayerType/,
-      friendlyMessage: 'The given object is not a layer.'
-    },
-    'index-number': {
-      messageRegex: /indexNumber/,
-      friendlyMessage: 'index property must be a number.'
-    },
-    'index-out-of-range': {
-      messageRegex: /indexOutOfRange/,
-      friendlyMessage: 'index is out of range.'
-    },
-    'api-key-required': {
-      messageRegex: /apiKeyRequired/,
-      friendlyMessage: 'apiKey property is required.'
-    },
-    'api-key-string': {
-      messageRegex: /apiKeyString/,
-      friendlyMessage: 'apiKey property must be a string.'
-    },
-    'username-required': {
-      messageRegex: /usernameRequired/,
-      friendlyMessage: 'username property is required.'
-    },
-    'username-string': {
-      messageRegex: /usernameString/,
-      friendlyMessage: 'username property must be a string.'
-    },
-    'non-valid-server-url': {
-      messageRegex: /nonValidServerURL/,
-      friendlyMessage: 'serverUrl is not a valid URL.'
-    },
-    'non-matching-server-url': {
-      messageRegex: /serverURLDoesntMatchUsername/,
-      friendlyMessage: "serverUrl doesn't match the username."
-    },
-    'duplicated-layer-id': {
-      messageRegex: /duplicatedLayerId/,
-      friendlyMessage: 'A layer with the same ID already exists in the client.'
-    }
-  },
-  dataview: {
-    'source-required': {
-      messageRegex: /sourceRequired/,
-      friendlyMessage: 'Source property is required.'
-    },
-    'column-required': {
-      messageRegex: /columnRequired/,
-      friendlyMessage: 'Column property is required.'
-    },
-    'column-string': {
-      messageRegex: /columnString/,
-      friendlyMessage: 'Column property must be a string.'
-    },
-    'empty-column': {
-      messageRegex: /emptyColumn/,
-      friendlyMessage: 'Column property must be not empty.'
-    },
-    'filter-required': {
-      messageRegex: /filterRequired/,
-      friendlyMessage: 'Filter property is required.'
-    },
-    'time-series-options-required': {
-      messageRegex: /timeSeriesOptionsRequired/,
-      friendlyMessage: 'Options object to create a time series dataview is required.'
-    },
-    'time-series-invalid-aggregation': {
-      messageRegex: /timeSeriesInvalidAggregation/,
-      friendlyMessage: 'Time aggregation must be a valid value. Use carto.dataview.timeAggregation.'
-    },
-    'time-series-invalid-offset': {
-      messageRegex: /timeSeriesInvalidOffset/,
-      friendlyMessage: 'Offset must an integer value between -12 and 14.'
-    },
-    'time-series-invalid-uselocaltimezone': {
-      messageRegex: /timeSeriesInvalidUselocaltimezone/,
-      friendlyMessage: 'useLocalTimezone must be a boolean value.'
-    },
-    'histogram-options-required': {
-      messageRegex: /histogramOptionsRequired/,
-      friendlyMessage: 'Options object to create a histogram dataview is required.'
-    },
-    'histogram-invalid-bins': {
-      messageRegex: /histogramInvalidBins/,
-      friendlyMessage: 'Bins must be a positive integer value.'
-    },
-    'histogram-invalid-start-end': {
-      messageRegex: /histogramInvalidStartEnd/,
-      friendlyMessage: 'Both start and end values must be a number or null.'
-    },
-    'formula-options-required': {
-      messageRegex: /formulaOptionsRequired/,
-      friendlyMessage: 'Formula dataview options are not defined.'
-    },
-    'formula-invalid-operation': {
-      messageRegex: /formulaInvalidOperation/,
-      friendlyMessage: 'Operation for formula dataview is not valid. Use carto.operation'
-    },
-    'category-options-required': {
-      messageRegex: /categoryOptionsRequired/,
-      friendlyMessage: 'Category dataview options are not defined.'
-    },
-    'category-limit-required': {
-      messageRegex: /categoryLimitRequired/,
-      friendlyMessage: 'Limit for category dataview is required.'
-    },
-    'category-limit-number': {
-      messageRegex: /categoryLimitNumber/,
-      friendlyMessage: 'Limit for category dataview must be a number.'
-    },
-    'category-limit-positive': {
-      messageRegex: /categoryLimitPositive/,
-      friendlyMessage: 'Limit for category dataview must be greater than 0.'
-    },
-    'category-invalid-operation': {
-      messageRegex: /categoryInvalidOperation/,
-      friendlyMessage: 'Operation for category dataview is not valid. Use carto.operation'
-    },
-    'category-operation-required': {
-      messageRegex: /categoryOperationRequired/,
-      friendlyMessage: 'Operation column for category dataview is required.'
-    },
-    'category-operation-string': {
-      messageRegex: /categoryOperationString/,
-      friendlyMessage: 'Operation column for category dataview must be a string.'
-    },
-    'category-operation-empty': {
-      messageRegex: /categoryOperationEmpty/,
-      friendlyMessage: 'Operation column for category dataview must be not empty.'
-    }
-  },
-  filter: {
-    'invalid-bounds-object': {
-      messageRegex: /invalidBoundsObject/,
-      friendlyMessage: 'Bounds object is not valid. Use a carto.filter.Bounds object'
-    },
-    'invalid-circle-object': {
-      messageRegex: /invalidCircleObject/,
-      friendlyMessage: 'Circle object is not valid. Use a carto.filter.CircleData object'
-    },
-    'invalid-polygon-object': {
-      messageRegex: /invalidPolygonObject/,
-      friendlyMessage: 'Polygon object is not valid. Use a carto.filter.PolygonData object'
-    },
-    'column-required': {
-      messageRegex: /columnRequired/,
-      friendlyMessage: 'Column property is required.'
-    },
-    'column-string': {
-      messageRegex: /columnString/,
-      friendlyMessage: 'Column property must be a string.'
-    },
-    'empty-column': {
-      messageRegex: /emptyColumn/,
-      friendlyMessage: 'Column property must be not empty.'
-    },
-    'invalid-filter': {
-      messageRegex: /invalidFilter(.+)/,
-      friendlyMessage: "'$0' is not a valid filter. Please check documentation."
-    },
-    'invalid-option': {
-      messageRegex: /invalidOption(.+)/,
-      friendlyMessage: "'$0' is not a valid option for this filter."
-    },
-    'wrong-filter-type': {
-      messageRegex: /wrongFilterType/,
-      friendlyMessage: 'Filters need to extend from carto.filter.SQLBase. Please use carto.filter.Category or carto.filter.Range.'
-    },
-    'invalid-parameter-type': {
-      messageRegex: /invalidParameterType(.+)/,
-      friendlyMessage: "Invalid parameter type for '$0'. Please check filters documentation."
-    }
-  },
-  aggregation: {
-    'threshold-required': {
-      messageRegex: /thresholdRequired/,
-      friendlyMessage: 'Aggregation threshold is required.'
-    },
-    'invalid-threshold': {
-      messageRegex: /invalidThreshold/,
-      friendlyMessage: 'Aggregation threshold must be an integer value greater than 0.'
-    },
-    'resolution-required': {
-      messageRegex: /resolutionRequired/,
-      friendlyMessage: 'Aggregation resolution is required.'
-    },
-    'invalid-resolution': {
-      messageRegex: /invalidResolution/,
-      friendlyMessage: 'Aggregation resolution must be 0.5, 1 or powers of 2 up to 256 (2, 4, 8, 16, 32, 64, 128, 256).'
-    },
-    'invalid-placement': {
-      messageRegex: /invalidPlacement/,
-      friendlyMessage: 'Aggregation placement is not valid. Must be one of these values: `point-sample`, `point-grid`, `centroid`'
-    },
-    'column-function-required': {
-      messageRegex: /columnFunctionRequired(.+)$/,
-      friendlyMessage: "Aggregation function for column '$0' is required."
-    },
-    'invalid-column-function': {
-      messageRegex: /invalidColumnFunction(.+)$/,
-      friendlyMessage: "Aggregation function for column '$0' is not valid. Use carto.aggregation.function"
-    },
-    'column-aggregated-column-required': {
-      messageRegex: /columnAggregatedColumnRequired(.+)$/,
-      friendlyMessage: "Column to be aggregated to '$0' is required."
-    },
-    'invalid-column-aggregated-column': {
-      messageRegex: /invalidColumnAggregatedColumn(.+)$/,
-      friendlyMessage: "Column to be aggregated to '$0' must be a string."
-    }
+/* global L */
+var Base = __webpack_require__(7);
+var LeafletBoundingBoxAdapter = __webpack_require__(140);
+var BoundingBoxFilterModel = __webpack_require__(30);
+var utils = __webpack_require__(6);
+var SpatialFilterTypes = __webpack_require__(8);
+
+/**
+ * Bounding box filter for Leaflet maps.
+ *
+ * When this filter is included into a dataview only the data inside the {@link http://leafletjs.com/reference-1.3.1.html#map|leafletMap}
+ * bounds will be taken into account.
+ *
+ * @param {L.Map} map - The leaflet map view
+ *
+ * @fires boundsChanged
+ *
+ * @constructor
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ *
+ * @example
+ * // Create a bonding box attached to a leaflet map.
+ * const bboxFilter = new carto.filter.BoundingBoxLeaflet(leafletMap);
+ * // Add the filter to a dataview. Generating new data when the map bounds are changed.
+ * dataview.addFilter(bboxFilter);
+ */
+function BoundingBoxLeaflet(map) {
+  if (!_isLeafletMap(map)) {
+    throw new Error('Bounding box requires a Leaflet map but got: ' + map);
   }
+  this.type = SpatialFilterTypes.BBOX;
+
+  // Adapt the Leaflet map to offer unique:
+  // - getBounds() function
+  // - 'boundsChanged' event
+  var mapAdapter = new LeafletBoundingBoxAdapter(map);
+  // Use the adapter for the internal BoundingBoxFilter model
+  this._internalModel = new BoundingBoxFilterModel(mapAdapter);
+  this.listenTo(this._internalModel, 'boundsChanged', this._onBoundsChanged);
+}
+
+BoundingBoxLeaflet.prototype = Object.create(Base.prototype);
+
+/**
+ * Return the current bounds.
+ *
+ * @return {carto.filter.Bounds} Current bounds
+ * @api
+ */
+BoundingBoxLeaflet.prototype.getBounds = function () {
+  return this._internalModel.getBounds();
 };
+
+BoundingBoxLeaflet.prototype._onBoundsChanged = function (bounds) {
+  this.trigger('boundsChanged', bounds);
+};
+
+BoundingBoxLeaflet.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+// Helper to check if an element is a Leaflet map object
+function _isLeafletMap(element) {
+  // Check if Leaflet is loaded
+  utils.isLeafletLoaded();
+  return element instanceof L.Map;
+}
+
+module.exports = BoundingBoxLeaflet;
 
 /***/ }),
 /* 140 */
@@ -33259,7 +33715,42 @@ module.exports = {
 "use strict";
 
 
-module.exports = {};
+var _ = __webpack_require__(0);
+var Model = __webpack_require__(2);
+
+/**
+ * Adapt the Leaflet map to offer unique:
+ * - getBounds() function
+ * - 'boundsChanged' event
+ */
+module.exports = Model.extend({
+
+  initialize: function initialize(map) {
+    this._map = map;
+    this._debouncedTriggerBoundsChanged = _.debounce(this._triggerBoundsChanged, 200);
+    this._map.on('move zoom', this._debouncedTriggerBoundsChanged, this);
+  },
+
+  getBounds: function getBounds() {
+    var mapBounds = this._map.getBounds();
+    var sw = mapBounds.getSouthWest();
+    var ne = mapBounds.getNorthEast();
+    return {
+      west: sw.lng,
+      south: sw.lat,
+      east: ne.lng,
+      north: ne.lat
+    };
+  },
+
+  clean: function clean() {
+    this._map.off('move zoom');
+  },
+
+  _triggerBoundsChanged: function _triggerBoundsChanged() {
+    this.trigger('boundsChanged', this.getBounds());
+  }
+});
 
 /***/ }),
 /* 141 */
@@ -33268,77 +33759,78 @@ module.exports = {};
 "use strict";
 
 
-module.exports = {
-  analysis: {
-    'sql-syntax-error': {
-      messageRegex: /^syntax error/
-    },
-    'invalid-dataset': {
-      messageRegex: /relation (.+) does not exist/,
-      friendlyMessage: 'Invalid dataset name used. Dataset $0 does not exist.'
-    },
-    'column-does-not-exist': {
-      messageRegex: /column (.+) does not exist/,
-      friendlyMessage: 'Invalid column name. Column $0 does not exist.'
-    },
-    'analysis-requires-authentication': {
-      messageRegex: /^Analysis requires authentication with API key/
-    }
-  },
-  generic: {},
-  limit: {
-    'over-platform-limits': {
-      messageRegex: /^You are over platform's limits/
-    },
-    'generic-limit-error': {
-      messageRegex: /.*/,
-      friendlyMessage: 'The server is taking too long to respond, due to poor conectivity or a temporary error with our servers. Please try again soon.'
-    }
-  },
-  tile: {
-    'generic-tile-error': {
-      messageRegex: /.*/,
-      friendlyMessage: 'Some tiles might not be rendering correctly.'
-    }
-  },
-  layer: {
-    'column-does-not-exist': {
-      messageRegex: /column (.+) does not exist/,
-      friendlyMessage: 'Invalid column name. Column $0 does not exist.'
-    },
-    'unrecognized-rule': {
-      messageRegex: /Unrecognized rule: (.+)/,
-      friendlyMessage: 'Unrecognized rule "$0"'
-    },
-    'generic-layer-error': {
-      messageRegex: /.*/
-    }
-  },
-  dataview: {
-    'formula-does-not-support-operation': {
-      messageRegex: /Formula does not support (.+) operation/
-    },
-    'column-does-not-exist': {
-      messageRegex: /column (.+) does not exist/
-    },
-    'permission-denied': {
-      messageRegex: /permission denied for (.+)/
-    },
-    'wrong-type-column-used-in-time-series': {
-      messageRegex: /function date_part\(unknown, (.+)\) does not exist/,
-      friendlyMessage: 'Your time series column type is $0. Please use a date type.'
-    },
-    'invalid-aggregation-value': {
-      messageRegex: /Invalid aggregation value. Valid ones: auto, minute, hour, day, week, month, quarter, year, decade, century, millennium/
-    }
-  },
-  auth: {
-    'forbidden': {
-      messageRegex: /^Forbidden$/,
-      friendlyMessage: 'Forbidden. API key does not grant access.'
-    }
+/* global google */
+
+var Base = __webpack_require__(7);
+var GoogleMapsBoundingBoxAdapter = __webpack_require__(142);
+var BoundingBoxFilterModel = __webpack_require__(30);
+var utils = __webpack_require__(6);
+var SpatialFilterTypes = __webpack_require__(8);
+
+/**
+ * Bounding box filter for Google Maps maps.
+ *
+ * When this filter is included into a dataview only the data inside the {@link https://developers.google.com/maps/documentation/javascript/3.exp/reference#Map|googleMap}
+ * bounds will be taken into account.
+ *
+ * @param {google.maps.map} map - The google map to track the bounds
+ *
+ * @fires boundsChanged
+ *
+ * @constructor
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ *
+ * @example
+ * // Create a bonding box attached to a google map.
+ * const bboxFilter = new carto.filter.BoundingBoxGoogleMaps(googleMap);
+ * // Add the filter to a dataview. Generating new data when the map bounds are changed.
+ * dataview.addFilter(bboxFilter);
+ */
+function BoundingBoxGoogleMaps(map) {
+  if (!_isGoogleMap(map)) {
+    throw new Error('Bounding box requires a Google Maps map but got: ' + map);
   }
+  this.type = SpatialFilterTypes.BBOX;
+
+  // Adapt the Google Maps map to offer unique:
+  // - getBounds() function
+  // - 'boundsChanged' event
+  var mapAdapter = new GoogleMapsBoundingBoxAdapter(map);
+  // Use the adapter for the internal BoundingBoxFilter model
+  this._internalModel = new BoundingBoxFilterModel(mapAdapter);
+  this.listenTo(this._internalModel, 'boundsChanged', this._onBoundsChanged);
+}
+
+BoundingBoxGoogleMaps.prototype = Object.create(Base.prototype);
+
+/**
+ * Return the current bounds.
+ *
+ * @return {carto.filter.Bounds} Current bounds
+ * @api
+ */
+BoundingBoxGoogleMaps.prototype.getBounds = function () {
+  return this._internalModel.getBounds();
 };
+
+BoundingBoxGoogleMaps.prototype._onBoundsChanged = function (bounds) {
+  this.trigger('boundsChanged', bounds);
+};
+
+BoundingBoxGoogleMaps.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+// Helper to check if an element is a leafletmap object
+function _isGoogleMap(element) {
+  // Check if Google Maps is loaded
+  utils.isGoogleMapsLoaded();
+  return element instanceof google.maps.Map;
+}
+
+module.exports = BoundingBoxGoogleMaps;
 
 /***/ }),
 /* 142 */
@@ -33347,15 +33839,54 @@ module.exports = {
 "use strict";
 
 
-var windshaft = __webpack_require__(141);
-var ajax = __webpack_require__(140);
-var validation = __webpack_require__(139);
+/* global google */
+var _ = __webpack_require__(0);
+var Model = __webpack_require__(2);
 
-module.exports = {
-  ajax: ajax,
-  windshaft: windshaft,
-  validation: validation
-};
+/**
+ * Adapt the Google Maps map to offer unique:
+ * - getBounds() function
+ * - 'boundsChanged' event
+ */
+module.exports = Model.extend({
+
+  initialize: function initialize(map) {
+    this._isReady = false;
+    this._map = map;
+    this._debouncedTriggerBoundsChanged = _.debounce(this._triggerBoundsChanged, 200);
+
+    google.maps.event.addListener(this._map, 'bounds_changed', this._debouncedTriggerBoundsChanged.bind(this));
+  },
+
+  getBounds: function getBounds() {
+    if (this._isReady) {
+      var mapBounds = this._map.getBounds();
+      var sw = mapBounds.getSouthWest();
+      var ne = mapBounds.getNorthEast();
+      return {
+        west: sw.lng(),
+        south: sw.lat(),
+        east: ne.lng(),
+        north: ne.lat()
+      };
+    }
+    return {
+      west: 0,
+      south: 0,
+      east: 0,
+      north: 0
+    };
+  },
+
+  clean: function clean() {
+    google.maps.event.clearListeners(this._map, 'bounds_changed');
+  },
+
+  _triggerBoundsChanged: function _triggerBoundsChanged() {
+    this._isReady = true;
+    this.trigger('boundsChanged', this.getBounds());
+  }
+});
 
 /***/ }),
 /* 143 */
@@ -33365,125 +33896,117 @@ module.exports = {
 
 
 var _ = __webpack_require__(0);
-var ERROR_LIST = __webpack_require__(142);
+var Base = __webpack_require__(7);
+var CircleFilterModel = __webpack_require__(144);
+var CartoValidationError = __webpack_require__(3);
+var SpatialFilterTypes = __webpack_require__(8);
 
 /**
- * Returns two parameters to enrich a CartoError.
- * - friendlyMessage: A easy to understand error description.
- * - errorCode: Am unique error code
+ * Generic circle filter.
  *
- * @param {CartoError} cartoError
+ * When this filter is included into a dataview only the data inside a custom circle will be taken into account.
  *
- * @returns {object} - An object containing a friendly message and a errorCode
- */
-function getExtraFields(cartoError) {
-  var errorlist = _getErrorList(cartoError);
-  var listedError = _getListedError(cartoError, errorlist);
-
-  return {
-    friendlyMessage: listedError.friendlyMessage,
-    errorCode: listedError.errorCode
-  };
-}
-
-/**
+ * You can manually set the circle properties with the `setCircle()`.
  *
- * @param {CartoError} cartoError
+ * This filter could be useful if you want give the users the ability to select a buffer around a point of interest in the map and update the dataviews accordingly.
+ *
+ *
+ * @constructor
+ * @fires circleChanged
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ *
  */
-function _getErrorList(cartoError) {
-  return ERROR_LIST[cartoError.origin] && ERROR_LIST[cartoError.origin][cartoError.type];
+function Circle() {
+  this._internalModel = new CircleFilterModel();
+  this.type = SpatialFilterTypes.CIRCLE;
 }
+
+Circle.prototype = Object.create(Base.prototype);
 
 /**
- * Get the listed error from a cartoError, if no listedError is found return a generic
- * unknown error.
- * @param {CartoError} cartoError
+ * Set the circle.
+ *
+ * @param {carto.filter.CircleData} circle
+ * @fires circleChanged
+ * @return {carto.filter.Circle} this
+ * @api
  */
-function _getListedError(cartoError, errorList) {
-  var errorListkeys = _.keys(errorList);
-  var key;
-  for (var i = 0; i < errorListkeys.length; i++) {
-    key = errorListkeys[i];
-    if (!(errorList[key].messageRegex instanceof RegExp)) {
-      throw new Error('MessageRegex on ' + key + ' is not a RegExp.');
-    }
-    if (errorList[key].messageRegex.test(cartoError.message)) {
-      return {
-        friendlyMessage: _replaceRegex(cartoError, errorList[key]),
-        errorCode: _buildErrorCode(cartoError, key)
-      };
-    }
-  }
-
-  // When cartoError not found return generic values
-  return {
-    friendlyMessage: cartoError.message || '',
-    errorCode: _buildErrorCode(cartoError, 'unknown-error')
-  };
-}
+Circle.prototype.setCircle = function (circle) {
+  this._checkCircle(circle);
+  this._internalModel.setCircle(circle);
+  this.trigger('circleChanged', circle);
+  return this;
+};
 
 /**
- * Replace $0 and $1 with the proper paramter in the listedError regex to build a friendly message
+ * Reset the circle.
+ *
+ * @fires circleChanged
+ * @return {carto.filter.Circle} this
+ * @api
  */
-function _replaceRegex(cartoError, listedError) {
-  if (!listedError.friendlyMessage) {
-    return cartoError.message;
-  }
-  var match = cartoError.message && cartoError.message.match(listedError.messageRegex);
-  if (match && match.length > 1) {
-    var replaced = listedError.friendlyMessage.replace('$0', match[1]);
-    if (match.length > 2) {
-      replaced = replaced.replace('$1', match[2]);
-    }
-    return replaced;
-  }
-  return listedError.friendlyMessage;
-}
+Circle.prototype.resetCircle = function () {
+  return this.setCircle({ lat: 0, lng: 0, radius: 0 });
+};
 
 /**
- * Generate an unique string that represents a cartoError
- * @param {cartoError} cartoError
- * @param {string} key
+ * Return the current circle data
+ *
+ * @return {carto.filter.CircleData} Current circle data
+ * @api
  */
-function _buildErrorCode(cartoError, key) {
-  var fragments = [];
-  fragments.push(cartoError && cartoError.origin);
-  fragments.push(cartoError && cartoError.type);
-  fragments.push(key);
-  fragments = _.compact(fragments);
+Circle.prototype.getCircle = function () {
+  /**
+   * @typedef {object} carto.filter.CircleData
+   * @property {number} lat - Center Latitude WGS84
+   * @property {number} lng - Center Longitude WGS84
+   * @property {number} radius - Radius in meters
+   * @api
+   */
+  return this._internalModel.getCircle();
+};
 
-  return fragments.join(':');
-}
+Circle.prototype._checkCircle = function (circle) {
+  if (_.isUndefined(circle) || _.isUndefined(circle.lat) || _.isUndefined(circle.lng) || _.isUndefined(circle.radius) || !_.isNumber(circle.lat) || !_.isNumber(circle.lng) || !_.isNumber(circle.radius)) {
+    throw new CartoValidationError('filter', 'invalidCircleObject');
+  }
+};
 
-module.exports = { getExtraFields: getExtraFields };
+Circle.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
+
+module.exports = Circle;
 
 /***/ }),
 /* 144 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
+"use strict";
 
+
+var Model = __webpack_require__(2);
+
+module.exports = Model.extend({
+  initialize: function initialize() {
+    this._circle = {};
+  },
+
+  setCircle: function setCircle(circle) {
+    this._circle = circle;
+    this.trigger('circleChanged', circle);
+  },
+
+  getCircle: function getCircle() {
+    return this._circle;
+  },
+
+  serialize: function serialize() {
+    return encodeURIComponent(JSON.stringify(this.getCircle()));
+  }
+});
 
 /***/ }),
 /* 145 */
@@ -33493,1747 +34016,1226 @@ module.exports = function(module) {
 
 
 var _ = __webpack_require__(0);
-var Backbone = __webpack_require__(1);
-var CartoError = __webpack_require__(4);
-var Engine = __webpack_require__(44);
-var Events = __webpack_require__(14);
-var LayerBase = __webpack_require__(40);
-var Layers = __webpack_require__(111);
-var VERSION = __webpack_require__(27).version;
+var Base = __webpack_require__(7);
+var PolygonFilterModel = __webpack_require__(146);
 var CartoValidationError = __webpack_require__(3);
-var utils = __webpack_require__(7);
-
-function getValidationError(code) {
-  return new CartoValidationError('client', code);
-}
-
-var DEFAULT_SERVER_URL = 'https://{username}.carto.com';
+var SpatialFilterTypes = __webpack_require__(8);
 
 /**
- * This is the entry point for a CARTO.js application.
+ * Generic polygon filter.
  *
- * A CARTO client allows managing layers and dataviews. Some operations like addding a layer or a dataview are asynchronous.
- * The client takes care of the communication between CARTO.js and the server for you.
+ * When this filter is included into a dataview only the data inside a custom polygon will be taken into account.
  *
- * To create a new client you need a CARTO account, where you will be able to get
- * your API key and username.
+ * You can manually set the polygon with the `setPolygon()`.
  *
- * If you want to learn more about authorization and authentication, please read the authorization fundamentals section of our Developer Center.
+ * This filter could be useful if you want give the users the ability to select a custom area in the map and update the dataviews accordingly.
  *
- * @param {object} settings
- * @param {string} settings.apiKey - API key used to authenticate against CARTO
- * @param {string} settings.username - Name of the user
- * @param {string} [settings.serverUrl='https://{username}.carto.com'] - URL of the windshaft server. Only needed in custom installations. Pattern: `http(s)://{username}.your.carto.instance` or `http(s)://your.carto.instance/user/{username}` (only for On-Premises environments).
- *
- * @example
- * var client = new carto.Client({
- *   apiKey: 'YOUR_API_KEY_HERE',
- *   username: 'YOUR_USERNAME_HERE'
- * });
- *
- * var client = new carto.Client({
- *   apiKey: 'YOUR_API_KEY_HERE',
- *   username: 'YOUR_USERNAME_HERE',
- *   serverUrl: 'http://{username}.your.carto.instance'
- * });
  *
  * @constructor
- * @memberof carto
+ * @fires polygonChanged
+ * @extends carto.filter.Base
+ * @memberof carto.filter
  * @api
  *
- * @fires error
- * @fires success
  */
-function Client(settings) {
-  settings.serverUrl = (settings.serverUrl || DEFAULT_SERVER_URL).replace(/{username}/, settings.username || '');
-  _checkSettings(settings);
-  this._layers = new Layers();
-  this._dataviews = [];
-  this._engine = new Engine({
-    apiKey: settings.apiKey,
-    username: settings.username,
-    serverUrl: settings.serverUrl,
-    client: 'js-' + VERSION
-  });
-  this._bindEngine(this._engine);
+function Polygon() {
+  this._internalModel = new PolygonFilterModel();
+  this.type = SpatialFilterTypes.POLYGON;
 }
 
-_.extend(Client.prototype, Backbone.Events);
+Polygon.prototype = Object.create(Base.prototype);
 
 /**
- * Add a layer to the client.
- * If the layer id already exists in the client this method will throw an error.
+ * Set the polygon.
  *
- * @param {carto.layer.Base} - The layer to be added
- *
- * @fires error
- * @fires success
- *
- * @example
- * // Add a layer to the client
- * client.addLayer(layer)
- *  .then(() => {
- *    console.log('Layer added');
- *  })
- *  .catch(cartoError => {
- *    console.error(cartoError.message);
- *  });
- *
- * @returns {Promise} - A promise that will be fulfilled when the layer is added
+ * @param {carto.filter.PolygonData} polygon
+ * @fires polygonChanged
+ * @return {carto.filter.Polygon} this
  * @api
  */
-Client.prototype.addLayer = function (layer) {
-  return this.addLayers([layer]);
+Polygon.prototype.setPolygon = function (polygon) {
+  this._checkPolygon(polygon);
+  this._internalModel.setPolygon(polygon);
+  this.trigger('polygonChanged', polygon);
+  return this;
 };
 
 /**
- * Add multiple layers to the client at once.
+ * Reset the polygon.
  *
- * @param {carto.layer.Base[]} - An array with the layers to be added. Note that ([A, B]) displays B as the top layer.
- *
- * @fires error
- * @fires success
- *
- * @example
- * // Add multiple layers ad once layer to the client
- * client.addLayers([layer0, layer1])
- *  .then(() => {
- *    console.log('Layers added');
- *  })
- *  .catch(cartoError => {
- *    console.error(cartoError.message);
- *  });
- *
- * @returns {Promise} A promise that will be fulfilled when the layers are added
+ * @fires polygonChanged
+ * @return {carto.filter.Polygon} this
  * @api
  */
-Client.prototype.addLayers = function (layers) {
-  layers.forEach(this._addLayer, this);
-  return this._reload();
-};
-
-/**
- * Remove a layer from the client.
- *
- * @example
- * // Remove a layer from the client
- * client.removeLayer(layer)
- * .then(() => {
- *  console.log('Layer removed');
- * })
- * .catch(cartoError => {
- *  console.error(cartoError.message);
- * });
- *
- * @param {carto.layer.Base} - The layer to be removed
- *
- * @fires error
- * @fires success
- *
- * @returns {Promise} A promise that will be fulfilled when the layer is removed
- * @api
- */
-Client.prototype.removeLayer = function (layer) {
-  return this.removeLayers([layer]);
-};
-
-/**
- * Remove multiple layers from the client.
- *
- * @example
- * // Remove multiple layers from the client
- * client.removeLayers([layer1, layer2])
- * .then(() => {
- *  console.log('Layers removed');
- * })
- * .catch(cartoError => {
- *  console.error(cartoError.message);
- * });
- *
- *
- * @param {carto.layer.Base[]} - An array with the layers to be removed
- *
- * @fires error
- * @fires success
- *
- * @returns {Promise} A promise that will be fulfilled when the layers are removed
- * @api
- */
-Client.prototype.removeLayers = function (layers) {
-  var layersToRemove = layers.slice(0);
-  layersToRemove.forEach(this._removeLayer, this);
-
-  return this._reload();
-};
-
-/**
- * Move layer order.
- *
- * @example
- * // Move layer order
- * client.moveLayer(layer1, 0)
- * .then(() => {
- *  console.log('Layer moved');
- * })
- * .catch(cartoError => {
- *  console.error(cartoError.message);
- * });
- *
- *
- * @param {carto.layer.Base} - The layer to be moved
- * @param {number} toIndex - Final index for the layer
- *
- * @fires error
- * @fires success
- *
- * @returns {Promise} A promise that will be fulfilled when the layer is moved
- * @api
- */
-Client.prototype.moveLayer = function (layer, toIndex) {
-  var fromIndex = this._layers.indexOf(layer);
-  this._moveLayer(layer, toIndex);
-  if (fromIndex === toIndex) {
-    return Promise.resolve();
-  } else {
-    return this._reload();
-  }
-};
-
-/**
- * Get all the {@link carto.layer.Base|layers} from the client.
- *
- * @example
- * // Get all layers from the client
- * const layers = client.getLayers();
- *
- * @example
- * // Hide all layers from the client
- * client.getLayers().forEach(layer => layer.hide());
- *
- * @returns {carto.layer.Base[]} An array with all the Layers from the client
- * @api
- */
-Client.prototype.getLayers = function () {
-  return this._layers.toArray();
-};
-
-/**
- * Add a dataview to the client.
- *
- * @example
- * // Add a dataview to the client
- * client.addDataview(dataview)
- *  .then(() => {
- *    console.log('Dataview added');
- *  })
- *  .catch(cartoError => {
- *    console.error(cartoError.message);
- *  }):
- *
- * @param {carto.dataview.Base} - The dataview to be added
- *
- * @fires error
- * @fires success
- *
- * @returns {Promise} - A promise that will be fulfilled when the dataview is added
- * @api
- */
-Client.prototype.addDataview = function (dataview) {
-  return this.addDataviews([dataview]);
-};
-
-/**
- * Add multipe dataviews to the client.
- *
- * @example
- * // Add several dataviews to the client
- * client.addDataview([dataview0, dataview1])
- *  .then(() => {
- *    console.log('Dataviews added');
- *  })
- *  .catch(cartoError => {
- *    console.error(cartoError.message);
- *  }):
- *
- * @param {carto.dataview.Base[]} - An array with the dataviews to be added
- *
- * @fires error
- * @fires success
- *
- * @returns {Promise} A promise that will be fulfilled when the dataviews are added
- * @api
- */
-Client.prototype.addDataviews = function (dataviews) {
-  dataviews.forEach(this._addDataview, this);
-  return this._reload();
-};
-
-/**
- * Remove a dataview from the client.
- *
- * @example
- * // Remove a dataview from the client
- * client.removeDataview(dataview)
- * .then(() => {
- *    console.log('Dataviews removed');
- *  })
- *  .catch(cartoError => {
- *    console.error(cartoError.message);
- *  }):
- *
- * @param {carto.dataview.Base} - The dataview array to be removed
- *
- * @fires error
- * @fires success
- *
- * @returns {Promise} A promise that will be fulfilled when the dataview is removed
- * @api
- */
-Client.prototype.removeDataview = function (dataview) {
-  var dataviewIndex = this._dataviews.indexOf(dataview);
-
-  if (dataviewIndex === -1) {
-    return Promise.resolve();
-  }
-
-  this._dataviews.splice(dataviewIndex, 1);
-  this._engine.removeDataview(dataview.$getInternalModel());
-  dataview.disable();
-  return this._reload();
-};
-
-/**
- * Get all the dataviews from the client.
- *
- * @example
- * // Get all the dataviews from the client
- * const dataviews = client.getDataviews();
- *
- * @returns {carto.dataview.Base[]} An array with all the dataviews from the client
- * @api
- */
-Client.prototype.getDataviews = function () {
-  return this._dataviews;
-};
-
-/**
- * Return a {@link http://leafletjs.com/reference-1.3.1.html#tilelayer|leaflet layer} that groups all the layers that have been
- * added to this client.
- *
- * @example
- * // Get the leafletlayer from the client
- * const cartoLeafletLayer = client.getLeafletLayer();
- *
- * @example
- * // Add the leafletLayer to a leafletMap
- * client.getLeafletLayer().addTo(map);
- *
- * @param {object} options - {@link https://leafletjs.com/reference-1.3.0.html#tilelayer-minzoom|L.TileLayer} options.
- *
- * @returns A {@link http://leafletjs.com/reference-1.3.1.html#tilelayer|L.TileLayer} layer that groups all the layers.
- *
- * @api
- */
-Client.prototype.getLeafletLayer = function (options) {
-  // Check if Leaflet is loaded
-  utils.isLeafletLoaded();
-  if (!this._leafletLayer) {
-    var LeafletLayer = __webpack_require__(110);
-    this._leafletLayer = new LeafletLayer(this._layers, this._engine, options);
-  }
-  return this._leafletLayer;
-};
-
-/**
- * Return a {@link https://developers.google.com/maps/documentation/javascript/maptypes|google.maps.MapType} that groups all the layers that have been
- * added to this client.
- *
- * @example
- * // Get googlemaps MapType from client
- * const gmapsMapType = client.getGoogleMapsMapType();
- *
- * @example
- * // Add googlemaps MapType to a google map
- * googleMap.overlayMapTypes.push(client.getGoogleMapsMapType(googleMap));
- *
- * @param {google.maps.Map} - The native Google Maps map where the CARTO layers will be displayed.
- *
- * @return {google.maps.MapType} A Google Maps mapType that groups all the layers:
- * {@link https://developers.google.com/maps/documentation/javascript/maptypes|google.maps.MapType}
- * @api
- */
-Client.prototype.getGoogleMapsMapType = function (map) {
-  // Check if Google Maps is loaded
-  utils.isGoogleMapsLoaded();
-  if (!this._gmapsMapType) {
-    var GoogleMapsMapType = __webpack_require__(87);
-    this._gmapsMapType = new GoogleMapsMapType(this._layers, this._engine, map);
-  }
-  return this._gmapsMapType;
-};
-
-/**
- * Call engine.reload wrapping the native cartojs errors
- * into public CartoErrors.
- */
-Client.prototype._reload = function () {
-  return this._engine.reload().then(function () {
-    return Promise.resolve();
-  }).catch(function (error) {
-    return Promise.reject(new CartoError(error));
+Polygon.prototype.resetPolygon = function () {
+  return this.setPolygon({
+    type: 'Polygon',
+    coordinates: []
   });
 };
 
 /**
- * Helper used to link a layer and an engine.
- * @private
+ * Return the current polygon data
+ *
+ * @return {carto.filter.PolygonData} Current polygon data, expressed as a GeoJSON geometry fragment
+ * @api
  */
-Client.prototype._addLayer = function (layer, engine) {
-  _checkLayer(layer);
-  this._checkDuplicatedLayerId(layer);
-  this._layers.add(layer);
-  layer.$setClient(this);
-  layer.$setEngine(this._engine);
-  this._engine.addLayer(layer.$getInternalModel());
+Polygon.prototype.getPolygon = function () {
+  /**
+   * @typedef {object} carto.filter.PolygonData
+   * @property {string} type - Geometry type, Just 'Polygon' is valid
+   * @property {Array.<number[]>} coordinates - Array of coordinates [lng, lat] as defined in GeoJSON geometries
+   * @api
+   */
+  return this._internalModel.getPolygon();
 };
 
-/**
- * Helper used to remove a layer from the client.
- * @private
- */
-Client.prototype._removeLayer = function (layer) {
-  _checkLayer(layer);
-  this._layers.remove(layer);
-  this._engine.removeLayer(layer.$getInternalModel());
-};
-
-/**
- * Helper used to remove a layer from the client.
- * @private
- */
-Client.prototype._moveLayer = function (layer, toIndex) {
-  _checkLayer(layer);
-  _checkLayerIndex(toIndex, this._layers.size());
-  this._layers.move(layer, toIndex);
-  this._engine.moveLayer(layer.$getInternalModel(), toIndex);
-};
-
-/**
- * Helper used to link a dataview and an engine
- * @private
- */
-Client.prototype._addDataview = function (dataview, engine) {
-  this._dataviews.push(dataview);
-  dataview.$setEngine(this._engine);
-  this._engine.addDataview(dataview.$getInternalModel());
-};
-
-/**
- * Client exposes Event.SUCCESS and RELOAD_ERROR to the api users,
- * those events are wrappers using _engine internaly.
- */
-Client.prototype._bindEngine = function (engine) {
-  engine.on(Engine.Events.RELOAD_SUCCESS, function () {
-    this.trigger(Events.SUCCESS);
-  }.bind(this));
-
-  engine.on(Engine.Events.RELOAD_ERROR, function (err) {
-    this.trigger(Events.ERROR, new CartoError(err, { layers: this._layers }));
-  }.bind(this));
-
-  engine.on(Engine.Events.LAYER_ERROR, function (err) {
-    this.trigger(Events.ERROR, new CartoError(err));
-  }.bind(this));
-};
-
-/**
- * Check if some layer in the client has the same id.
- * @param {carto.layer.Base} layer
- */
-Client.prototype._checkDuplicatedLayerId = function (layer) {
-  if (this._layers.findById(layer.getId())) {
-    throw getValidationError('duplicatedLayerId');
+Polygon.prototype._checkPolygon = function (polygon) {
+  if (_.isUndefined(polygon) || _.isUndefined(polygon.type) || _.isUndefined(polygon.coordinates) || !_.isString(polygon.type) || !_.isArray(polygon.coordinates) || polygon.type !== 'Polygon') {
+    throw new CartoValidationError('filter', 'invalidPolygonObject');
   }
 };
 
-/**
- * Utility function to reduce duplicated code.
- */
-function _checkLayer(layer) {
-  if (!(layer instanceof LayerBase)) {
-    throw getValidationError('badLayerType');
-  }
-}
+Polygon.prototype.$getInternalModel = function () {
+  return this._internalModel;
+};
 
-function _checkLayerIndex(index, size) {
-  if (!_.isNumber(index)) {
-    throw getValidationError('indexNumber');
-  }
-  if (index < 0 || index >= size) {
-    throw getValidationError('indexOutOfRange');
-  }
-}
-
-function _checkSettings(settings) {
-  _checkApiKey(settings.apiKey);
-  _checkUsername(settings.username);
-  if (settings.serverUrl) {
-    _checkServerUrl(settings.serverUrl, settings.username);
-  }
-}
-
-function _checkApiKey(apiKey) {
-  if (!apiKey) {
-    throw getValidationError('apiKeyRequired');
-  }
-  if (!_.isString(apiKey)) {
-    throw getValidationError('apiKeyString');
-  }
-}
-
-function _checkUsername(username) {
-  if (!username) {
-    throw getValidationError('usernameRequired');
-  }
-  if (!_.isString(username)) {
-    throw getValidationError('usernameString');
-  }
-}
-
-function _checkServerUrl(serverUrl, username) {
-  var urlregex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
-  if (!serverUrl.match(urlregex)) {
-    throw getValidationError('nonValidServerURL');
-  }
-  if (serverUrl.indexOf(username) < 0) {
-    throw getValidationError('serverURLDoesntMatchUsername');
-  }
-}
-
-module.exports = Client;
+module.exports = Polygon;
 
 /***/ }),
 /* 146 */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
-    "use strict";
-
-    if (global.setImmediate) {
-        return;
-    }
-
-    var nextHandle = 1; // Spec says greater than zero
-    var tasksByHandle = {};
-    var currentlyRunningATask = false;
-    var doc = global.document;
-    var registerImmediate;
-
-    function setImmediate(callback) {
-      // Callback can either be a function or a string
-      if (typeof callback !== "function") {
-        callback = new Function("" + callback);
-      }
-      // Copy function arguments
-      var args = new Array(arguments.length - 1);
-      for (var i = 0; i < args.length; i++) {
-          args[i] = arguments[i + 1];
-      }
-      // Store and register the task
-      var task = { callback: callback, args: args };
-      tasksByHandle[nextHandle] = task;
-      registerImmediate(nextHandle);
-      return nextHandle++;
-    }
-
-    function clearImmediate(handle) {
-        delete tasksByHandle[handle];
-    }
-
-    function run(task) {
-        var callback = task.callback;
-        var args = task.args;
-        switch (args.length) {
-        case 0:
-            callback();
-            break;
-        case 1:
-            callback(args[0]);
-            break;
-        case 2:
-            callback(args[0], args[1]);
-            break;
-        case 3:
-            callback(args[0], args[1], args[2]);
-            break;
-        default:
-            callback.apply(undefined, args);
-            break;
-        }
-    }
-
-    function runIfPresent(handle) {
-        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
-        // So if we're currently running a task, we'll need to delay this invocation.
-        if (currentlyRunningATask) {
-            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
-            // "too much recursion" error.
-            setTimeout(runIfPresent, 0, handle);
-        } else {
-            var task = tasksByHandle[handle];
-            if (task) {
-                currentlyRunningATask = true;
-                try {
-                    run(task);
-                } finally {
-                    clearImmediate(handle);
-                    currentlyRunningATask = false;
-                }
-            }
-        }
-    }
-
-    function installNextTickImplementation() {
-        registerImmediate = function(handle) {
-            process.nextTick(function () { runIfPresent(handle); });
-        };
-    }
-
-    function canUsePostMessage() {
-        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
-        // where `global.postMessage` means something completely different and can't be used for this purpose.
-        if (global.postMessage && !global.importScripts) {
-            var postMessageIsAsynchronous = true;
-            var oldOnMessage = global.onmessage;
-            global.onmessage = function() {
-                postMessageIsAsynchronous = false;
-            };
-            global.postMessage("", "*");
-            global.onmessage = oldOnMessage;
-            return postMessageIsAsynchronous;
-        }
-    }
-
-    function installPostMessageImplementation() {
-        // Installs an event handler on `global` for the `message` event: see
-        // * https://developer.mozilla.org/en/DOM/window.postMessage
-        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
-
-        var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event) {
-            if (event.source === global &&
-                typeof event.data === "string" &&
-                event.data.indexOf(messagePrefix) === 0) {
-                runIfPresent(+event.data.slice(messagePrefix.length));
-            }
-        };
-
-        if (global.addEventListener) {
-            global.addEventListener("message", onGlobalMessage, false);
-        } else {
-            global.attachEvent("onmessage", onGlobalMessage);
-        }
-
-        registerImmediate = function(handle) {
-            global.postMessage(messagePrefix + handle, "*");
-        };
-    }
-
-    function installMessageChannelImplementation() {
-        var channel = new MessageChannel();
-        channel.port1.onmessage = function(event) {
-            var handle = event.data;
-            runIfPresent(handle);
-        };
-
-        registerImmediate = function(handle) {
-            channel.port2.postMessage(handle);
-        };
-    }
-
-    function installReadyStateChangeImplementation() {
-        var html = doc.documentElement;
-        registerImmediate = function(handle) {
-            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
-            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
-            var script = doc.createElement("script");
-            script.onreadystatechange = function () {
-                runIfPresent(handle);
-                script.onreadystatechange = null;
-                html.removeChild(script);
-                script = null;
-            };
-            html.appendChild(script);
-        };
-    }
-
-    function installSetTimeoutImplementation() {
-        registerImmediate = function(handle) {
-            setTimeout(runIfPresent, 0, handle);
-        };
-    }
-
-    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
-    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
-
-    // Don't get fooled by e.g. browserify environments.
-    if ({}.toString.call(global.process) === "[object process]") {
-        // For Node.js before 0.9
-        installNextTickImplementation();
-
-    } else if (canUsePostMessage()) {
-        // For non-IE10 modern browsers
-        installPostMessageImplementation();
-
-    } else if (global.MessageChannel) {
-        // For web workers, where supported
-        installMessageChannelImplementation();
-
-    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-        // For IE 6–8
-        installReadyStateChangeImplementation();
-
-    } else {
-        // For older browsers
-        installSetTimeoutImplementation();
-    }
-
-    attachTo.setImmediate = setImmediate;
-    attachTo.clearImmediate = clearImmediate;
-}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18), __webpack_require__(146)))
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
-            (typeof self !== "undefined" && self) ||
-            window;
-var apply = Function.prototype.apply;
-
-// DOM APIs, for completeness
-
-exports.setTimeout = function() {
-  return new Timeout(apply.call(setTimeout, scope, arguments), clearTimeout);
-};
-exports.setInterval = function() {
-  return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
-};
-exports.clearTimeout =
-exports.clearInterval = function(timeout) {
-  if (timeout) {
-    timeout.close();
-  }
-};
-
-function Timeout(id, clearFn) {
-  this._id = id;
-  this._clearFn = clearFn;
-}
-Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-Timeout.prototype.close = function() {
-  this._clearFn.call(scope, this._id);
-};
-
-// Does not start the time, just sets up the members needed.
-exports.enroll = function(item, msecs) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = msecs;
-};
-
-exports.unenroll = function(item) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = -1;
-};
-
-exports._unrefActive = exports.active = function(item) {
-  clearTimeout(item._idleTimeoutId);
-
-  var msecs = item._idleTimeout;
-  if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout() {
-      if (item._onTimeout)
-        item._onTimeout();
-    }, msecs);
-  }
-};
-
-// setimmediate attaches itself to the global object
-__webpack_require__(147);
-// On some exotic environments, it's not clear which object `setimmediate` was
-// able to install onto.  Search each possibility in the same order as the
-// `setimmediate` library.
-exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
-                       (typeof global !== "undefined" && global.setImmediate) ||
-                       (this && this.setImmediate);
-exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
-                         (typeof global !== "undefined" && global.clearImmediate) ||
-                         (this && this.clearImmediate);
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(setImmediate) {(function (root) {
-
-  // Store setTimeout reference so promise-polyfill will be unaffected by
-  // other code modifying setTimeout (like sinon.useFakeTimers())
-  var setTimeoutFunc = setTimeout;
-
-  function noop() {}
-  
-  // Polyfill for Function.prototype.bind
-  function bind(fn, thisArg) {
-    return function () {
-      fn.apply(thisArg, arguments);
-    };
-  }
-
-  function Promise(fn) {
-    if (!(this instanceof Promise)) throw new TypeError('Promises must be constructed via new');
-    if (typeof fn !== 'function') throw new TypeError('not a function');
-    this._state = 0;
-    this._handled = false;
-    this._value = undefined;
-    this._deferreds = [];
-
-    doResolve(fn, this);
-  }
-
-  function handle(self, deferred) {
-    while (self._state === 3) {
-      self = self._value;
-    }
-    if (self._state === 0) {
-      self._deferreds.push(deferred);
-      return;
-    }
-    self._handled = true;
-    Promise._immediateFn(function () {
-      var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
-      if (cb === null) {
-        (self._state === 1 ? resolve : reject)(deferred.promise, self._value);
-        return;
-      }
-      var ret;
-      try {
-        ret = cb(self._value);
-      } catch (e) {
-        reject(deferred.promise, e);
-        return;
-      }
-      resolve(deferred.promise, ret);
-    });
-  }
-
-  function resolve(self, newValue) {
-    try {
-      // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
-      if (newValue === self) throw new TypeError('A promise cannot be resolved with itself.');
-      if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
-        var then = newValue.then;
-        if (newValue instanceof Promise) {
-          self._state = 3;
-          self._value = newValue;
-          finale(self);
-          return;
-        } else if (typeof then === 'function') {
-          doResolve(bind(then, newValue), self);
-          return;
-        }
-      }
-      self._state = 1;
-      self._value = newValue;
-      finale(self);
-    } catch (e) {
-      reject(self, e);
-    }
-  }
-
-  function reject(self, newValue) {
-    self._state = 2;
-    self._value = newValue;
-    finale(self);
-  }
-
-  function finale(self) {
-    if (self._state === 2 && self._deferreds.length === 0) {
-      Promise._immediateFn(function() {
-        if (!self._handled) {
-          Promise._unhandledRejectionFn(self._value);
-        }
-      });
-    }
-
-    for (var i = 0, len = self._deferreds.length; i < len; i++) {
-      handle(self, self._deferreds[i]);
-    }
-    self._deferreds = null;
-  }
-
-  function Handler(onFulfilled, onRejected, promise) {
-    this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
-    this.onRejected = typeof onRejected === 'function' ? onRejected : null;
-    this.promise = promise;
-  }
-
-  /**
-   * Take a potentially misbehaving resolver function and make sure
-   * onFulfilled and onRejected are only called once.
-   *
-   * Makes no guarantees about asynchrony.
-   */
-  function doResolve(fn, self) {
-    var done = false;
-    try {
-      fn(function (value) {
-        if (done) return;
-        done = true;
-        resolve(self, value);
-      }, function (reason) {
-        if (done) return;
-        done = true;
-        reject(self, reason);
-      });
-    } catch (ex) {
-      if (done) return;
-      done = true;
-      reject(self, ex);
-    }
-  }
-
-  Promise.prototype['catch'] = function (onRejected) {
-    return this.then(null, onRejected);
-  };
-
-  Promise.prototype.then = function (onFulfilled, onRejected) {
-    var prom = new (this.constructor)(noop);
-
-    handle(this, new Handler(onFulfilled, onRejected, prom));
-    return prom;
-  };
-
-  Promise.all = function (arr) {
-    return new Promise(function (resolve, reject) {
-      if (!arr || typeof arr.length === 'undefined') throw new TypeError('Promise.all accepts an array');
-      var args = Array.prototype.slice.call(arr);
-      if (args.length === 0) return resolve([]);
-      var remaining = args.length;
-
-      function res(i, val) {
-        try {
-          if (val && (typeof val === 'object' || typeof val === 'function')) {
-            var then = val.then;
-            if (typeof then === 'function') {
-              then.call(val, function (val) {
-                res(i, val);
-              }, reject);
-              return;
-            }
-          }
-          args[i] = val;
-          if (--remaining === 0) {
-            resolve(args);
-          }
-        } catch (ex) {
-          reject(ex);
-        }
-      }
-
-      for (var i = 0; i < args.length; i++) {
-        res(i, args[i]);
-      }
-    });
-  };
-
-  Promise.resolve = function (value) {
-    if (value && typeof value === 'object' && value.constructor === Promise) {
-      return value;
-    }
-
-    return new Promise(function (resolve) {
-      resolve(value);
-    });
-  };
-
-  Promise.reject = function (value) {
-    return new Promise(function (resolve, reject) {
-      reject(value);
-    });
-  };
-
-  Promise.race = function (values) {
-    return new Promise(function (resolve, reject) {
-      for (var i = 0, len = values.length; i < len; i++) {
-        values[i].then(resolve, reject);
-      }
-    });
-  };
-
-  // Use polyfill for setImmediate for performance gains
-  Promise._immediateFn = (typeof setImmediate === 'function' && function (fn) { setImmediate(fn); }) ||
-    function (fn) {
-      setTimeoutFunc(fn, 0);
-    };
-
-  Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
-    if (typeof console !== 'undefined' && console) {
-      console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
-    }
-  };
-
-  /**
-   * Set the immediate function to execute callbacks
-   * @param fn {function} Function to execute
-   * @deprecated
-   */
-  Promise._setImmediateFn = function _setImmediateFn(fn) {
-    Promise._immediateFn = fn;
-  };
-
-  /**
-   * Change the function to execute on unhandled rejection
-   * @param {function} fn Function to execute on unhandled rejection
-   * @deprecated
-   */
-  Promise._setUnhandledRejectionFn = function _setUnhandledRejectionFn(fn) {
-    Promise._unhandledRejectionFn = fn;
-  };
-  
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Promise;
-  } else if (!root.Promise) {
-    root.Promise = Promise;
-  }
-
-})(this);
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(148).setImmediate))
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports) {
-
-(function(self) {
-  'use strict';
-
-  if (self.fetch) {
-    return
-  }
-
-  var support = {
-    searchParams: 'URLSearchParams' in self,
-    iterable: 'Symbol' in self && 'iterator' in Symbol,
-    blob: 'FileReader' in self && 'Blob' in self && (function() {
-      try {
-        new Blob()
-        return true
-      } catch(e) {
-        return false
-      }
-    })(),
-    formData: 'FormData' in self,
-    arrayBuffer: 'ArrayBuffer' in self
-  }
-
-  if (support.arrayBuffer) {
-    var viewClasses = [
-      '[object Int8Array]',
-      '[object Uint8Array]',
-      '[object Uint8ClampedArray]',
-      '[object Int16Array]',
-      '[object Uint16Array]',
-      '[object Int32Array]',
-      '[object Uint32Array]',
-      '[object Float32Array]',
-      '[object Float64Array]'
-    ]
-
-    var isDataView = function(obj) {
-      return obj && DataView.prototype.isPrototypeOf(obj)
-    }
-
-    var isArrayBufferView = ArrayBuffer.isView || function(obj) {
-      return obj && viewClasses.indexOf(Object.prototype.toString.call(obj)) > -1
-    }
-  }
-
-  function normalizeName(name) {
-    if (typeof name !== 'string') {
-      name = String(name)
-    }
-    if (/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(name)) {
-      throw new TypeError('Invalid character in header field name')
-    }
-    return name.toLowerCase()
-  }
-
-  function normalizeValue(value) {
-    if (typeof value !== 'string') {
-      value = String(value)
-    }
-    return value
-  }
-
-  // Build a destructive iterator for the value list
-  function iteratorFor(items) {
-    var iterator = {
-      next: function() {
-        var value = items.shift()
-        return {done: value === undefined, value: value}
-      }
-    }
-
-    if (support.iterable) {
-      iterator[Symbol.iterator] = function() {
-        return iterator
-      }
-    }
-
-    return iterator
-  }
-
-  function Headers(headers) {
-    this.map = {}
-
-    if (headers instanceof Headers) {
-      headers.forEach(function(value, name) {
-        this.append(name, value)
-      }, this)
-    } else if (Array.isArray(headers)) {
-      headers.forEach(function(header) {
-        this.append(header[0], header[1])
-      }, this)
-    } else if (headers) {
-      Object.getOwnPropertyNames(headers).forEach(function(name) {
-        this.append(name, headers[name])
-      }, this)
-    }
-  }
-
-  Headers.prototype.append = function(name, value) {
-    name = normalizeName(name)
-    value = normalizeValue(value)
-    var oldValue = this.map[name]
-    this.map[name] = oldValue ? oldValue+','+value : value
-  }
-
-  Headers.prototype['delete'] = function(name) {
-    delete this.map[normalizeName(name)]
-  }
-
-  Headers.prototype.get = function(name) {
-    name = normalizeName(name)
-    return this.has(name) ? this.map[name] : null
-  }
-
-  Headers.prototype.has = function(name) {
-    return this.map.hasOwnProperty(normalizeName(name))
-  }
-
-  Headers.prototype.set = function(name, value) {
-    this.map[normalizeName(name)] = normalizeValue(value)
-  }
-
-  Headers.prototype.forEach = function(callback, thisArg) {
-    for (var name in this.map) {
-      if (this.map.hasOwnProperty(name)) {
-        callback.call(thisArg, this.map[name], name, this)
-      }
-    }
-  }
-
-  Headers.prototype.keys = function() {
-    var items = []
-    this.forEach(function(value, name) { items.push(name) })
-    return iteratorFor(items)
-  }
-
-  Headers.prototype.values = function() {
-    var items = []
-    this.forEach(function(value) { items.push(value) })
-    return iteratorFor(items)
-  }
-
-  Headers.prototype.entries = function() {
-    var items = []
-    this.forEach(function(value, name) { items.push([name, value]) })
-    return iteratorFor(items)
-  }
-
-  if (support.iterable) {
-    Headers.prototype[Symbol.iterator] = Headers.prototype.entries
-  }
-
-  function consumed(body) {
-    if (body.bodyUsed) {
-      return Promise.reject(new TypeError('Already read'))
-    }
-    body.bodyUsed = true
-  }
-
-  function fileReaderReady(reader) {
-    return new Promise(function(resolve, reject) {
-      reader.onload = function() {
-        resolve(reader.result)
-      }
-      reader.onerror = function() {
-        reject(reader.error)
-      }
-    })
-  }
-
-  function readBlobAsArrayBuffer(blob) {
-    var reader = new FileReader()
-    var promise = fileReaderReady(reader)
-    reader.readAsArrayBuffer(blob)
-    return promise
-  }
-
-  function readBlobAsText(blob) {
-    var reader = new FileReader()
-    var promise = fileReaderReady(reader)
-    reader.readAsText(blob)
-    return promise
-  }
-
-  function readArrayBufferAsText(buf) {
-    var view = new Uint8Array(buf)
-    var chars = new Array(view.length)
-
-    for (var i = 0; i < view.length; i++) {
-      chars[i] = String.fromCharCode(view[i])
-    }
-    return chars.join('')
-  }
-
-  function bufferClone(buf) {
-    if (buf.slice) {
-      return buf.slice(0)
-    } else {
-      var view = new Uint8Array(buf.byteLength)
-      view.set(new Uint8Array(buf))
-      return view.buffer
-    }
-  }
-
-  function Body() {
-    this.bodyUsed = false
-
-    this._initBody = function(body) {
-      this._bodyInit = body
-      if (!body) {
-        this._bodyText = ''
-      } else if (typeof body === 'string') {
-        this._bodyText = body
-      } else if (support.blob && Blob.prototype.isPrototypeOf(body)) {
-        this._bodyBlob = body
-      } else if (support.formData && FormData.prototype.isPrototypeOf(body)) {
-        this._bodyFormData = body
-      } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
-        this._bodyText = body.toString()
-      } else if (support.arrayBuffer && support.blob && isDataView(body)) {
-        this._bodyArrayBuffer = bufferClone(body.buffer)
-        // IE 10-11 can't handle a DataView body.
-        this._bodyInit = new Blob([this._bodyArrayBuffer])
-      } else if (support.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) {
-        this._bodyArrayBuffer = bufferClone(body)
-      } else {
-        throw new Error('unsupported BodyInit type')
-      }
-
-      if (!this.headers.get('content-type')) {
-        if (typeof body === 'string') {
-          this.headers.set('content-type', 'text/plain;charset=UTF-8')
-        } else if (this._bodyBlob && this._bodyBlob.type) {
-          this.headers.set('content-type', this._bodyBlob.type)
-        } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
-          this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8')
-        }
-      }
-    }
-
-    if (support.blob) {
-      this.blob = function() {
-        var rejected = consumed(this)
-        if (rejected) {
-          return rejected
-        }
-
-        if (this._bodyBlob) {
-          return Promise.resolve(this._bodyBlob)
-        } else if (this._bodyArrayBuffer) {
-          return Promise.resolve(new Blob([this._bodyArrayBuffer]))
-        } else if (this._bodyFormData) {
-          throw new Error('could not read FormData body as blob')
-        } else {
-          return Promise.resolve(new Blob([this._bodyText]))
-        }
-      }
-
-      this.arrayBuffer = function() {
-        if (this._bodyArrayBuffer) {
-          return consumed(this) || Promise.resolve(this._bodyArrayBuffer)
-        } else {
-          return this.blob().then(readBlobAsArrayBuffer)
-        }
-      }
-    }
-
-    this.text = function() {
-      var rejected = consumed(this)
-      if (rejected) {
-        return rejected
-      }
-
-      if (this._bodyBlob) {
-        return readBlobAsText(this._bodyBlob)
-      } else if (this._bodyArrayBuffer) {
-        return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer))
-      } else if (this._bodyFormData) {
-        throw new Error('could not read FormData body as text')
-      } else {
-        return Promise.resolve(this._bodyText)
-      }
-    }
-
-    if (support.formData) {
-      this.formData = function() {
-        return this.text().then(decode)
-      }
-    }
-
-    this.json = function() {
-      return this.text().then(JSON.parse)
-    }
-
-    return this
-  }
-
-  // HTTP methods whose capitalization should be normalized
-  var methods = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT']
-
-  function normalizeMethod(method) {
-    var upcased = method.toUpperCase()
-    return (methods.indexOf(upcased) > -1) ? upcased : method
-  }
-
-  function Request(input, options) {
-    options = options || {}
-    var body = options.body
-
-    if (input instanceof Request) {
-      if (input.bodyUsed) {
-        throw new TypeError('Already read')
-      }
-      this.url = input.url
-      this.credentials = input.credentials
-      if (!options.headers) {
-        this.headers = new Headers(input.headers)
-      }
-      this.method = input.method
-      this.mode = input.mode
-      if (!body && input._bodyInit != null) {
-        body = input._bodyInit
-        input.bodyUsed = true
-      }
-    } else {
-      this.url = String(input)
-    }
-
-    this.credentials = options.credentials || this.credentials || 'omit'
-    if (options.headers || !this.headers) {
-      this.headers = new Headers(options.headers)
-    }
-    this.method = normalizeMethod(options.method || this.method || 'GET')
-    this.mode = options.mode || this.mode || null
-    this.referrer = null
-
-    if ((this.method === 'GET' || this.method === 'HEAD') && body) {
-      throw new TypeError('Body not allowed for GET or HEAD requests')
-    }
-    this._initBody(body)
-  }
-
-  Request.prototype.clone = function() {
-    return new Request(this, { body: this._bodyInit })
-  }
-
-  function decode(body) {
-    var form = new FormData()
-    body.trim().split('&').forEach(function(bytes) {
-      if (bytes) {
-        var split = bytes.split('=')
-        var name = split.shift().replace(/\+/g, ' ')
-        var value = split.join('=').replace(/\+/g, ' ')
-        form.append(decodeURIComponent(name), decodeURIComponent(value))
-      }
-    })
-    return form
-  }
-
-  function parseHeaders(rawHeaders) {
-    var headers = new Headers()
-    // Replace instances of \r\n and \n followed by at least one space or horizontal tab with a space
-    // https://tools.ietf.org/html/rfc7230#section-3.2
-    var preProcessedHeaders = rawHeaders.replace(/\r?\n[\t ]+/g, ' ')
-    preProcessedHeaders.split(/\r?\n/).forEach(function(line) {
-      var parts = line.split(':')
-      var key = parts.shift().trim()
-      if (key) {
-        var value = parts.join(':').trim()
-        headers.append(key, value)
-      }
-    })
-    return headers
-  }
-
-  Body.call(Request.prototype)
-
-  function Response(bodyInit, options) {
-    if (!options) {
-      options = {}
-    }
-
-    this.type = 'default'
-    this.status = options.status === undefined ? 200 : options.status
-    this.ok = this.status >= 200 && this.status < 300
-    this.statusText = 'statusText' in options ? options.statusText : 'OK'
-    this.headers = new Headers(options.headers)
-    this.url = options.url || ''
-    this._initBody(bodyInit)
-  }
-
-  Body.call(Response.prototype)
-
-  Response.prototype.clone = function() {
-    return new Response(this._bodyInit, {
-      status: this.status,
-      statusText: this.statusText,
-      headers: new Headers(this.headers),
-      url: this.url
-    })
-  }
-
-  Response.error = function() {
-    var response = new Response(null, {status: 0, statusText: ''})
-    response.type = 'error'
-    return response
-  }
-
-  var redirectStatuses = [301, 302, 303, 307, 308]
-
-  Response.redirect = function(url, status) {
-    if (redirectStatuses.indexOf(status) === -1) {
-      throw new RangeError('Invalid status code')
-    }
-
-    return new Response(null, {status: status, headers: {location: url}})
-  }
-
-  self.Headers = Headers
-  self.Request = Request
-  self.Response = Response
-
-  self.fetch = function(input, init) {
-    return new Promise(function(resolve, reject) {
-      var request = new Request(input, init)
-      var xhr = new XMLHttpRequest()
-
-      xhr.onload = function() {
-        var options = {
-          status: xhr.status,
-          statusText: xhr.statusText,
-          headers: parseHeaders(xhr.getAllResponseHeaders() || '')
-        }
-        options.url = 'responseURL' in xhr ? xhr.responseURL : options.headers.get('X-Request-URL')
-        var body = 'response' in xhr ? xhr.response : xhr.responseText
-        resolve(new Response(body, options))
-      }
-
-      xhr.onerror = function() {
-        reject(new TypeError('Network request failed'))
-      }
-
-      xhr.ontimeout = function() {
-        reject(new TypeError('Network request failed'))
-      }
-
-      xhr.open(request.method, request.url, true)
-
-      if (request.credentials === 'include') {
-        xhr.withCredentials = true
-      } else if (request.credentials === 'omit') {
-        xhr.withCredentials = false
-      }
-
-      if ('responseType' in xhr && support.blob) {
-        xhr.responseType = 'blob'
-      }
-
-      request.headers.forEach(function(value, name) {
-        xhr.setRequestHeader(name, value)
-      })
-
-      xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit)
-    })
-  }
-  self.fetch.polyfill = true
-})(typeof self !== 'undefined' ? self : this);
-
-
-/***/ }),
-/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-/**
- *  @api
- *  @namespace carto
- *
- *  @description
- *  # CARTO.js
- *  All the library features are exposed through the `carto` namespace.
- *
- *
- * - **Client** : The api client.
- * - **source** : Source description
- * - **style** : Style description
- * - **layer** : Layer description
- * - **dataview** : Dataview description
- * - **filter** : Filter description
- * - **events** : The events exposed.
- * - **operation** : The operations exposed.
- */
+var Model = __webpack_require__(2);
 
-// Add polyfill for `fetch`
-__webpack_require__(150);
-// Add polyfill for `Promise`
-var Promise = __webpack_require__(149);
-if (!window.Promise) {
-  window.Promise = Promise;
-}
+module.exports = Model.extend({
+  initialize: function initialize() {
+    this._polygon = {};
+  },
 
-var Client = __webpack_require__(145);
-var source = __webpack_require__(82);
-var style = __webpack_require__(79);
-var layer = __webpack_require__(24);
-var dataview = __webpack_require__(77);
-var filter = __webpack_require__(59);
-var events = __webpack_require__(14);
-var constants = __webpack_require__(5);
+  setPolygon: function setPolygon(polygon) {
+    this._polygon = polygon;
+    this.trigger('polygonChanged', polygon);
+  },
 
-var carto = {
-  version: __webpack_require__(27).version,
-  ATTRIBUTION: constants.ATTRIBUTION,
-  Client: Client,
-  source: source,
-  style: style,
-  layer: layer,
-  dataview: dataview,
-  filter: filter,
-  events: events,
-  operation: constants.operation
+  getPolygon: function getPolygon() {
+    return this._polygon;
+  },
+
+  serialize: function serialize() {
+    return encodeURIComponent(JSON.stringify(this.getPolygon()));
+  }
+});
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SQLBase = __webpack_require__(17);
+
+var CATEGORY_COMPARISON_OPERATORS = {
+  in: { parameters: [{ name: 'in', allowedTypes: ['Array', 'String', 'Object'] }] },
+  notIn: { parameters: [{ name: 'notIn', allowedTypes: ['Array', 'String', 'Object'] }] },
+  eq: { parameters: [{ name: 'eq', allowedTypes: ['String', 'Number', 'Date', 'Object'] }] },
+  notEq: { parameters: [{ name: 'notEq', allowedTypes: ['String', 'Number', 'Date', 'Object'] }] },
+  like: { parameters: [{ name: 'like', allowedTypes: ['String'] }] },
+  similarTo: { parameters: [{ name: 'similarTo', allowedTypes: ['String'] }] }
 };
 
-module.exports = carto;
+var ALLOWED_FILTERS = Object.freeze(Object.keys(CATEGORY_COMPARISON_OPERATORS));
+
+/**
+ * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within the filter.
+ *
+ * You can filter columns with `in`, `notIn`, `eq`, `notEq`, `like`, `similarTo` filters, and update the conditions with `.set()` or `.setFilters()` method. It will refresh the visualization automatically when any filter is added or modified.
+ *
+ * This filter won't include null values within returned rows by default but you can include them by setting `includeNull` option.
+ *
+ * @param {string} column - The column which the filter will be performed against
+ * @param {object} filters - The filters you want to apply to the table rows
+ * @param {(string[]|object)} filters.in - Return rows whose column value is included within the provided values
+ * @param {string} filters.in.query - Return rows whose column value is included within query results
+ * @param {(string[]|object)} filters.notIn - Return rows whose column value is included within the provided values
+ * @param {string} filters.notIn.query - Return rows whose column value is not included within query results
+ * @param {(string|number|Date|object)} filters.eq - Return rows whose column value is equal to the provided value
+ * @param {string} filters.eq.query - Return rows whose column value is equal to the value returned by query
+ * @param {(string|number|Date|object)} filters.notEq - Return rows whose column value is not equal to the provided value
+ * @param {string} filters.notEq.query - Return rows whose column value is not equal to the value returned by query
+ * @param {string} filters.like - Return rows whose column value is like the provided value
+ * @param {string} filters.similarTo - Return rows whose column value is similar to the provided values
+ * @param {object} [options]
+ * @param {boolean} [options.includeNull] - Include null rows when returning data
+ *
+ * @example
+ * // Create a filter by room type, showing only private rooms
+ * const roomTypeFilter = new carto.filter.Category('room_type', { eq: 'Private Room' });
+ * airbnbDataset.addFilter(roomTypeFilter);
+ *
+ * @example
+ * // Create a filter by room type, showing only private rooms and entire apartments
+ * const roomTypeFilter = new carto.filter.Category('room_type', { in: ['Private Room', 'Entire home/apt'] });
+ * airbnbDataset.addFilter(roomTypeFilter);
+ *
+ * @example
+ * // Create a filter by room type, showing results included in subquery
+ * const roomTypeFilter = new carto.filter.Category('room_type', { in: { query: 'SELECT distinct(type) FROM rooms' } });
+ * airbnbDataset.addFilter(roomTypeFilter);
+ *
+ * @class Category
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ */
+
+var Category = function (_SQLBase) {
+  _inherits(Category, _SQLBase);
+
+  function Category(column) {
+    var filters = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var options = arguments[2];
+
+    _classCallCheck(this, Category);
+
+    var _this = _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).call(this, column, options));
+
+    _this.SQL_TEMPLATES = _this._getSQLTemplates();
+    _this.ALLOWED_FILTERS = ALLOWED_FILTERS;
+    _this.PARAMETER_SPECIFICATION = CATEGORY_COMPARISON_OPERATORS;
+
+    _this._checkFilters(filters);
+    _this._filters = filters;
+    return _this;
+  }
+
+  _createClass(Category, [{
+    key: '_getSQLTemplates',
+    value: function _getSQLTemplates() {
+      return {
+        in: '<% if (value) { %><%= column %> IN (<%= value.query || value %>)<% } else { %>true = false<% } %>',
+        notIn: '<% if (value) { %><%= column %> NOT IN (<%= value.query || value %>)<% } %>',
+        eq: '<%= column %> = <%= value.query ? "(" + value.query + ")" : value %>',
+        notEq: '<%= column %> != <%= value.query ? "(" + value.query + ")" : value %>',
+        like: '<%= column %> LIKE <%= value %>',
+        similarTo: '<%= column %> SIMILAR TO <%= value %>'
+      };
+    }
+
+    /**
+     * Set any of the filter conditions, overwriting the previous one.
+     * @param {string} filterType - The filter type that you want to set. `in`, `notIn`, `eq`, `notEq`, `like`, `similarTo`.
+     * @param {string} filterValue - The value of the filter. Check types in {@link carto.filter.Category}
+     *
+     * @memberof Category
+     * @method set
+     * @api
+     */
+
+    /**
+     * Set filter conditions, overriding all the previous ones.
+     * @param {object} filters - Object containing all the new filters to apply. Check filter options in {@link carto.filter.Category}.
+     *
+     * @memberof Category
+     * @method setFilters
+     * @api
+     */
+
+    /**
+     * Remove all conditions from current filter
+     *
+     * @memberof Category
+     * @method resetFilters
+     * @api
+     */
+
+  }]);
+
+  return Category;
+}(SQLBase);
+
+module.exports = Category;
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SQLBase = __webpack_require__(17);
+
+var RANGE_COMPARISON_OPERATORS = {
+  lt: { parameters: [{ name: 'lt', allowedTypes: ['Number', 'Date', 'Object'] }] },
+  lte: { parameters: [{ name: 'lte', allowedTypes: ['Number', 'Date', 'Object'] }] },
+  gt: { parameters: [{ name: 'gt', allowedTypes: ['Number', 'Date', 'Object'] }] },
+  gte: { parameters: [{ name: 'gte', allowedTypes: ['Number', 'Date', 'Object'] }] },
+  between: {
+    parameters: [{ name: 'between.min', allowedTypes: ['Number', 'Date'] }, { name: 'between.max', allowedTypes: ['Number', 'Date'] }]
+  },
+  notBetween: {
+    parameters: [{ name: 'notBetween.min', allowedTypes: ['Number', 'Date'] }, { name: 'notBetween.max', allowedTypes: ['Number', 'Date'] }]
+  },
+  betweenSymmetric: {
+    parameters: [{ name: 'betweenSymmetric.min', allowedTypes: ['Number', 'Date'] }, { name: 'betweenSymmetric.max', allowedTypes: ['Number', 'Date'] }]
+  },
+  notBetweenSymmetric: {
+    parameters: [{ name: 'notBetweenSymmetric.min', allowedTypes: ['Number', 'Date'] }, { name: 'notBetweenSymmetric.max', allowedTypes: ['Number', 'Date'] }]
+  }
+};
+
+var ALLOWED_FILTERS = Object.freeze(Object.keys(RANGE_COMPARISON_OPERATORS));
+
+/**
+ * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within the filter.
+ *
+ * You can filter columns with `in`, `notIn`, `eq`, `notEq`, `like`, `similarTo` filters, and update the conditions with `.set()` or `.setFilters()` method. It will refresh the visualization automatically when any filter is added or modified.
+ *
+ * This filter won't include null values within returned rows by default but you can include them by setting `includeNull` option.
+ *
+ * @param {string} column - The column to filter rows
+ * @param {object} filters - The filters you want to apply to the column
+ * @param {(number|Date|object)} filters.lt - Return rows whose column value is less than the provided value
+ * @param {string} filters.lt.query - Return rows whose column value is less than the value returned by query
+ * @param {(number|Date|object)} filters.lte - Return rows whose column value is less than or equal to the provided value
+ * @param {string} filters.lte.query - Return rows whose column value is less than or equal to the value returned by query
+ * @param {(number|Date|object)} filters.gt - Return rows whose column value is greater than the provided value
+ * @param {string} filters.gt.query - Return rows whose column value is greater than the value returned by query
+ * @param {(number|Date|object)} filters.gte - Return rows whose column value is greater than or equal to the provided value
+ * @param {string} filters.gte.query - Return rows whose column value is greater than or equal to the value returned by query
+ * @param {(number|Date)} filters.between - Return rows whose column value is between the provided values
+ * @param {(number|Date)} filters.between.min - Lower value of the comparison range
+ * @param {(number|Date)} filters.between.max - Upper value of the comparison range
+ * @param {(number|Date)} filters.notBetween - Return rows whose column value is not between the provided values
+ * @param {(number|Date)} filters.notBetween.min - Lower value of the comparison range
+ * @param {(number|Date)} filters.notBetween.max - Upper value of the comparison range
+ * @param {(number|Date)} filters.betweenSymmetric - Return rows whose column value is between the provided values after sorting them
+ * @param {(number|Date)} filters.betweenSymmetric.min - Lower value of the comparison range
+ * @param {(number|Date)} filters.betweenSymmetric.max - Upper value of the comparison range
+ * @param {(number|Date)} filters.notBetweenSymmetric - Return rows whose column value is not between the provided values after sorting them
+ * @param {(number|Date)} filters.notBetweenSymmetric.min - Lower value of the comparison range
+ * @param {(number|Date)} filters.notBetweenSymmetric.max - Upper value of the comparison range
+ * @param {object} [options]
+ * @param {boolean} [options.includeNull] - Include null rows when returning data
+ *
+ * @example
+ * // Create a filter by price, showing only listings lower than or equal to 50€, and higher than 100€
+ * const priceFilter = new carto.filter.Range('price', { lte: 50, gt: 100 });
+ *
+ * // Add filter to the existing source
+ * airbnbDataset.addFilter(priceFilter);
+ *
+ * @example
+ * // Create a filter by price, showing only listings greater than or equal to the average price
+ * const priceFilter = new carto.filter.Range('price', { gte: { query: 'SELECT avg(price) FROM listings' } });
+ *
+ * // Add filter to the existing source
+ * airbnbDataset.addFilter(priceFilter);
+ *
+ * @class Range
+ * @extends carto.filter.Base
+ * @memberof carto.filter
+ * @api
+ */
+
+var Range = function (_SQLBase) {
+  _inherits(Range, _SQLBase);
+
+  function Range(column) {
+    var filters = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var options = arguments[2];
+
+    _classCallCheck(this, Range);
+
+    var _this = _possibleConstructorReturn(this, (Range.__proto__ || Object.getPrototypeOf(Range)).call(this, column, options));
+
+    _this.SQL_TEMPLATES = _this._getSQLTemplates();
+    _this.ALLOWED_FILTERS = ALLOWED_FILTERS;
+    _this.PARAMETER_SPECIFICATION = RANGE_COMPARISON_OPERATORS;
+
+    _this._checkFilters(filters);
+    _this._filters = filters;
+    return _this;
+  }
+
+  _createClass(Range, [{
+    key: '_getSQLTemplates',
+    value: function _getSQLTemplates() {
+      return {
+        lt: '<%= column %> < <%= value.query ? "(" + value.query + ")" : value %>',
+        lte: '<%= column %> <= <%= value.query ? "(" + value.query + ")" : value %>',
+        gt: '<%= column %> > <%= value.query ? "(" + value.query + ")" : value %>',
+        gte: '<%= column %> >= <%= value.query ? "(" + value.query + ")" : value %>',
+        between: '<%= column %> BETWEEN <%= value.min %> AND <%= value.max %>',
+        notBetween: '<%= column %> NOT BETWEEN <%= value.min %> AND <%= value.max %>',
+        betweenSymmetric: '<%= column %> BETWEEN SYMMETRIC <%= value.min %> AND <%= value.max %>',
+        notBetweenSymmetric: '<%= column %> NOT BETWEEN SYMMETRIC <%= value.min %> AND <%= value.max %>'
+      };
+    }
+
+    /**
+     * Set any of the filter conditions, overwriting the previous one.
+     * @param {string} filterType - The filter type that you want to set. `lt`, `lte`, `gt`, `gte`, `between`, `notBetween`, `betweenSymmetric`, `notBetweenSymmetric`.
+     * @param {string} filterValue - The value of the filter. Check types in {@link carto.filter.Range}
+     *
+     * @memberof Range
+     * @method set
+     * @api
+     */
+
+    /**
+     * Set filter conditions, overriding all the previous ones.
+     * @param {object} filters - Object containing all the new filters to apply. Check filter options in {@link carto.filter.Range}.
+     *
+     * @memberof Range
+     * @method setFilters
+     * @api
+     */
+
+    /**
+     * Remove all conditions from current filter
+     *
+     * @memberof Range
+     * @method resetFilters
+     * @api
+     */
+
+  }]);
+
+  return Range;
+}(SQLBase);
+
+module.exports = Range;
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FiltersCollection = __webpack_require__(27);
+
+/**
+ * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within filters.
+ *
+ * This filter will group as many filters as you want and it will add them to the query returning the rows that match ALL the filters to render the visualization.
+ *
+ * You can add or remove filters by invoking `.addFilter()` and `.removeFilter()`.
+ *
+ * @example
+ * // Create a filter by room type, showing only private rooms
+ * const roomTypeFilter = new carto.filter.Category('room_type', { eq: 'Private room' });
+ * // Create a filter by price, showing only listings lower than or equal to 50€
+ * const priceFilter = new carto.filter.Range('price', { lte: 50 });
+ *
+ * // Combine the filters with an AND condition, returning rows that match both filters
+ * const filterByRoomTypeAndPrice = new carto.filter.AND([ roomTypeFilter, priceFilter ]);
+ *
+ * // Add filters to the existing source
+ * source.addFilter(filterByRoomTypeAndPrice);
+ *
+ * @class AND
+ * @extends carto.filter.FiltersCollection
+ * @memberof carto.filter
+ * @api
+ */
+
+var AND = function (_FiltersCollection) {
+  _inherits(AND, _FiltersCollection);
+
+  function AND(filters) {
+    _classCallCheck(this, AND);
+
+    var _this = _possibleConstructorReturn(this, (AND.__proto__ || Object.getPrototypeOf(AND)).call(this, filters));
+
+    _this.JOIN_OPERATOR = 'AND';
+    return _this;
+  }
+
+  return AND;
+}(FiltersCollection);
+
+module.exports = AND;
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FiltersCollection = __webpack_require__(27);
+
+/**
+ * When including this filter into a {@link carto.source.SQL} or a {@link carto.source.Dataset}, the rows will be filtered by the conditions included within filters.
+ *
+ * This filter will group as many filters as you want and it will add them to the query returning the rows that match ANY of the filters to render the visualization.
+ *
+ * You can add or remove filters by invoking `.addFilter()` and `.removeFilter()`.
+ *
+ * @example
+ * // Create a filter by room type, showing only private rooms
+ * const roomTypeFilter = new carto.filter.Category('room_type', { eq: 'Private room' });
+ * // Create a filter by price, showing only listings lower than or equal to 50€
+ * const priceFilter = new carto.filter.Range('price', { lte: 50 });
+ *
+ * // Combine the filters with an OR operator, returning rows that match one or the other filter
+ * const filterByRoomTypeOrPrice = new carto.filter.OR([ roomTypeFilter, priceFilter ]);
+ *
+ * // Add filters to the existing source
+ * source.addFilter(filterByRoomTypeOrPrice);
+ *
+ * @class OR
+ * @extends carto.filter.FiltersCollection
+ * @memberof carto.filter
+ * @api
+ */
+
+var OR = function (_FiltersCollection) {
+  _inherits(OR, _FiltersCollection);
+
+  /**
+   * Create a OR group filter
+   * @param {Array} filters - The filters to apply in the query
+   */
+  function OR(filters) {
+    _classCallCheck(this, OR);
+
+    var _this = _possibleConstructorReturn(this, (OR.__proto__ || Object.getPrototypeOf(OR)).call(this, filters));
+
+    _this.JOIN_OPERATOR = 'OR';
+    return _this;
+  }
+
+  return OR;
+}(FiltersCollection);
+
+module.exports = OR;
+
+/***/ }),
+/* 151 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "bisect", function() { return /* reexport */ bisect; });
+__webpack_require__.d(__webpack_exports__, "bisectRight", function() { return /* reexport */ bisectRight; });
+__webpack_require__.d(__webpack_exports__, "bisectLeft", function() { return /* reexport */ bisectLeft; });
+__webpack_require__.d(__webpack_exports__, "ascending", function() { return /* reexport */ ascending; });
+__webpack_require__.d(__webpack_exports__, "bisector", function() { return /* reexport */ bisector; });
+__webpack_require__.d(__webpack_exports__, "cross", function() { return /* reexport */ cross; });
+__webpack_require__.d(__webpack_exports__, "descending", function() { return /* reexport */ descending; });
+__webpack_require__.d(__webpack_exports__, "deviation", function() { return /* reexport */ deviation; });
+__webpack_require__.d(__webpack_exports__, "extent", function() { return /* reexport */ extent; });
+__webpack_require__.d(__webpack_exports__, "histogram", function() { return /* reexport */ src_histogram; });
+__webpack_require__.d(__webpack_exports__, "thresholdFreedmanDiaconis", function() { return /* reexport */ freedmanDiaconis; });
+__webpack_require__.d(__webpack_exports__, "thresholdScott", function() { return /* reexport */ scott; });
+__webpack_require__.d(__webpack_exports__, "thresholdSturges", function() { return /* reexport */ sturges; });
+__webpack_require__.d(__webpack_exports__, "max", function() { return /* reexport */ src_max; });
+__webpack_require__.d(__webpack_exports__, "mean", function() { return /* reexport */ src_mean; });
+__webpack_require__.d(__webpack_exports__, "median", function() { return /* reexport */ median; });
+__webpack_require__.d(__webpack_exports__, "merge", function() { return /* reexport */ merge; });
+__webpack_require__.d(__webpack_exports__, "min", function() { return /* reexport */ src_min; });
+__webpack_require__.d(__webpack_exports__, "pairs", function() { return /* reexport */ pairs; });
+__webpack_require__.d(__webpack_exports__, "permute", function() { return /* reexport */ permute; });
+__webpack_require__.d(__webpack_exports__, "quantile", function() { return /* reexport */ quantile; });
+__webpack_require__.d(__webpack_exports__, "range", function() { return /* reexport */ range; });
+__webpack_require__.d(__webpack_exports__, "scan", function() { return /* reexport */ scan; });
+__webpack_require__.d(__webpack_exports__, "shuffle", function() { return /* reexport */ shuffle; });
+__webpack_require__.d(__webpack_exports__, "sum", function() { return /* reexport */ src_sum; });
+__webpack_require__.d(__webpack_exports__, "ticks", function() { return /* reexport */ ticks; });
+__webpack_require__.d(__webpack_exports__, "tickIncrement", function() { return /* reexport */ tickIncrement; });
+__webpack_require__.d(__webpack_exports__, "tickStep", function() { return /* reexport */ tickStep; });
+__webpack_require__.d(__webpack_exports__, "transpose", function() { return /* reexport */ src_transpose; });
+__webpack_require__.d(__webpack_exports__, "variance", function() { return /* reexport */ variance; });
+__webpack_require__.d(__webpack_exports__, "zip", function() { return /* reexport */ zip; });
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/ascending.js
+/* harmony default export */ var ascending = (function(a, b) {
+  return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/bisector.js
+
+
+/* harmony default export */ var bisector = (function(compare) {
+  if (compare.length === 1) compare = ascendingComparator(compare);
+  return {
+    left: function(a, x, lo, hi) {
+      if (lo == null) lo = 0;
+      if (hi == null) hi = a.length;
+      while (lo < hi) {
+        var mid = lo + hi >>> 1;
+        if (compare(a[mid], x) < 0) lo = mid + 1;
+        else hi = mid;
+      }
+      return lo;
+    },
+    right: function(a, x, lo, hi) {
+      if (lo == null) lo = 0;
+      if (hi == null) hi = a.length;
+      while (lo < hi) {
+        var mid = lo + hi >>> 1;
+        if (compare(a[mid], x) > 0) hi = mid;
+        else lo = mid + 1;
+      }
+      return lo;
+    }
+  };
+});
+
+function ascendingComparator(f) {
+  return function(d, x) {
+    return ascending(f(d), x);
+  };
+}
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/bisect.js
+
+
+
+var ascendingBisect = bisector(ascending);
+var bisectRight = ascendingBisect.right;
+var bisectLeft = ascendingBisect.left;
+/* harmony default export */ var bisect = (bisectRight);
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/pairs.js
+/* harmony default export */ var pairs = (function(array, f) {
+  if (f == null) f = pair;
+  var i = 0, n = array.length - 1, p = array[0], pairs = new Array(n < 0 ? 0 : n);
+  while (i < n) pairs[i] = f(p, p = array[++i]);
+  return pairs;
+});
+
+function pair(a, b) {
+  return [a, b];
+}
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/cross.js
+
+
+/* harmony default export */ var cross = (function(values0, values1, reduce) {
+  var n0 = values0.length,
+      n1 = values1.length,
+      values = new Array(n0 * n1),
+      i0,
+      i1,
+      i,
+      value0;
+
+  if (reduce == null) reduce = pair;
+
+  for (i0 = i = 0; i0 < n0; ++i0) {
+    for (value0 = values0[i0], i1 = 0; i1 < n1; ++i1, ++i) {
+      values[i] = reduce(value0, values1[i1]);
+    }
+  }
+
+  return values;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/descending.js
+/* harmony default export */ var descending = (function(a, b) {
+  return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/number.js
+/* harmony default export */ var number = (function(x) {
+  return x === null ? NaN : +x;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/variance.js
+
+
+/* harmony default export */ var variance = (function(values, valueof) {
+  var n = values.length,
+      m = 0,
+      i = -1,
+      mean = 0,
+      value,
+      delta,
+      sum = 0;
+
+  if (valueof == null) {
+    while (++i < n) {
+      if (!isNaN(value = number(values[i]))) {
+        delta = value - mean;
+        mean += delta / ++m;
+        sum += delta * (value - mean);
+      }
+    }
+  }
+
+  else {
+    while (++i < n) {
+      if (!isNaN(value = number(valueof(values[i], i, values)))) {
+        delta = value - mean;
+        mean += delta / ++m;
+        sum += delta * (value - mean);
+      }
+    }
+  }
+
+  if (m > 1) return sum / (m - 1);
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/deviation.js
+
+
+/* harmony default export */ var deviation = (function(array, f) {
+  var v = variance(array, f);
+  return v ? Math.sqrt(v) : v;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/extent.js
+/* harmony default export */ var extent = (function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      min,
+      max;
+
+  if (valueof == null) {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = values[i]) != null && value >= value) {
+        min = max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = values[i]) != null) {
+            if (min > value) min = value;
+            if (max < value) max = value;
+          }
+        }
+      }
+    }
+  }
+
+  else {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = valueof(values[i], i, values)) != null && value >= value) {
+        min = max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = valueof(values[i], i, values)) != null) {
+            if (min > value) min = value;
+            if (max < value) max = value;
+          }
+        }
+      }
+    }
+  }
+
+  return [min, max];
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/array.js
+var array_array = Array.prototype;
+
+var slice = array_array.slice;
+var map = array_array.map;
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/constant.js
+/* harmony default export */ var constant = (function(x) {
+  return function() {
+    return x;
+  };
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/identity.js
+/* harmony default export */ var identity = (function(x) {
+  return x;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/range.js
+/* harmony default export */ var range = (function(start, stop, step) {
+  start = +start, stop = +stop, step = (n = arguments.length) < 2 ? (stop = start, start = 0, 1) : n < 3 ? 1 : +step;
+
+  var i = -1,
+      n = Math.max(0, Math.ceil((stop - start) / step)) | 0,
+      range = new Array(n);
+
+  while (++i < n) {
+    range[i] = start + i * step;
+  }
+
+  return range;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/ticks.js
+var e10 = Math.sqrt(50),
+    e5 = Math.sqrt(10),
+    e2 = Math.sqrt(2);
+
+/* harmony default export */ var ticks = (function(start, stop, count) {
+  var reverse,
+      i = -1,
+      n,
+      ticks,
+      step;
+
+  stop = +stop, start = +start, count = +count;
+  if (start === stop && count > 0) return [start];
+  if (reverse = stop < start) n = start, start = stop, stop = n;
+  if ((step = tickIncrement(start, stop, count)) === 0 || !isFinite(step)) return [];
+
+  if (step > 0) {
+    start = Math.ceil(start / step);
+    stop = Math.floor(stop / step);
+    ticks = new Array(n = Math.ceil(stop - start + 1));
+    while (++i < n) ticks[i] = (start + i) * step;
+  } else {
+    start = Math.floor(start * step);
+    stop = Math.ceil(stop * step);
+    ticks = new Array(n = Math.ceil(start - stop + 1));
+    while (++i < n) ticks[i] = (start - i) / step;
+  }
+
+  if (reverse) ticks.reverse();
+
+  return ticks;
+});
+
+function tickIncrement(start, stop, count) {
+  var step = (stop - start) / Math.max(0, count),
+      power = Math.floor(Math.log(step) / Math.LN10),
+      error = step / Math.pow(10, power);
+  return power >= 0
+      ? (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1) * Math.pow(10, power)
+      : -Math.pow(10, -power) / (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1);
+}
+
+function tickStep(start, stop, count) {
+  var step0 = Math.abs(stop - start) / Math.max(0, count),
+      step1 = Math.pow(10, Math.floor(Math.log(step0) / Math.LN10)),
+      error = step0 / step1;
+  if (error >= e10) step1 *= 10;
+  else if (error >= e5) step1 *= 5;
+  else if (error >= e2) step1 *= 2;
+  return stop < start ? -step1 : step1;
+}
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/sturges.js
+/* harmony default export */ var sturges = (function(values) {
+  return Math.ceil(Math.log(values.length) / Math.LN2) + 1;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/histogram.js
+
+
+
+
+
+
+
+
+
+/* harmony default export */ var src_histogram = (function() {
+  var value = identity,
+      domain = extent,
+      threshold = sturges;
+
+  function histogram(data) {
+    var i,
+        n = data.length,
+        x,
+        values = new Array(n);
+
+    for (i = 0; i < n; ++i) {
+      values[i] = value(data[i], i, data);
+    }
+
+    var xz = domain(values),
+        x0 = xz[0],
+        x1 = xz[1],
+        tz = threshold(values, x0, x1);
+
+    // Convert number of thresholds into uniform thresholds.
+    if (!Array.isArray(tz)) {
+      tz = tickStep(x0, x1, tz);
+      tz = range(Math.ceil(x0 / tz) * tz, Math.floor(x1 / tz) * tz, tz); // exclusive
+    }
+
+    // Remove any thresholds outside the domain.
+    var m = tz.length;
+    while (tz[0] <= x0) tz.shift(), --m;
+    while (tz[m - 1] > x1) tz.pop(), --m;
+
+    var bins = new Array(m + 1),
+        bin;
+
+    // Initialize bins.
+    for (i = 0; i <= m; ++i) {
+      bin = bins[i] = [];
+      bin.x0 = i > 0 ? tz[i - 1] : x0;
+      bin.x1 = i < m ? tz[i] : x1;
+    }
+
+    // Assign data to bins by value, ignoring any outside the domain.
+    for (i = 0; i < n; ++i) {
+      x = values[i];
+      if (x0 <= x && x <= x1) {
+        bins[bisect(tz, x, 0, m)].push(data[i]);
+      }
+    }
+
+    return bins;
+  }
+
+  histogram.value = function(_) {
+    return arguments.length ? (value = typeof _ === "function" ? _ : constant(_), histogram) : value;
+  };
+
+  histogram.domain = function(_) {
+    return arguments.length ? (domain = typeof _ === "function" ? _ : constant([_[0], _[1]]), histogram) : domain;
+  };
+
+  histogram.thresholds = function(_) {
+    return arguments.length ? (threshold = typeof _ === "function" ? _ : Array.isArray(_) ? constant(slice.call(_)) : constant(_), histogram) : threshold;
+  };
+
+  return histogram;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/quantile.js
+
+
+/* harmony default export */ var quantile = (function(values, p, valueof) {
+  if (valueof == null) valueof = number;
+  if (!(n = values.length)) return;
+  if ((p = +p) <= 0 || n < 2) return +valueof(values[0], 0, values);
+  if (p >= 1) return +valueof(values[n - 1], n - 1, values);
+  var n,
+      i = (n - 1) * p,
+      i0 = Math.floor(i),
+      value0 = +valueof(values[i0], i0, values),
+      value1 = +valueof(values[i0 + 1], i0 + 1, values);
+  return value0 + (value1 - value0) * (i - i0);
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/freedmanDiaconis.js
+
+
+
+
+
+/* harmony default export */ var freedmanDiaconis = (function(values, min, max) {
+  values = map.call(values, number).sort(ascending);
+  return Math.ceil((max - min) / (2 * (quantile(values, 0.75) - quantile(values, 0.25)) * Math.pow(values.length, -1 / 3)));
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/scott.js
+
+
+/* harmony default export */ var scott = (function(values, min, max) {
+  return Math.ceil((max - min) / (3.5 * deviation(values) * Math.pow(values.length, -1 / 3)));
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/max.js
+/* harmony default export */ var src_max = (function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      max;
+
+  if (valueof == null) {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = values[i]) != null && value >= value) {
+        max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = values[i]) != null && value > max) {
+            max = value;
+          }
+        }
+      }
+    }
+  }
+
+  else {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = valueof(values[i], i, values)) != null && value >= value) {
+        max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = valueof(values[i], i, values)) != null && value > max) {
+            max = value;
+          }
+        }
+      }
+    }
+  }
+
+  return max;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/mean.js
+
+
+/* harmony default export */ var src_mean = (function(values, valueof) {
+  var n = values.length,
+      m = n,
+      i = -1,
+      value,
+      sum = 0;
+
+  if (valueof == null) {
+    while (++i < n) {
+      if (!isNaN(value = number(values[i]))) sum += value;
+      else --m;
+    }
+  }
+
+  else {
+    while (++i < n) {
+      if (!isNaN(value = number(valueof(values[i], i, values)))) sum += value;
+      else --m;
+    }
+  }
+
+  if (m) return sum / m;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/median.js
+
+
+
+
+/* harmony default export */ var median = (function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      numbers = [];
+
+  if (valueof == null) {
+    while (++i < n) {
+      if (!isNaN(value = number(values[i]))) {
+        numbers.push(value);
+      }
+    }
+  }
+
+  else {
+    while (++i < n) {
+      if (!isNaN(value = number(valueof(values[i], i, values)))) {
+        numbers.push(value);
+      }
+    }
+  }
+
+  return quantile(numbers.sort(ascending), 0.5);
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/merge.js
+/* harmony default export */ var merge = (function(arrays) {
+  var n = arrays.length,
+      m,
+      i = -1,
+      j = 0,
+      merged,
+      array;
+
+  while (++i < n) j += arrays[i].length;
+  merged = new Array(j);
+
+  while (--n >= 0) {
+    array = arrays[n];
+    m = array.length;
+    while (--m >= 0) {
+      merged[--j] = array[m];
+    }
+  }
+
+  return merged;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/min.js
+/* harmony default export */ var src_min = (function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      min;
+
+  if (valueof == null) {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = values[i]) != null && value >= value) {
+        min = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = values[i]) != null && min > value) {
+            min = value;
+          }
+        }
+      }
+    }
+  }
+
+  else {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = valueof(values[i], i, values)) != null && value >= value) {
+        min = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = valueof(values[i], i, values)) != null && min > value) {
+            min = value;
+          }
+        }
+      }
+    }
+  }
+
+  return min;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/permute.js
+/* harmony default export */ var permute = (function(array, indexes) {
+  var i = indexes.length, permutes = new Array(i);
+  while (i--) permutes[i] = array[indexes[i]];
+  return permutes;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/scan.js
+
+
+/* harmony default export */ var scan = (function(values, compare) {
+  if (!(n = values.length)) return;
+  var n,
+      i = 0,
+      j = 0,
+      xi,
+      xj = values[j];
+
+  if (compare == null) compare = ascending;
+
+  while (++i < n) {
+    if (compare(xi = values[i], xj) < 0 || compare(xj, xj) !== 0) {
+      xj = xi, j = i;
+    }
+  }
+
+  if (compare(xj, xj) === 0) return j;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/shuffle.js
+/* harmony default export */ var shuffle = (function(array, i0, i1) {
+  var m = (i1 == null ? array.length : i1) - (i0 = i0 == null ? 0 : +i0),
+      t,
+      i;
+
+  while (m) {
+    i = Math.random() * m-- | 0;
+    t = array[m + i0];
+    array[m + i0] = array[i + i0];
+    array[i + i0] = t;
+  }
+
+  return array;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/sum.js
+/* harmony default export */ var src_sum = (function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      sum = 0;
+
+  if (valueof == null) {
+    while (++i < n) {
+      if (value = +values[i]) sum += value; // Note: zero and null are equivalent.
+    }
+  }
+
+  else {
+    while (++i < n) {
+      if (value = +valueof(values[i], i, values)) sum += value;
+    }
+  }
+
+  return sum;
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/transpose.js
+
+
+/* harmony default export */ var src_transpose = (function(matrix) {
+  if (!(n = matrix.length)) return [];
+  for (var i = -1, m = src_min(matrix, transpose_length), transpose = new Array(m); ++i < m;) {
+    for (var j = -1, n, row = transpose[i] = new Array(n); ++j < n;) {
+      row[j] = matrix[j][i];
+    }
+  }
+  return transpose;
+});
+
+function transpose_length(d) {
+  return d.length;
+}
+
+// CONCATENATED MODULE: ./node_modules/d3-array/src/zip.js
+
+
+/* harmony default export */ var zip = (function() {
+  return src_transpose(arguments);
+});
+
+// CONCATENATED MODULE: ./node_modules/d3-array/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***/ })
 /******/ ]);
